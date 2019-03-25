@@ -1900,7 +1900,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #fb0e77;
+  background: #06ec91;
 }
 .links-of-blogroll {
   margin-top: 10px;
@@ -2243,6 +2243,13 @@ ul.popular-posts .popular-posts-item .popular-posts-title {
   font-size: 14px;
   margin: 0;
   line-height: 2.4;
+}
+.has-jax {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+li {
+  list-style-position: inside !important;
 }
 .page-archive .archive-page-counter {
   position: relative;
@@ -2816,4 +2823,7 @@ hr {
     width: auto;
     text-align: center;
   }
+}
+.post-body p {
+  text-indent: 2em;
 }
