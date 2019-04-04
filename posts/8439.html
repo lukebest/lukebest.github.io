@@ -117,19 +117,19 @@
 
 
 
-  <meta name="description" content="airflow是什么Airflow 被 Airbnb 内部用来创建、监控和调整数据管道。任何工作流都可以在这个使用 Python 编写的平台上运行（目前加入 Apache 基金会孵化器）。 Airflow 允许工作流开发人员轻松创建、维护和周期性地调度运行工作流（即有向无环图或成为DAGs）的工具。在Airbnb中，这些工作流包括了如数据存储、增长分析、Email发送、A/B测试等等这些跨越多部门">
-<meta name="keywords" content="airflow">
+  <meta name="description" content="airflow是什么 Airflow 被 Airbnb 内部用来创建、监控和调整数据管道。任何工作流都可以在这个使用 Python 编写的平台上运行（目前加入 Apache 基金会孵化器）。 Airflow 允许工作流开发人员轻松创建、维护和周期性地调度运行工作流（即有向无环图或成为DAGs）的工具。在Airbnb中，这些工作流包括了如数据存储、增长分析、Email发送、A/B测试等等这些跨越">
+<meta name="keywords" content="airflow,ETL">
 <meta property="og:type" content="article">
 <meta property="og:title" content="airflow 从入门到放弃">
 <meta property="og:url" content="https://lukebest.github.io/posts/8439.html">
 <meta property="og:site_name" content="心明录">
-<meta property="og:description" content="airflow是什么Airflow 被 Airbnb 内部用来创建、监控和调整数据管道。任何工作流都可以在这个使用 Python 编写的平台上运行（目前加入 Apache 基金会孵化器）。 Airflow 允许工作流开发人员轻松创建、维护和周期性地调度运行工作流（即有向无环图或成为DAGs）的工具。在Airbnb中，这些工作流包括了如数据存储、增长分析、Email发送、A/B测试等等这些跨越多部门">
+<meta property="og:description" content="airflow是什么 Airflow 被 Airbnb 内部用来创建、监控和调整数据管道。任何工作流都可以在这个使用 Python 编写的平台上运行（目前加入 Apache 基金会孵化器）。 Airflow 允许工作流开发人员轻松创建、维护和周期性地调度运行工作流（即有向无环图或成为DAGs）的工具。在Airbnb中，这些工作流包括了如数据存储、增长分析、Email发送、A/B测试等等这些跨越">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://lukebest.github.io/posts/8439/20190322122137.png">
-<meta property="og:updated_time" content="2019-04-03T08:28:19.891Z">
+<meta property="og:updated_time" content="2019-04-04T07:17:04.433Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="airflow 从入门到放弃">
-<meta name="twitter:description" content="airflow是什么Airflow 被 Airbnb 内部用来创建、监控和调整数据管道。任何工作流都可以在这个使用 Python 编写的平台上运行（目前加入 Apache 基金会孵化器）。 Airflow 允许工作流开发人员轻松创建、维护和周期性地调度运行工作流（即有向无环图或成为DAGs）的工具。在Airbnb中，这些工作流包括了如数据存储、增长分析、Email发送、A/B测试等等这些跨越多部门">
+<meta name="twitter:description" content="airflow是什么 Airflow 被 Airbnb 内部用来创建、监控和调整数据管道。任何工作流都可以在这个使用 Python 编写的平台上运行（目前加入 Apache 基金会孵化器）。 Airflow 允许工作流开发人员轻松创建、维护和周期性地调度运行工作流（即有向无环图或成为DAGs）的工具。在Airbnb中，这些工作流包括了如数据存储、增长分析、Email发送、A/B测试等等这些跨越">
 <meta name="twitter:image" content="https://lukebest.github.io/posts/8439/20190322122137.png">
 
 
@@ -279,7 +279,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">3</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">4</span></a>
 
   </li>
         
@@ -298,7 +298,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">6</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">7</span></a>
 
   </li>
         
@@ -317,7 +317,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">4</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">16</span></a>
 
   </li>
         
@@ -488,7 +488,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-03 16:28:19" itemprop="dateModified" datetime="2019-04-03T16:28:19+08:00">2019-04-03</time>
+                <time title="修改时间：2019-04-04 15:17:04" itemprop="dateModified" datetime="2019-04-04T15:17:04+08:00">2019-04-04</time>
               
             
           </span>
@@ -564,31 +564,20 @@
       
 
       
-        <h1 id="airflow是什么"><a href="#airflow是什么" class="headerlink" title="airflow是什么"></a>airflow是什么</h1><p>Airflow 被 Airbnb 内部用来创建、监控和调整数据管道。任何工作流都可以在这个使用 Python 编写的平台上运行（目前加入 Apache 基金会孵化器）。</p>
-<p>Airflow 允许工作流开发人员轻松创建、维护和周期性地调度运行工作流（即有向无环图或成为DAGs）的工具。在Airbnb中，这些工作流包括了如数据存储、增长分析、Email发送、A/B测试等等这些跨越多部门的用例。这个平台拥有和 Hive、Presto、MySQL、HDFS、Postgres和S3交互的能力，并且提供了钩子使得系统拥有很好地扩展性。除了一个命令行界面，该工具还提供了一个    基于Web的用户界面让您可以可视化管道的依赖关系、监控进度、触发任务等。</p>
-<p>在ETL(Extract-Transform-Load)中会经常使用脚本（bash/python）+ crontab来运行数据处理任务，然而这种方案存在以下问题</p>
-<ul>
-<li>查看任务执行情况不直观方便，只能登录机器、或者写一个界面/监控</li>
-<li>存在依赖关系的任务没办法保证，或者保证的方法成本太高</li>
-<li>任务量达到一定量级，任务的管理将极其棘手</li>
-</ul>
-<p>而airflow有如下优点：</p>
-<ul>
-<li>Airbnb开源的工作流管理平台</li>
-<li>工作流依赖关系的可视化 </li>
-<li>日志追踪</li>
-<li>用Python编写，易于扩展</li>
-<li>开箱即用的ETL调度管理平台</li>
-<li>运维/作业管理平台</li>
-<li>调度平台设计</li>
-</ul>
+        <h1 id="airflow是什么">airflow是什么</h1>
+<p>Airflow 被 Airbnb 内部用来创建、监控和调整数据管道。任何工作流都可以在这个使用 Python 编写的平台上运行（目前加入 Apache 基金会孵化器）。</p>
+<p>Airflow 允许工作流开发人员轻松创建、维护和周期性地调度运行工作流（即有向无环图或成为DAGs）的工具。在Airbnb中，这些工作流包括了如数据存储、增长分析、Email发送、A/B测试等等这些跨越多部门的用例。这个平台拥有和 Hive、Presto、MySQL、HDFS、Postgres和S3交互的能力，并且提供了钩子使得系统拥有很好地扩展性。除了一个命令行界面，该工具还提供了一个 基于Web的用户界面让您可以可视化管道的依赖关系、监控进度、触发任务等。</p>
+<p>在ETL(Extract-Transform-Load)中会经常使用脚本（bash/python）+ crontab来运行数据处理任务，然而这种方案存在以下问题 - 查看任务执行情况不直观方便，只能登录机器、或者写一个界面/监控 - 存在依赖关系的任务没办法保证，或者保证的方法成本太高 - 任务量达到一定量级，任务的管理将极其棘手</p>
+<p>而airflow有如下优点： - Airbnb开源的工作流管理平台 - 工作流依赖关系的可视化 - 日志追踪 - 用Python编写，易于扩展 - 开箱即用的ETL调度管理平台 - 运维/作业管理平台 - 调度平台设计</p>
 <p>在一个机器学习建模的工程项目中，数据的ETL处理非常需要airflow。</p>
-<h1 id="airflow怎么得到"><a href="#airflow怎么得到" class="headerlink" title="airflow怎么得到"></a>airflow怎么得到</h1><p>安装airflow原则上不需要多说，但实际操作的过程中出现一些问题。笔者在windows 10的ubuntu 子系统上用python3安装airflow，最开始就出现了如下问题：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">pip3 install apache-airflow</span><br><span class="line"></span><br><span class="line">Collecting apache-airflow</span><br><span class="line">  Using cached https://files.pythonhosted.org/packages/e4/06/45fe64a358ae595ac562640ce96a320313ff098eeff88afb3ca8293cb6b9/apache-airflow-1.10.2.tar.gz</span><br><span class="line">    Complete output from <span class="built_in">command</span> python setup.py egg_info:</span><br><span class="line">    Traceback (most recent call last):</span><br><span class="line">      File <span class="string">"&lt;string&gt;"</span>, line 1, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">      File <span class="string">"/tmp/pip-build-465wd_ew/apache-airflow/setup.py"</span>, line 429, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">        do_setup()</span><br><span class="line">      File <span class="string">"/tmp/pip-build-465wd_ew/apache-airflow/setup.py"</span>, line 287, <span class="keyword">in</span> do_setup</span><br><span class="line">        verify_gpl_dependency()</span><br><span class="line">      File <span class="string">"/tmp/pip-build-465wd_ew/apache-airflow/setup.py"</span>, line 53, <span class="keyword">in</span> verify_gpl_dependency</span><br><span class="line">        raise RuntimeError(<span class="string">"By default one of Airflow's dependencies installs a GPL "</span></span><br><span class="line">    RuntimeError: By default one of Airflow<span class="string">'s dependencies installs a GPL dependency (unidecode). To avoid this dependency set SLUGIFY_USES_TEXT_UNIDECODE=yes in your environment when you install or upgrade Airflow. To force installing the GPL version set AIRFLOW_GPL_UNIDECODE</span></span><br></pre></td></tr></table></figure></p>
-<p>我们可以看到后面给出相关的解决方法，设置SLUGIFY_USES_TEXT_UNIDECODE=yes，如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> SLUGIFY_USES_TEXT_UNIDECODE=yes</span><br></pre></td></tr></table></figure></p>
-<p>再次用<code>pip3 install apache-airflow</code>安装，成功！<br>按照官方步骤执行：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> AIRFLOW_HOME=~/airflow</span><br><span class="line">airflow initdb</span><br><span class="line">airflow webserver -p 8080</span><br></pre></td></tr></table></figure></p>
-<p>在浏览器地址栏输入<code>http://localhost:8080</code>，得下图：<br><img src="/posts/8439/20190322122137.png" alt="airflow界面安装成功"></p>
-<p>整个airflow的安装在细节上还会有比较多的小问题，要细心排查。上面如果安装后找不到airflow的命令，则找到airflow的脚本所在路径，加入系统<code>PATH</code>即可。<br>实际项目中路径可能会不一样，需要灵活处理。<br>airflow的使用相关的内容请点击<a href="/posts/6a60.html" title="airflow使用">airflow使用</a></p>
-<h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><ul>
+<h1 id="airflow怎么得到">airflow怎么得到</h1>
+<p>安装airflow原则上不需要多说，但实际操作的过程中出现一些问题。笔者在windows 10的ubuntu 子系统上用python3安装airflow，最开始就出现了如下问题： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">pip3 install apache-airflow</span><br><span class="line"></span><br><span class="line">Collecting apache-airflow</span><br><span class="line">  Using cached https://files.pythonhosted.org/packages/e4/06/45fe64a358ae595ac562640ce96a320313ff098eeff88afb3ca8293cb6b9/apache-airflow-1.10.2.tar.gz</span><br><span class="line">    Complete output from <span class="built_in">command</span> python setup.py egg_info:</span><br><span class="line">    Traceback (most recent call last):</span><br><span class="line">      File <span class="string">"&lt;string&gt;"</span>, line 1, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">      File <span class="string">"/tmp/pip-build-465wd_ew/apache-airflow/setup.py"</span>, line 429, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">        do_setup()</span><br><span class="line">      File <span class="string">"/tmp/pip-build-465wd_ew/apache-airflow/setup.py"</span>, line 287, <span class="keyword">in</span> do_setup</span><br><span class="line">        verify_gpl_dependency()</span><br><span class="line">      File <span class="string">"/tmp/pip-build-465wd_ew/apache-airflow/setup.py"</span>, line 53, <span class="keyword">in</span> verify_gpl_dependency</span><br><span class="line">        raise RuntimeError(<span class="string">"By default one of Airflow's dependencies installs a GPL "</span></span><br><span class="line">    RuntimeError: By default one of Airflow<span class="string">'s dependencies installs a GPL dependency (unidecode). To avoid this dependency set SLUGIFY_USES_TEXT_UNIDECODE=yes in your environment when you install or upgrade Airflow. To force installing the GPL version set AIRFLOW_GPL_UNIDECODE</span></span><br></pre></td></tr></table></figure></p>
+<p>我们可以看到后面给出相关的解决方法，设置SLUGIFY_USES_TEXT_UNIDECODE=yes，如下： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> SLUGIFY_USES_TEXT_UNIDECODE=yes</span><br></pre></td></tr></table></figure></p>
+<p>再次用<code>pip3 install apache-airflow</code>安装，成功！ 按照官方步骤执行： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> AIRFLOW_HOME=~/airflow</span><br><span class="line">airflow initdb</span><br><span class="line">airflow webserver -p 8080</span><br></pre></td></tr></table></figure></p>
+<p>在浏览器地址栏输入<code>http://localhost:8080</code>，得下图： <img src="/posts/8439/20190322122137.png" alt="airflow界面安装成功"></p>
+<p>整个airflow的安装在细节上还会有比较多的小问题，要细心排查。上面如果安装后找不到airflow的命令，则找到airflow的脚本所在路径，加入系统<code>PATH</code>即可。 实际项目中路径可能会不一样，需要灵活处理。 airflow的使用相关的内容请点击<a href="/posts/6a60.html" title="airflow使用">airflow使用</a></p>
+<h1 id="参考链接">参考链接</h1>
+<ul>
 <li><a href="https://github.com/apache/airflow" target="_blank" rel="noopener">airflow github</a></li>
 <li><a href="https://www.oschina.net/p/airflow" target="_blank" rel="noopener">开源中国airflow首页</a></li>
 <li><a href="http://www.cnfluffy.com/2018-08-15/2829" target="_blank" rel="noopener">记一次自认为成功的技术选型——AIRFLOW</a></li>
@@ -665,6 +654,8 @@
         <div class="post-tags">
           
             <a href="/tags/airflow/" rel="tag"># airflow</a>
+          
+            <a href="/tags/ETL/" rel="tag"># ETL</a>
           
         </div>
       
@@ -781,7 +772,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -804,7 +795,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">3</span>
+                      
+                    
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -829,7 +822,31 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">16</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
