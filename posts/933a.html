@@ -117,18 +117,18 @@
 
 
 
-  <meta name="description" content="简介 本文不讲如何使用XGBoost也不讲如何调参，主要会讲一下作为GBDT中的一种，XGBoost的原理与相关公式推导。为了循序渐进的理解，读者可先从简单的回归树再到提升树再来看本文。关于回归树与提升树占位链接如下，后续进行更新。我们现在直接从XGBoost的目标函数讲起。  回归树原理与推导 提升树原理与推导  XGBoost公式推导 XGBoost的目标函数如下： \[ obj">
+  <meta name="description" content="简介 本文不讲如何使用XGBoost也不讲如何调参，主要会讲一下作为GBDT中的一种，XGBoost的原理与相关公式推导。为了循序渐进的理解，读者可先从简单的回归树再到提升树再来看本文。关于回归树与提升树占位链接如下。我们现在直接从XGBoost的目标函数讲起。  回归树原理与推导 提升树原理与推导  XGBoost公式推导 XGBoost的目标函数如下： \[ obj=\sum_{">
 <meta name="keywords" content="原理,推导,XGBoost,提升方法,boosting,GBDT">
 <meta property="og:type" content="article">
 <meta property="og:title" content="XGBoost原理与推导">
 <meta property="og:url" content="https://lukebest.github.io/posts/933a.html">
 <meta property="og:site_name" content="心明录">
-<meta property="og:description" content="简介 本文不讲如何使用XGBoost也不讲如何调参，主要会讲一下作为GBDT中的一种，XGBoost的原理与相关公式推导。为了循序渐进的理解，读者可先从简单的回归树再到提升树再来看本文。关于回归树与提升树占位链接如下，后续进行更新。我们现在直接从XGBoost的目标函数讲起。  回归树原理与推导 提升树原理与推导  XGBoost公式推导 XGBoost的目标函数如下： \[ obj">
+<meta property="og:description" content="简介 本文不讲如何使用XGBoost也不讲如何调参，主要会讲一下作为GBDT中的一种，XGBoost的原理与相关公式推导。为了循序渐进的理解，读者可先从简单的回归树再到提升树再来看本文。关于回归树与提升树占位链接如下。我们现在直接从XGBoost的目标函数讲起。  回归树原理与推导 提升树原理与推导  XGBoost公式推导 XGBoost的目标函数如下： \[ obj=\sum_{">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-09T07:11:18.170Z">
+<meta property="og:updated_time" content="2019-04-09T08:18:08.833Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="XGBoost原理与推导">
-<meta name="twitter:description" content="简介 本文不讲如何使用XGBoost也不讲如何调参，主要会讲一下作为GBDT中的一种，XGBoost的原理与相关公式推导。为了循序渐进的理解，读者可先从简单的回归树再到提升树再来看本文。关于回归树与提升树占位链接如下，后续进行更新。我们现在直接从XGBoost的目标函数讲起。  回归树原理与推导 提升树原理与推导  XGBoost公式推导 XGBoost的目标函数如下： \[ obj">
+<meta name="twitter:description" content="简介 本文不讲如何使用XGBoost也不讲如何调参，主要会讲一下作为GBDT中的一种，XGBoost的原理与相关公式推导。为了循序渐进的理解，读者可先从简单的回归树再到提升树再来看本文。关于回归树与提升树占位链接如下。我们现在直接从XGBoost的目标函数讲起。  回归树原理与推导 提升树原理与推导  XGBoost公式推导 XGBoost的目标函数如下： \[ obj=\sum_{">
 
 
 
@@ -486,7 +486,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-09 15:11:18" itemprop="dateModified" datetime="2019-04-09T15:11:18+08:00">2019-04-09</time>
+                <time title="修改时间：2019-04-09 16:18:08" itemprop="dateModified" datetime="2019-04-09T16:18:08+08:00">2019-04-09</time>
               
             
           </span>
@@ -563,7 +563,7 @@
 
       
         <h1 id="简介">简介</h1>
-<p>本文不讲如何使用<code>XGBoost</code>也不讲如何调参，主要会讲一下作为<code>GBDT</code>中的一种，<code>XGBoost</code>的原理与相关公式推导。为了循序渐进的理解，读者可先从简单的回归树再到提升树再来看本文。关于回归树与提升树占位链接如下，后续进行更新。我们现在直接从<code>XGBoost</code>的目标函数讲起。</p>
+<p>本文不讲如何使用<code>XGBoost</code>也不讲如何调参，主要会讲一下作为<code>GBDT</code>中的一种，<code>XGBoost</code>的原理与相关公式推导。为了循序渐进的理解，读者可先从简单的回归树再到提升树再来看本文。关于回归树与提升树占位链接如下。我们现在直接从<code>XGBoost</code>的目标函数讲起。</p>
 <ul>
 <li><a href="/posts/917e.html" title="回归树原理与推导">回归树原理与推导</a></li>
 <li><a href="/posts/e647.html" title="提升树原理与推导">提升树原理与推导</a></li>
@@ -595,6 +595,8 @@ h_i=\partial^2_{\hat{y}^{(t-1)}}\mathcal{L}(y_i,\hat{y}^{(t-1)})\\
 <p>那么如何获取最优的树结构呢？方式一：遍历所有可能的树结构，计算每种可能的树的结构分，然后再找到最小结构分对应的权重。这种方式可想而知根本无法实际应用。方式二：基于贪心策略，每次分裂都使得分裂后的增益最大。这种方式其实与决策树的树基本生成算法类似，只是增益的定义不一样。我们这里的增益可以树的结构分来定义，每次树的分裂点使得整体树的结构分下降得最大，定义如下： <span class="math display">\[\mathcal{L}_{split}=\frac{1}{2}(\frac{G_L^2}{H_L+\lambda}+\frac{G_R^2}{H_R+\lambda}-\frac{(G_L^2+G_R^2)}{H_L+H_R+\lambda})-\gamma \tag{20}\]</span></p>
 <h1 id="总结">总结</h1>
 <p>我们对本文从上到下总结一下。<code>XGBoost</code>首先确定好树的棵数。对于每轮的那棵树，其形成步骤大体可以分为两大块，第一要先确定好树的最优结构，一般会根据树的结构分下降最大的分裂点进行贪心算法构造，当然这里会有一些单棵树的深度或者叶子节点数限制。当树的结构确定好之后，对于每个叶子节点的权重，可以很快地用一元二次函数解法求得。当此轮的树生成完毕后，即可求得每个样本的预测结果，从而进行下一轮迭代。</p>
+<h1 id="参考文献">参考文献</h1>
+<p><a href="https://www.kdd.org/kdd2016/papers/files/rfp0697-chenAemb.pdf" target="_blank" rel="noopener">XGBoost: A Scalable Tree Boosting System</a></p>
 
       
     </div>
@@ -977,7 +979,7 @@ h_i=\partial^2_{\hat{y}^{(t-1)}}\mathcal{L}(y_i,\hat{y}^{(t-1)})\\
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#xgboost公式推导"><span class="nav-number">2.</span> <span class="nav-text">XGBoost公式推导</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#boosting"><span class="nav-number">2.1.</span> <span class="nav-text">Boosting</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#taylor展开"><span class="nav-number">2.2.</span> <span class="nav-text">Taylor展开</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#树的权重求解与结构分"><span class="nav-number">2.3.</span> <span class="nav-text">树的权重求解与结构分</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何找到最优的树结构"><span class="nav-number">3.</span> <span class="nav-text">如何找到最优的树结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#xgboost公式推导"><span class="nav-number">2.</span> <span class="nav-text">XGBoost公式推导</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#boosting"><span class="nav-number">2.1.</span> <span class="nav-text">Boosting</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#taylor展开"><span class="nav-number">2.2.</span> <span class="nav-text">Taylor展开</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#树的权重求解与结构分"><span class="nav-number">2.3.</span> <span class="nav-text">树的权重求解与结构分</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何找到最优的树结构"><span class="nav-number">3.</span> <span class="nav-text">如何找到最优的树结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考文献"><span class="nav-number">5.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
             
 
           </div>

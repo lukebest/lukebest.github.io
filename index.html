@@ -842,7 +842,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-09 15:11:18" itemprop="dateModified" datetime="2019-04-09T15:11:18+08:00">2019-04-09</time>
+                <time title="修改时间：2019-04-09 16:18:08" itemprop="dateModified" datetime="2019-04-09T16:18:08+08:00">2019-04-09</time>
               
             
           </span>
@@ -922,13 +922,13 @@
           
             <p>
               简介
-本文不讲如何使用XGBoost也不讲如何调参，主要会讲一下作为GBDT中的一种，XGBoost的原理与相关公式推导。为了循序渐进的理解，读者可先从简单的回归树再到提升树再来看本文。关于回归树与提升树占位链接如下，后续进行更新。我们现在直接从XGBoost的目标函数讲起。
+本文不讲如何使用XGBoost也不讲如何调参，主要会讲一下作为GBDT中的一种，XGBoost的原理与相关公式推导。为了循序渐进的理解，读者可先从简单的回归树再到提升树再来看本文。关于回归树与提升树占位链接如下。我们现在直接从XGBoost的目标函数讲起。
 
 回归树原理与推导
 提升树原理与推导
 
 XGBoost公式推导
-XGBoost的目标函数如下： \[ obj=\sum_{i=1}^n\mathcal{L}(y_i,\hat{y}_i)+\sum \Omega(f_k),f_k\in\mathcal{F} \tag1\] 上面的两项加号前项为在训练集上的损失函数。其中\(y_i\)表示真实值，\(\hat{y}_i\)表示预测值。加号后项为正则项，到后面再看\(\Omega\)这个函数的具体形式。我们现在只需要知道\(\Omega\)的自变量为\(f_
+XGBoost的目标函数如下： \[ obj=\sum_{i=1}^n\mathcal{L}(y_i,\hat{y}_i)+\sum \Omega(f_k),f_k\in\mathcal{F} \tag1\] 上面的两项加号前项为在训练集上的损失函数。其中\(y_i\)表示真实值，\(\hat{y}_i\)表示预测值。加号后项为正则项，到后面再看\(\Omega\)这个函数的具体形式。我们现在只需要知道\(\Omega\)的自变量为\(f_k\)，是决策
               ...
             </p>
           <!--noindex-->
