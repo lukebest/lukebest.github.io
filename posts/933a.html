@@ -125,7 +125,7 @@
 <meta property="og:site_name" content="心明录">
 <meta property="og:description" content="简介 本文不讲如何使用XGBoost也不讲如何调参，主要会讲一下作为GBDT中的一种，XGBoost的原理与相关公式推导。为了循序渐进的理解，读者可先从简单的回归树再到提升树再来看本文。关于回归树与提升树占位链接如下。我们现在直接从XGBoost的目标函数讲起。  回归树原理与推导 提升树原理与推导  XGBoost公式推导 XGBoost的目标函数如下： \[ obj=\sum_{">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-09T08:18:08.833Z">
+<meta property="og:updated_time" content="2019-04-09T08:49:12.229Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="XGBoost原理与推导">
 <meta name="twitter:description" content="简介 本文不讲如何使用XGBoost也不讲如何调参，主要会讲一下作为GBDT中的一种，XGBoost的原理与相关公式推导。为了循序渐进的理解，读者可先从简单的回归树再到提升树再来看本文。关于回归树与提升树占位链接如下。我们现在直接从XGBoost的目标函数讲起。  回归树原理与推导 提升树原理与推导  XGBoost公式推导 XGBoost的目标函数如下： \[ obj=\sum_{">
@@ -486,7 +486,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-09 16:18:08" itemprop="dateModified" datetime="2019-04-09T16:18:08+08:00">2019-04-09</time>
+                <time title="修改时间：2019-04-09 16:49:12" itemprop="dateModified" datetime="2019-04-09T16:49:12+08:00">2019-04-09</time>
               
             
           </span>
@@ -577,7 +577,7 @@
 <h2 id="taylor展开">Taylor展开</h2>
 <p>在(5)这个式子的基础上，我们就可以做点文章了。我们现在假定经验损失<span class="math inline">\(\mathcal{L}\)</span>是可以二阶<code>Taylor</code>展开的。把<span class="math inline">\(f_t(x_i)\)</span>当成无穷小，就得到了如下式： <span class="math display">\[ obj^{(t)}\approx\sum_{i=1}^n[\mathcal{L}(y_i,\hat{y}_i^{(t-1)})+g_if_t(x_i)+\frac{1}{2}h_if_t^2(x_i)]+\Omega(f_t)+const \tag6\]</span></p>
 <blockquote>
-<p>(6)这个式子是比较抽象的，为帮助对<span class="math inline">\(g_i\)</span>和<span class="math inline">\(h_i\)</span>的理解，我们把常见的到平方损失函数代入(5)可有： <span class="math display">\[ obj^{(t)}=\sum_{i=1}^n(y_i-(\hat{y}_i^{(t-1)}+f_t(x_i)))^2+\Omega(f_t)+const\]</span> 展开有： <span class="math display">\[ obj^{(t)}=\sum_{i=1}^n[(y_i-\hat{y}_i^{(t-1)})^2+2(\hat{y}_i^{(t-1)}-y_i)f_t(x_i)+f_t^2(x_i)]+\Omega(f_t)+const\]</span> 即： <span class="math display">\[ obj^{(t)}=\sum_{i=1}^n[\mathcal{L}(y_i,\hat{y}^{(t-1)})+2(\hat{y}_i^{(t-1)}-y_i)f_t(x_i)+f_t^2(x_i)]+\Omega(f_t)+const\]</span> 套用一下(6)式，即有当损失函数为平方损失时<span class="math inline">\(g_i=2(\hat{y}_i^{(t-1)}-y_i)\)</span>，<span class="math inline">\(h_i=2\)</span>。</p>
+<p>(6)这个式子是比较抽象的，为帮助对<span class="math inline">\(g_i\)</span>和<span class="math inline">\(h_i\)</span>的理解，我们把常见的平方损失函数代入(5)可有： <span class="math display">\[ obj^{(t)}=\sum_{i=1}^n(y_i-(\hat{y}_i^{(t-1)}+f_t(x_i)))^2+\Omega(f_t)+const\]</span> 展开有： <span class="math display">\[ obj^{(t)}=\sum_{i=1}^n[(y_i-\hat{y}_i^{(t-1)})^2+2(\hat{y}_i^{(t-1)}-y_i)f_t(x_i)+f_t^2(x_i)]+\Omega(f_t)+const\]</span> 即： <span class="math display">\[ obj^{(t)}=\sum_{i=1}^n[\mathcal{L}(y_i,\hat{y}^{(t-1)})+2(\hat{y}_i^{(t-1)}-y_i)f_t(x_i)+f_t^2(x_i)]+\Omega(f_t)+const\]</span> 套用一下(6)式，即有当损失函数为平方损失时<span class="math inline">\(g_i=2(\hat{y}_i^{(t-1)}-y_i)\)</span>，<span class="math inline">\(h_i=2\)</span>。</p>
 </blockquote>
 <p>我们再考察(6)式，其中的<span class="math inline">\(\mathcal{L}(y_i,\hat{y}_i^{(t-1)})\)</span>意义是<span class="math inline">\(t-1\)</span>轮的经验损失，在执行第<span class="math inline">\(t\)</span>轮的时候，这一项其实已经也是一个已知的常数。那么优化目标就可以继续简化如下： <span class="math display">\[ obj^{(t)}=\sum_{i=1}^n[g_if_t(x_i)+\frac{1}{2}h_if_t^2(x_i)]+\Omega(f_t) \tag7\]</span> 其中，<span class="math inline">\(g_i\)</span>和<span class="math inline">\(h_i\)</span>可根据<code>Taylor</code>公式求得如下： <span class="math display">\[\begin{cases}
 g_i=\partial_{\hat{y}^{(t-1)}}\mathcal{L}(y_i,\hat{y}^{(t-1)})\\
@@ -592,7 +592,7 @@ h_i=\partial^2_{\hat{y}^{(t-1)}}\mathcal{L}(y_i,\hat{y}^{(t-1)})\\
 <p>到这里，我们可以看到(7)式中优化事实上可以着重分为两大步，第一步拿到树结构，第二步再计算叶子节点上的权重大小。我们先令： <span class="math display">\[I_j=\{i|q(x_i)=j\},j\in \{1,2,\cdots,T\} \tag{12}\]</span> (12)式的意思是定义<strong>所有</strong>落在第<span class="math inline">\(j\)</span>个叶子节点的样本为<span class="math inline">\(I_j\)</span>，即被映射到第<span class="math inline">\(j\)</span>个叶子节点上的所有样本<span class="math inline">\(x_i\)</span>的索引。那么对(11)式按树的叶子节点维度重写如下： <span class="math display">\[ obj^{(t)}=\sum_{j=1}^T[(\sum_{i\in I_j}g_i)w_j+\frac{1}{2}(\sum_{i\in I_j}h_i+\lambda)w^2_j]+\gamma T\tag{13}\]</span> 我们令 <span class="math display">\[G_j=\sum_{i\in I_j}g_i \tag{14}\]</span> <span class="math display">\[H_j=\sum_{i\in I_j}h_i \tag{15}\]</span> 把(14)(15)代入(13)有： <span class="math display">\[ obj^{(t)}=\sum_{j=1}^T[G_jw_j+\frac{1}{2}(H_j+\lambda)w^2_j]+\gamma T\tag{16}\]</span> 我们<strong>假定这时候树的结构</strong>已经知道，那么映射到叶子节点<span class="math inline">\(j\)</span>上面的样本索引就固定了，而损失函数也是已知的，由(8)可有<span class="math inline">\(g_i\)</span>和<span class="math inline">\(h_i\)</span>都是已知的，进而<span class="math inline">\(G_j\)</span>和<span class="math inline">\(H_j\)</span>则都是已知的。那么，目标函数就变成了求叶子节点个数<span class="math inline">\(T\)</span>个的关于<span class="math inline">\(w\)</span>的一元二次函数求和的形式，而且他们两两之间都是独立的。接下来我们对每个<span class="math inline">\(w\)</span>进行求解，用到的就是高中数学知识了。对于每个这个形式的一元二次函数，可有取极值时的<span class="math inline">\(w\)</span>： <span class="math display">\[argmin_w[Gw+\frac{1}{2}(H+\lambda)w^2]=-\frac{G}{H+\lambda},H&gt;0 \tag{17}\]</span> 这个时候极值为: <span class="math display">\[min_w[Gw+\frac{1}{2}(H+\lambda)w^2]=-\frac{G^2}{2(H+\lambda)} \tag{18}\]</span> 即这个时候，目标函数的极值： <span class="math display">\[\hat{obj}^{(t)}=-\sum_{j=1}^T\frac{G^2}{2(H+\lambda)}+\gamma T \tag{19}\]</span> 也被称为树的结构分。</p>
 <p>到这里，我们解决了一个问题，就是<strong>在知道每轮的树的结构<span class="math inline">\(q\)</span>的前提下，我们能够很快求得每个叶子节点上的最优权重值<span class="math inline">\(w\)</span></strong>。</p>
 <h1 id="如何找到最优的树结构">如何找到最优的树结构</h1>
-<p>那么如何获取最优的树结构呢？方式一：遍历所有可能的树结构，计算每种可能的树的结构分，然后再找到最小结构分对应的权重。这种方式可想而知根本无法实际应用。方式二：基于贪心策略，每次分裂都使得分裂后的增益最大。这种方式其实与决策树的树基本生成算法类似，只是增益的定义不一样。我们这里的增益可以树的结构分来定义，每次树的分裂点使得整体树的结构分下降得最大，定义如下： <span class="math display">\[\mathcal{L}_{split}=\frac{1}{2}(\frac{G_L^2}{H_L+\lambda}+\frac{G_R^2}{H_R+\lambda}-\frac{(G_L^2+G_R^2)}{H_L+H_R+\lambda})-\gamma \tag{20}\]</span></p>
+<p>那么如何获取最优的树结构呢？方式一：遍历所有可能的树结构，计算每种可能的树的结构分，然后再找到最小结构分对应的权重。这种方式可想而知根本无法实际应用。方式二：基于贪心策略，每次分裂都使得分裂后的增益最大。这种方式其实与决策树的树基本生成算法类似，只是增益的定义不一样。我们这里的增益可以用树的结构分来定义，每次树的分裂点使得整体树的结构分下降得最大，定义如下： <span class="math display">\[\mathcal{L}_{split}=\frac{1}{2}(\frac{G_L^2}{H_L+\lambda}+\frac{G_R^2}{H_R+\lambda}-\frac{(G_L^2+G_R^2)}{H_L+H_R+\lambda})-\gamma \tag{20}\]</span></p>
 <h1 id="总结">总结</h1>
 <p>我们对本文从上到下总结一下。<code>XGBoost</code>首先确定好树的棵数。对于每轮的那棵树，其形成步骤大体可以分为两大块，第一要先确定好树的最优结构，一般会根据树的结构分下降最大的分裂点进行贪心算法构造，当然这里会有一些单棵树的深度或者叶子节点数限制。当树的结构确定好之后，对于每个叶子节点的权重，可以很快地用一元二次函数解法求得。当此轮的树生成完毕后，即可求得每个样本的预测结果，从而进行下一轮迭代。</p>
 <h1 id="参考文献">参考文献</h1>
