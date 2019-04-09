@@ -117,25 +117,25 @@
 
 
 
-  <meta name="description" content="parquet是什么 Apache Parquet 是一种 列式存储 格式可用于 Hadoop 生态系统中的任何组件，无论是数据处理框架，数据模型，或者编程语言。Parquet 文件格式包含几个支持数据仓库风格操作的功能 : - 列式存储设计 - 仅仅从数据文件或者表中读取一小部分数据时查询可以检测和执行计算所有值中的一个列。 - 灵活的压缩选项 - 数据能够使用几种编码器压缩。可以将不同的数据">
-<meta name="keywords" content="parquet2csv,数据处理">
+  <meta name="description" content="简介 本文不讲如何使用逻辑回归，主要会讲一下逻辑回归的算法和模型背后的假设。主要分为两部分，一个是逻辑回归公式的推导，其次会讲述一下如何理解sigmoid函数。 逻辑回归推导 首先我们知道逻辑回归的一个sigmoid假设，这个假设背后的由来我们会在后面给出，请先记得这个假设。公式如下： \[ p(y=1|x) = \frac {1} {1+e^{-(\theta^Tx+b)}} \tag1\">
+<meta name="keywords" content="LR,逻辑回归,logistic regression,SGD,BGD,梯度下降,原理,推导">
 <meta property="og:type" content="article">
-<meta property="og:title" content="parquet转csv">
-<meta property="og:url" content="https://lukebest.github.io/posts/cd96.html">
+<meta property="og:title" content="Logistic Regression原理与推导">
+<meta property="og:url" content="https://lukebest.github.io/posts/d28f.html">
 <meta property="og:site_name" content="心明录">
-<meta property="og:description" content="parquet是什么 Apache Parquet 是一种 列式存储 格式可用于 Hadoop 生态系统中的任何组件，无论是数据处理框架，数据模型，或者编程语言。Parquet 文件格式包含几个支持数据仓库风格操作的功能 : - 列式存储设计 - 仅仅从数据文件或者表中读取一小部分数据时查询可以检测和执行计算所有值中的一个列。 - 灵活的压缩选项 - 数据能够使用几种编码器压缩。可以将不同的数据">
+<meta property="og:description" content="简介 本文不讲如何使用逻辑回归，主要会讲一下逻辑回归的算法和模型背后的假设。主要分为两部分，一个是逻辑回归公式的推导，其次会讲述一下如何理解sigmoid函数。 逻辑回归推导 首先我们知道逻辑回归的一个sigmoid假设，这个假设背后的由来我们会在后面给出，请先记得这个假设。公式如下： \[ p(y=1|x) = \frac {1} {1+e^{-(\theta^Tx+b)}} \tag1\">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-04T07:13:32.144Z">
+<meta property="og:updated_time" content="2019-04-08T06:01:01.702Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="parquet转csv">
-<meta name="twitter:description" content="parquet是什么 Apache Parquet 是一种 列式存储 格式可用于 Hadoop 生态系统中的任何组件，无论是数据处理框架，数据模型，或者编程语言。Parquet 文件格式包含几个支持数据仓库风格操作的功能 : - 列式存储设计 - 仅仅从数据文件或者表中读取一小部分数据时查询可以检测和执行计算所有值中的一个列。 - 灵活的压缩选项 - 数据能够使用几种编码器压缩。可以将不同的数据">
+<meta name="twitter:title" content="Logistic Regression原理与推导">
+<meta name="twitter:description" content="简介 本文不讲如何使用逻辑回归，主要会讲一下逻辑回归的算法和模型背后的假设。主要分为两部分，一个是逻辑回归公式的推导，其次会讲述一下如何理解sigmoid函数。 逻辑回归推导 首先我们知道逻辑回归的一个sigmoid假设，这个假设背后的由来我们会在后面给出，请先记得这个假设。公式如下： \[ p(y=1|x) = \frac {1} {1+e^{-(\theta^Tx+b)}} \tag1\">
 
 
 
 
 
 
-  <link rel="canonical" href="https://lukebest.github.io/posts/cd96.html">
+  <link rel="canonical" href="https://lukebest.github.io/posts/d28f.html">
 
 
 
@@ -145,7 +145,7 @@
   };
 </script>
 
-  <title>parquet转csv | 心明录</title>
+  <title>Logistic Regression原理与推导 | 心明录</title>
   
 
 
@@ -426,7 +426,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://lukebest.github.io/posts/cd96.html">
+    <link itemprop="mainEntityOfPage" href="https://lukebest.github.io/posts/d28f.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="瑾锋">
@@ -443,7 +443,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">parquet转csv
+          <h2 class="post-title" itemprop="name headline">Logistic Regression原理与推导
 
               
             
@@ -469,7 +469,7 @@
                 
               
 
-              <time title="创建时间：2019-04-01 17:26:36" itemprop="dateCreated datePublished" datetime="2019-04-01T17:26:36+08:00">2019-04-01</time>
+              <time title="创建时间：2019-04-03 17:58:20" itemprop="dateCreated datePublished" datetime="2019-04-03T17:58:20+08:00">2019-04-03</time>
             
 
             
@@ -486,7 +486,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-04 15:13:32" itemprop="dateModified" datetime="2019-04-04T15:13:32+08:00">2019-04-04</time>
+                <time title="修改时间：2019-04-08 14:01:01" itemprop="dateModified" datetime="2019-04-08T14:01:01+08:00">2019-04-08</time>
               
             
           </span>
@@ -503,7 +503,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/工具环境/" itemprop="url" rel="index"><span itemprop="name">工具环境</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/算法/" itemprop="url" rel="index"><span itemprop="name">算法</span></a></span>
 
                 
                 
@@ -522,8 +522,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/posts/cd96.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/posts/cd96.html" itemprop="commentCount"></span>
+                <a href="/posts/d28f.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/posts/d28f.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -531,7 +531,7 @@
 
           
           
-            <span id="/posts/cd96.html" class="leancloud_visitors" data-flag-title="parquet转csv">
+            <span id="/posts/d28f.html" class="leancloud_visitors" data-flag-title="Logistic Regression原理与推导">
               <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
@@ -562,19 +562,67 @@
       
 
       
-        <h1 id="parquet是什么">parquet是什么</h1>
-<p>Apache Parquet 是一种 列式存储 格式可用于 Hadoop 生态系统中的任何组件，无论是数据处理框架，数据模型，或者编程语言。Parquet 文件格式包含几个支持数据仓库风格操作的功能 : - 列式存储设计 - 仅仅从数据文件或者表中读取一小部分数据时查询可以检测和执行计算所有值中的一个列。 - 灵活的压缩选项 - 数据能够使用几种编码器压缩。可以将不同的数据文件压缩成不同的格式。 - 新颖的编码方案 - 相同的，相似的或者相关数据值的序列可以存储在硬盘和内存。The encoding schemes provide an extra level of space savings beyond overall compression for each data file。 - 大的文件 - Parquet 数据文件是被设计用于优化查询大量数据，单个文件大小在 MB 甚至 GB 以上。</p>
-<p>在实际的数据挖掘工作中，可能会有把parquet文件转为csv后本地验证或者实验的需求。 # 如何把parquet转为csv ## 前期准备 需要安装<code>pyarrow</code>库： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install pyarrow</span><br></pre></td></tr></table></figure></p>
-<p>or <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install pyarrow</span><br></pre></td></tr></table></figure></p>
-<h2 id="处理转换">处理转换</h2>
-<p>python文件如下： <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> pyarrow.parquet <span class="keyword">as</span> pq</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">read_pyarrow</span><span class="params">(path, use_threads=<span class="number">1</span>)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> pq.read_table(path, use_threads=use_threads).to_pandas()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_file_list</span><span class="params">(file_dir=<span class="string">'.'</span>)</span>:</span></span><br><span class="line">    L = []</span><br><span class="line">    <span class="keyword">for</span> root, _, files <span class="keyword">in</span> os.walk(file_dir):</span><br><span class="line">        <span class="keyword">for</span> file <span class="keyword">in</span> files:</span><br><span class="line">            <span class="keyword">if</span> os.path.splitext(file)[<span class="number">1</span>] == <span class="string">'.parquet'</span>:</span><br><span class="line">                L.append(os.path.join(root, file))</span><br><span class="line">    <span class="keyword">return</span> L</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_csv</span><span class="params">(file_list)</span>:</span></span><br><span class="line">    init_flag = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> f <span class="keyword">in</span> file_list:</span><br><span class="line">        print(<span class="string">'The current handling file is:\n'</span>, f)</span><br><span class="line">        <span class="keyword">if</span> init_flag == <span class="number">0</span>:</span><br><span class="line">            init_df = read_pyarrow(f)</span><br><span class="line">            init_flag = <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            t_df = read_pyarrow(f)</span><br><span class="line">            init_df = pd.concat([init_df, t_df])</span><br><span class="line">    <span class="keyword">return</span> init_df</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">path = <span class="string">'JoinPredict-20190401055632-SLOT_0-29358'</span></span><br><span class="line"></span><br><span class="line">file_list = get_file_list(path)</span><br><span class="line">df = get_csv(file_list)</span><br><span class="line">df.to_csv(<span class="string">'./parquet_data.csv'</span>,</span><br><span class="line">          sep=<span class="string">','</span>, index=<span class="literal">False</span>, mode=<span class="string">'w'</span>, line_terminator=<span class="string">'\n'</span>, encoding=<span class="string">'utf-8'</span>)</span><br></pre></td></tr></table></figure></p>
-<p>笔者本身的需求便是要把一个文件夹内的多个parquet文件转换为一个总的csv文件。如需要分别转换，修改源码即可。 # github <a href="https://github.com/lukebest/parquet2csv" target="_blank" rel="noopener">github源码</a> # 参考链接 <a href="http://cwiki.apachecn.org/pages/viewpage.action?pageId=2884896" target="_blank" rel="noopener">Parquet 文件</a></p>
+        <h1 id="简介">简介</h1>
+<p>本文不讲如何使用逻辑回归，主要会讲一下逻辑回归的算法和模型背后的假设。主要分为两部分，一个是逻辑回归公式的推导，其次会讲述一下如何理解sigmoid函数。</p>
+<h1 id="逻辑回归推导">逻辑回归推导</h1>
+<p>首先我们知道逻辑回归的一个<code>sigmoid</code>假设，这个假设背后的由来我们会在后面给出，请先记得这个假设。公式如下： <span class="math display">\[ p(y=1|x) = \frac {1} {1+e^{-(\theta^Tx+b)}} \tag1\]</span> 这个假设告诉我们分为正样本的概率为(1)中右式。其中<span class="math inline">\(x\)</span>为输入的向量，计算的结果与<code>0.5</code>比较，如果大于0.5则为正样本。右式的值域易知为(0,1)。对于负样本，有： <span class="math display">\[ p(y=0|x) = 1-p(y=1|x) \tag2\]</span> 综合上述二式可得： <span class="math display">\[ p(y|x) = p(y=1|x)^yp(y=0|x)^{1-y} \tag3\]</span> 注意得到上式用到了数学的trick，即下式： <span class="math display">\[\begin{cases}
+p(y=1|x),y=1\\
+p(x=0|x),y=0\\
+\end{cases}
+\]</span> 我们继续往下。事实上，从(3)式我们就知道了概率函数<span class="math inline">\(p(y|x)\)</span>，拿到概率函数，我们可以求其最大似然估计（maximum likelihood estimation，MLE）。</p>
+<blockquote>
+<p>MLE是用来估计概率模型的参数的一种方法，最大似然估计会寻找关于 <span class="math inline">\(\theta\)</span> 的最可能的值（即，在所有可能的<span class="math inline">\(\theta\)</span> 取值中，寻找一个值使这个采样的“可能性”最大化）。从数学上来说，我们可以在<span class="math inline">\(\theta\)</span>的所有可能取值中寻找一个值使得似然函数取到最大值。这个使可能性最大的<span class="math inline">\(\widehat{\theta}\)</span>值即称为 <span class="math inline">\(\theta\)</span>的最大似然估计。由定义，最大似然估计是样本的函数。</p>
+</blockquote>
+<p>如果有<code>n</code>个样本，那么其似然函数为(3)式的<code>n</code>个样本的乘积： <span class="math display">\[ likelihood=\prod_{i=1}^np(y_i|x_i) \tag4\]</span> <span class="math display">\[ likelihood=\prod_{i=1}^np(y_i=1|x_i)^{y_i}p(y_i=0|x_i)^{1-y_i} \tag5\]</span> 对(5)取log： <span class="math display">\[ log\_likelihood=\sum_{i=1}^ny_i*ln(p(y_i=1|x_i))+(1-y_i)*ln(p(y_i=0|x_i)) \tag6\]</span> 于是就变成了对数似然函数(6)，对<code>log_likelihood</code>，我们是希望它越大越好（极大似然估计），如果对其取负，则可以作为损失函数，我们是希望损失越小越好。这里的优化方法，先从简单的说，可用梯度下降进行迭代优化（对数似然函数对应地用梯度上升）。</p>
+<p>我们现在把最初始的(1)式代入(6)： <span class="math display">\[ log\_likelihood=\sum_{i=1}^ny_i*ln(\frac {1} {1+e^{-(\theta^Tx_i+b)}})+(1-y_i)*ln(1-\frac {1} {1+e^{-(\theta^Tx_i+b)}}) \tag7\]</span> 对于<code>sigmoid</code>函数，求导是非常方便的。即有： <span class="math display">\[ f(x)=\frac1{1+e^{-x}} \tag8\]</span> <span class="math display">\[ f^\prime(x)=f(x)*(1-f(x)) \tag9\]</span> 那么(7)式对<span class="math inline">\(\theta\)</span>求梯度有： <span class="math display">\[ \nabla_\theta log\_likelihood=\sum_{i=1}^n x_i*(y_i-\frac{1}{1+e^{-(\theta^T x_i+b)}}) \tag{10}\]</span> 其中(10)式中的<code>b</code>可以先忽略（可以与<span class="math inline">\(\theta\)</span>统一）。</p>
+<h1 id="迭代优化方式">迭代优化方式</h1>
+<h2 id="bgdbatch-gradient-descent">BGD(Batch Gradient Descent)</h2>
+<p>对极大似然函数梯度上升，有： <span class="math display">\[ \vec\theta_{i+1}=  \vec\theta_{i}+\lambda*\nabla_\theta log\_likelihood \tag{11}\]</span> 把(10)代入，即： <span class="math display">\[ \vec\theta_{i+1}=  \vec\theta_{i}+\lambda*\sum_{i=1}^n \vec x_i*(y_i-\frac{1}{1+e^{-(\vec\theta^T \vec x_i+b)}}) \tag{12}\]</span> (12)式就是全批量梯度更新方法，其中<span class="math inline">\(\lambda\)</span>即为一般意义上的学习步长。从(12)式可以看到，要把<code>n</code>个数据样本全部代入后方可进行梯度更新。计算来说是比较繁琐的。而根据监督学习的假设<strong>样本数据是依据某种联合概率分布独立同分布产生</strong>，那么可有一种一次用一个样本的梯度更新方式，就是SGD(Stochastic Gradient Descent)。</p>
+<h2 id="sgdstochastic-gradient-descent">SGD(Stochastic Gradient Descent)</h2>
+<p>随机梯度更新方式就是在(12)式去掉了求和符号： <span class="math display">\[ \vec\theta_{i+1}=  \vec\theta_{i}+\lambda*\vec x_i*(y_i-\frac{1}{1+e^{-(\vec\theta^T \vec x_i+b)}}) \tag{13}\]</span> 随机梯度更新方式来一条样本即可做一次更新，通常情况下会引入较大的随机性。<code>BGD</code>和<code>SGD</code>很明显都比较极端，那么就有了一种折中方式<code>Mini-Batch GD</code></p>
+<h2 id="mini-batch-gdmini-batch-gradient-descent">Mini-Batch GD(Mini-Batch Gradient Descent)</h2>
+<p>与<code>BGD</code>类似，只是所有样本的计算换成部分样本计算： <span class="math display">\[ \vec\theta_{i+1}=  \vec\theta_{i}+\lambda*\sum_{i=1}^m \vec x_i*(y_i-\frac{1}{1+e^{-(\vec\theta^T \vec x_i+b)}}) \tag{14}\]</span> 其中<span class="math inline">\(m\ll n\)</span>，这样做的好处就是可以综合<code>SGD</code>和<code>BGD</code>。在较快更新速度的同时可以有一定的随机性防止陷入局部最优。以上的梯度更新方式在神经网络的训练中也可以借鉴。</p>
+<h1 id="sigmoid函数的由来">sigmoid函数的由来</h1>
+<p>我们在最开始有一个假设，一切的出发点为(1)中的假设。那么为什么会有这样一个假设呢？</p>
+<p>我们先看一个一般性的二分类的贝叶斯公式，二类分别为<code>C1</code>和<code>C2</code>： <span class="math display">\[ p(C1|x)=\frac{p(x|C1)p(C1)}{p(x|C1)p(C1)+p(x|C2)p(C2)} \tag{15}\]</span> 我们对(15)式右边的分子分母同时除以<span class="math inline">\(p(x|C1)p(C1)\)</span>（二分类问题可保证其一定不为0），那么就有： <span class="math display">\[ p(C1|x)=\frac1{1+\frac{p(x|C2)p(C2)}{p(x|C1)p(C1)}} \tag{16}\]</span> 我们可以令： <span class="math display">\[a=ln\frac{p(x|C1)p(C1)}{p(x|C2)p(C2)} \tag{17}\]</span> 那么把(17)代入(16)，即有： <span class="math display">\[ p(C1|x)=\frac1{1+e^{-a}} \tag{18}\]</span> 上面的(18)式就是我们最初的<code>sigmoid</code>函数。我们再看一下(17)式，用人话把<span class="math inline">\(ln\)</span>的对象描述如下：分类为<code>C1</code>的<code>x</code>出现的概率比上分类为<code>C2</code>的<code>x</code>出现的概率。</p>
+<h1 id="广义指数分布函数族">广义指数分布函数族</h1>
+<p>虽然(18)式看着和我们最开始的假设很像，但细心的读者可以看到最开始假设的<span class="math inline">\(a\)</span>是<span class="math inline">\(\theta\)</span>和<span class="math inline">\(x\)</span>的线性函数。而(17)式目前看不出来像。</p>
+<p>我们先看一下广义指数分布函数族的概念，对于广义指数分布函数族，有： <span class="math display">\[ p(x|\lambda_k)=h(x)g(\lambda_k)e^{\lambda_k^Tu(x)} \tag{19}\]</span> 把(19)代入(17)，有： <span class="math display">\[a=ln\frac{h(x)g(\lambda_1)e^{\lambda_1^Tu(x)}p(C1)}{h(x)g(\lambda_2)e^{\lambda_2^Tu(x)}p(C2)} \tag{20}\]</span> <span class="math inline">\(h(x)\)</span>可以约掉，<span class="math inline">\(g(\lambda_i)\)</span>是常数项可有： <span class="math display">\[a=(\lambda_1-\lambda_2)^Tu(x)+ln(\frac{g(\lambda_1)}{g(\lambda_2)})+ln(\frac{p(C1)}{p(C2)}) \tag{21}\]</span> 即： <span class="math display">\[a=(\lambda_1-\lambda_2)^Tu(x)+const \tag{22}\]</span></p>
+<p>上面就告诉我们，当<span class="math inline">\(p(x|C1)\)</span>和<span class="math inline">\(p(x|C2)\)</span>满足广义指数分布，并且是其中一种特例（<span class="math inline">\(u(x)=x\)</span>），就可以满足<span class="math inline">\(a\)</span>是<span class="math inline">\(\theta\)</span>和<span class="math inline">\(x\)</span>的线性函数，其中<span class="math inline">\((\lambda_1-\lambda_2)=\theta\)</span>。</p>
+<h2 id="其他广义指数分布函数">其他广义指数分布函数</h2>
+<p>这里给出结论，感兴趣者可作详细推导：满足<span class="math inline">\(a\)</span>是<span class="math inline">\(\theta\)</span>和<span class="math inline">\(x\)</span>的线性函数的广义指数分布还有如下：</p>
+<ul>
+<li>Gaussian分布</li>
+<li>Binomial分布</li>
+<li>Poisson分布</li>
+<li>Bernoulli分布</li>
+</ul>
+<p>可以看到逻辑回归的适用范围是比较广的。</p>
+<h1 id="参考链接">参考链接</h1>
+<ul>
+<li><a href="https://zh.wikipedia.org/wiki/%E6%9C%80%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1" target="_blank" rel="noopener">最大似然估计</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Exponential_family" target="_blank" rel="noopener">Exponential family</a></li>
+</ul>
 
       
     </div>
 
     
       
+
+  <div class="popular-posts-header">相关文章</div>
+  <ul class="popular-posts">
+  
+    <li class="popular-posts-item">
+      
+        <div class="popular-posts-date">2019-04-08</div>
+      
+      
+      <div class="popular-posts-title"><a href="\posts\933a.html" rel="bookmark">XGBoost原理与推导</a></div>
+      
+    </li>
+  
+  </ul>
 
 
     
@@ -613,7 +661,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="https://lukebest.github.io/posts/cd96.html" title="parquet转csv">https://lukebest.github.io/posts/cd96.html</a>
+    <a href="https://lukebest.github.io/posts/d28f.html" title="Logistic Regression原理与推导">https://lukebest.github.io/posts/d28f.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -626,9 +674,21 @@
       
         <div class="post-tags">
           
-            <a href="/tags/parquet2csv/" rel="tag"># parquet2csv</a>
+            <a href="/tags/LR/" rel="tag"># LR</a>
           
-            <a href="/tags/数据处理/" rel="tag"># 数据处理</a>
+            <a href="/tags/逻辑回归/" rel="tag"># 逻辑回归</a>
+          
+            <a href="/tags/logistic-regression/" rel="tag"># logistic regression</a>
+          
+            <a href="/tags/SGD/" rel="tag"># SGD</a>
+          
+            <a href="/tags/BGD/" rel="tag"># BGD</a>
+          
+            <a href="/tags/梯度下降/" rel="tag"># 梯度下降</a>
+          
+            <a href="/tags/原理/" rel="tag"># 原理</a>
+          
+            <a href="/tags/推导/" rel="tag"># 推导</a>
           
         </div>
       
@@ -662,8 +722,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/69e5.html" rel="next" title="朴槿惠与文明6">
-                <i class="fa fa-chevron-left"></i> 朴槿惠与文明6
+              <a href="/posts/cd96.html" rel="next" title="parquet转csv">
+                <i class="fa fa-chevron-left"></i> parquet转csv
               </a>
             
           </div>
@@ -672,8 +732,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/d28f.html" rel="prev" title="Logistic Regression原理与推导">
-                Logistic Regression原理与推导 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/933a.html" rel="prev" title="XGBoost原理与推导">
+                XGBoost原理与推导 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -929,7 +989,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#parquet是什么"><span class="nav-number">1.</span> <span class="nav-text">parquet是什么</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#处理转换"><span class="nav-number">1.1.</span> <span class="nav-text">处理转换</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#逻辑回归推导"><span class="nav-number">2.</span> <span class="nav-text">逻辑回归推导</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#迭代优化方式"><span class="nav-number">3.</span> <span class="nav-text">迭代优化方式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#bgdbatch-gradient-descent"><span class="nav-number">3.1.</span> <span class="nav-text">BGD(Batch Gradient Descent)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sgdstochastic-gradient-descent"><span class="nav-number">3.2.</span> <span class="nav-text">SGD(Stochastic Gradient Descent)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mini-batch-gdmini-batch-gradient-descent"><span class="nav-number">3.3.</span> <span class="nav-text">Mini-Batch GD(Mini-Batch Gradient Descent)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#sigmoid函数的由来"><span class="nav-number">4.</span> <span class="nav-text">sigmoid函数的由来</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#广义指数分布函数族"><span class="nav-number">5.</span> <span class="nav-text">广义指数分布函数族</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#其他广义指数分布函数"><span class="nav-number">5.1.</span> <span class="nav-text">其他广义指数分布函数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考链接"><span class="nav-number">6.</span> <span class="nav-text">参考链接</span></a></li></ol></div>
             
 
           </div>
@@ -1462,6 +1522,46 @@
   
   
 
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling }
+        if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next) }
+      }
+    });
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
+    }
+  });
+</script>
+<script src="//cdn.staticfile.org/MathJax/MathJax-2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
   
 
 
