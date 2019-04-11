@@ -125,7 +125,7 @@
 <meta property="og:site_name" content="心明录">
 <meta property="og:description" content="CART简介 本文主要讲回归树和最小二乘回归树的算法，目的是对决策树做回归有一个认识，并且熟悉经典的最小二乘回归树。我们这里只关注CART的回归树， CART(classification and regressioin tree)是在给定输入随机变量\(X\)条件下输出 随机变量\(Y\)的条件概率分布的学习方法。CART假设决策树是二叉树，内部结点特征的取值为“是”和“否”。其中的回归决策树">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-10T08:27:32.520Z">
+<meta property="og:updated_time" content="2019-04-11T05:32:39.679Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="回归树原理与推导">
 <meta name="twitter:description" content="CART简介 本文主要讲回归树和最小二乘回归树的算法，目的是对决策树做回归有一个认识，并且熟悉经典的最小二乘回归树。我们这里只关注CART的回归树， CART(classification and regressioin tree)是在给定输入随机变量\(X\)条件下输出 随机变量\(Y\)的条件概率分布的学习方法。CART假设决策树是二叉树，内部结点特征的取值为“是”和“否”。其中的回归决策树">
@@ -315,7 +315,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">23</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">24</span></a>
 
   </li>
         
@@ -469,12 +469,24 @@
                 
               
 
-              <time title="创建时间：2019-04-10 10:11:31 / 修改时间：16:27:32" itemprop="dateCreated datePublished" datetime="2019-04-10T10:11:31+08:00">2019-04-10</time>
+              <time title="创建时间：2019-04-10 10:11:31" itemprop="dateCreated datePublished" datetime="2019-04-10T10:11:31+08:00">2019-04-10</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-04-11 13:32:39" itemprop="dateModified" datetime="2019-04-11T13:32:39+08:00">2019-04-11</time>
               
             
           </span>
@@ -583,10 +595,10 @@
 <h1 id="怎么做">怎么做</h1>
 <p>从上述简介可以看出生成一个回归树大致需要两部，第一步，切分特征空间为有限个单元；第二步，在每个切分后的单元上确定代表该单元的回归值。下面先讲如何确定单元取值，再讲如何切分特征空间。</p>
 <h2 id="确定单元取值">确定单元取值</h2>
-<p>假设<span class="math inline">\(X\)</span>与<span class="math inline">\(Y\)</span>分别为输入和输出变量，并且<span class="math inline">\(Y\)</span>是连续变量，给定训练数据集： <span class="math display">\[D=\{(x_1,y_1),(x_2,y_2),\dots,(x_N,y_N)\}\]</span> 其中<span class="math inline">\(x \in R^d\)</span>，一个回归树对应着输入空间（即特征空间）的一个切分和在切分后的单元上的输出值。我们这里假设输入空间已经被切分为<span class="math inline">\(M\)</span>个单元<span class="math inline">\(R_1,R_2,\dots,R_M\)</span>，并且每个单元有一个固定的输出值<span class="math inline">\(c_m\)</span>，那么回归树的模型就可以写成： <span class="math display">\[f(x)=\sum_{m=1}^Mc_mI(x \in R_m)\]</span> 那么如何确定每个<span class="math inline">\(R_m\)</span>上的取值呢？我们这里的最小二乘回归树用平方误差来表示回归树的单元取值与真实值的误差，即： <span class="math display">\[\mathcal{L}=\sum_{x_i \in R_m}(y_i-f(x_i))^2\]</span> 根据最小二乘法，可以很容易知道单元<span class="math inline">\(R_m\)</span>上的<span class="math inline">\(c_m\)</span>的最优值<span class="math inline">\(\hat{c}_m\)</span>是<span class="math inline">\(R_m\)</span>的所有样本的输出<span class="math inline">\(y_i\)</span>的均值，即： <span class="math display">\[\hat{c}_m=\frac{1}{N_m}\sum_{x_i\in R_m(j,s)}y_i\]</span> 其中<span class="math inline">\(N_m\)</span>为落在切分空间<span class="math inline">\(R_m\)</span>的所有样本数目，<span class="math inline">\(R_m(j,s)\)</span>意思是切分变量<span class="math inline">\(x^{(j)}\)</span>(即输入变量的第<span class="math inline">\(j\)</span>维特征)和对应的切分点<span class="math inline">\(s\)</span>对应的切后单元空间。到这里就解决了问题：<strong>假设切分空间确定后，每个空间所代表的值</strong>。</p>
+<p>假设<span class="math inline">\(X\)</span>与<span class="math inline">\(Y\)</span>分别为输入和输出变量，并且<span class="math inline">\(Y\)</span>是连续变量，给定训练数据集： <span class="math display">\[D=\{(x_1,y_1),(x_2,y_2),\dots,(x_N,y_N)\}\]</span> 其中<span class="math inline">\(x \in R^d\)</span>，一个回归树对应着输入空间（即特征空间）的一个切分和在切分后的单元上的输出值。我们这里假设输入空间已经被切分为<span class="math inline">\(M\)</span>个单元<span class="math inline">\(R_1,R_2,\dots,R_M\)</span>，并且每个单元有一个固定的输出值<span class="math inline">\(c_m\)</span>，那么回归树的模型就可以写成： <span class="math display">\[f(x)=\sum_{m=1}^Mc_mI(x \in R_m) \tag{1}\]</span> 那么如何确定每个<span class="math inline">\(R_m\)</span>上的取值呢？我们这里的最小二乘回归树用平方误差来表示回归树的单元取值与真实值的误差，即： <span class="math display">\[\mathcal{L}=\sum_{x_i \in R_m}(y_i-f(x_i))^2 \tag{2}\]</span> 根据最小二乘法，可以很容易知道单元<span class="math inline">\(R_m\)</span>上的<span class="math inline">\(c_m\)</span>的最优值<span class="math inline">\(\hat{c}_m\)</span>是<span class="math inline">\(R_m\)</span>的所有样本的输出<span class="math inline">\(y_i\)</span>的均值，即： <span class="math display">\[\hat{c}_m=\frac{1}{N_m}\sum_{x_i\in R_m(j,s)}y_i \tag{3}\]</span> 其中<span class="math inline">\(N_m\)</span>为落在切分空间<span class="math inline">\(R_m\)</span>的所有样本数目，<span class="math inline">\(R_m(j,s)\)</span>意思是切分变量<span class="math inline">\(x^{(j)}\)</span>(即输入变量的第<span class="math inline">\(j\)</span>维特征)和对应的切分点<span class="math inline">\(s\)</span>对应的切后单元空间。到这里就解决了问题：<strong>假设切分空间确定后，每个空间所代表的值</strong>。</p>
 <h2 id="切分特征空间">切分特征空间</h2>
 <p>那么回归树的问题就剩余如何确定输入空间的切分。事实上只要找到切分变量<span class="math inline">\(x^{(j)}\)</span>(即输入变量的第<span class="math inline">\(j\)</span>维特征)和对应的切分点<span class="math inline">\(s\)</span>，然后再针对切分后的子空间递归进行切分直到满足建树停止条件即可。</p>
-<p>这里定义切分后的两个区域为<span class="math inline">\(R_1\)</span>和<span class="math inline">\(R_2\)</span>，有： <span class="math display">\[R_1(j,s)=\{x|x^{(j)}\leq s\}\]</span> <span class="math display">\[R_2(j,s)=\{x|x^{(j)}&gt; s\}\]</span> 然后求解如下式寻找最优切分变量<span class="math inline">\(j\)</span>和最优切分点<span class="math inline">\(s\)</span>： <span class="math display">\[min_{j,s}[min_{c_1}\sum_{x_i\in R_1(j,s)}(y_i-c_1)^2 + min_{c_2}\sum_{x_i\in R_2(j,s)}(y_i-c_2)^2]\]</span> 解释一下上式，即选取输入变量<span class="math inline">\(x\)</span>的第<span class="math inline">\(j\)</span>维，并扫描切分点<span class="math inline">\(s\)</span>，当切分的两个子单元的方差之和最小，则为第<span class="math inline">\(j\)</span>维的最优切分点。遍历所有找到符合上式的<span class="math inline">\(j,s\)</span>，切分为两个子单元，再对子单元按上式进行递归切分直到满足停止条件即可。</p>
+<p>这里定义切分后的两个区域为<span class="math inline">\(R_1\)</span>和<span class="math inline">\(R_2\)</span>，有： <span class="math display">\[R_1(j,s)=\{x|x^{(j)}\leq s\}\]</span> <span class="math display">\[R_2(j,s)=\{x|x^{(j)}&gt; s\}\]</span> 然后求解如下式寻找最优切分变量<span class="math inline">\(j\)</span>和最优切分点<span class="math inline">\(s\)</span>： <span class="math display">\[min_{j,s}[min_{c_1}\sum_{x_i\in R_1(j,s)}(y_i-c_1)^2 + min_{c_2}\sum_{x_i\in R_2(j,s)}(y_i-c_2)^2] \tag{4}\]</span> 解释一下(4)式，即选取输入变量<span class="math inline">\(x\)</span>的第<span class="math inline">\(j\)</span>维，并扫描切分点<span class="math inline">\(s\)</span>，当切分的两个子单元的方差之和最小，则为第<span class="math inline">\(j\)</span>维的最优切分点。遍历所有找到符合(4)式的<span class="math inline">\(j,s\)</span>，切分为两个子单元，再对子单元按(4)式进行递归切分直到满足停止条件即可。</p>
 <blockquote>
 <p>这里找切分点的方法思想本质还是最小二乘法，与图像二值化当中的Otsu算法有点神似。</p>
 </blockquote>
@@ -608,6 +620,15 @@
       
       
       <div class="popular-posts-title"><a href="\posts\d28f.html" rel="bookmark">Logistic Regression原理与推导</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+        <div class="popular-posts-date">2019-04-11</div>
+      
+      
+      <div class="popular-posts-title"><a href="\posts\e647.html" rel="bookmark">提升树原理与推导</a></div>
       
     </li>
   
@@ -887,7 +908,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">23</span>
+                      
+                    
+                    <span class="site-state-item-count">24</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1025,7 +1048,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">21k</span>
+    <span title="站点总字数">22k</span>
   
 
   
@@ -1036,7 +1059,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">19 分钟</span>
+    <span title="站点阅读时长">20 分钟</span>
   
 </div>
 

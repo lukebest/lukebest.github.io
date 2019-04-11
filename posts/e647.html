@@ -117,18 +117,18 @@
 
 
 
-  <meta name="description" content="TODO">
-<meta name="keywords" content="机器学习 算法分析 工程实现">
+  <meta name="description" content="简介 本文主要讲提升树的模型与算法，并会在最后对梯度提升树进行比较与描述。在看XGBoost原理与推导前，可先看本文，对提升树有一个基本了解。 提升树模型 我们先来看一下提升树的模型，提升方法实际采用的仍然是加法模型(即基函数的线性组合)和前向分步算法。当基函数是决策树的时候，这个提升方法就叫提升树。根据上述，我们可以把提升树的模型公式表示出来： \[f_M(x)=\sum_{m=1}^MT">
+<meta name="keywords" content="原理,推导,GBDT,提升树">
 <meta property="og:type" content="article">
 <meta property="og:title" content="提升树原理与推导">
 <meta property="og:url" content="https://lukebest.github.io/posts/e647.html">
 <meta property="og:site_name" content="心明录">
-<meta property="og:description" content="TODO">
+<meta property="og:description" content="简介 本文主要讲提升树的模型与算法，并会在最后对梯度提升树进行比较与描述。在看XGBoost原理与推导前，可先看本文，对提升树有一个基本了解。 提升树模型 我们先来看一下提升树的模型，提升方法实际采用的仍然是加法模型(即基函数的线性组合)和前向分步算法。当基函数是决策树的时候，这个提升方法就叫提升树。根据上述，我们可以把提升树的模型公式表示出来： \[f_M(x)=\sum_{m=1}^MT">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-10T08:27:20.294Z">
+<meta property="og:updated_time" content="2019-04-11T08:49:15.759Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="提升树原理与推导">
-<meta name="twitter:description" content="TODO">
+<meta name="twitter:description" content="简介 本文主要讲提升树的模型与算法，并会在最后对梯度提升树进行比较与描述。在看XGBoost原理与推导前，可先看本文，对提升树有一个基本了解。 提升树模型 我们先来看一下提升树的模型，提升方法实际采用的仍然是加法模型(即基函数的线性组合)和前向分步算法。当基函数是决策树的时候，这个提升方法就叫提升树。根据上述，我们可以把提升树的模型公式表示出来： \[f_M(x)=\sum_{m=1}^MT">
 
 
 
@@ -315,7 +315,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">23</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">24</span></a>
 
   </li>
         
@@ -469,7 +469,7 @@
                 
               
 
-              <time title="创建时间：2019-04-10 16:27:48 / 修改时间：16:27:20" itemprop="dateCreated datePublished" datetime="2019-04-10T16:27:48+08:00">2019-04-10</time>
+              <time title="创建时间：2019-04-11 13:35:48 / 修改时间：16:49:15" itemprop="dateCreated datePublished" datetime="2019-04-11T13:35:48+08:00">2019-04-11</time>
             
 
             
@@ -479,6 +479,24 @@
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/机器学习/" itemprop="url" rel="index"><span itemprop="name">机器学习</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -526,7 +544,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">6</span>
+                <span title="本文字数">1.3k</span>
               
 
               
@@ -560,13 +578,58 @@
       
 
       
-        <h1 id="todo">TODO</h1>
+        <h1 id="简介">简介</h1>
+<p>本文主要讲提升树的模型与算法，并会在最后对梯度提升树进行比较与描述。在看<a href="/posts/933a.html" title="XGBoost原理与推导">XGBoost原理与推导</a>前，可先看本文，对提升树有一个基本了解。</p>
+<h1 id="提升树模型">提升树模型</h1>
+<p>我们先来看一下提升树的模型，提升方法实际采用的仍然是加法模型(即基函数的线性组合)和前向分步算法。当基函数是决策树的时候，这个提升方法就叫提升树。根据上述，我们可以把提升树的模型公式表示出来： <span class="math display">\[f_M(x)=\sum_{m=1}^MT(x;\Theta_m) \tag{1}\]</span> 其中，<span class="math inline">\(T(x;\Theta_m)\)</span>就表示决策树。<span class="math inline">\(x\)</span>为输入的样本。<span class="math inline">\(\Theta_m\)</span>为第<span class="math inline">\(m\)</span>棵树的参数，从<a href="/posts/917e.html" title="回归树原理与推导">回归树原理与推导</a>中来看，类似其叶子节点权重。<span class="math inline">\(M\)</span>为树的总棵树。</p>
+<h1 id="提升树算法">提升树算法</h1>
+<p>提升树算法也是用前向分步算法，我们设第<span class="math inline">\(m\)</span>步的模型是 <span class="math display">\[f_m(x)=f_{m-1}(x)+T(x;\Theta_m) \tag{2}\]</span> 也就是说模型是在之前训练好的结果上加上当前的决策树的输出。</p>
+<p>对于第<span class="math inline">\(m\)</span>步的最优参数<span class="math inline">\(\hat{\Theta}_m\)</span>，根据经验风险最小化的策略，有： <span class="math display">\[\hat{\Theta}_m=\arg \min_{\Theta_m}\sum_{i=1}^N\mathcal{L}(y_i,f_m(x_i)) \tag{3}\]</span> 我们假定采用平方误差损失，即有： <span class="math display">\[\mathcal{L}(y,f_m(x))=(y-f_m(x))^2 \tag{4}\]</span> 我们把(2)式代入(4)式，有： <span class="math display">\[\mathcal{L}(y,f_{m-1}(x)+T(x;\Theta_m))=(y-f_{m-1}(x)-T(x;\Theta_m))^2 \tag{5}\]</span> 我们令 <span class="math display">\[r=y-f_{m-1}(x) \tag{6}\]</span> 则(5)式可以写成： <span class="math display">\[\mathcal{L}(y,f_{m-1}(x)+T(x;\Theta_m))=(r-T(x;\Theta_m))^2 \tag{7}\]</span> 我们把<span class="math inline">\(r\)</span>叫作当前模型拟合数据的残差(residual)，从(7)式可以看到，要使损失变小，即要让当前的树的输出拟合当前模型的残差。如何去拟合呢？可以参考<a href="/posts/917e.html" title="回归树原理与推导">回归树原理与推导</a>。</p>
+<h1 id="梯度提升树">梯度提升树</h1>
+<p>对于上述提升树，我们做了一个假设为损失为平方误差损失，如果推及一般损失函数，每一步的优化并不简单了。针对这个问题，Freidman提出了梯度提升的算法，即利用损失函数的负梯度在当前模型的值来近似(6)式中的残差(如果损失为平方误差损失，那么负梯度就是残差)。即 <span class="math display">\[r_{mi}=-[\frac{\partial \mathcal{L(y_i,f(x_i))}}{\partial f(x_i)}]_{f(x)=f_{m-1}(x)} \tag{8}\]</span> 其中<span class="math inline">\(i\)</span>为样本数，<span class="math inline">\(m\)</span>为提升迭代第<span class="math inline">\(m\)</span>轮。与我们比较熟悉的梯度下降的算法思想类似。</p>
+<h1 id="参考文献">参考文献</h1>
+<ul>
+<li><p>《统计学习方法》李航 8.4</p></li>
+<li><p><a href="http://www-stat.stanford.edu/~jhf/ftp/trebst.pdf" target="_blank" rel="noopener">Greedy function approximation: a gradient boosting machine</a></p></li>
+</ul>
 
       
     </div>
 
     
       
+
+  <div class="popular-posts-header">相关文章</div>
+  <ul class="popular-posts">
+  
+    <li class="popular-posts-item">
+      
+        <div class="popular-posts-date">2019-04-08</div>
+      
+      
+      <div class="popular-posts-title"><a href="\posts\933a.html" rel="bookmark">XGBoost原理与推导</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+        <div class="popular-posts-date">2019-04-03</div>
+      
+      
+      <div class="popular-posts-title"><a href="\posts\d28f.html" rel="bookmark">Logistic Regression原理与推导</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+        <div class="popular-posts-date">2019-04-10</div>
+      
+      
+      <div class="popular-posts-title"><a href="\posts\917e.html" rel="bookmark">回归树原理与推导</a></div>
+      
+    </li>
+  
+  </ul>
 
 
     
@@ -615,6 +678,18 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/原理/" rel="tag"># 原理</a>
+          
+            <a href="/tags/推导/" rel="tag"># 推导</a>
+          
+            <a href="/tags/GBDT/" rel="tag"># GBDT</a>
+          
+            <a href="/tags/提升树/" rel="tag"># 提升树</a>
+          
+        </div>
       
 
       
@@ -817,7 +892,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">23</span>
+                      
+                    
+                    <span class="site-state-item-count">24</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -913,7 +990,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#todo"><span class="nav-number">1.</span> <span class="nav-text">TODO</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#提升树模型"><span class="nav-number">2.</span> <span class="nav-text">提升树模型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#提升树算法"><span class="nav-number">3.</span> <span class="nav-text">提升树算法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#梯度提升树"><span class="nav-number">4.</span> <span class="nav-text">梯度提升树</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考文献"><span class="nav-number">5.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
             
 
           </div>
@@ -955,7 +1032,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">21k</span>
+    <span title="站点总字数">22k</span>
   
 
   
@@ -966,7 +1043,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">19 分钟</span>
+    <span title="站点阅读时长">20 分钟</span>
   
 </div>
 
@@ -1464,6 +1541,46 @@
   
   
 
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling }
+        if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next) }
+      }
+    });
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
+    }
+  });
+</script>
+<script src="//cdn.staticfile.org/MathJax/MathJax-2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
   
 
 
