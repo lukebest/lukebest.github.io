@@ -53,11 +53,9 @@
 
 
 
-
-
   
   
-  <link rel="stylesheet" href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5">
+  <link rel="stylesheet" href="/lib/fancybox/source/jquery.fancybox.css">
 
 
 
@@ -67,19 +65,19 @@
 
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
 
-<link rel="stylesheet" href="/css/main.css?v=7.0.1">
+<link rel="stylesheet" href="/css/main.css?v=7.1.1">
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.0.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.1">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.0.1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.1">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.0.1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.1">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=7.0.1" color="#222">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.1" color="#222">
 
 
 
@@ -92,7 +90,7 @@
   var CONFIG = {
     root: '/',
     scheme: 'Pisces',
-    version: '7.0.1',
+    version: '7.1.1',
     sidebar: {"position":"right","display":"post","offset":12,"onmobile":true,"dimmer":false},
     back2top: true,
     back2top_sidebar: true,
@@ -117,28 +115,29 @@
 
 
 
-  <meta name="description" content="WSL是什么 Windows Subsystem for Linux（简称WSL）是一个为在Windows 10上能够原生运行Linux二进制可执行文件（ELF格式）的兼容层。它是由微软与Canonical公司合作开发，目标是使纯正的Ubuntu映像能下载和解压到用户的本地计算机，并且映像内的工具和实用工具能在此子系统上原生运行。 在windows 10专业版上面可以使用。可以免去虚拟机安装的">
+  <meta name="description" content="WSL是什么Windows Subsystem for Linux（简称WSL）是一个为在Windows 10上能够原生运行Linux二进制可执行文件（ELF格式）的兼容层。它是由微软与Canonical公司合作开发，目标是使纯正的Ubuntu映像能下载和解压到用户的本地计算机，并且映像内的工具和实用工具能在此子系统上原生运行。 在windows 10专业版上面可以使用。可以免去虚拟机安装的麻烦。">
 <meta name="keywords" content="WSL,Linux,Win10">
 <meta property="og:type" content="article">
 <meta property="og:title" content="WSL自定义安装路径">
 <meta property="og:url" content="https://lukebest.github.io/posts/bb32.html">
 <meta property="og:site_name" content="心明录">
-<meta property="og:description" content="WSL是什么 Windows Subsystem for Linux（简称WSL）是一个为在Windows 10上能够原生运行Linux二进制可执行文件（ELF格式）的兼容层。它是由微软与Canonical公司合作开发，目标是使纯正的Ubuntu映像能下载和解压到用户的本地计算机，并且映像内的工具和实用工具能在此子系统上原生运行。 在windows 10专业版上面可以使用。可以免去虚拟机安装的">
+<meta property="og:description" content="WSL是什么Windows Subsystem for Linux（简称WSL）是一个为在Windows 10上能够原生运行Linux二进制可执行文件（ELF格式）的兼容层。它是由微软与Canonical公司合作开发，目标是使纯正的Ubuntu映像能下载和解压到用户的本地计算机，并且映像内的工具和实用工具能在此子系统上原生运行。 在windows 10专业版上面可以使用。可以免去虚拟机安装的麻烦。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://lukebest.github.io/posts/bb32/20190326151814.png">
 <meta property="og:image" content="https://lukebest.github.io/posts/bb32/20190326152411.png">
 <meta property="og:updated_time" content="2019-04-10T08:31:22.508Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="WSL自定义安装路径">
-<meta name="twitter:description" content="WSL是什么 Windows Subsystem for Linux（简称WSL）是一个为在Windows 10上能够原生运行Linux二进制可执行文件（ELF格式）的兼容层。它是由微软与Canonical公司合作开发，目标是使纯正的Ubuntu映像能下载和解压到用户的本地计算机，并且映像内的工具和实用工具能在此子系统上原生运行。 在windows 10专业版上面可以使用。可以免去虚拟机安装的">
+<meta name="twitter:description" content="WSL是什么Windows Subsystem for Linux（简称WSL）是一个为在Windows 10上能够原生运行Linux二进制可执行文件（ELF格式）的兼容层。它是由微软与Canonical公司合作开发，目标是使纯正的Ubuntu映像能下载和解压到用户的本地计算机，并且映像内的工具和实用工具能在此子系统上原生运行。 在windows 10专业版上面可以使用。可以免去虚拟机安装的麻烦。">
 <meta name="twitter:image" content="https://lukebest.github.io/posts/bb32/20190326151814.png">
 
 
 
 
 
-
-  <link rel="canonical" href="https://lukebest.github.io/posts/bb32.html">
+  
+  
+  <link rel="canonical" href="https://lukebest.github.io/posts/bb32">
 
 
 
@@ -280,7 +279,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">5</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">4</span></a>
 
   </li>
         
@@ -299,7 +298,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">13</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">10</span></a>
 
   </li>
         
@@ -318,7 +317,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">33</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">30</span></a>
 
   </li>
         
@@ -392,12 +391,10 @@
     
   
   
-  
-  
 
   
 
-  <a href="https://github.com/shanksly" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewbox="0 0 250 250" style="fill: #222; color: #fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a>
+  <a href="https://github.com/lukebest" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewbox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a>
 
 
 
@@ -420,8 +417,6 @@
   
   
 
-  
-    <div class="reading-progress-bar"></div>
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -559,7 +554,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">947</span>
+                <span title="本文字数">909</span>
               
 
               
@@ -593,31 +588,23 @@
       
 
       
-        <h1 id="wsl是什么">WSL是什么</h1>
-<p>Windows Subsystem for Linux（简称WSL）是一个为在Windows 10上能够原生运行Linux二进制可执行文件（ELF格式）的兼容层。它是由微软与Canonical公司合作开发，目标是使纯正的Ubuntu映像能下载和解压到用户的本地计算机，并且映像内的工具和实用工具能在此子系统上原生运行。</p>
+        <h1 id="WSL是什么"><a href="#WSL是什么" class="headerlink" title="WSL是什么"></a>WSL是什么</h1><p>Windows Subsystem for Linux（简称WSL）是一个为在Windows 10上能够原生运行Linux二进制可执行文件（ELF格式）的兼容层。它是由微软与Canonical公司合作开发，目标是使纯正的Ubuntu映像能下载和解压到用户的本地计算机，并且映像内的工具和实用工具能在此子系统上原生运行。</p>
 <p>在windows 10专业版上面可以使用。可以免去虚拟机安装的麻烦。</p>
-<h1 id="wsl有什么问题">WSL有什么问题</h1>
-<p>一个很麻烦的问题是WSL默认在windows商店里面安装，默认安装到系统盘，且后续的根文件系统均在系统盘中，对于系统盘资源较紧张者比较麻烦。</p>
-<h1 id="如何解决">如何解决</h1>
-<p>针对于以上问题，有如下步骤解决:</p>
-<h2 id="下载wsl离线安装包">下载wsl离线安装包</h2>
-<p><a href="https://docs.microsoft.com/en-us/windows/wsl/install-manual" target="_blank" rel="noopener">wsl离线安装包下载</a></p>
+<h1 id="WSL有什么问题"><a href="#WSL有什么问题" class="headerlink" title="WSL有什么问题"></a>WSL有什么问题</h1><p>一个很麻烦的问题是WSL默认在windows商店里面安装，默认安装到系统盘，且后续的根文件系统均在系统盘中，对于系统盘资源较紧张者比较麻烦。</p>
+<h1 id="如何解决"><a href="#如何解决" class="headerlink" title="如何解决"></a>如何解决</h1><p>针对于以上问题，有如下步骤解决:</p>
+<h2 id="下载wsl离线安装包"><a href="#下载wsl离线安装包" class="headerlink" title="下载wsl离线安装包"></a>下载wsl离线安装包</h2><p><a href="https://docs.microsoft.com/en-us/windows/wsl/install-manual" target="_blank" rel="noopener">wsl离线安装包下载</a></p>
 <p>在<code>Downloading distros</code>中找到要下载的版本下载<code>.Appx</code>文件。</p>
-<h2 id="安装lxrunoffline">安装LxRunOffline</h2>
-<p><a href="https://github.com/DDoSolitary/LxRunOffline/releases/download/v3.3.3/LxRunOffline-v3.3.3.zip" target="_blank" rel="noopener">LxRunOffline下载</a></p>
-<p>解压放在程序路径，并在系统环境变量中添加： <img src="/posts/bb32/20190326151814.png" alt="添加环境变量"></p>
+<h2 id="安装LxRunOffline"><a href="#安装LxRunOffline" class="headerlink" title="安装LxRunOffline"></a>安装LxRunOffline</h2><p><a href="https://github.com/DDoSolitary/LxRunOffline/releases/download/v3.3.3/LxRunOffline-v3.3.3.zip" target="_blank" rel="noopener">LxRunOffline下载</a></p>
+<p>解压放在程序路径，并在系统环境变量中添加：<br><img src="/posts/bb32/20190326151814.png" alt="添加环境变量"></p>
 <p>在cmd中有<code>LxRunOffline</code>命令对应提示即为成功。</p>
-<h2 id="用lxrunoffline安装wsl离线安装包">用LxRunOffline安装wsl离线安装包</h2>
-<p>首先在<code>powershell</code>中输入</p>
+<h2 id="用LxRunOffline安装wsl离线安装包"><a href="#用LxRunOffline安装wsl离线安装包" class="headerlink" title="用LxRunOffline安装wsl离线安装包"></a>用LxRunOffline安装wsl离线安装包</h2><p>首先在<code>powershell</code>中输入</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux</span><br></pre></td></tr></table></figure>
 <p>来打开<code>Linux子系统</code>功能，也可以在控制面板的<code>启用或关闭windows功能</code>勾选打开。</p>
 <p>然后使用<code>LxRunOffline</code></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LxRunOffline i -n &lt;安装名称&gt; -d &lt;安装路径&gt; -f &lt;安装文件&gt;</span><br></pre></td></tr></table></figure>
-<p>其中<code>安装名称</code>可以自定义，<code>安装路径</code>为自定义安装路径，<code>安装文件</code>为上一步解压后的文件中的<code>install.tar.gz</code>的路径，回车后等待安装完成。示例如下： <img src="/posts/bb32/20190326152411.png" alt="安装示例"></p>
-<h2 id="备注">备注</h2>
-<p>若系统中安装不止一个WSL,则可以通过<code>LxRunOffline sd -n &lt;安装名称&gt;</code>设置默认启动系统，然后在<code>cmd</code>中输入<code>wsl</code>启动系统。若忘记安装名称，可通过<code>LxRunOffline list</code>命令查看。</p>
-<h1 id="参考链接">参考链接</h1>
-<ul>
+<p>其中<code>安装名称</code>可以自定义，<code>安装路径</code>为自定义安装路径，<code>安装文件</code>为上一步解压后的文件中的<code>install.tar.gz</code>的路径，回车后等待安装完成。示例如下：<br><img src="/posts/bb32/20190326152411.png" alt="安装示例"></p>
+<h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>若系统中安装不止一个WSL,则可以通过<code>LxRunOffline sd -n &lt;安装名称&gt;</code>设置默认启动系统，然后在<code>cmd</code>中输入<code>wsl</code>启动系统。若忘记安装名称，可通过<code>LxRunOffline list</code>命令查看。</p>
+<h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><ul>
 <li><a href="https://baike.baidu.com/item/wsl/20359185" target="_blank" rel="noopener">百度百科WSL介绍</a></li>
 <li><a href="https://blog.csdn.net/weixin_42508385/article/details/86905616" target="_blank" rel="noopener">自定义安装路径安装WSL</a></li>
 </ul>
@@ -638,7 +625,7 @@
     
       <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center;">
   <img id="wechat_subscriber_qcode" src="/images/qrcode_wechat.jpg" alt="瑾锋 wechat" style="width: 200px; max-width: 100%;">
-  <div>扫描订阅心明录公众号</div>
+  <div>ɨ�趩������¼���ں�</div>
 </div>
 
     
@@ -716,8 +703,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/35d9.html" rel="next" title="我为什么写作">
-                <i class="fa fa-chevron-left"></i> 我为什么写作
+              <a href="/posts/8439.html" rel="next" title="airflow 从入门到放弃">
+                <i class="fa fa-chevron-left"></i> airflow 从入门到放弃
               </a>
             
           </div>
@@ -803,7 +790,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">13</span>
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -828,9 +815,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -907,13 +892,7 @@
                     
                       
                     
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">33</span>
+                    <span class="site-state-item-count">30</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1009,7 +988,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#wsl是什么"><span class="nav-number">1.</span> <span class="nav-text">WSL是什么</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#wsl有什么问题"><span class="nav-number">2.</span> <span class="nav-text">WSL有什么问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何解决"><span class="nav-number">3.</span> <span class="nav-text">如何解决</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#下载wsl离线安装包"><span class="nav-number">3.1.</span> <span class="nav-text">下载wsl离线安装包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装lxrunoffline"><span class="nav-number">3.2.</span> <span class="nav-text">安装LxRunOffline</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#用lxrunoffline安装wsl离线安装包"><span class="nav-number">3.3.</span> <span class="nav-text">用LxRunOffline安装wsl离线安装包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#备注"><span class="nav-number">3.4.</span> <span class="nav-text">备注</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考链接"><span class="nav-number">4.</span> <span class="nav-text">参考链接</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#WSL是什么"><span class="nav-number">1.</span> <span class="nav-text">WSL是什么</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#WSL有什么问题"><span class="nav-number">2.</span> <span class="nav-text">WSL有什么问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何解决"><span class="nav-number">3.</span> <span class="nav-text">如何解决</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#下载wsl离线安装包"><span class="nav-number">3.1.</span> <span class="nav-text">下载wsl离线安装包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装LxRunOffline"><span class="nav-number">3.2.</span> <span class="nav-text">安装LxRunOffline</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#用LxRunOffline安装wsl离线安装包"><span class="nav-number">3.3.</span> <span class="nav-text">用LxRunOffline安装wsl离线安装包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#备注"><span class="nav-number">3.4.</span> <span class="nav-text">备注</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考链接"><span class="nav-number">4.</span> <span class="nav-text">参考链接</span></a></li></ol></div>
             
 
           </div>
@@ -1051,7 +1030,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">30k</span>
+    <span title="站点总字数">25k</span>
   
 
   
@@ -1062,7 +1041,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">27 分钟</span>
+    <span title="站点阅读时长">22 分钟</span>
   
 </div>
 
@@ -1129,8 +1108,6 @@
 
 
 
-  
-
 
 
   
@@ -1143,18 +1120,15 @@
   <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
   
-  <script src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-  
-  <script src="/lib/reading_progress/reading_progress.js"></script>
+  <script src="/lib/fancybox/source/jquery.fancybox.pack.js"></script>
 
 
   
 
 
-  <script src="/js/src/utils.js?v=7.0.1"></script>
+  <script src="/js/utils.js?v=7.1.1"></script>
 
-  <script src="/js/src/motion.js?v=7.0.1"></script>
+  <script src="/js/motion.js?v=7.1.1"></script>
 
 
 
@@ -1162,27 +1136,27 @@
   
 
 
-  <script src="/js/src/affix.js?v=7.0.1"></script>
+  <script src="/js/affix.js?v=7.1.1"></script>
 
-  <script src="/js/src/schemes/pisces.js?v=7.0.1"></script>
-
-
-
-  
-  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
-<script src="/js/src/post-details.js?v=7.0.1"></script>
+  <script src="/js/schemes/pisces.js?v=7.1.1"></script>
 
 
 
   
+  <script src="/js/scrollspy.js?v=7.1.1"></script>
+<script src="/js/post-details.js?v=7.1.1"></script>
 
-
-  <script src="/js/src/next-boot.js?v=7.0.1"></script>
 
 
   
-  <script src="/js/src/js.cookie.js?v=7.0.1"></script>
-  <script src="/js/src/scroll-cookie.js?v=7.0.1"></script>
+
+
+  <script src="/js/next-boot.js?v=7.1.1"></script>
+
+
+  
+  <script src="/js/js.cookie.js?v=7.1.1"></script>
+  <script src="/js/scroll-cookie.js?v=7.1.1"></script>
 
 
   
@@ -1210,7 +1184,7 @@
     notify: false,
     appId: 'PE1n54R8ntdU6kBDm1qHqiHO-gzGzoHsz',
     appKey: 'PCK0D0zRhlTpUKmbHdCYMzPH',
-    placeholder: '吐槽一下',
+    placeholder: '�²�һ��',
     avatar: 'mm',
     meta: guest,
     pageSize: '10' || 10,
@@ -1568,16 +1542,6 @@
   
 
   
-  <script>
-    (function(){
-      var bp = document.createElement('script');
-      var curProtocol = window.location.protocol.split(':')[0];
-      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(bp, s);
-    })();
-  </script>
-
 
   
 
@@ -1595,7 +1559,7 @@
       
         pbOptions.position = "bottomCenter";
       
-        pbOptions.networks = "Weibo,Wechat,Douban,QQZone";
+        pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
       
       new needShareButton('#needsharebutton-postbottom', pbOptions);
     

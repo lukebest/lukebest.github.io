@@ -53,11 +53,9 @@
 
 
 
-
-
   
   
-  <link rel="stylesheet" href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5">
+  <link rel="stylesheet" href="/lib/fancybox/source/jquery.fancybox.css">
 
 
 
@@ -67,19 +65,19 @@
 
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
 
-<link rel="stylesheet" href="/css/main.css?v=7.0.1">
+<link rel="stylesheet" href="/css/main.css?v=7.1.1">
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.0.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.1">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.0.1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.1">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.0.1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.1">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=7.0.1" color="#222">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.1" color="#222">
 
 
 
@@ -92,7 +90,7 @@
   var CONFIG = {
     root: '/',
     scheme: 'Pisces',
-    version: '7.0.1',
+    version: '7.1.1',
     sidebar: {"position":"right","display":"post","offset":12,"onmobile":true,"dimmer":false},
     back2top: true,
     back2top_sidebar: true,
@@ -117,27 +115,28 @@
 
 
 
-  <meta name="description" content="简介 ⽂本定位主要适⽤于识别图⽚中⽂本的位置信息。利⽤计算机视觉智能识别图⽚中的⽂本信息并进⾏定位，⽣成的带有类别信息的⽬标候选框，经常应⽤于带有多种⽂本信息的票据，证件识别中。本文主要介绍如下两种文本定位算法：  Deeptext CTPN  Deeptext Deeptext算法原理 DeepText是基于Faster R-CNN针对⽂本定位进⾏改进的Two-Stage模型。D">
+  <meta name="description" content="简介⽂本定位主要适⽤于识别图⽚中⽂本的位置信息。利⽤计算机视觉智能识别图⽚中的⽂本信息并进⾏定位，⽣成的带有类别信息的⽬标候选框，经常应⽤于带有多种⽂本信息的票据，证件识别中。本文主要介绍如下两种文本定位算法：  Deeptext CTPN  DeeptextDeeptext算法原理DeepText是基于Faster R-CNN针对⽂本定位进⾏改进的Two-Stage模型。DeepText的结构和">
 <meta name="keywords" content="OCR,Deeptext,CTPN,CV,神经网络">
 <meta property="og:type" content="article">
 <meta property="og:title" content="文本定位算法">
 <meta property="og:url" content="https://lukebest.github.io/posts/ad64.html">
 <meta property="og:site_name" content="心明录">
-<meta property="og:description" content="简介 ⽂本定位主要适⽤于识别图⽚中⽂本的位置信息。利⽤计算机视觉智能识别图⽚中的⽂本信息并进⾏定位，⽣成的带有类别信息的⽬标候选框，经常应⽤于带有多种⽂本信息的票据，证件识别中。本文主要介绍如下两种文本定位算法：  Deeptext CTPN  Deeptext Deeptext算法原理 DeepText是基于Faster R-CNN针对⽂本定位进⾏改进的Two-Stage模型。D">
+<meta property="og:description" content="简介⽂本定位主要适⽤于识别图⽚中⽂本的位置信息。利⽤计算机视觉智能识别图⽚中的⽂本信息并进⾏定位，⽣成的带有类别信息的⽬标候选框，经常应⽤于带有多种⽂本信息的票据，证件识别中。本文主要介绍如下两种文本定位算法：  Deeptext CTPN  DeeptextDeeptext算法原理DeepText是基于Faster R-CNN针对⽂本定位进⾏改进的Two-Stage模型。DeepText的结构和">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://lukebest.github.io/posts/ad64/Deeptext.png">
 <meta property="og:updated_time" content="2019-04-23T08:04:11.696Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="文本定位算法">
-<meta name="twitter:description" content="简介 ⽂本定位主要适⽤于识别图⽚中⽂本的位置信息。利⽤计算机视觉智能识别图⽚中的⽂本信息并进⾏定位，⽣成的带有类别信息的⽬标候选框，经常应⽤于带有多种⽂本信息的票据，证件识别中。本文主要介绍如下两种文本定位算法：  Deeptext CTPN  Deeptext Deeptext算法原理 DeepText是基于Faster R-CNN针对⽂本定位进⾏改进的Two-Stage模型。D">
+<meta name="twitter:description" content="简介⽂本定位主要适⽤于识别图⽚中⽂本的位置信息。利⽤计算机视觉智能识别图⽚中的⽂本信息并进⾏定位，⽣成的带有类别信息的⽬标候选框，经常应⽤于带有多种⽂本信息的票据，证件识别中。本文主要介绍如下两种文本定位算法：  Deeptext CTPN  DeeptextDeeptext算法原理DeepText是基于Faster R-CNN针对⽂本定位进⾏改进的Two-Stage模型。DeepText的结构和">
 <meta name="twitter:image" content="https://lukebest.github.io/posts/ad64/Deeptext.png">
 
 
 
 
 
-
-  <link rel="canonical" href="https://lukebest.github.io/posts/ad64.html">
+  
+  
+  <link rel="canonical" href="https://lukebest.github.io/posts/ad64">
 
 
 
@@ -279,7 +278,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">5</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">4</span></a>
 
   </li>
         
@@ -298,7 +297,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">13</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">10</span></a>
 
   </li>
         
@@ -317,7 +316,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">33</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">30</span></a>
 
   </li>
         
@@ -391,12 +390,10 @@
     
   
   
-  
-  
 
   
 
-  <a href="https://github.com/shanksly" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewbox="0 0 250 250" style="fill: #222; color: #fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a>
+  <a href="https://github.com/lukebest" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewbox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a>
 
 
 
@@ -419,8 +416,6 @@
   
   
 
-  
-    <div class="reading-progress-bar"></div>
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -592,21 +587,18 @@
       
 
       
-        <h1 id="简介">简介</h1>
-<p>⽂本定位主要适⽤于识别图⽚中⽂本的位置信息。利⽤计算机视觉智能识别图⽚中的⽂本信息并进⾏定位，⽣成的带有类别信息的⽬标候选框，经常应⽤于带有多种⽂本信息的票据，证件识别中。本文主要介绍如下两种文本定位算法：</p>
+        <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>⽂本定位主要适⽤于识别图⽚中⽂本的位置信息。利⽤计算机视觉智能识别图⽚中的⽂本信息并进⾏定位，⽣成的带有类别信息的⽬标候选框，经常应⽤于带有多种⽂本信息的票据，证件识别中。本文主要介绍如下两种文本定位算法：</p>
 <ul>
 <li>Deeptext</li>
 <li>CTPN</li>
 </ul>
-<h1 id="deeptext">Deeptext</h1>
-<h2 id="deeptext算法原理">Deeptext算法原理</h2>
-<p>DeepText是基于Faster R-CNN针对⽂本定位进⾏改进的Two-Stage模型。DeepText的结构和Faster R-CNN如出⼀辙：⾸先特征层使⽤的是VGG-16，其次算法均由⽤于提取候选区域的RPN和⽤于物体检测的Fast R-CNN。关于上述几个结构与概念，有相关卷积神经网络结构和本博客相关文章如下，建议在看本文之前先行阅览：</p>
+<h1 id="Deeptext"><a href="#Deeptext" class="headerlink" title="Deeptext"></a>Deeptext</h1><h2 id="Deeptext算法原理"><a href="#Deeptext算法原理" class="headerlink" title="Deeptext算法原理"></a>Deeptext算法原理</h2><p>DeepText是基于Faster R-CNN针对⽂本定位进⾏改进的Two-Stage模型。DeepText的结构和Faster R-CNN如出⼀辙：⾸先特征层使⽤的是VGG-16，其次算法均由⽤于提取候选区域的RPN和⽤于物体检测的Fast R-CNN。关于上述几个结构与概念，有相关卷积神经网络结构和本博客相关文章如下，建议在看本文之前先行阅览：</p>
 <ul>
 <li><a href="https://cwlacewe.github.io/netscope/#/preset/vgg-16" target="_blank" rel="noopener">VGG ILSVRC 16 layers</a></li>
-<li><a href="/posts/547f.html" title="目标检测R-CNN系算法">目标检测R-CNN系算法</a></li>
+<li><a href="/posts/547f.html" title="目标检测R-CNN系算法">目标检测R-CNN系算法</a>
+</li>
 </ul>
-<h2 id="deeptext的创新点">DeepText的创新点</h2>
-<ul>
+<h2 id="DeepText的创新点"><a href="#DeepText的创新点" class="headerlink" title="DeepText的创新点"></a>DeepText的创新点</h2><ul>
 <li>Inception-RPN：与传统RPN相⽐，使⽤3x3的max pooling, 3x3的卷积以及5x5的卷积，使得在RPN模块可以考虑多尺度的特征；</li>
 <li>ATC： ⽂本与其他物体检测不同的是很多置信度在[0.2,0.5]的框内也是有⽂本存在的（物体检测⼀般将置信度⼩于0.5的样例当作负样例），这样就会将很多⽂本当作负样例，影响最终的结果。所以DeepText在RCNN的分类结果中加⼊了ATC的分类（正、ATC、负）;</li>
 <li>MLRP：在Detection Network模块中使⽤来⾃不同卷积层的特征，因为不同层的特征不同，融合多种特征可以提升指标；</li>
@@ -614,41 +606,30 @@
 <li>Scales：针对⽂本特征修改超参数，⽀持(2,3,4,5)四种scale；</li>
 <li>Ratios：针对⽂本特征修改超参数， ⽀持(0.2, 0.5, 0.8, 1.0, 1.2, 1.5)六种scale；</li>
 </ul>
-<h2 id="deeptext的络结构">DeepText的⽹络结构</h2>
-<figure>
-<img src="/posts/ad64/Deeptext.png" alt="DeepText⽹络结构"><figcaption>DeepText⽹络结构</figcaption>
-</figure>
-<h2 id="指标介绍">指标介绍</h2>
-<h3 id="验证指标">验证指标</h3>
-<p>⽂本定位验证指标主要是计算预测出来的物体的位置的框与真实的框之间的精确率（precision）,召回率（recall）, F值（F-Measure），相关的定义如下：</p>
+<h2 id="DeepText的⽹络结构"><a href="#DeepText的⽹络结构" class="headerlink" title="DeepText的⽹络结构"></a>DeepText的⽹络结构</h2><p><img src="/posts/ad64/Deeptext.png" alt="DeepText⽹络结构"></p>
+<h2 id="指标介绍"><a href="#指标介绍" class="headerlink" title="指标介绍"></a>指标介绍</h2><h3 id="验证指标"><a href="#验证指标" class="headerlink" title="验证指标"></a>验证指标</h3><p>⽂本定位验证指标主要是计算预测出来的物体的位置的框与真实的框之间的精确率（precision）,召回率（recall）, F值（F-Measure），相关的定义如下：</p>
 <ul>
 <li>精确率：预测为某类样本（例如正样本）中有多少是真正的该类样本。</li>
 <li>召回率：样本中的某类样本有多少被正确预测了。</li>
 <li>F值：P和R指标有时候会出现的⽭盾的情况，这样就需要综合考虑他们，F-Measure是Precision和Recall加权调和平均。</li>
 </ul>
-<h3 id="训练指标">训练指标</h3>
-<ul>
+<h3 id="训练指标"><a href="#训练指标" class="headerlink" title="训练指标"></a>训练指标</h3><ul>
 <li>训练总损失： ⽂本定位的验证指标主要是训练损失，代表了真实值和预测值之间的差值，如果训练损失越来越⼩，代表模型预测的能⼒越来越强。</li>
 <li>训练准确率： 训练准确率则代表着训练集上被预测准确的样本数占总样本的⽐例情况；</li>
 </ul>
-<h1 id="ctpn">CTPN</h1>
-<h2 id="算法概述">算法概述</h2>
-<p>CTPN是基于Faster-RCNN针对⽂本定位进⾏改进的Two-Stage模型。 CTPN的结构如Faster R-CNN如出⼀辙：⾸先特征层使⽤的是VGG-16，其次算法均由⽤于提取候选区域的RPN和⽤于物体检测的Fast R-CNN。DeepText的创新点如下：</p>
+<h1 id="CTPN"><a href="#CTPN" class="headerlink" title="CTPN"></a>CTPN</h1><h2 id="算法概述"><a href="#算法概述" class="headerlink" title="算法概述"></a>算法概述</h2><p>CTPN是基于Faster-RCNN针对⽂本定位进⾏改进的Two-Stage模型。 CTPN的结构如Faster R-CNN如出⼀辙：⾸先特征层使⽤的是VGG-16，其次算法均由⽤于提取候选区域的RPN和⽤于物体检测的Fast R-CNN。DeepText的创新点如下：</p>
 <ul>
 <li>BLSTM：CTPN结构与Faster R-CNN基本类似，但是加⼊了LSTM层。该循环⽹络层采⽤双向LSTM，使得⽹络学习到了⽂字前向、后向的序列信息，但是训练过程需要⼩⼼梯度爆炸。</li>
 <li>定宽的anchor： 由于CTPN针对的是横向排列的⽂字检测，所以其采⽤了⼀组（10个）等宽度的Anchors，⽤于定位⽂字位置。Anchor宽⾼为：width = [16] ,height = [11,16,23,33,48,68,97,139,198,283];该设置⽅法保证了在x⽅向上，Anchor覆盖原图每个点且不相互重叠，并且anchor⾼度覆盖了不同尺度⽂本⽬标。</li>
 <li>⽂本线构造：在获得多个text proposal的基础上，需要将各个group的proposal进⾏合并，即将定宽proposal链接成标准框，主要利⽤计算overlap以及⽔平正向距离确group，再执⾏框链接算法；</li>
 </ul>
-<h2 id="指标介绍-1">指标介绍</h2>
-<h3 id="验证指标-1">验证指标</h3>
-<p>⽂本定位验证指标主要是计算预测出来的物体的位置的框与真实的框之间的精确率（precision）,召回率（recall）, F值（F-Measure），相关的定义如下：</p>
+<h2 id="指标介绍-1"><a href="#指标介绍-1" class="headerlink" title="指标介绍"></a>指标介绍</h2><h3 id="验证指标-1"><a href="#验证指标-1" class="headerlink" title="验证指标"></a>验证指标</h3><p>⽂本定位验证指标主要是计算预测出来的物体的位置的框与真实的框之间的精确率（precision）,召回率（recall）, F值（F-Measure），相关的定义如下：</p>
 <ul>
 <li>Precision：预测为某类样本（例如正样本）中有多少是真正的该类样本。</li>
 <li>Recall：样本中的某类样本有多少被正确预测了。</li>
 <li>F-Measure：P和R指标有时候会出现的⽭盾的情况，这样就需要综合考虑他们，F-Measure是Precision和Recall加权调和平均。</li>
 </ul>
-<h3 id="训练指标-1">训练指标</h3>
-<p>⽂本定位的验证指标主要是训练损失，代表了真实值和预测值之间的差值，如果训练损失越来越⼩，代表模型预测的能⼒越来越好。</p>
+<h3 id="训练指标-1"><a href="#训练指标-1" class="headerlink" title="训练指标"></a>训练指标</h3><p>⽂本定位的验证指标主要是训练损失，代表了真实值和预测值之间的差值，如果训练损失越来越⼩，代表模型预测的能⼒越来越好。</p>
 
       
     </div>
@@ -680,7 +661,7 @@
     
       <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center;">
   <img id="wechat_subscriber_qcode" src="/images/qrcode_wechat.jpg" alt="瑾锋 wechat" style="width: 200px; max-width: 100%;">
-  <div>扫描订阅心明录公众号</div>
+  <div>ɨ�趩������¼���ں�</div>
 </div>
 
     
@@ -762,8 +743,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/ee7a.html" rel="next" title="中国股市乱象">
-                <i class="fa fa-chevron-left"></i> 中国股市乱象
+              <a href="/posts/e647.html" rel="next" title="提升树原理与推导">
+                <i class="fa fa-chevron-left"></i> 提升树原理与推导
               </a>
             
           </div>
@@ -849,7 +830,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">13</span>
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -874,9 +855,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -953,13 +932,7 @@
                     
                       
                     
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">33</span>
+                    <span class="site-state-item-count">30</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1055,7 +1028,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#deeptext"><span class="nav-number">2.</span> <span class="nav-text">Deeptext</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#deeptext算法原理"><span class="nav-number">2.1.</span> <span class="nav-text">Deeptext算法原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#deeptext的创新点"><span class="nav-number">2.2.</span> <span class="nav-text">DeepText的创新点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#deeptext的络结构"><span class="nav-number">2.3.</span> <span class="nav-text">DeepText的⽹络结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#指标介绍"><span class="nav-number">2.4.</span> <span class="nav-text">指标介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#验证指标"><span class="nav-number">2.4.1.</span> <span class="nav-text">验证指标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#训练指标"><span class="nav-number">2.4.2.</span> <span class="nav-text">训练指标</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ctpn"><span class="nav-number">3.</span> <span class="nav-text">CTPN</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#算法概述"><span class="nav-number">3.1.</span> <span class="nav-text">算法概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#指标介绍-1"><span class="nav-number">3.2.</span> <span class="nav-text">指标介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#验证指标-1"><span class="nav-number">3.2.1.</span> <span class="nav-text">验证指标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#训练指标-1"><span class="nav-number">3.2.2.</span> <span class="nav-text">训练指标</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Deeptext"><span class="nav-number">2.</span> <span class="nav-text">Deeptext</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Deeptext算法原理"><span class="nav-number">2.1.</span> <span class="nav-text">Deeptext算法原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DeepText的创新点"><span class="nav-number">2.2.</span> <span class="nav-text">DeepText的创新点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DeepText的⽹络结构"><span class="nav-number">2.3.</span> <span class="nav-text">DeepText的⽹络结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#指标介绍"><span class="nav-number">2.4.</span> <span class="nav-text">指标介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#验证指标"><span class="nav-number">2.4.1.</span> <span class="nav-text">验证指标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#训练指标"><span class="nav-number">2.4.2.</span> <span class="nav-text">训练指标</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CTPN"><span class="nav-number">3.</span> <span class="nav-text">CTPN</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#算法概述"><span class="nav-number">3.1.</span> <span class="nav-text">算法概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#指标介绍-1"><span class="nav-number">3.2.</span> <span class="nav-text">指标介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#验证指标-1"><span class="nav-number">3.2.1.</span> <span class="nav-text">验证指标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#训练指标-1"><span class="nav-number">3.2.2.</span> <span class="nav-text">训练指标</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -1097,7 +1070,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">30k</span>
+    <span title="站点总字数">25k</span>
   
 
   
@@ -1108,7 +1081,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">27 分钟</span>
+    <span title="站点阅读时长">22 分钟</span>
   
 </div>
 
@@ -1175,8 +1148,6 @@
 
 
 
-  
-
 
 
   
@@ -1189,18 +1160,15 @@
   <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
   
-  <script src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-  
-  <script src="/lib/reading_progress/reading_progress.js"></script>
+  <script src="/lib/fancybox/source/jquery.fancybox.pack.js"></script>
 
 
   
 
 
-  <script src="/js/src/utils.js?v=7.0.1"></script>
+  <script src="/js/utils.js?v=7.1.1"></script>
 
-  <script src="/js/src/motion.js?v=7.0.1"></script>
+  <script src="/js/motion.js?v=7.1.1"></script>
 
 
 
@@ -1208,27 +1176,27 @@
   
 
 
-  <script src="/js/src/affix.js?v=7.0.1"></script>
+  <script src="/js/affix.js?v=7.1.1"></script>
 
-  <script src="/js/src/schemes/pisces.js?v=7.0.1"></script>
-
-
-
-  
-  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
-<script src="/js/src/post-details.js?v=7.0.1"></script>
+  <script src="/js/schemes/pisces.js?v=7.1.1"></script>
 
 
 
   
+  <script src="/js/scrollspy.js?v=7.1.1"></script>
+<script src="/js/post-details.js?v=7.1.1"></script>
 
-
-  <script src="/js/src/next-boot.js?v=7.0.1"></script>
 
 
   
-  <script src="/js/src/js.cookie.js?v=7.0.1"></script>
-  <script src="/js/src/scroll-cookie.js?v=7.0.1"></script>
+
+
+  <script src="/js/next-boot.js?v=7.1.1"></script>
+
+
+  
+  <script src="/js/js.cookie.js?v=7.1.1"></script>
+  <script src="/js/scroll-cookie.js?v=7.1.1"></script>
 
 
   
@@ -1256,7 +1224,7 @@
     notify: false,
     appId: 'PE1n54R8ntdU6kBDm1qHqiHO-gzGzoHsz',
     appKey: 'PCK0D0zRhlTpUKmbHdCYMzPH',
-    placeholder: '吐槽一下',
+    placeholder: '�²�һ��',
     avatar: 'mm',
     meta: guest,
     pageSize: '10' || 10,
@@ -1614,16 +1582,6 @@
   
 
   
-  <script>
-    (function(){
-      var bp = document.createElement('script');
-      var curProtocol = window.location.protocol.split(':')[0];
-      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(bp, s);
-    })();
-  </script>
-
 
   
 
@@ -1641,7 +1599,7 @@
       
         pbOptions.position = "bottomCenter";
       
-        pbOptions.networks = "Weibo,Wechat,Douban,QQZone";
+        pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
       
       new needShareButton('#needsharebutton-postbottom', pbOptions);
     

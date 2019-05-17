@@ -53,11 +53,9 @@
 
 
 
-
-
   
   
-  <link rel="stylesheet" href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5">
+  <link rel="stylesheet" href="/lib/fancybox/source/jquery.fancybox.css">
 
 
 
@@ -67,19 +65,19 @@
 
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
 
-<link rel="stylesheet" href="/css/main.css?v=7.0.1">
+<link rel="stylesheet" href="/css/main.css?v=7.1.1">
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.0.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.1">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.0.1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.1">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.0.1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.1">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=7.0.1" color="#222">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.1" color="#222">
 
 
 
@@ -92,7 +90,7 @@
   var CONFIG = {
     root: '/',
     scheme: 'Pisces',
-    version: '7.0.1',
+    version: '7.1.1',
     sidebar: {"position":"right","display":"post","offset":12,"onmobile":true,"dimmer":false},
     back2top: true,
     back2top_sidebar: true,
@@ -117,25 +115,26 @@
 
 
 
-  <meta name="description" content="简介 本文主要讲提升树的模型与算法，并会在最后对梯度提升树进行比较与描述。在看XGBoost原理与推导前，可先看本文，对提升树有一个基本了解。 提升树模型 我们先来看一下提升树的模型，提升方法实际采用的仍然是加法模型(即基函数的线性组合)和前向分步算法。当基函数是决策树的时候，这个提升方法就叫提升树。根据上述，我们可以把提升树的模型公式表示出来： \[f_M(x)=\sum_{m=1}^MT">
+  <meta name="description" content="简介本文主要讲提升树的模型与算法，并会在最后对梯度提升树进行比较与描述。在看XGBoost原理与推导前，可先看本文，对提升树有一个基本了解。 提升树模型我们先来看一下提升树的模型，提升方法实际采用的仍然是加法模型(即基函数的线性组合)和前向分步算法。当基函数是决策树的时候，这个提升方法就叫提升树。根据上述，我们可以把提升树的模型公式表示出来：$$f_M(x)=\sum_{m=1}^MT(x;\Th">
 <meta name="keywords" content="原理,推导,GBDT,提升树">
 <meta property="og:type" content="article">
 <meta property="og:title" content="提升树原理与推导">
 <meta property="og:url" content="https://lukebest.github.io/posts/e647.html">
 <meta property="og:site_name" content="心明录">
-<meta property="og:description" content="简介 本文主要讲提升树的模型与算法，并会在最后对梯度提升树进行比较与描述。在看XGBoost原理与推导前，可先看本文，对提升树有一个基本了解。 提升树模型 我们先来看一下提升树的模型，提升方法实际采用的仍然是加法模型(即基函数的线性组合)和前向分步算法。当基函数是决策树的时候，这个提升方法就叫提升树。根据上述，我们可以把提升树的模型公式表示出来： \[f_M(x)=\sum_{m=1}^MT">
+<meta property="og:description" content="简介本文主要讲提升树的模型与算法，并会在最后对梯度提升树进行比较与描述。在看XGBoost原理与推导前，可先看本文，对提升树有一个基本了解。 提升树模型我们先来看一下提升树的模型，提升方法实际采用的仍然是加法模型(即基函数的线性组合)和前向分步算法。当基函数是决策树的时候，这个提升方法就叫提升树。根据上述，我们可以把提升树的模型公式表示出来：$$f_M(x)=\sum_{m=1}^MT(x;\Th">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2019-04-11T08:50:41.525Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="提升树原理与推导">
-<meta name="twitter:description" content="简介 本文主要讲提升树的模型与算法，并会在最后对梯度提升树进行比较与描述。在看XGBoost原理与推导前，可先看本文，对提升树有一个基本了解。 提升树模型 我们先来看一下提升树的模型，提升方法实际采用的仍然是加法模型(即基函数的线性组合)和前向分步算法。当基函数是决策树的时候，这个提升方法就叫提升树。根据上述，我们可以把提升树的模型公式表示出来： \[f_M(x)=\sum_{m=1}^MT">
+<meta name="twitter:description" content="简介本文主要讲提升树的模型与算法，并会在最后对梯度提升树进行比较与描述。在看XGBoost原理与推导前，可先看本文，对提升树有一个基本了解。 提升树模型我们先来看一下提升树的模型，提升方法实际采用的仍然是加法模型(即基函数的线性组合)和前向分步算法。当基函数是决策树的时候，这个提升方法就叫提升树。根据上述，我们可以把提升树的模型公式表示出来：$$f_M(x)=\sum_{m=1}^MT(x;\Th">
 
 
 
 
 
-
-  <link rel="canonical" href="https://lukebest.github.io/posts/e647.html">
+  
+  
+  <link rel="canonical" href="https://lukebest.github.io/posts/e647">
 
 
 
@@ -277,7 +276,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">5</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">4</span></a>
 
   </li>
         
@@ -296,7 +295,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">13</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">10</span></a>
 
   </li>
         
@@ -315,7 +314,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">33</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">30</span></a>
 
   </li>
         
@@ -389,12 +388,10 @@
     
   
   
-  
-  
 
   
 
-  <a href="https://github.com/shanksly" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewbox="0 0 250 250" style="fill: #222; color: #fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a>
+  <a href="https://github.com/lukebest" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewbox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a>
 
 
 
@@ -417,8 +414,6 @@
   
   
 
-  
-    <div class="reading-progress-bar"></div>
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -578,19 +573,16 @@
       
 
       
-        <h1 id="简介">简介</h1>
-<p>本文主要讲提升树的模型与算法，并会在最后对梯度提升树进行比较与描述。在看<a href="/posts/933a.html" title="XGBoost原理与推导">XGBoost原理与推导</a>前，可先看本文，对提升树有一个基本了解。</p>
-<h1 id="提升树模型">提升树模型</h1>
-<p>我们先来看一下提升树的模型，提升方法实际采用的仍然是加法模型(即基函数的线性组合)和前向分步算法。当基函数是决策树的时候，这个提升方法就叫提升树。根据上述，我们可以把提升树的模型公式表示出来： <span class="math display">\[f_M(x)=\sum_{m=1}^MT(x;\Theta_m) \tag{1}\]</span> 其中，<span class="math inline">\(T(x;\Theta_m)\)</span>就表示决策树。<span class="math inline">\(x\)</span>为输入的样本。<span class="math inline">\(\Theta_m\)</span>为第<span class="math inline">\(m\)</span>棵树的参数，从<a href="/posts/917e.html" title="回归树原理与推导">回归树原理与推导</a>中来看，类似其叶子节点权重。<span class="math inline">\(M\)</span>为树的总棵树。</p>
-<h1 id="提升树算法">提升树算法</h1>
-<p>提升树算法也是用前向分步算法，我们设第<span class="math inline">\(m\)</span>步的模型是 <span class="math display">\[f_m(x)=f_{m-1}(x)+T(x;\Theta_m) \tag{2}\]</span> 也就是说模型是在之前训练好的结果上加上当前的决策树的输出。</p>
-<p>对于第<span class="math inline">\(m\)</span>步的最优参数<span class="math inline">\(\hat{\Theta}_m\)</span>，根据经验风险最小化的策略，有： <span class="math display">\[\hat{\Theta}_m=\arg \min_{\Theta_m}\sum_{i=1}^N\mathcal{L}(y_i,f_m(x_i)) \tag{3}\]</span> 我们假定采用平方误差损失，即有： <span class="math display">\[\mathcal{L}(y,f_m(x))=(y-f_m(x))^2 \tag{4}\]</span> 我们把(2)式代入(4)式，有： <span class="math display">\[\mathcal{L}(y,f_{m-1}(x)+T(x;\Theta_m))=(y-f_{m-1}(x)-T(x;\Theta_m))^2 \tag{5}\]</span> 我们令 <span class="math display">\[r=y-f_{m-1}(x) \tag{6}\]</span> 则(5)式可以写成： <span class="math display">\[\mathcal{L}(y,f_{m-1}(x)+T(x;\Theta_m))=(r-T(x;\Theta_m))^2 \tag{7}\]</span> 我们把<span class="math inline">\(r\)</span>叫作当前模型拟合数据的残差(residual)，从(7)式可以看到，要使损失变小，即要让当前的树的输出拟合当前模型的残差。如何去拟合呢？可以参考<a href="/posts/917e.html" title="回归树原理与推导">回归树原理与推导</a>。</p>
-<h1 id="梯度提升树">梯度提升树</h1>
-<p>对于上述提升树，我们做了一个假设为损失为平方误差损失，如果推及一般损失函数，每一步的优化并不简单了。针对这个问题，Freidman提出了梯度提升的算法，即利用损失函数的负梯度在当前模型的值来近似(6)式中的残差(如果损失为平方误差损失，那么负梯度就是残差)。即 <span class="math display">\[r_{mi}=-[\frac{\partial \mathcal{L(y_i,f(x_i))}}{\partial f(x_i)}]_{f(x)=f_{m-1}(x)} \tag{8}\]</span> 其中<span class="math inline">\(i\)</span>为样本数，<span class="math inline">\(m\)</span>为提升迭代第<span class="math inline">\(m\)</span>轮。与我们比较熟悉的梯度下降的算法思想类似。</p>
-<h1 id="参考文献">参考文献</h1>
-<ul>
-<li><p>《统计学习方法》李航 8.4</p></li>
-<li><p><a href="http://www-stat.stanford.edu/~jhf/ftp/trebst.pdf" target="_blank" rel="noopener">Greedy function approximation: a gradient boosting machine</a></p></li>
+        <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>本文主要讲提升树的模型与算法，并会在最后对梯度提升树进行比较与描述。在看<a href="/posts/933a.html" title="XGBoost原理与推导">XGBoost原理与推导</a>前，可先看本文，对提升树有一个基本了解。</p>
+<h1 id="提升树模型"><a href="#提升树模型" class="headerlink" title="提升树模型"></a>提升树模型</h1><p>我们先来看一下提升树的模型，提升方法实际采用的仍然是加法模型(即基函数的线性组合)和前向分步算法。当基函数是决策树的时候，这个提升方法就叫提升树。根据上述，我们可以把提升树的模型公式表示出来：<br>$$f_M(x)=\sum_{m=1}^MT(x;\Theta_m) \tag{1}$$<br>其中，$T(x;\Theta_m)$就表示决策树。$x$为输入的样本。$\Theta_m$为第$m$棵树的参数，从<a href="/posts/917e.html" title="回归树原理与推导">回归树原理与推导</a>中来看，类似其叶子节点权重。$M$为树的总棵树。</p>
+<h1 id="提升树算法"><a href="#提升树算法" class="headerlink" title="提升树算法"></a>提升树算法</h1><p>提升树算法也是用前向分步算法，我们设第$m$步的模型是<br>$$f_m(x)=f_{m-1}(x)+T(x;\Theta_m) \tag{2}$$<br>也就是说模型是在之前训练好的结果上加上当前的决策树的输出。</p>
+<p>对于第$m$步的最优参数$\hat{\Theta}_m$，根据经验风险最小化的策略，有：<br>$$\hat{\Theta}<em>m=\arg \min</em>{\Theta_m}\sum_{i=1}^N\mathcal{L}(y_i,f_m(x_i)) \tag{3}$$<br>我们假定采用平方误差损失，即有：<br>$$\mathcal{L}(y,f_m(x))=(y-f_m(x))^2 \tag{4}$$<br>我们把(2)式代入(4)式，有：<br>$$\mathcal{L}(y,f_{m-1}(x)+T(x;\Theta_m))=(y-f_{m-1}(x)-T(x;\Theta_m))^2 \tag{5}$$<br>我们令<br>$$r=y-f_{m-1}(x) \tag{6}$$<br>则(5)式可以写成：<br>$$\mathcal{L}(y,f_{m-1}(x)+T(x;\Theta_m))=(r-T(x;\Theta_m))^2 \tag{7}$$<br>我们把$r$叫作当前模型拟合数据的残差(residual)，从(7)式可以看到，要使损失变小，即要让当前的树的输出拟合当前模型的残差。如何去拟合呢？可以参考<a href="/posts/917e.html" title="回归树原理与推导">回归树原理与推导</a>。</p>
+<h1 id="梯度提升树"><a href="#梯度提升树" class="headerlink" title="梯度提升树"></a>梯度提升树</h1><p>对于上述提升树，我们做了一个假设为损失为平方误差损失，如果推及一般损失函数，每一步的优化并不简单了。针对这个问题，Freidman提出了梯度提升的算法，即利用损失函数的负梯度在当前模型的值来近似(6)式中的残差(如果损失为平方误差损失，那么负梯度就是残差)。即<br>$$r_{mi}=-[\frac{\partial \mathcal{L(y_i,f(x_i))}}{\partial f(x_i)}]<em>{f(x)=f</em>{m-1}(x)} \tag{8}$$<br>其中$i$为样本数，$m$为提升迭代第$m$轮。与我们比较熟悉的梯度下降的算法思想类似。</p>
+<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><ul>
+<li><p>《统计学习方法》李航 8.4</p>
+</li>
+<li><p><a href="http://www-stat.stanford.edu/~jhf/ftp/trebst.pdf" target="_blank" rel="noopener">Greedy function approximation: a gradient boosting machine</a></p>
+</li>
 </ul>
 
       
@@ -641,7 +633,7 @@
     
       <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center;">
   <img id="wechat_subscriber_qcode" src="/images/qrcode_wechat.jpg" alt="瑾锋 wechat" style="width: 200px; max-width: 100%;">
-  <div>扫描订阅心明录公众号</div>
+  <div>ɨ�趩������¼���ں�</div>
 </div>
 
     
@@ -731,8 +723,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/ee7a.html" rel="prev" title="中国股市乱象">
-                中国股市乱象 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/ad64.html" rel="prev" title="文本定位算法">
+                文本定位算法 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -808,7 +800,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">13</span>
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -833,9 +825,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -912,13 +902,7 @@
                     
                       
                     
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">33</span>
+                    <span class="site-state-item-count">30</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1056,7 +1040,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">30k</span>
+    <span title="站点总字数">25k</span>
   
 
   
@@ -1067,7 +1051,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">27 分钟</span>
+    <span title="站点阅读时长">22 分钟</span>
   
 </div>
 
@@ -1134,8 +1118,6 @@
 
 
 
-  
-
 
 
   
@@ -1148,18 +1130,15 @@
   <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
   
-  <script src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-  
-  <script src="/lib/reading_progress/reading_progress.js"></script>
+  <script src="/lib/fancybox/source/jquery.fancybox.pack.js"></script>
 
 
   
 
 
-  <script src="/js/src/utils.js?v=7.0.1"></script>
+  <script src="/js/utils.js?v=7.1.1"></script>
 
-  <script src="/js/src/motion.js?v=7.0.1"></script>
+  <script src="/js/motion.js?v=7.1.1"></script>
 
 
 
@@ -1167,27 +1146,27 @@
   
 
 
-  <script src="/js/src/affix.js?v=7.0.1"></script>
+  <script src="/js/affix.js?v=7.1.1"></script>
 
-  <script src="/js/src/schemes/pisces.js?v=7.0.1"></script>
-
-
-
-  
-  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
-<script src="/js/src/post-details.js?v=7.0.1"></script>
+  <script src="/js/schemes/pisces.js?v=7.1.1"></script>
 
 
 
   
+  <script src="/js/scrollspy.js?v=7.1.1"></script>
+<script src="/js/post-details.js?v=7.1.1"></script>
 
-
-  <script src="/js/src/next-boot.js?v=7.0.1"></script>
 
 
   
-  <script src="/js/src/js.cookie.js?v=7.0.1"></script>
-  <script src="/js/src/scroll-cookie.js?v=7.0.1"></script>
+
+
+  <script src="/js/next-boot.js?v=7.1.1"></script>
+
+
+  
+  <script src="/js/js.cookie.js?v=7.1.1"></script>
+  <script src="/js/scroll-cookie.js?v=7.1.1"></script>
 
 
   
@@ -1215,7 +1194,7 @@
     notify: false,
     appId: 'PE1n54R8ntdU6kBDm1qHqiHO-gzGzoHsz',
     appKey: 'PCK0D0zRhlTpUKmbHdCYMzPH',
-    placeholder: '吐槽一下',
+    placeholder: '�²�һ��',
     avatar: 'mm',
     meta: guest,
     pageSize: '10' || 10,
@@ -1613,16 +1592,6 @@
   
 
   
-  <script>
-    (function(){
-      var bp = document.createElement('script');
-      var curProtocol = window.location.protocol.split(':')[0];
-      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(bp, s);
-    })();
-  </script>
-
 
   
 
@@ -1640,7 +1609,7 @@
       
         pbOptions.position = "bottomCenter";
       
-        pbOptions.networks = "Weibo,Wechat,Douban,QQZone";
+        pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
       
       new needShareButton('#needsharebutton-postbottom', pbOptions);
     
