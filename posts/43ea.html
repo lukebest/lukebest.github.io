@@ -115,18 +115,18 @@
 
 
 
-  <meta name="description" content="问题背景在银行的票据识别的过程中，并非所有的票据都是完整的一张图，有一些票据图片是倾斜并且有背景的，这种在票据识别的版式（也称模板）粗切时，会出现大量的粗切不准现象。所以对这类OCR的票据识别的图片，有必要对其进行规整。 处理算法这里的处理主要还是看图片本身的情况如何，我们接触到的图片，前景为浅色的矩形，大多数是整张票据，但有部分图片中的票据有某几边是存在较深颜色的背景的。并且在深颜色的背景中，还">
+  <meta name="description" content="问题背景 在银行的票据识别的过程中，并非所有的票据都是完整的一张图，有一些票据图片是倾斜并且有背景的，这种在票据识别的版式（也称模板）粗切时，会出现大量的粗切不准现象。所以对这类OCR的票据识别的图片，有必要对其进行规整。 处理算法 这里的处理主要还是看图片本身的情况如何，我们接触到的图片，前景为浅色的矩形，大多数是整张票据，但有部分图片中的票据有某几边是存在较深颜色的背景的。并且在深颜色的">
 <meta name="keywords" content="OCR,Opencv,Skimage,票据识别,图像处理">
 <meta property="og:type" content="article">
 <meta property="og:title" content="票据识别的图片前处理">
 <meta property="og:url" content="https://lukebest.github.io/posts/43ea.html">
 <meta property="og:site_name" content="心明录">
-<meta property="og:description" content="问题背景在银行的票据识别的过程中，并非所有的票据都是完整的一张图，有一些票据图片是倾斜并且有背景的，这种在票据识别的版式（也称模板）粗切时，会出现大量的粗切不准现象。所以对这类OCR的票据识别的图片，有必要对其进行规整。 处理算法这里的处理主要还是看图片本身的情况如何，我们接触到的图片，前景为浅色的矩形，大多数是整张票据，但有部分图片中的票据有某几边是存在较深颜色的背景的。并且在深颜色的背景中，还">
+<meta property="og:description" content="问题背景 在银行的票据识别的过程中，并非所有的票据都是完整的一张图，有一些票据图片是倾斜并且有背景的，这种在票据识别的版式（也称模板）粗切时，会出现大量的粗切不准现象。所以对这类OCR的票据识别的图片，有必要对其进行规整。 处理算法 这里的处理主要还是看图片本身的情况如何，我们接触到的图片，前景为浅色的矩形，大多数是整张票据，但有部分图片中的票据有某几边是存在较深颜色的背景的。并且在深颜色的">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-20T08:58:19.579Z">
+<meta property="og:updated_time" content="2019-05-28T03:18:00.842Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="票据识别的图片前处理">
-<meta name="twitter:description" content="问题背景在银行的票据识别的过程中，并非所有的票据都是完整的一张图，有一些票据图片是倾斜并且有背景的，这种在票据识别的版式（也称模板）粗切时，会出现大量的粗切不准现象。所以对这类OCR的票据识别的图片，有必要对其进行规整。 处理算法这里的处理主要还是看图片本身的情况如何，我们接触到的图片，前景为浅色的矩形，大多数是整张票据，但有部分图片中的票据有某几边是存在较深颜色的背景的。并且在深颜色的背景中，还">
+<meta name="twitter:description" content="问题背景 在银行的票据识别的过程中，并非所有的票据都是完整的一张图，有一些票据图片是倾斜并且有背景的，这种在票据识别的版式（也称模板）粗切时，会出现大量的粗切不准现象。所以对这类OCR的票据识别的图片，有必要对其进行规整。 处理算法 这里的处理主要还是看图片本身的情况如何，我们接触到的图片，前景为浅色的矩形，大多数是整张票据，但有部分图片中的票据有某几边是存在较深颜色的背景的。并且在深颜色的">
 
 
 
@@ -276,7 +276,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">5</span></a>
 
   </li>
         
@@ -295,7 +295,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">11</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">12</span></a>
 
   </li>
         
@@ -314,7 +314,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">34</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">37</span></a>
 
   </li>
         
@@ -464,12 +464,24 @@
                 
               
 
-              <time title="创建时间：2019-05-20 15:48:22 / 修改时间：16:58:19" itemprop="dateCreated datePublished" datetime="2019-05-20T15:48:22+08:00">2019-05-20</time>
+              <time title="创建时间：2019-05-20 15:48:22" itemprop="dateCreated datePublished" datetime="2019-05-20T15:48:22+08:00">2019-05-20</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-05-28 11:18:00" itemprop="dateModified" datetime="2019-05-28T11:18:00+08:00">2019-05-28</time>
               
             
           </span>
@@ -486,7 +498,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/深度学习/" itemprop="url" rel="index"><span itemprop="name">深度学习</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/图像处理/" itemprop="url" rel="index"><span itemprop="name">图像处理</span></a></span>
 
                 
                 
@@ -573,18 +585,28 @@
       
 
       
-        <h1 id="问题背景"><a href="#问题背景" class="headerlink" title="问题背景"></a>问题背景</h1><p>在银行的票据识别的过程中，并非所有的票据都是完整的一张图，有一些票据图片是倾斜并且有背景的，这种在票据识别的版式（也称模板）粗切时，会出现大量的粗切不准现象。所以对这类OCR的票据识别的图片，有必要对其进行规整。</p>
-<h1 id="处理算法"><a href="#处理算法" class="headerlink" title="处理算法"></a>处理算法</h1><p>这里的处理主要还是看图片本身的情况如何，我们接触到的图片，前景为浅色的矩形，大多数是整张票据，但有部分图片中的票据有某几边是存在较深颜色的背景的。并且在深颜色的背景中，还可能会有闪光灯拍照造成的高光区域，颜色基本和票据颜色相近。如果采用普通的找矩形轮廓再透视变换的方法，极可能把大多数整张票据的轮廓进行裁剪，造成处理后的票据图并非整张票据。所以这里需要对此进行特殊处理。下面进行处理算法的详细描述。</p>
-<h2 id="二值化图像"><a href="#二值化图像" class="headerlink" title="二值化图像"></a>二值化图像</h2><p>这里的二值化票据图像的目标就是要把票据的前景显示为白，其他为黑。</p>
-<p>首先是把图像转为灰阶图，然后用Otsu算法进行二值化，关于Otsu算法，笔者有一篇专门的文章描述其原理- 。在二值化之后，就可以进行形态学闭运算，把票据中的的内容进行清除，减少找轮廓的运算量。这里的闭运算采用的核为10阶。</p>
-<h2 id="边缘加边"><a href="#边缘加边" class="headerlink" title="边缘加边"></a>边缘加边</h2><p>这个想法是整个方案中比较特殊的一个处理。因为如果是已经整张图都是前景票据，这个时候去找轮廓基本上都会影响票据的正常大小。所以这里有一个处理方法是在上述二值化之后的图片的四边均加上一个小边，这个小边的要求是基本上比有深背景的图片的深背景宽度要小。这里取的是20个像素。</p>
-<h2 id="寻找轮廓"><a href="#寻找轮廓" class="headerlink" title="寻找轮廓"></a>寻找轮廓</h2><p>在边缘加边了之后就可以去大胆找轮廓而不用担心轮廓找错，寻找最大的轮廓即可。</p>
-<h2 id="多边拟合"><a href="#多边拟合" class="headerlink" title="多边拟合"></a>多边拟合</h2><p>在找到最大轮廓之后即可对其进行拟合，可以加大类似于tolerance之类的系数让其尽量为一个矩形，从而忽略掉可能会影响轮廓查找的闪光灯高光。</p>
-<h2 id="顶点排序"><a href="#顶点排序" class="headerlink" title="顶点排序"></a>顶点排序</h2><p>顶点排序，即把所有的轮廓点作为输入，找到矩形顶点并进行排序，方便后面透视变换。这里直接把代码打在如下，其中pts为n个二维点的numpy矩阵。</p>
+        <h1 id="问题背景">问题背景</h1>
+<p>在银行的票据识别的过程中，并非所有的票据都是完整的一张图，有一些票据图片是倾斜并且有背景的，这种在票据识别的版式（也称模板）粗切时，会出现大量的粗切不准现象。所以对这类OCR的票据识别的图片，有必要对其进行规整。</p>
+<h1 id="处理算法">处理算法</h1>
+<p>这里的处理主要还是看图片本身的情况如何，我们接触到的图片，前景为浅色的矩形，大多数是整张票据，但有部分图片中的票据有某几边是存在较深颜色的背景的。并且在深颜色的背景中，还可能会有闪光灯拍照造成的高光区域，颜色基本和票据颜色相近。如果采用普通的找矩形轮廓再透视变换的方法，极可能把大多数整张票据的轮廓进行裁剪，造成处理后的票据图并非整张票据。所以这里需要对此进行特殊处理。下面进行处理算法的详细描述。</p>
+<h2 id="二值化图像">二值化图像</h2>
+<p>这里的二值化票据图像的目标就是要把票据的前景显示为白，其他为黑。</p>
+<p>首先是把图像转为灰阶图，然后用Otsu算法进行二值化，关于Otsu算法，笔者有一篇专门的文章描述其原理- <a href="/posts/undefined.html" title="Otsu算法">Otsu算法</a>。在二值化之后，就可以进行形态学闭运算，把票据中的的内容进行清除，减少找轮廓的运算量。这里的闭运算采用的核为10阶。</p>
+<h2 id="边缘加边">边缘加边</h2>
+<p>这个想法是整个方案中比较特殊的一个处理。因为如果是已经整张图都是前景票据，这个时候去找轮廓基本上都会影响票据的正常大小。所以这里有一个处理方法是在上述二值化之后的图片的四边均加上一个小边，这个小边的要求是基本上比有深背景的图片的深背景宽度要小。这里取的是20个像素。</p>
+<h2 id="寻找轮廓">寻找轮廓</h2>
+<p>在边缘加边了之后就可以去大胆找轮廓而不用担心轮廓找错，寻找最大的轮廓即可。</p>
+<h2 id="多边拟合">多边拟合</h2>
+<p>在找到最大轮廓之后即可对其进行拟合，可以加大类似于tolerance之类的系数让其尽量为一个矩形，从而忽略掉可能会影响轮廓查找的闪光灯高光。</p>
+<h2 id="顶点排序">顶点排序</h2>
+<p>顶点排序，即把所有的轮廓点作为输入，找到矩形顶点并进行排序，方便后面透视变换。这里直接把代码打在如下，其中pts为n个二维点的numpy矩阵。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 四边形顶点排序，[top-left, top-right, bottom-right, bottom-left]</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">orderPoints</span><span class="params">(pts)</span>:</span></span><br><span class="line">    rect = np.zeros((<span class="number">4</span>, <span class="number">2</span>), dtype=<span class="string">"float32"</span>)</span><br><span class="line">    s = pts.sum(axis=<span class="number">1</span>)</span><br><span class="line">    rect[<span class="number">0</span>] = pts[np.argmin(s)]</span><br><span class="line">    rect[<span class="number">2</span>] = pts[np.argmax(s)]</span><br><span class="line">    diff = np.diff(pts, axis=<span class="number">1</span>)</span><br><span class="line">    rect[<span class="number">1</span>] = pts[np.argmin(diff)]</span><br><span class="line">    rect[<span class="number">3</span>] = pts[np.argmax(diff)]</span><br><span class="line">    <span class="keyword">return</span> rect</span><br></pre></td></tr></table></figure>
-<h2 id="透视变换"><a href="#透视变换" class="headerlink" title="透视变换"></a>透视变换</h2><p>这个没什么好说的，就是把顶点排序之后的顶点对应到目标顶点直接调接口进行透视变换。目标顶点即为我们需要的分辨率的四个顶点。</p>
-<h1 id="遗留问题"><a href="#遗留问题" class="headerlink" title="遗留问题"></a>遗留问题</h1><p>整个方案的图片处理正确率在98%左右，其他无法处理有如下几类：1.整体亮度都非常暗，2.整体亮度都非常亮或者背景都是浅色背景和前景无法区分者。由于要兼顾效率与效果，目前处理结果已能接受。另外就是在无Opencv的环境还用skimage进行了全套实现。如果有任何问题可以在正文评论提出或者在github的repo中提出。</p>
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://github.com/lukebest/fileclipper" target="_blank" rel="noopener">github源码</a></p>
+<h2 id="透视变换">透视变换</h2>
+<p>这个没什么好说的，就是把顶点排序之后的顶点对应到目标顶点直接调接口进行透视变换。目标顶点即为我们需要的分辨率的四个顶点。</p>
+<h1 id="遗留问题">遗留问题</h1>
+<p>整个方案的图片处理正确率在98%左右，其他无法处理有如下几类：1.整体亮度都非常暗，2.整体亮度都非常亮或者背景都是浅色背景和前景无法区分者。由于要兼顾效率与效果，目前处理结果已能接受。另外就是在无Opencv的环境还用skimage进行了全套实现。如果有任何问题可以在正文评论提出或者在github的repo中提出。</p>
+<h1 id="参考">参考</h1>
+<p><a href="https://github.com/lukebest/fileclipper" target="_blank" rel="noopener">github源码</a></p>
 
       
     </div>
@@ -604,6 +626,15 @@
       
     </li>
   
+    <li class="popular-posts-item">
+      
+        <div class="popular-posts-date">2019-05-27</div>
+      
+      
+      <div class="popular-posts-title"><a href="\posts\c380.html" rel="bookmark">Otsu算法</a></div>
+      
+    </li>
+  
   </ul>
 
 
@@ -616,7 +647,7 @@
     
       <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center;">
   <img id="wechat_subscriber_qcode" src="/images/qrcode_wechat.jpg" alt="瑾锋 wechat" style="width: 200px; max-width: 100%;">
-  <div>ɨ�趩������¼���ں�</div>
+  <div>文学向公众号</div>
 </div>
 
     
@@ -708,6 +739,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/posts/c380.html" rel="prev" title="Otsu算法">
+                Otsu算法 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -781,7 +816,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-count">12</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -806,7 +841,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -891,7 +928,13 @@
                     
                       
                     
-                    <span class="site-state-item-count">34</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">37</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1029,7 +1072,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">27k</span>
+    <span title="站点总字数">30k</span>
   
 
   
@@ -1040,7 +1083,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">25 分钟</span>
+    <span title="站点阅读时长">27 分钟</span>
   
 </div>
 

@@ -115,17 +115,18 @@
 
 
 
-  <meta name="description" content="Stay hungry. Stay foolish.">
-<meta name="keywords" content="机器学习 算法分析 工程实现">
-<meta property="og:type" content="website">
-<meta property="og:title" content="心明录">
-<meta property="og:url" content="https://lukebest.github.io/tags/原理/index.html">
+  <meta name="description" content="简介 在图像处理中我们经常会遇到（灰度图）二值化的需求，一般情况下可以指定全局阈值进行二值化，那这种时候我们如何知道这个阈值的好坏呢？答案就是不停的尝试。如果是一副双峰图像（双峰图像是指图像直方图中存在两个峰），直观上应该是在两峰之间的峰谷附近取一个值。Otsu就是处理这个问题的，即根据图像直方图自动算出一个阈值。本文会先介绍和简单推导一下公式，然后再脑洞清奇地用代码探索一下Otsu的二值化和k">
+<meta name="keywords" content="原理,推导,票据识别,kmean,Otsu,二值化">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Otsu算法">
+<meta property="og:url" content="https://lukebest.github.io/posts/c380.html">
 <meta property="og:site_name" content="心明录">
-<meta property="og:description" content="Stay hungry. Stay foolish.">
+<meta property="og:description" content="简介 在图像处理中我们经常会遇到（灰度图）二值化的需求，一般情况下可以指定全局阈值进行二值化，那这种时候我们如何知道这个阈值的好坏呢？答案就是不停的尝试。如果是一副双峰图像（双峰图像是指图像直方图中存在两个峰），直观上应该是在两峰之间的峰谷附近取一个值。Otsu就是处理这个问题的，即根据图像直方图自动算出一个阈值。本文会先介绍和简单推导一下公式，然后再脑洞清奇地用代码探索一下Otsu的二值化和k">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-05-28T09:19:04.696Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="心明录">
-<meta name="twitter:description" content="Stay hungry. Stay foolish.">
+<meta name="twitter:title" content="Otsu算法">
+<meta name="twitter:description" content="简介 在图像处理中我们经常会遇到（灰度图）二值化的需求，一般情况下可以指定全局阈值进行二值化，那这种时候我们如何知道这个阈值的好坏呢？答案就是不停的尝试。如果是一副双峰图像（双峰图像是指图像直方图中存在两个峰），直观上应该是在两峰之间的峰谷附近取一个值。Otsu就是处理这个问题的，即根据图像直方图自动算出一个阈值。本文会先介绍和简单推导一下公式，然后再脑洞清奇地用代码探索一下Otsu的二值化和k">
 
 
 
@@ -133,7 +134,7 @@
 
   
   
-  <link rel="canonical" href="https://lukebest.github.io/tags/原理/">
+  <link rel="canonical" href="https://lukebest.github.io/posts/c380">
 
 
 
@@ -143,7 +144,7 @@
   };
 </script>
 
-  <title>标签: 原理 | 心明录</title>
+  <title>Otsu算法 | 心明录</title>
   
 
 
@@ -202,7 +203,7 @@
     
   
 
-  <div class="container sidebar-position-right ">
+  <div class="container sidebar-position-right page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -301,7 +302,7 @@
         
         
           
-          <li class="menu-item menu-item-tags menu-item-active">
+          <li class="menu-item menu-item-tags">
 
     
     
@@ -400,187 +401,404 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block tag">
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h2>原理<small>标签</small>
-        </h2>
-      </div>
-
-      
-        
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://lukebest.github.io/posts/c380.html">
 
-      <h3 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="瑾锋">
+      <meta itemprop="description" content="Stay hungry. Stay foolish.">
+      <meta itemprop="image" content="/images/avatar_luke.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="心明录">
+    </span>
+
+    
+      <header class="post-header">
+
         
-          <a class="post-title-link" href="/posts/c380.html" itemprop="url">
-            
-              <span itemprop="name">Otsu算法</span>
-            
-          </a>
         
-      </h3>
+          <h2 class="post-title" itemprop="name headline">Otsu算法
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-05-27T15:43:14+08:00" content="2019-05-27">
-          05-27
-        </time>
-      </div>
+              
+            
+          </h2>
+        
 
-    </header>
-  </article>
+        <div class="post-meta">
+          <span class="post-time">
 
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-27 15:43:14" itemprop="dateCreated datePublished" datetime="2019-05-27T15:43:14+08:00">2019-05-27</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-05-28 17:19:04" itemprop="dateModified" datetime="2019-05-28T17:19:04+08:00">2019-05-28</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/图像处理/" itemprop="url" rel="index"><span itemprop="name">图像处理</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/posts/c380.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/posts/c380.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+            <span id="/posts/c380.html" class="leancloud_visitors" data-flag-title="Otsu算法">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读次数：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">3k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">3 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-          <a class="post-title-link" href="/posts/e647.html" itemprop="url">
-            
-              <span itemprop="name">提升树原理与推导</span>
-            
-          </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-11T13:35:48+08:00" content="2019-04-11">
-          04-11
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-          <a class="post-title-link" href="/posts/917e.html" itemprop="url">
-            
-              <span itemprop="name">回归树原理与推导</span>
-            
-          </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-10T10:11:31+08:00" content="2019-04-10">
-          04-10
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-          <a class="post-title-link" href="/posts/933a.html" itemprop="url">
-            
-              <span itemprop="name">XGBoost原理与推导</span>
-            
-          </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-08T13:57:58+08:00" content="2019-04-08">
-          04-08
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-          <a class="post-title-link" href="/posts/d28f.html" itemprop="url">
-            
-              <span itemprop="name">Logistic Regression原理与推导</span>
-            
-          </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-03T17:58:20+08:00" content="2019-04-03">
-          04-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+        <h1 id="简介">简介</h1>
+<p>在图像处理中我们经常会遇到（灰度图）二值化的需求，一般情况下可以指定全局阈值进行二值化，那这种时候我们如何知道这个阈值的好坏呢？答案就是不停的尝试。如果是一副双峰图像（双峰图像是指图像直方图中存在两个峰），直观上应该是在两峰之间的峰谷附近取一个值。Otsu就是处理这个问题的，即根据图像直方图自动算出一个阈值。本文会先介绍和简单推导一下公式，然后再脑洞清奇地用代码探索一下Otsu的二值化和kmean的二类聚类方法的效果是否有差异。</p>
+<h1 id="原理与公式">原理与公式</h1>
+<h2 id="原理">原理</h2>
+<p>Otsu算法的原理非常简单，算法假定该图像根据双模直方图（前景像素和背景像素）把包含两类像素，于是它要计算能将两类分开的最佳阈值，使得它们的类内方差最小；由于两两平方距离恒定，所以即它们的类间方差最大。</p>
+<h2 id="公式推导">公式推导</h2>
+<p>在大津算法中，我们穷举搜索能使类内方差最小的阈值<span class="math inline">\(t\)</span>。<strong>类内方差</strong>定义为两个类的方差的加权和： <span class="math display">\[\sigma_w^2(t) = \omega_1(t)\sigma_1^2(t)+\omega_2(t)\sigma_2^2(t) \tag{1}\]</span> 权重 <span class="math inline">\(\omega_i\)</span>是被阈值<span class="math inline">\(t\)</span>分开的两个类的概率，而 <span class="math inline">\(\sigma^2_ i\)</span>是这两个类的类内方差。有： <span class="math display">\[\omega_1(t)=\sum_{i=0}^t p(i) \tag{2}\]</span> <span class="math display">\[\omega_2(t)=\sum_{i=t+1}^l p(i) \tag{3}\]</span> 类均值<span class="math inline">\(\mu_i(t)\)</span>为： <span class="math display">\[\mu_1(t)=\left[\sum_{i=0}^t p(i)\,x(i)\right]/\omega_1 \tag{4}\]</span> <span class="math display">\[\mu_2(t)=\left[\sum_{i=t+1}^l p(i)\,x(i)\right]/\omega_2 \tag{5}\]</span> 其中<span class="math inline">\(x(i)\)</span>为第<span class="math inline">\(i\)</span>个直方图面元中心的值。 而<strong>类间方差</strong>： <span class="math display">\[\sigma_b^2(t) = \sigma^2-\sigma_w^2(t)=\omega_1(t)\omega_2(t)[\mu_1(t)-\mu_2(t)]^2 \tag{6}\]</span></p>
+<h2 id="代码">代码</h2>
+<p>我们就采用使得类内方差(1)式最小的方案，Python代码如下 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">img = cv2.imread(<span class="string">'test.jpg'</span>,<span class="number">0</span>)</span><br><span class="line">blur = cv2.GaussianBlur(img,(<span class="number">5</span>,<span class="number">5</span>),<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># find normalized_histogram, and its cumulative distribution function</span></span><br><span class="line">hist = cv2.calcHist([blur],[<span class="number">0</span>],<span class="literal">None</span>,[<span class="number">256</span>],[<span class="number">0</span>,<span class="number">256</span>])</span><br><span class="line">hist_norm = hist.ravel()/hist.max()</span><br><span class="line">Q = hist_norm.cumsum()</span><br><span class="line">bins = np.arange(<span class="number">256</span>)</span><br><span class="line">fn_min = np.inf</span><br><span class="line">thresh = <span class="number">-1</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> xrange(<span class="number">1</span>,<span class="number">256</span>):</span><br><span class="line">    p1,p2 = np.hsplit(hist_norm,[i]) <span class="comment"># probabilities</span></span><br><span class="line">    q1,q2 = Q[i],Q[<span class="number">255</span>]-Q[i] <span class="comment"># cum sum of classes</span></span><br><span class="line">    b1,b2 = np.hsplit(bins,[i]) <span class="comment"># weights</span></span><br><span class="line">    <span class="comment"># finding means and variances</span></span><br><span class="line">    m1,m2 = np.sum(p1*b1)/q1, np.sum(p2*b2)/q2</span><br><span class="line">    v1,v2 = np.sum(((b1-m1)**<span class="number">2</span>)*p1)/q1,np.sum(((b2-m2)**<span class="number">2</span>)*p2)/q2</span><br><span class="line">    <span class="comment"># calculates the minimization function</span></span><br><span class="line">    fn = v1*q1 + v2*q2</span><br><span class="line">    <span class="keyword">if</span> fn &lt; fn_min:</span><br><span class="line">        fn_min = fn</span><br><span class="line">        thresh = i</span><br><span class="line">print(<span class="string">"loop:"</span>,i)</span><br><span class="line">print(<span class="string">"threshold:"</span>,i)</span><br></pre></td></tr></table></figure></p>
+<h1 id="kmean二值化思考">kmean二值化思考</h1>
+<p>这是笔者的一个脑洞，直接在直方图上做kmean二类聚类，看看是否能够达到和Otsu算法一样的效果。我们先按kmean的思路模拟一下算法流程：</p>
+<ol type="1">
+<li>在直方图上任取两个整数点<span class="math inline">\(A_0\)</span>,<span class="math inline">\(B_0\)</span>，<span class="math inline">\(A_0,B_0\in[0,255]\)</span>；</li>
+<li>在直方图上的其余点按距离归属为二类，易知<span class="math inline">\(A\)</span>,<span class="math inline">\(B\)</span>的中点<span class="math inline">\(M_i\)</span>即为分界点，<span class="math inline">\(M_i=(A_i+B_i)/2\)</span>；</li>
+<li>分别计算被<span class="math inline">\(M_i\)</span>分割的两类的加权均值，并用两类的加权均值替换<span class="math inline">\(A,B\)</span>；</li>
+<li>重复第2步和第3步，直到<span class="math inline">\(M_i\)</span>变化幅度小于<span class="math inline">\(eps\)</span>。</li>
+</ol>
+<h2 id="kmean代码">kmean代码</h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">img = cv2.imread(<span class="string">'test.jpg'</span>,<span class="number">0</span>)</span><br><span class="line">blur = cv2.GaussianBlur(img,(<span class="number">5</span>,<span class="number">5</span>),<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># find normalized_histogram, and its cumulative distribution function</span></span><br><span class="line">hist = cv2.calcHist([blur],[<span class="number">0</span>],<span class="literal">None</span>,[<span class="number">256</span>],[<span class="number">0</span>,<span class="number">256</span>])</span><br><span class="line">hist_norm = hist.ravel()/hist.max()</span><br><span class="line">Q = hist_norm.cumsum()</span><br><span class="line">bins = np.arange(<span class="number">256</span>)</span><br><span class="line">fn_min = np.inf</span><br><span class="line">thresh = <span class="number">-1</span></span><br><span class="line">A = <span class="number">64</span></span><br><span class="line">B = <span class="number">192</span></span><br><span class="line">eps = <span class="number">1</span></span><br><span class="line">count = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> t <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">1024</span>):</span><br><span class="line">    i = int((A + B) / <span class="number">2</span>)</span><br><span class="line">    p1,p2 = np.hsplit(hist_norm,[i]) <span class="comment"># probabilities</span></span><br><span class="line">    q1,q2 = Q[i],Q[<span class="number">255</span>]-Q[i] <span class="comment"># cum sum of classes</span></span><br><span class="line">    b1,b2 = np.hsplit(bins,[i]) <span class="comment"># weights</span></span><br><span class="line">    <span class="comment"># finding means and variances</span></span><br><span class="line">    A,B = np.sum(p1*b1)/q1, np.sum(p2*b2)/q2</span><br><span class="line">    <span class="keyword">if</span> abs(((A+B)/<span class="number">2</span>)-i) &lt; eps:</span><br><span class="line">        count = t</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">print(<span class="string">"loop:"</span>,count)</span><br><span class="line">print(<span class="string">"threshold:"</span>,i)</span><br></pre></td></tr></table></figure>
+<h1 id="结果比较">结果比较</h1>
+<p>运行上面两段代码如下：</p>
+<p><strong>Otsu</strong> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">loop: 255</span><br><span class="line">threshold: 120</span><br></pre></td></tr></table></figure></p>
+<p><strong>kmean</strong> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">loop: 2</span><br><span class="line">threshold: 119</span><br></pre></td></tr></table></figure></p>
+<p>从代码上分析也可以看到Otsu法事实上就是遍历直方图的横轴使得类内方差最小即可，迭代次数固定。而kmean方法一般情况下4次左右迭代即可找到与Otsu法相差不大的结果。</p>
+<h1 id="参考">参考</h1>
+<p><a href="https://zh.wikipedia.org/wiki/%E5%A4%A7%E6%B4%A5%E7%AE%97%E6%B3%95" target="_blank" rel="noopener">大津算法</a></p>
 
       
     </div>
 
+    
+      
+
+  <div class="popular-posts-header">相关文章</div>
+  <ul class="popular-posts">
+  
+    <li class="popular-posts-item">
+      
+        <div class="popular-posts-date">2019-04-03</div>
+      
+      
+      <div class="popular-posts-title"><a href="\posts\d28f.html" rel="bookmark">Logistic Regression原理与推导</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+        <div class="popular-posts-date">2019-04-10</div>
+      
+      
+      <div class="popular-posts-title"><a href="\posts\917e.html" rel="bookmark">回归树原理与推导</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+        <div class="popular-posts-date">2019-04-11</div>
+      
+      
+      <div class="popular-posts-title"><a href="\posts\e647.html" rel="bookmark">提升树原理与推导</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+        <div class="popular-posts-date">2019-04-08</div>
+      
+      
+      <div class="popular-posts-title"><a href="\posts\933a.html" rel="bookmark">XGBoost原理与推导</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+        <div class="popular-posts-date">2019-05-20</div>
+      
+      
+      <div class="popular-posts-title"><a href="\posts\43ea.html" rel="bookmark">票据识别的图片前处理</a></div>
+      
+    </li>
+  
+  </ul>
+
+
+    
+
+    
+    
+    
+
+    
+      <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center;">
+  <img id="wechat_subscriber_qcode" src="/images/qrcode_wechat.jpg" alt="瑾锋 wechat" style="width: 200px; max-width: 100%;">
+  <div>文学向公众号</div>
+</div>
+
+    
+
+    
+      
+    
+    
+
+    
+      <div>
+        
+
+
+
+
+  
+
+
+
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>瑾锋</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    
+    <a href="https://lukebest.github.io/posts/c380.html" title="Otsu算法">https://lukebest.github.io/posts/c380.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/原理/" rel="tag"># 原理</a>
+          
+            <a href="/tags/推导/" rel="tag"># 推导</a>
+          
+            <a href="/tags/票据识别/" rel="tag"># 票据识别</a>
+          
+            <a href="/tags/kmean/" rel="tag"># kmean</a>
+          
+            <a href="/tags/Otsu/" rel="tag"># Otsu</a>
+          
+            <a href="/tags/二值化/" rel="tag"># 二值化</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div class="social_share">
+            
+            
+              <div id="needsharebutton-postbottom">
+                <span class="btn">
+                  <i class="fa fa-share-alt" aria-hidden="true"></i>
+                </span>
+              </div>
+            
+            
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/posts/43ea.html" rel="next" title="票据识别的图片前处理">
+                <i class="fa fa-chevron-left"></i> 票据识别的图片前处理
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
 
         </div>
         
@@ -600,8 +818,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -822,6 +1049,23 @@
       </div>
 
       
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#原理与公式"><span class="nav-number">2.</span> <span class="nav-text">原理与公式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#原理"><span class="nav-number">2.1.</span> <span class="nav-text">原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#公式推导"><span class="nav-number">2.2.</span> <span class="nav-text">公式推导</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码"><span class="nav-number">2.3.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#kmean二值化思考"><span class="nav-number">3.</span> <span class="nav-text">kmean二值化思考</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#kmean代码"><span class="nav-number">3.1.</span> <span class="nav-text">kmean代码</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#结果比较"><span class="nav-number">4.</span> <span class="nav-text">结果比较</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">5.</span> <span class="nav-text">参考</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
       
         <div class="back-to-top">
@@ -970,6 +1214,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.1.1"></script>
+<script src="/js/post-details.js?v=7.1.1"></script>
+
+
 
   
 
@@ -1018,6 +1266,8 @@
 
 
 
+
+  
 
 
   
@@ -1355,6 +1605,46 @@
   
   
 
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling }
+        if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next) }
+      }
+    });
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
+    }
+  });
+</script>
+<script src="//cdn.staticfile.org/MathJax/MathJax-2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
   
 
 
