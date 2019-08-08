@@ -115,18 +115,18 @@
 
 
 
-  <meta name="description" content="CART简介 本文主要讲回归树和最小二乘回归树的算法，目的是对决策树做回归有一个认识，并且熟悉经典的最小二乘回归树。我们这里只关注CART的回归树， CART(classification and regressioin tree)是在给定输入随机变量\(X\)条件下输出 随机变量\(Y\)的条件概率分布的学习方法。CART假设决策树是二叉树，内部结点特征的取值为“是”和“否”。其中的回归决策树">
+  <meta name="description" content="CART简介本文主要讲回归树和最小二乘回归树的算法，目的是对决策树做回归有一个认识，并且熟悉经典的最小二乘回归树。我们这里只关注CART的回归树，CART(classification and regressioin tree)是在给定输入随机变量$X$条件下输出 随机变量$Y$的条件概率分布的学习方法。CART假设决策树是二叉树，内部结点特征的取值为“是”和“否”。其中的回归决策树等价于递归地二">
 <meta name="keywords" content="原理,推导,最小二乘回归树,回归树">
 <meta property="og:type" content="article">
 <meta property="og:title" content="回归树原理与推导">
 <meta property="og:url" content="https://lukebest.github.io/posts/917e.html">
 <meta property="og:site_name" content="心明录">
-<meta property="og:description" content="CART简介 本文主要讲回归树和最小二乘回归树的算法，目的是对决策树做回归有一个认识，并且熟悉经典的最小二乘回归树。我们这里只关注CART的回归树， CART(classification and regressioin tree)是在给定输入随机变量\(X\)条件下输出 随机变量\(Y\)的条件概率分布的学习方法。CART假设决策树是二叉树，内部结点特征的取值为“是”和“否”。其中的回归决策树">
+<meta property="og:description" content="CART简介本文主要讲回归树和最小二乘回归树的算法，目的是对决策树做回归有一个认识，并且熟悉经典的最小二乘回归树。我们这里只关注CART的回归树，CART(classification and regressioin tree)是在给定输入随机变量$X$条件下输出 随机变量$Y$的条件概率分布的学习方法。CART假设决策树是二叉树，内部结点特征的取值为“是”和“否”。其中的回归决策树等价于递归地二">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2019-04-11T05:32:39.679Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="回归树原理与推导">
-<meta name="twitter:description" content="CART简介 本文主要讲回归树和最小二乘回归树的算法，目的是对决策树做回归有一个认识，并且熟悉经典的最小二乘回归树。我们这里只关注CART的回归树， CART(classification and regressioin tree)是在给定输入随机变量\(X\)条件下输出 随机变量\(Y\)的条件概率分布的学习方法。CART假设决策树是二叉树，内部结点特征的取值为“是”和“否”。其中的回归决策树">
+<meta name="twitter:description" content="CART简介本文主要讲回归树和最小二乘回归树的算法，目的是对决策树做回归有一个认识，并且熟悉经典的最小二乘回归树。我们这里只关注CART的回归树，CART(classification and regressioin tree)是在给定输入随机变量$X$条件下输出 随机变量$Y$的条件概率分布的学习方法。CART假设决策树是二叉树，内部结点特征的取值为“是”和“否”。其中的回归决策树等价于递归地二">
 
 
 
@@ -276,7 +276,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">5</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">6</span></a>
 
   </li>
         
@@ -295,7 +295,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">12</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">13</span></a>
 
   </li>
         
@@ -314,7 +314,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">37</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">40</span></a>
 
   </li>
         
@@ -551,7 +551,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1.6k</span>
+                <span title="本文字数">1.5k</span>
               
 
               
@@ -585,20 +585,15 @@
       
 
       
-        <h1 id="cart简介">CART简介</h1>
-<p>本文主要讲回归树和最小二乘回归树的算法，目的是对决策树做回归有一个认识，并且熟悉经典的最小二乘回归树。我们这里只关注<code>CART</code>的回归树， <code>CART(classification and regressioin tree)</code>是在给定输入随机变量<span class="math inline">\(X\)</span>条件下输出 随机变量<span class="math inline">\(Y\)</span>的条件概率分布的学习方法。<code>CART</code>假设决策树是二叉树，内部结点特征的取值为“是”和“否”。其中的回归决策树等价于递归地二分每个特征，将输入空间即特征空间切分为有限个单元，并在这些单元上确定预测的回归值。当切分完毕，这些单元就是回归树上的叶子节点，这些单元上的预测值，就是叶子节点的取值。</p>
-<h1 id="怎么做">怎么做</h1>
-<p>从上述简介可以看出生成一个回归树大致需要两部，第一步，切分特征空间为有限个单元；第二步，在每个切分后的单元上确定代表该单元的回归值。下面先讲如何确定单元取值，再讲如何切分特征空间。</p>
-<h2 id="确定单元取值">确定单元取值</h2>
-<p>假设<span class="math inline">\(X\)</span>与<span class="math inline">\(Y\)</span>分别为输入和输出变量，并且<span class="math inline">\(Y\)</span>是连续变量，给定训练数据集： <span class="math display">\[D=\{(x_1,y_1),(x_2,y_2),\dots,(x_N,y_N)\}\]</span> 其中<span class="math inline">\(x \in R^d\)</span>，一个回归树对应着输入空间（即特征空间）的一个切分和在切分后的单元上的输出值。我们这里假设输入空间已经被切分为<span class="math inline">\(M\)</span>个单元<span class="math inline">\(R_1,R_2,\dots,R_M\)</span>，并且每个单元有一个固定的输出值<span class="math inline">\(c_m\)</span>，那么回归树的模型就可以写成： <span class="math display">\[f(x)=\sum_{m=1}^Mc_mI(x \in R_m) \tag{1}\]</span> 那么如何确定每个<span class="math inline">\(R_m\)</span>上的取值呢？我们这里的最小二乘回归树用平方误差来表示回归树的单元取值与真实值的误差，即： <span class="math display">\[\mathcal{L}=\sum_{x_i \in R_m}(y_i-f(x_i))^2 \tag{2}\]</span> 根据最小二乘法，可以很容易知道单元<span class="math inline">\(R_m\)</span>上的<span class="math inline">\(c_m\)</span>的最优值<span class="math inline">\(\hat{c}_m\)</span>是<span class="math inline">\(R_m\)</span>的所有样本的输出<span class="math inline">\(y_i\)</span>的均值，即： <span class="math display">\[\hat{c}_m=\frac{1}{N_m}\sum_{x_i\in R_m(j,s)}y_i \tag{3}\]</span> 其中<span class="math inline">\(N_m\)</span>为落在切分空间<span class="math inline">\(R_m\)</span>的所有样本数目，<span class="math inline">\(R_m(j,s)\)</span>意思是切分变量<span class="math inline">\(x^{(j)}\)</span>(即输入变量的第<span class="math inline">\(j\)</span>维特征)和对应的切分点<span class="math inline">\(s\)</span>对应的切后单元空间。到这里就解决了问题：<strong>假设切分空间确定后，每个空间所代表的值</strong>。</p>
-<h2 id="切分特征空间">切分特征空间</h2>
-<p>那么回归树的问题就剩余如何确定输入空间的切分。事实上只要找到切分变量<span class="math inline">\(x^{(j)}\)</span>(即输入变量的第<span class="math inline">\(j\)</span>维特征)和对应的切分点<span class="math inline">\(s\)</span>，然后再针对切分后的子空间递归进行切分直到满足建树停止条件即可。</p>
-<p>这里定义切分后的两个区域为<span class="math inline">\(R_1\)</span>和<span class="math inline">\(R_2\)</span>，有： <span class="math display">\[R_1(j,s)=\{x|x^{(j)}\leq s\}\]</span> <span class="math display">\[R_2(j,s)=\{x|x^{(j)}&gt; s\}\]</span> 然后求解如下式寻找最优切分变量<span class="math inline">\(j\)</span>和最优切分点<span class="math inline">\(s\)</span>： <span class="math display">\[min_{j,s}[min_{c_1}\sum_{x_i\in R_1(j,s)}(y_i-c_1)^2 + min_{c_2}\sum_{x_i\in R_2(j,s)}(y_i-c_2)^2] \tag{4}\]</span> 解释一下(4)式，即选取输入变量<span class="math inline">\(x\)</span>的第<span class="math inline">\(j\)</span>维，并扫描切分点<span class="math inline">\(s\)</span>，当切分的两个子单元的方差之和最小，则为第<span class="math inline">\(j\)</span>维的最优切分点。遍历所有找到符合(4)式的<span class="math inline">\(j,s\)</span>，切分为两个子单元，再对子单元按(4)式进行递归切分直到满足停止条件即可。</p>
+        <h1 id="CART简介"><a href="#CART简介" class="headerlink" title="CART简介"></a>CART简介</h1><p>本文主要讲回归树和最小二乘回归树的算法，目的是对决策树做回归有一个认识，并且熟悉经典的最小二乘回归树。我们这里只关注<code>CART</code>的回归树，<br><code>CART(classification and regressioin tree)</code>是在给定输入随机变量$X$条件下输出 随机变量$Y$的条件概率分布的学习方法。<code>CART</code>假设决策树是二叉树，内部结点特征的取值为“是”和“否”。其中的回归决策树等价于递归地二分每个特征，将输入空间即特征空间切分为有限个单元，并在这些单元上确定预测的回归值。当切分完毕，这些单元就是回归树上的叶子节点，这些单元上的预测值，就是叶子节点的取值。</p>
+<h1 id="怎么做"><a href="#怎么做" class="headerlink" title="怎么做"></a>怎么做</h1><p>从上述简介可以看出生成一个回归树大致需要两部，第一步，切分特征空间为有限个单元；第二步，在每个切分后的单元上确定代表该单元的回归值。下面先讲如何确定单元取值，再讲如何切分特征空间。</p>
+<h2 id="确定单元取值"><a href="#确定单元取值" class="headerlink" title="确定单元取值"></a>确定单元取值</h2><p>假设$X$与$Y$分别为输入和输出变量，并且$Y$是连续变量，给定训练数据集：<br>$$D={(x_1,y_1),(x_2,y_2),\dots,(x_N,y_N)}$$<br>其中$x \in R^d$，一个回归树对应着输入空间（即特征空间）的一个切分和在切分后的单元上的输出值。我们这里假设输入空间已经被切分为$M$个单元$R_1,R_2,\dots,R_M$，并且每个单元有一个固定的输出值$c_m$，那么回归树的模型就可以写成：<br>$$f(x)=\sum_{m=1}^Mc_mI(x \in R_m) \tag{1}$$<br>那么如何确定每个$R_m$上的取值呢？我们这里的最小二乘回归树用平方误差来表示回归树的单元取值与真实值的误差，即：<br>$$\mathcal{L}=\sum_{x_i \in R_m}(y_i-f(x_i))^2 \tag{2}$$<br>根据最小二乘法，可以很容易知道单元$R_m$上的$c_m$的最优值$\hat{c}_m$是$R_m$的所有样本的输出$y_i$的均值，即：<br>$$\hat{c}_m=\frac{1}{N_m}\sum_{x_i\in R_m(j,s)}y_i \tag{3}$$<br>其中$N_m$为落在切分空间$R_m$的所有样本数目，$R_m(j,s)$意思是切分变量$x^{(j)}$(即输入变量的第$j$维特征)和对应的切分点$s$对应的切后单元空间。到这里就解决了问题：<strong>假设切分空间确定后，每个空间所代表的值</strong>。</p>
+<h2 id="切分特征空间"><a href="#切分特征空间" class="headerlink" title="切分特征空间"></a>切分特征空间</h2><p>那么回归树的问题就剩余如何确定输入空间的切分。事实上只要找到切分变量$x^{(j)}$(即输入变量的第$j$维特征)和对应的切分点$s$，然后再针对切分后的子空间递归进行切分直到满足建树停止条件即可。</p>
+<p>这里定义切分后的两个区域为$R_1$和$R_2$，有：<br>$$R_1(j,s)={x|x^{(j)}\leq s}$$<br>$$R_2(j,s)={x|x^{(j)}&gt; s}$$<br>然后求解如下式寻找最优切分变量$j$和最优切分点$s$：<br>$$min_{j,s}[min_{c_1}\sum_{x_i\in R_1(j,s)}(y_i-c_1)^2 + min_{c_2}\sum_{x_i\in R_2(j,s)}(y_i-c_2)^2] \tag{4}$$<br>解释一下(4)式，即选取输入变量$x$的第$j$维，并扫描切分点$s$，当切分的两个子单元的方差之和最小，则为第$j$维的最优切分点。遍历所有找到符合(4)式的$j,s$，切分为两个子单元，再对子单元按(4)式进行递归切分直到满足停止条件即可。</p>
 <blockquote>
 <p>这里找切分点的方法思想本质还是最小二乘法，与图像二值化当中的Otsu算法有点神似。</p>
 </blockquote>
-<h1 id="参考文献">参考文献</h1>
-<p>《统计学习方法》李航 5.5.1</p>
+<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>《统计学习方法》李航 5.5.1</p>
 
       
     </div>
@@ -824,7 +819,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-count">13</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -851,7 +846,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">5</span>
+                      
+                    
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -942,7 +939,13 @@
                     
                       
                     
-                    <span class="site-state-item-count">37</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">40</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1038,7 +1041,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#cart简介"><span class="nav-number">1.</span> <span class="nav-text">CART简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#怎么做"><span class="nav-number">2.</span> <span class="nav-text">怎么做</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#确定单元取值"><span class="nav-number">2.1.</span> <span class="nav-text">确定单元取值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#切分特征空间"><span class="nav-number">2.2.</span> <span class="nav-text">切分特征空间</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考文献"><span class="nav-number">3.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CART简介"><span class="nav-number">1.</span> <span class="nav-text">CART简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#怎么做"><span class="nav-number">2.</span> <span class="nav-text">怎么做</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#确定单元取值"><span class="nav-number">2.1.</span> <span class="nav-text">确定单元取值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#切分特征空间"><span class="nav-number">2.2.</span> <span class="nav-text">切分特征空间</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考文献"><span class="nav-number">3.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
             
 
           </div>
@@ -1091,7 +1094,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">27 分钟</span>
+    <span title="站点阅读时长">28 分钟</span>
   
 </div>
 
