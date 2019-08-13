@@ -115,18 +115,18 @@
 
 
 
-  <meta name="description" content="简介本文不讲如何使用逻辑回归，主要会讲一下逻辑回归的算法和模型背后的假设。主要分为两部分，一个是逻辑回归公式的推导，其次会讲述一下如何理解sigmoid函数。 逻辑回归推导首先我们知道逻辑回归的一个sigmoid假设，这个假设背后的由来我们会在后面给出，请先记得这个假设。公式如下：$$ p(y=1|x) = \frac {1} {1+e^{-(\theta^Tx+b)}} \tag1$$这个假设告">
+  <meta name="description" content="简介 本文不讲如何使用逻辑回归，主要会讲一下逻辑回归的算法和模型背后的假设。主要分为两部分，一个是逻辑回归公式的推导，其次会讲述一下如何理解sigmoid函数。 逻辑回归推导 首先我们知道逻辑回归的一个sigmoid假设，这个假设背后的由来我们会在后面给出，请先记得这个假设。公式如下： \[ p(y=1|x) = \frac {1} {1+e^{-(\theta^Tx+b)}} \tag1\">
 <meta name="keywords" content="LR,逻辑回归,logistic regression,SGD,BGD,梯度下降,原理,推导">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Logistic Regression原理与推导">
 <meta property="og:url" content="https://lukebest.github.io/posts/d28f.html">
 <meta property="og:site_name" content="心明录">
-<meta property="og:description" content="简介本文不讲如何使用逻辑回归，主要会讲一下逻辑回归的算法和模型背后的假设。主要分为两部分，一个是逻辑回归公式的推导，其次会讲述一下如何理解sigmoid函数。 逻辑回归推导首先我们知道逻辑回归的一个sigmoid假设，这个假设背后的由来我们会在后面给出，请先记得这个假设。公式如下：$$ p(y=1|x) = \frac {1} {1+e^{-(\theta^Tx+b)}} \tag1$$这个假设告">
+<meta property="og:description" content="简介 本文不讲如何使用逻辑回归，主要会讲一下逻辑回归的算法和模型背后的假设。主要分为两部分，一个是逻辑回归公式的推导，其次会讲述一下如何理解sigmoid函数。 逻辑回归推导 首先我们知道逻辑回归的一个sigmoid假设，这个假设背后的由来我们会在后面给出，请先记得这个假设。公式如下： \[ p(y=1|x) = \frac {1} {1+e^{-(\theta^Tx+b)}} \tag1\">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-10T08:32:45.721Z">
+<meta property="og:updated_time" content="2019-08-13T06:31:02.327Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Logistic Regression原理与推导">
-<meta name="twitter:description" content="简介本文不讲如何使用逻辑回归，主要会讲一下逻辑回归的算法和模型背后的假设。主要分为两部分，一个是逻辑回归公式的推导，其次会讲述一下如何理解sigmoid函数。 逻辑回归推导首先我们知道逻辑回归的一个sigmoid假设，这个假设背后的由来我们会在后面给出，请先记得这个假设。公式如下：$$ p(y=1|x) = \frac {1} {1+e^{-(\theta^Tx+b)}} \tag1$$这个假设告">
+<meta name="twitter:description" content="简介 本文不讲如何使用逻辑回归，主要会讲一下逻辑回归的算法和模型背后的假设。主要分为两部分，一个是逻辑回归公式的推导，其次会讲述一下如何理解sigmoid函数。 逻辑回归推导 首先我们知道逻辑回归的一个sigmoid假设，这个假设背后的由来我们会在后面给出，请先记得这个假设。公式如下： \[ p(y=1|x) = \frac {1} {1+e^{-(\theta^Tx+b)}} \tag1\">
 
 
 
@@ -481,7 +481,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-10 16:32:45" itemprop="dateModified" datetime="2019-04-10T16:32:45+08:00">2019-04-10</time>
+                <time title="修改时间：2019-08-13 14:31:02" itemprop="dateModified" datetime="2019-08-13T14:31:02+08:00">2019-08-13</time>
               
             
           </span>
@@ -551,7 +551,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">3.7k</span>
+                <span title="本文字数">3.9k</span>
               
 
               
@@ -565,7 +565,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">3 分钟</span>
+                <span title="阅读时长">4 分钟</span>
               
             </div>
           
@@ -585,22 +585,38 @@
       
 
       
-        <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>本文不讲如何使用逻辑回归，主要会讲一下逻辑回归的算法和模型背后的假设。主要分为两部分，一个是逻辑回归公式的推导，其次会讲述一下如何理解sigmoid函数。</p>
-<h1 id="逻辑回归推导"><a href="#逻辑回归推导" class="headerlink" title="逻辑回归推导"></a>逻辑回归推导</h1><p>首先我们知道逻辑回归的一个<code>sigmoid</code>假设，这个假设背后的由来我们会在后面给出，请先记得这个假设。公式如下：<br>$$ p(y=1|x) = \frac {1} {1+e^{-(\theta^Tx+b)}} \tag1$$<br>这个假设告诉我们分为正样本的概率为(1)中右式。其中$x$为输入的向量，计算的结果与<code>0.5</code>比较，如果大于0.5则为正样本。右式的值域易知为(0,1)。对于负样本，有：<br>$$ p(y=0|x) = 1-p(y=1|x) \tag2$$<br>综合上述二式可得：<br>$$ p(y|x) = p(y=1|x)^yp(y=0|x)^{1-y} \tag3$$<br>注意得到上式用到了数学的trick，即下式：<br>$$\begin{cases}<br>p(y=1|x),y=1\<br>p(x=0|x),y=0\<br>\end{cases}<br>$$<br>我们继续往下。事实上，从(3)式我们就知道了概率函数$p(y|x)$，拿到概率函数，我们可以求其最大似然估计（maximum likelihood estimation，MLE）。</p>
+        <h1 id="简介">简介</h1>
+<p>本文不讲如何使用逻辑回归，主要会讲一下逻辑回归的算法和模型背后的假设。主要分为两部分，一个是逻辑回归公式的推导，其次会讲述一下如何理解sigmoid函数。</p>
+<h1 id="逻辑回归推导">逻辑回归推导</h1>
+首先我们知道逻辑回归的一个<code>sigmoid</code>假设，这个假设背后的由来我们会在后面给出，请先记得这个假设。公式如下： <span class="math display">\[ p(y=1|x) = \frac {1} {1+e^{-(\theta^Tx+b)}} \tag1\]</span> 这个假设告诉我们分为正样本的概率为(1)中右式。其中<span class="math inline">\(x\)</span>为输入的向量，计算的结果与<code>0.5</code>比较，如果大于0.5则为正样本。右式的值域易知为(0,1)。对于负样本，有： <span class="math display">\[ p(y=0|x) = 1-p(y=1|x) \tag2\]</span> 综合上述二式可得： <span class="math display">\[ p(y|x) = p(y=1|x)^yp(y=0|x)^{1-y} \tag3\]</span> 注意得到上式用到了数学的trick，即下式： $$
+<span class="math display">\[\begin{cases}
+
+p(y=1|x),y=1\\
+p(x=0|x),y=0\\
+
+\end{cases}\]</span>
+<p>$$ 我们继续往下。事实上，从(3)式我们就知道了概率函数<span class="math inline">\(p(y|x)\)</span>，拿到概率函数，我们可以求其最大似然估计（maximum likelihood estimation，MLE）。</p>
 <blockquote>
-<p>MLE是用来估计概率模型的参数的一种方法，最大似然估计会寻找关于 $\theta$ 的最可能的值（即，在所有可能的$\theta$ 取值中，寻找一个值使这个采样的“可能性”最大化）。从数学上来说，我们可以在$\theta$的所有可能取值中寻找一个值使得似然函数取到最大值。这个使可能性最大的$\widehat{\theta}$值即称为 $\theta$的最大似然估计。由定义，最大似然估计是样本的函数。</p>
+<p>MLE是用来估计概率模型的参数的一种方法，最大似然估计会寻找关于 <span class="math inline">\(\theta\)</span> 的最可能的值（即，在所有可能的<span class="math inline">\(\theta\)</span> 取值中，寻找一个值使这个采样的“可能性”最大化）。从数学上来说，我们可以在<span class="math inline">\(\theta\)</span>的所有可能取值中寻找一个值使得似然函数取到最大值。这个使可能性最大的<span class="math inline">\(\widehat{\theta}\)</span>值即称为 <span class="math inline">\(\theta\)</span>的最大似然估计。由定义，最大似然估计是样本的函数。</p>
 </blockquote>
-<p>如果有<code>n</code>个样本，那么其似然函数为(3)式的<code>n</code>个样本的乘积：<br>$$ likelihood=\prod_{i=1}^np(y_i|x_i) \tag4$$<br>$$ likelihood=\prod_{i=1}^np(y_i=1|x_i)^{y_i}p(y_i=0|x_i)^{1-y_i} \tag5$$<br>对(5)取log：<br>$$ log_likelihood=\sum_{i=1}^ny_i<em>ln(p(y_i=1|x_i))+(1-y_i)</em>ln(p(y_i=0|x_i)) \tag6$$<br>于是就变成了对数似然函数(6)，对<code>log_likelihood</code>，我们是希望它越大越好（极大似然估计），如果对其取负，则可以作为损失函数，我们是希望损失越小越好。这里的优化方法，先从简单的说，可用梯度下降进行迭代优化（对数似然函数对应地用梯度上升）。</p>
-<p>我们现在把最初始的(1)式代入(6)：<br>$$ log_likelihood=\sum_{i=1}^ny_i<em>ln(\frac {1} {1+e^{-(\theta^Tx_i+b)}})+(1-y_i)</em>ln(1-\frac {1} {1+e^{-(\theta^Tx_i+b)}}) \tag7$$<br>对于<code>sigmoid</code>函数，求导是非常方便的。即有：<br>$$ f(x)=\frac1{1+e^{-x}} \tag8$$<br>$$ f^\prime(x)=f(x)<em>(1-f(x)) \tag9$$<br>那么(7)式对$\theta$求梯度有：<br>$$ \nabla_\theta log_likelihood=\sum_{i=1}^n x_i</em>(y_i-\frac{1}{1+e^{-(\theta^T x_i+b)}}) \tag{10}$$<br>其中(10)式中的<code>b</code>可以先忽略（可以与$\theta$统一）。</p>
-<h1 id="迭代优化方式"><a href="#迭代优化方式" class="headerlink" title="迭代优化方式"></a>迭代优化方式</h1><h2 id="BGD-Batch-Gradient-Descent"><a href="#BGD-Batch-Gradient-Descent" class="headerlink" title="BGD(Batch Gradient Descent)"></a>BGD(Batch Gradient Descent)</h2><p>对极大似然函数梯度上升，有：<br>$$ \vec\theta_{i+1}=  \vec\theta_{i}+\lambda<em>\nabla_\theta log_likelihood \tag{11}$$<br>把(10)代入，即：<br>$$ \vec\theta_{i+1}=  \vec\theta_{i}+\lambda</em>\sum_{i=1}^n \vec x_i*(y_i-\frac{1}{1+e^{-(\vec\theta^T \vec x_i+b)}}) \tag{12}$$<br>(12)式就是全批量梯度更新方法，其中$\lambda$即为一般意义上的学习步长。从(12)式可以看到，要把<code>n</code>个数据样本全部代入后方可进行梯度更新。计算来说是比较繁琐的。而根据监督学习的假设<strong>样本数据是依据某种联合概率分布独立同分布产生</strong>，那么可有一种一次用一个样本的梯度更新方式，就是SGD(Stochastic Gradient Descent)。</p>
-<h2 id="SGD-Stochastic-Gradient-Descent"><a href="#SGD-Stochastic-Gradient-Descent" class="headerlink" title="SGD(Stochastic Gradient Descent)"></a>SGD(Stochastic Gradient Descent)</h2><p>随机梯度更新方式就是在(12)式去掉了求和符号：<br>$$ \vec\theta_{i+1}=  \vec\theta_{i}+\lambda<em>\vec x_i</em>(y_i-\frac{1}{1+e^{-(\vec\theta^T \vec x_i+b)}}) \tag{13}$$<br>随机梯度更新方式来一条样本即可做一次更新，通常情况下会引入较大的随机性。<code>BGD</code>和<code>SGD</code>很明显都比较极端，那么就有了一种折中方式<code>Mini-Batch GD</code></p>
-<h2 id="Mini-Batch-GD-Mini-Batch-Gradient-Descent"><a href="#Mini-Batch-GD-Mini-Batch-Gradient-Descent" class="headerlink" title="Mini-Batch GD(Mini-Batch Gradient Descent)"></a>Mini-Batch GD(Mini-Batch Gradient Descent)</h2><p>与<code>BGD</code>类似，只是所有样本的计算换成部分样本计算：<br>$$ \vec\theta_{i+1}=  \vec\theta_{i}+\lambda<em>\sum_{i=1}^m \vec x_i</em>(y_i-\frac{1}{1+e^{-(\vec\theta^T \vec x_i+b)}}) \tag{14}$$<br>其中$m\ll n$，这样做的好处就是可以综合<code>SGD</code>和<code>BGD</code>。在较快更新速度的同时可以有一定的随机性防止陷入局部最优。以上的梯度更新方式在神经网络的训练中也可以借鉴。</p>
-<h1 id="sigmoid函数的由来"><a href="#sigmoid函数的由来" class="headerlink" title="sigmoid函数的由来"></a>sigmoid函数的由来</h1><p>我们在最开始有一个假设，一切的出发点为(1)中的假设。那么为什么会有这样一个假设呢？</p>
-<p>我们先看一个一般性的二分类的贝叶斯公式，二类分别为<code>C1</code>和<code>C2</code>：<br>$$ p(C1|x)=\frac{p(x|C1)p(C1)}{p(x|C1)p(C1)+p(x|C2)p(C2)} \tag{15}$$<br>我们对(15)式右边的分子分母同时除以$p(x|C1)p(C1)$（二分类问题可保证其一定不为0），那么就有：<br>$$ p(C1|x)=\frac1{1+\frac{p(x|C2)p(C2)}{p(x|C1)p(C1)}} \tag{16}$$<br>我们可以令：<br>$$a=ln\frac{p(x|C1)p(C1)}{p(x|C2)p(C2)} \tag{17}$$<br>那么把(17)代入(16)，即有：<br>$$ p(C1|x)=\frac1{1+e^{-a}} \tag{18}$$<br>上面的(18)式就是我们最初的<code>sigmoid</code>函数。我们再看一下(17)式，用人话把$ln$的对象描述如下：分类为<code>C1</code>的<code>x</code>出现的概率比上分类为<code>C2</code>的<code>x</code>出现的概率。</p>
-<h1 id="广义指数分布函数族"><a href="#广义指数分布函数族" class="headerlink" title="广义指数分布函数族"></a>广义指数分布函数族</h1><p>虽然(18)式看着和我们最开始的假设很像，但细心的读者可以看到最开始假设的$a$是$\theta$和$x$的线性函数。而(17)式目前看不出来像。</p>
-<p>我们先看一下广义指数分布函数族的概念，对于广义指数分布函数族，有：<br>$$ p(x|\lambda_k)=h(x)g(\lambda_k)e^{\lambda_k^Tu(x)} \tag{19}$$<br>把(19)代入(17)，有：<br>$$a=ln\frac{h(x)g(\lambda_1)e^{\lambda_1^Tu(x)}p(C1)}{h(x)g(\lambda_2)e^{\lambda_2^Tu(x)}p(C2)} \tag{20}$$<br>$h(x)$可以约掉，$g(\lambda_i)$是常数项可有：<br>$$a=(\lambda_1-\lambda_2)^Tu(x)+ln(\frac{g(\lambda_1)}{g(\lambda_2)})+ln(\frac{p(C1)}{p(C2)}) \tag{21}$$<br>即：<br>$$a=(\lambda_1-\lambda_2)^Tu(x)+const \tag{22}$$</p>
-<p>上面就告诉我们，当$p(x|C1)$和$p(x|C2)$满足广义指数分布，并且是其中一种特例（$u(x)=x$），就可以满足$a$是$\theta$和$x$的线性函数，其中$(\lambda_1-\lambda_2)=\theta$。</p>
-<h2 id="其他广义指数分布函数"><a href="#其他广义指数分布函数" class="headerlink" title="其他广义指数分布函数"></a>其他广义指数分布函数</h2><p>这里给出结论，感兴趣者可作详细推导：满足$a$是$\theta$和$x$的线性函数的广义指数分布还有如下：</p>
+<p>如果有<code>n</code>个样本，那么其似然函数为(3)式的<code>n</code>个样本的乘积： <span class="math display">\[ likelihood=\prod_{i=1}^np(y_i|x_i) \tag4\]</span> <span class="math display">\[ likelihood=\prod_{i=1}^np(y_i=1|x_i)^{y_i}p(y_i=0|x_i)^{1-y_i} \tag5\]</span> 对(5)取log： <span class="math display">\[ log\_likelihood=\sum_{i=1}^ny_i*ln(p(y_i=1|x_i))+(1-y_i)*ln(p(y_i=0|x_i)) \tag6\]</span> 于是就变成了对数似然函数(6)，对<code>log_likelihood</code>，我们是希望它越大越好（极大似然估计），如果对其取负，则可以作为损失函数，我们是希望损失越小越好。这里的优化方法，先从简单的说，可用梯度下降进行迭代优化（对数似然函数对应地用梯度上升）。</p>
+<p>我们现在把最初始的(1)式代入(6)： <span class="math display">\[ log\_likelihood=\sum_{i=1}^ny_i*ln(\frac {1} {1+e^{-(\theta^Tx_i+b)}})+(1-y_i)*ln(1-\frac {1} {1+e^{-(\theta^Tx_i+b)}}) \tag7\]</span> 对于<code>sigmoid</code>函数，求导是非常方便的。即有： <span class="math display">\[ f(x)=\frac1{1+e^{-x}} \tag8\]</span> <span class="math display">\[ f^\prime(x)=f(x)*(1-f(x)) \tag9\]</span> 那么(7)式对<span class="math inline">\(\theta\)</span>求梯度有： <span class="math display">\[ \nabla_\theta log\_likelihood=\sum_{i=1}^n x_i*(y_i-\frac{1}{1+e^{-(\theta^T x_i+b)}}) \tag{10}\]</span> 其中(10)式中的<code>b</code>可以先忽略（可以与<span class="math inline">\(\theta\)</span>统一）。</p>
+<h1 id="迭代优化方式">迭代优化方式</h1>
+<h2 id="bgdbatch-gradient-descent">BGD(Batch Gradient Descent)</h2>
+<p>对极大似然函数梯度上升，有： <span class="math display">\[ \vec\theta_{i+1}=  \vec\theta_{i}+\lambda*\nabla_\theta log\_likelihood \tag{11}\]</span> 把(10)代入，即： <span class="math display">\[ \vec\theta_{i+1}=  \vec\theta_{i}+\lambda*\sum_{i=1}^n \vec x_i*(y_i-\frac{1}{1+e^{-(\vec\theta^T \vec x_i+b)}}) \tag{12}\]</span> (12)式就是全批量梯度更新方法，其中<span class="math inline">\(\lambda\)</span>即为一般意义上的学习步长。从(12)式可以看到，要把<code>n</code>个数据样本全部代入后方可进行梯度更新。计算来说是比较繁琐的。而根据监督学习的假设<strong>样本数据是依据某种联合概率分布独立同分布产生</strong>，那么可有一种一次用一个样本的梯度更新方式，就是SGD(Stochastic Gradient Descent)。</p>
+<h2 id="sgdstochastic-gradient-descent">SGD(Stochastic Gradient Descent)</h2>
+<p>随机梯度更新方式就是在(12)式去掉了求和符号： <span class="math display">\[ \vec\theta_{i+1}=  \vec\theta_{i}+\lambda*\vec x_i*(y_i-\frac{1}{1+e^{-(\vec\theta^T \vec x_i+b)}}) \tag{13}\]</span> 随机梯度更新方式来一条样本即可做一次更新，通常情况下会引入较大的随机性。<code>BGD</code>和<code>SGD</code>很明显都比较极端，那么就有了一种折中方式<code>Mini-Batch GD</code></p>
+<h2 id="mini-batch-gdmini-batch-gradient-descent">Mini-Batch GD(Mini-Batch Gradient Descent)</h2>
+<p>与<code>BGD</code>类似，只是所有样本的计算换成部分样本计算： <span class="math display">\[ \vec\theta_{i+1}=  \vec\theta_{i}+\lambda*\sum_{i=1}^m \vec x_i*(y_i-\frac{1}{1+e^{-(\vec\theta^T \vec x_i+b)}}) \tag{14}\]</span> 其中<span class="math inline">\(m\ll n\)</span>，这样做的好处就是可以综合<code>SGD</code>和<code>BGD</code>。在较快更新速度的同时可以有一定的随机性防止陷入局部最优。以上的梯度更新方式在神经网络的训练中也可以借鉴。</p>
+<h1 id="sigmoid函数的由来">sigmoid函数的由来</h1>
+<p>我们在最开始有一个假设，一切的出发点为(1)中的假设。那么为什么会有这样一个假设呢？</p>
+<p>我们先看一个一般性的二分类的贝叶斯公式，二类分别为<code>C1</code>和<code>C2</code>： <span class="math display">\[ p(C1|x)=\frac{p(x|C1)p(C1)}{p(x|C1)p(C1)+p(x|C2)p(C2)} \tag{15}\]</span> 我们对(15)式右边的分子分母同时除以<span class="math inline">\(p(x|C1)p(C1)\)</span>（二分类问题可保证其一定不为0），那么就有： <span class="math display">\[ p(C1|x)=\frac1{1+\frac{p(x|C2)p(C2)}{p(x|C1)p(C1)}} \tag{16}\]</span> 我们可以令： <span class="math display">\[a=ln\frac{p(x|C1)p(C1)}{p(x|C2)p(C2)} \tag{17}\]</span> 那么把(17)代入(16)，即有： <span class="math display">\[ p(C1|x)=\frac1{1+e^{-a}} \tag{18}\]</span> 上面的(18)式就是我们最初的<code>sigmoid</code>函数。我们再看一下(17)式，用人话把<span class="math inline">\(ln\)</span>的对象描述如下：分类为<code>C1</code>的<code>x</code>出现的概率比上分类为<code>C2</code>的<code>x</code>出现的概率。</p>
+<h1 id="广义指数分布函数族">广义指数分布函数族</h1>
+<p>虽然(18)式看着和我们最开始的假设很像，但细心的读者可以看到最开始假设的<span class="math inline">\(a\)</span>是<span class="math inline">\(\theta\)</span>和<span class="math inline">\(x\)</span>的线性函数。而(17)式目前看不出来像。</p>
+<p>我们先看一下广义指数分布函数族的概念，对于广义指数分布函数族，有： <span class="math display">\[ p(x|\lambda_k)=h(x)g(\lambda_k)e^{\lambda_k^Tu(x)} \tag{19}\]</span> 把(19)代入(17)，有： <span class="math display">\[a=ln\frac{h(x)g(\lambda_1)e^{\lambda_1^Tu(x)}p(C1)}{h(x)g(\lambda_2)e^{\lambda_2^Tu(x)}p(C2)} \tag{20}\]</span> <span class="math inline">\(h(x)\)</span>可以约掉，<span class="math inline">\(g(\lambda_i)\)</span>是常数项可有： <span class="math display">\[a=(\lambda_1-\lambda_2)^Tu(x)+ln(\frac{g(\lambda_1)}{g(\lambda_2)})+ln(\frac{p(C1)}{p(C2)}) \tag{21}\]</span> 即： <span class="math display">\[a=(\lambda_1-\lambda_2)^Tu(x)+const \tag{22}\]</span></p>
+<p>上面就告诉我们，当<span class="math inline">\(p(x|C1)\)</span>和<span class="math inline">\(p(x|C2)\)</span>满足广义指数分布，并且是其中一种特例（<span class="math inline">\(u(x)=x\)</span>），就可以满足<span class="math inline">\(a\)</span>是<span class="math inline">\(\theta\)</span>和<span class="math inline">\(x\)</span>的线性函数，其中<span class="math inline">\((\lambda_1-\lambda_2)=\theta\)</span>。</p>
+<h2 id="其他广义指数分布函数">其他广义指数分布函数</h2>
+<p>这里给出结论，感兴趣者可作详细推导：满足<span class="math inline">\(a\)</span>是<span class="math inline">\(\theta\)</span>和<span class="math inline">\(x\)</span>的线性函数的广义指数分布还有如下：</p>
 <ul>
 <li>Gaussian分布</li>
 <li>Binomial分布</li>
@@ -608,7 +624,8 @@
 <li>Bernoulli分布</li>
 </ul>
 <p>可以看到逻辑回归的适用范围是比较广的。</p>
-<h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><ul>
+<h1 id="参考链接">参考链接</h1>
+<ul>
 <li><a href="https://zh.wikipedia.org/wiki/%E6%9C%80%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1" target="_blank" rel="noopener">最大似然估计</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Exponential_family" target="_blank" rel="noopener">Exponential family</a></li>
 </ul>
@@ -1067,7 +1084,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#逻辑回归推导"><span class="nav-number">2.</span> <span class="nav-text">逻辑回归推导</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#迭代优化方式"><span class="nav-number">3.</span> <span class="nav-text">迭代优化方式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#BGD-Batch-Gradient-Descent"><span class="nav-number">3.1.</span> <span class="nav-text">BGD(Batch Gradient Descent)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SGD-Stochastic-Gradient-Descent"><span class="nav-number">3.2.</span> <span class="nav-text">SGD(Stochastic Gradient Descent)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mini-Batch-GD-Mini-Batch-Gradient-Descent"><span class="nav-number">3.3.</span> <span class="nav-text">Mini-Batch GD(Mini-Batch Gradient Descent)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#sigmoid函数的由来"><span class="nav-number">4.</span> <span class="nav-text">sigmoid函数的由来</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#广义指数分布函数族"><span class="nav-number">5.</span> <span class="nav-text">广义指数分布函数族</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#其他广义指数分布函数"><span class="nav-number">5.1.</span> <span class="nav-text">其他广义指数分布函数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考链接"><span class="nav-number">6.</span> <span class="nav-text">参考链接</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#逻辑回归推导"><span class="nav-number">2.</span> <span class="nav-text">逻辑回归推导</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#迭代优化方式"><span class="nav-number">3.</span> <span class="nav-text">迭代优化方式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#bgdbatch-gradient-descent"><span class="nav-number">3.1.</span> <span class="nav-text">BGD(Batch Gradient Descent)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sgdstochastic-gradient-descent"><span class="nav-number">3.2.</span> <span class="nav-text">SGD(Stochastic Gradient Descent)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mini-batch-gdmini-batch-gradient-descent"><span class="nav-number">3.3.</span> <span class="nav-text">Mini-Batch GD(Mini-Batch Gradient Descent)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#sigmoid函数的由来"><span class="nav-number">4.</span> <span class="nav-text">sigmoid函数的由来</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#广义指数分布函数族"><span class="nav-number">5.</span> <span class="nav-text">广义指数分布函数族</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#其他广义指数分布函数"><span class="nav-number">5.1.</span> <span class="nav-text">其他广义指数分布函数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考链接"><span class="nav-number">6.</span> <span class="nav-text">参考链接</span></a></li></ol></div>
             
 
           </div>
@@ -1109,7 +1126,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">30k</span>
+    <span title="站点总字数">31k</span>
   
 
   
