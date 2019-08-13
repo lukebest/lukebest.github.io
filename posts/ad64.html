@@ -115,19 +115,19 @@
 
 
 
-  <meta name="description" content="简介⽂本定位主要适⽤于识别图⽚中⽂本的位置信息。利⽤计算机视觉智能识别图⽚中的⽂本信息并进⾏定位，⽣成的带有类别信息的⽬标候选框，经常应⽤于带有多种⽂本信息的票据，证件识别中。本文主要介绍如下两种文本定位算法：  Deeptext CTPN  DeeptextDeeptext算法原理DeepText是基于Faster R-CNN针对⽂本定位进⾏改进的Two-Stage模型。DeepText的结构和">
+  <meta name="description" content="简介 ⽂本定位主要适⽤于识别图⽚中⽂本的位置信息。利⽤计算机视觉智能识别图⽚中的⽂本信息并进⾏定位，⽣成的带有类别信息的⽬标候选框，经常应⽤于带有多种⽂本信息的票据，证件识别中。本文主要介绍如下两种文本定位算法：  Deeptext CTPN  Deeptext Deeptext算法原理 DeepText是基于Faster R-CNN针对⽂本定位进⾏改进的Two-Stage模型。D">
 <meta name="keywords" content="OCR,Deeptext,CTPN,CV,神经网络">
 <meta property="og:type" content="article">
 <meta property="og:title" content="文本定位算法">
 <meta property="og:url" content="https://lukebest.github.io/posts/ad64.html">
 <meta property="og:site_name" content="心明录">
-<meta property="og:description" content="简介⽂本定位主要适⽤于识别图⽚中⽂本的位置信息。利⽤计算机视觉智能识别图⽚中的⽂本信息并进⾏定位，⽣成的带有类别信息的⽬标候选框，经常应⽤于带有多种⽂本信息的票据，证件识别中。本文主要介绍如下两种文本定位算法：  Deeptext CTPN  DeeptextDeeptext算法原理DeepText是基于Faster R-CNN针对⽂本定位进⾏改进的Two-Stage模型。DeepText的结构和">
+<meta property="og:description" content="简介 ⽂本定位主要适⽤于识别图⽚中⽂本的位置信息。利⽤计算机视觉智能识别图⽚中的⽂本信息并进⾏定位，⽣成的带有类别信息的⽬标候选框，经常应⽤于带有多种⽂本信息的票据，证件识别中。本文主要介绍如下两种文本定位算法：  Deeptext CTPN  Deeptext Deeptext算法原理 DeepText是基于Faster R-CNN针对⽂本定位进⾏改进的Two-Stage模型。D">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://lukebest.github.io/posts/ad64/Deeptext.png">
 <meta property="og:updated_time" content="2019-04-23T08:04:11.696Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="文本定位算法">
-<meta name="twitter:description" content="简介⽂本定位主要适⽤于识别图⽚中⽂本的位置信息。利⽤计算机视觉智能识别图⽚中的⽂本信息并进⾏定位，⽣成的带有类别信息的⽬标候选框，经常应⽤于带有多种⽂本信息的票据，证件识别中。本文主要介绍如下两种文本定位算法：  Deeptext CTPN  DeeptextDeeptext算法原理DeepText是基于Faster R-CNN针对⽂本定位进⾏改进的Two-Stage模型。DeepText的结构和">
+<meta name="twitter:description" content="简介 ⽂本定位主要适⽤于识别图⽚中⽂本的位置信息。利⽤计算机视觉智能识别图⽚中的⽂本信息并进⾏定位，⽣成的带有类别信息的⽬标候选框，经常应⽤于带有多种⽂本信息的票据，证件识别中。本文主要介绍如下两种文本定位算法：  Deeptext CTPN  Deeptext Deeptext算法原理 DeepText是基于Faster R-CNN针对⽂本定位进⾏改进的Two-Stage模型。D">
 <meta name="twitter:image" content="https://lukebest.github.io/posts/ad64/Deeptext.png">
 
 
@@ -316,7 +316,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">40</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">39</span></a>
 
   </li>
         
@@ -587,18 +587,21 @@
       
 
       
-        <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>⽂本定位主要适⽤于识别图⽚中⽂本的位置信息。利⽤计算机视觉智能识别图⽚中的⽂本信息并进⾏定位，⽣成的带有类别信息的⽬标候选框，经常应⽤于带有多种⽂本信息的票据，证件识别中。本文主要介绍如下两种文本定位算法：</p>
+        <h1 id="简介">简介</h1>
+<p>⽂本定位主要适⽤于识别图⽚中⽂本的位置信息。利⽤计算机视觉智能识别图⽚中的⽂本信息并进⾏定位，⽣成的带有类别信息的⽬标候选框，经常应⽤于带有多种⽂本信息的票据，证件识别中。本文主要介绍如下两种文本定位算法：</p>
 <ul>
 <li>Deeptext</li>
 <li>CTPN</li>
 </ul>
-<h1 id="Deeptext"><a href="#Deeptext" class="headerlink" title="Deeptext"></a>Deeptext</h1><h2 id="Deeptext算法原理"><a href="#Deeptext算法原理" class="headerlink" title="Deeptext算法原理"></a>Deeptext算法原理</h2><p>DeepText是基于Faster R-CNN针对⽂本定位进⾏改进的Two-Stage模型。DeepText的结构和Faster R-CNN如出⼀辙：⾸先特征层使⽤的是VGG-16，其次算法均由⽤于提取候选区域的RPN和⽤于物体检测的Fast R-CNN。关于上述几个结构与概念，有相关卷积神经网络结构和本博客相关文章如下，建议在看本文之前先行阅览：</p>
+<h1 id="deeptext">Deeptext</h1>
+<h2 id="deeptext算法原理">Deeptext算法原理</h2>
+<p>DeepText是基于Faster R-CNN针对⽂本定位进⾏改进的Two-Stage模型。DeepText的结构和Faster R-CNN如出⼀辙：⾸先特征层使⽤的是VGG-16，其次算法均由⽤于提取候选区域的RPN和⽤于物体检测的Fast R-CNN。关于上述几个结构与概念，有相关卷积神经网络结构和本博客相关文章如下，建议在看本文之前先行阅览：</p>
 <ul>
 <li><a href="https://cwlacewe.github.io/netscope/#/preset/vgg-16" target="_blank" rel="noopener">VGG ILSVRC 16 layers</a></li>
-<li><a href="/posts/547f.html" title="目标检测R-CNN系算法">目标检测R-CNN系算法</a>
-</li>
+<li><a href="/posts/547f.html" title="目标检测R-CNN系算法">目标检测R-CNN系算法</a></li>
 </ul>
-<h2 id="DeepText的创新点"><a href="#DeepText的创新点" class="headerlink" title="DeepText的创新点"></a>DeepText的创新点</h2><ul>
+<h2 id="deeptext的创新点">DeepText的创新点</h2>
+<ul>
 <li>Inception-RPN：与传统RPN相⽐，使⽤3x3的max pooling, 3x3的卷积以及5x5的卷积，使得在RPN模块可以考虑多尺度的特征；</li>
 <li>ATC： ⽂本与其他物体检测不同的是很多置信度在[0.2,0.5]的框内也是有⽂本存在的（物体检测⼀般将置信度⼩于0.5的样例当作负样例），这样就会将很多⽂本当作负样例，影响最终的结果。所以DeepText在RCNN的分类结果中加⼊了ATC的分类（正、ATC、负）;</li>
 <li>MLRP：在Detection Network模块中使⽤来⾃不同卷积层的特征，因为不同层的特征不同，融合多种特征可以提升指标；</li>
@@ -606,30 +609,41 @@
 <li>Scales：针对⽂本特征修改超参数，⽀持(2,3,4,5)四种scale；</li>
 <li>Ratios：针对⽂本特征修改超参数， ⽀持(0.2, 0.5, 0.8, 1.0, 1.2, 1.5)六种scale；</li>
 </ul>
-<h2 id="DeepText的⽹络结构"><a href="#DeepText的⽹络结构" class="headerlink" title="DeepText的⽹络结构"></a>DeepText的⽹络结构</h2><p><img src="/posts/ad64/Deeptext.png" alt="DeepText⽹络结构"></p>
-<h2 id="指标介绍"><a href="#指标介绍" class="headerlink" title="指标介绍"></a>指标介绍</h2><h3 id="验证指标"><a href="#验证指标" class="headerlink" title="验证指标"></a>验证指标</h3><p>⽂本定位验证指标主要是计算预测出来的物体的位置的框与真实的框之间的精确率（precision）,召回率（recall）, F值（F-Measure），相关的定义如下：</p>
+<h2 id="deeptext的络结构">DeepText的⽹络结构</h2>
+<figure>
+<img src="/posts/ad64/Deeptext.png" alt="DeepText⽹络结构"><figcaption>DeepText⽹络结构</figcaption>
+</figure>
+<h2 id="指标介绍">指标介绍</h2>
+<h3 id="验证指标">验证指标</h3>
+<p>⽂本定位验证指标主要是计算预测出来的物体的位置的框与真实的框之间的精确率（precision）,召回率（recall）, F值（F-Measure），相关的定义如下：</p>
 <ul>
 <li>精确率：预测为某类样本（例如正样本）中有多少是真正的该类样本。</li>
 <li>召回率：样本中的某类样本有多少被正确预测了。</li>
 <li>F值：P和R指标有时候会出现的⽭盾的情况，这样就需要综合考虑他们，F-Measure是Precision和Recall加权调和平均。</li>
 </ul>
-<h3 id="训练指标"><a href="#训练指标" class="headerlink" title="训练指标"></a>训练指标</h3><ul>
+<h3 id="训练指标">训练指标</h3>
+<ul>
 <li>训练总损失： ⽂本定位的验证指标主要是训练损失，代表了真实值和预测值之间的差值，如果训练损失越来越⼩，代表模型预测的能⼒越来越强。</li>
 <li>训练准确率： 训练准确率则代表着训练集上被预测准确的样本数占总样本的⽐例情况；</li>
 </ul>
-<h1 id="CTPN"><a href="#CTPN" class="headerlink" title="CTPN"></a>CTPN</h1><h2 id="算法概述"><a href="#算法概述" class="headerlink" title="算法概述"></a>算法概述</h2><p>CTPN是基于Faster-RCNN针对⽂本定位进⾏改进的Two-Stage模型。 CTPN的结构如Faster R-CNN如出⼀辙：⾸先特征层使⽤的是VGG-16，其次算法均由⽤于提取候选区域的RPN和⽤于物体检测的Fast R-CNN。DeepText的创新点如下：</p>
+<h1 id="ctpn">CTPN</h1>
+<h2 id="算法概述">算法概述</h2>
+<p>CTPN是基于Faster-RCNN针对⽂本定位进⾏改进的Two-Stage模型。 CTPN的结构如Faster R-CNN如出⼀辙：⾸先特征层使⽤的是VGG-16，其次算法均由⽤于提取候选区域的RPN和⽤于物体检测的Fast R-CNN。DeepText的创新点如下：</p>
 <ul>
 <li>BLSTM：CTPN结构与Faster R-CNN基本类似，但是加⼊了LSTM层。该循环⽹络层采⽤双向LSTM，使得⽹络学习到了⽂字前向、后向的序列信息，但是训练过程需要⼩⼼梯度爆炸。</li>
 <li>定宽的anchor： 由于CTPN针对的是横向排列的⽂字检测，所以其采⽤了⼀组（10个）等宽度的Anchors，⽤于定位⽂字位置。Anchor宽⾼为：width = [16] ,height = [11,16,23,33,48,68,97,139,198,283];该设置⽅法保证了在x⽅向上，Anchor覆盖原图每个点且不相互重叠，并且anchor⾼度覆盖了不同尺度⽂本⽬标。</li>
 <li>⽂本线构造：在获得多个text proposal的基础上，需要将各个group的proposal进⾏合并，即将定宽proposal链接成标准框，主要利⽤计算overlap以及⽔平正向距离确group，再执⾏框链接算法；</li>
 </ul>
-<h2 id="指标介绍-1"><a href="#指标介绍-1" class="headerlink" title="指标介绍"></a>指标介绍</h2><h3 id="验证指标-1"><a href="#验证指标-1" class="headerlink" title="验证指标"></a>验证指标</h3><p>⽂本定位验证指标主要是计算预测出来的物体的位置的框与真实的框之间的精确率（precision）,召回率（recall）, F值（F-Measure），相关的定义如下：</p>
+<h2 id="指标介绍-1">指标介绍</h2>
+<h3 id="验证指标-1">验证指标</h3>
+<p>⽂本定位验证指标主要是计算预测出来的物体的位置的框与真实的框之间的精确率（precision）,召回率（recall）, F值（F-Measure），相关的定义如下：</p>
 <ul>
 <li>Precision：预测为某类样本（例如正样本）中有多少是真正的该类样本。</li>
 <li>Recall：样本中的某类样本有多少被正确预测了。</li>
 <li>F-Measure：P和R指标有时候会出现的⽭盾的情况，这样就需要综合考虑他们，F-Measure是Precision和Recall加权调和平均。</li>
 </ul>
-<h3 id="训练指标-1"><a href="#训练指标-1" class="headerlink" title="训练指标"></a>训练指标</h3><p>⽂本定位的验证指标主要是训练损失，代表了真实值和预测值之间的差值，如果训练损失越来越⼩，代表模型预测的能⼒越来越好。</p>
+<h3 id="训练指标-1">训练指标</h3>
+<p>⽂本定位的验证指标主要是训练损失，代表了真实值和预测值之间的差值，如果训练损失越来越⼩，代表模型预测的能⼒越来越好。</p>
 
       
     </div>
@@ -963,8 +977,6 @@
                     
                       
                     
-                      
-                    
                     <span class="site-state-item-count">39</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
@@ -1061,7 +1073,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Deeptext"><span class="nav-number">2.</span> <span class="nav-text">Deeptext</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Deeptext算法原理"><span class="nav-number">2.1.</span> <span class="nav-text">Deeptext算法原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DeepText的创新点"><span class="nav-number">2.2.</span> <span class="nav-text">DeepText的创新点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DeepText的⽹络结构"><span class="nav-number">2.3.</span> <span class="nav-text">DeepText的⽹络结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#指标介绍"><span class="nav-number">2.4.</span> <span class="nav-text">指标介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#验证指标"><span class="nav-number">2.4.1.</span> <span class="nav-text">验证指标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#训练指标"><span class="nav-number">2.4.2.</span> <span class="nav-text">训练指标</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CTPN"><span class="nav-number">3.</span> <span class="nav-text">CTPN</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#算法概述"><span class="nav-number">3.1.</span> <span class="nav-text">算法概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#指标介绍-1"><span class="nav-number">3.2.</span> <span class="nav-text">指标介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#验证指标-1"><span class="nav-number">3.2.1.</span> <span class="nav-text">验证指标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#训练指标-1"><span class="nav-number">3.2.2.</span> <span class="nav-text">训练指标</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#deeptext"><span class="nav-number">2.</span> <span class="nav-text">Deeptext</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#deeptext算法原理"><span class="nav-number">2.1.</span> <span class="nav-text">Deeptext算法原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#deeptext的创新点"><span class="nav-number">2.2.</span> <span class="nav-text">DeepText的创新点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#deeptext的络结构"><span class="nav-number">2.3.</span> <span class="nav-text">DeepText的⽹络结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#指标介绍"><span class="nav-number">2.4.</span> <span class="nav-text">指标介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#验证指标"><span class="nav-number">2.4.1.</span> <span class="nav-text">验证指标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#训练指标"><span class="nav-number">2.4.2.</span> <span class="nav-text">训练指标</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ctpn"><span class="nav-number">3.</span> <span class="nav-text">CTPN</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#算法概述"><span class="nav-number">3.1.</span> <span class="nav-text">算法概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#指标介绍-1"><span class="nav-number">3.2.</span> <span class="nav-text">指标介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#验证指标-1"><span class="nav-number">3.2.1.</span> <span class="nav-text">验证指标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#训练指标-1"><span class="nav-number">3.2.2.</span> <span class="nav-text">训练指标</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -1114,7 +1126,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">28 分钟</span>
+    <span title="站点阅读时长">29 分钟</span>
   
 </div>
 
