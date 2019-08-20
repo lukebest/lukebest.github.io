@@ -115,17 +115,18 @@
 
 
 
-  <meta name="description" content="Stay hungry. Stay foolish.">
-<meta name="keywords" content="机器学习 算法分析 工程实现">
-<meta property="og:type" content="website">
-<meta property="og:title" content="心明录">
-<meta property="og:url" content="https://lukebest.github.io/categories/工程实现/index.html">
+  <meta name="description" content="简介 本文主要介绍几个在风控或者推荐的机器学习项目中数据处理的几种SQL实现方法 保留原始列，并新增一列 很多情况下，对于变换后新增的列，希望它补充到最后一列，而非作为唯一输出。这种情况下，可以采用以下方法。 SQL实现方法如下： 1SELECT *,  &amp;#123;其他脚本&amp;#125; FROM t1  注：{其他脚本}例如后文“类型转换”的 CAST (col_name as in">
+<meta name="keywords" content="SQL,数据预处理,特征工程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="常见数据预处理SQL方法">
+<meta property="og:url" content="https://lukebest.github.io/posts/9a61.html">
 <meta property="og:site_name" content="心明录">
-<meta property="og:description" content="Stay hungry. Stay foolish.">
+<meta property="og:description" content="简介 本文主要介绍几个在风控或者推荐的机器学习项目中数据处理的几种SQL实现方法 保留原始列，并新增一列 很多情况下，对于变换后新增的列，希望它补充到最后一列，而非作为唯一输出。这种情况下，可以采用以下方法。 SQL实现方法如下： 1SELECT *,  &amp;#123;其他脚本&amp;#125; FROM t1  注：{其他脚本}例如后文“类型转换”的 CAST (col_name as in">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-08-20T06:46:33.766Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="心明录">
-<meta name="twitter:description" content="Stay hungry. Stay foolish.">
+<meta name="twitter:title" content="常见数据预处理SQL方法">
+<meta name="twitter:description" content="简介 本文主要介绍几个在风控或者推荐的机器学习项目中数据处理的几种SQL实现方法 保留原始列，并新增一列 很多情况下，对于变换后新增的列，希望它补充到最后一列，而非作为唯一输出。这种情况下，可以采用以下方法。 SQL实现方法如下： 1SELECT *,  &amp;#123;其他脚本&amp;#125; FROM t1  注：{其他脚本}例如后文“类型转换”的 CAST (col_name as in">
 
 
 
@@ -133,7 +134,7 @@
 
   
   
-  <link rel="canonical" href="https://lukebest.github.io/categories/工程实现/">
+  <link rel="canonical" href="https://lukebest.github.io/posts/9a61">
 
 
 
@@ -143,7 +144,7 @@
   };
 </script>
 
-  <title>分类: 工程实现 | 心明录</title>
+  <title>常见数据预处理SQL方法 | 心明录</title>
   
 
 
@@ -202,7 +203,7 @@
     
   
 
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-right ">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-right page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -263,7 +264,7 @@
         
         
           
-          <li class="menu-item menu-item-categories menu-item-active">
+          <li class="menu-item menu-item-categories">
 
     
     
@@ -400,109 +401,336 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h2>工程实现<small>分类</small>
-        </h2>
-      </div>
+  
 
-      
-        
+  
+  
+  
+
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://lukebest.github.io/posts/9a61.html">
 
-      <h3 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="瑾锋">
+      <meta itemprop="description" content="Stay hungry. Stay foolish.">
+      <meta itemprop="image" content="/images/avatar_luke.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="心明录">
+    </span>
+
+    
+      <header class="post-header">
+
         
-          <a class="post-title-link" href="/posts/6a60.html" itemprop="url">
-            
-              <span itemprop="name">airflow使用</span>
-            
-          </a>
         
-      </h3>
+          <h2 class="post-title" itemprop="name headline">常见数据预处理SQL方法
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-29T15:49:30+08:00" content="2019-03-29">
-          03-29
-        </time>
-      </div>
+              
+            
+          </h2>
+        
 
-    </header>
-  </article>
+        <div class="post-meta">
+          <span class="post-time">
 
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-20 14:33:53 / 修改时间：14:46:33" itemprop="dateCreated datePublished" datetime="2019-08-20T14:33:53+08:00">2019-08-20</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/机器学习/" itemprop="url" rel="index"><span itemprop="name">机器学习</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/posts/9a61.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/posts/9a61.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+            <span id="/posts/9a61.html" class="leancloud_visitors" data-flag-title="常见数据预处理SQL方法">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读次数：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">1.3k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
-        
+      
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-          <a class="post-title-link" href="/posts/8439.html" itemprop="url">
-            
-              <span itemprop="name">airflow 从入门到放弃</span>
-            
-          </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-22T11:50:08+08:00" content="2019-03-22">
-          03-22
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
+        <h1 id="简介">简介</h1>
+<p>本文主要介绍几个在风控或者推荐的机器学习项目中数据处理的几种SQL实现方法</p>
+<h1 id="保留原始列并新增一列">保留原始列，并新增一列</h1>
+<p>很多情况下，对于变换后新增的列，希望它补充到最后一列，而非作为唯一输出。这种情况下，可以采用以下方法。</p>
+<p>SQL实现方法如下： <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> *,  &#123;其他脚本&#125; <span class="keyword">FROM</span> t1</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>注：{其他脚本}例如后文“类型转换”的 CAST (col_name as int) AS col_name_int 即SELECT *, CAST (col_name as int) AS col_name_int FROM t1</p>
+</blockquote>
+<h1 id="类型转换">类型转换</h1>
+<p>当您引入数据后，发现字段类型需要转化，例如要从“string”转为“int”，以便特征抽取时作为连续特征使用，那么就可以做类型转换处理。</p>
+<p>SQL实现方法如下： <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">CAST</span> (col_name <span class="keyword">as</span> <span class="built_in">int</span>) <span class="keyword">AS</span> col_name_int <span class="keyword">FROM</span> t1</span><br></pre></td></tr></table></figure></p>
+<h1 id="标准化缩放归一化">标准化缩放（归一化）</h1>
+<p>标准化缩放，即将数值变量的均值变为0，方差变为1，对于那些目标变量为输入特征的光滑函数模型，如线性回归，逻辑回归等，其对输入特征的大小很敏感，对特征进行标准化比较有效。 特别地，当我们使用逻辑回归进行分类预测时，若一些数值特别大的特征不提前做归一化处理，往往容易发生模型无法收敛，AUC停留在0.5的情况。</p>
+<p>SQL实现方法如下： <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> ( col_name - (<span class="keyword">avg</span>(col_name) <span class="keyword">over</span> (<span class="keyword">partition</span> <span class="keyword">by</span> <span class="number">1</span>)) )*<span class="number">1.0</span>/( <span class="keyword">stddev</span>(col_name) <span class="keyword">over</span> (<span class="keyword">partition</span> <span class="keyword">by</span> <span class="number">1</span>) ) <span class="keyword">AS</span> col_name_std <span class="keyword">FROM</span> t1</span><br></pre></td></tr></table></figure></p>
+<h1 id="字符串截断">字符串截断</h1>
+<p>对于连续型数值特征，有时候太多的精度可能只是噪声，因此需要在保留重要信息的前提下对特征进行截断，需要进行类型转换后结束字符串。</p>
+<p>SQL实现方法如下： <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">SUBSTR</span>(<span class="keyword">string</span>(col_name),<span class="number">1</span>,<span class="number">10</span>) <span class="keyword">AS</span> col_name_trim <span class="keyword">FROM</span> t1</span><br></pre></td></tr></table></figure></p>
+<p>col_name为double类型，以上操作表示从第1个往后截取10位数字</p>
+<h1 id="空值填充">空值填充</h1>
+<p>实际问题中经常会遇到数据空值的情况，会影响模型的效果及处理效率，因此需要对空值进行填充处理，包括填充默认值或变量。</p>
+<p>SQL实现方法如下： <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">if</span>(col_name,<span class="keyword">avg</span>(col_name)) <span class="keyword">AS</span> col_name_filled <span class="keyword">FROM</span> t1</span><br></pre></td></tr></table></figure></p>
+<p>col_name为数值类型，以上操作表示将空值填充为该列的均值</p>
+<h1 id="统计行内出现空值的个数">统计行内出现空值的个数</h1>
+<p>实际问题中会需要直接对行向量进行统计处理，比如统计行向量中空值的个数、正值或负值的个数等。</p>
+<p>SQL实现方法如下： <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">isnull</span>(col_name_1)+<span class="keyword">isnull</span>(col_name_2)+..+<span class="keyword">isnull</span>(col_name_n) <span class="keyword">AS</span> cnt_null <span class="keyword">FROM</span> t1</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
 
+    
+      
+
+
+    
+
+    
+    
+    
+
+    
+      <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center;">
+  <img id="wechat_subscriber_qcode" src="/images/qrcode_wechat.jpg" alt="瑾锋 wechat" style="width: 200px; max-width: 100%;">
+  <div>文学向公众号</div>
+</div>
+
+    
+
+    
+      
+    
+    
+
+    
+      <div>
+        
+
+
+
+
+  
+
+
+
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>瑾锋</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    
+    <a href="https://lukebest.github.io/posts/9a61.html" title="常见数据预处理SQL方法">https://lukebest.github.io/posts/9a61.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/SQL/" rel="tag"># SQL</a>
+          
+            <a href="/tags/数据预处理/" rel="tag"># 数据预处理</a>
+          
+            <a href="/tags/特征工程/" rel="tag"># 特征工程</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div class="social_share">
+            
+            
+              <div id="needsharebutton-postbottom">
+                <span class="btn">
+                  <i class="fa fa-share-alt" aria-hidden="true"></i>
+                </span>
+              </div>
+            
+            
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/posts/a889.html" rel="next" title="AI行业相关思考">
+                <i class="fa fa-chevron-left"></i> AI行业相关思考
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
-
   
+  </article>
 
+
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
 
         </div>
         
@@ -522,8 +750,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -756,6 +993,23 @@
       </div>
 
       
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#保留原始列并新增一列"><span class="nav-number">2.</span> <span class="nav-text">保留原始列，并新增一列</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#类型转换"><span class="nav-number">3.</span> <span class="nav-text">类型转换</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#标准化缩放归一化"><span class="nav-number">4.</span> <span class="nav-text">标准化缩放（归一化）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#字符串截断"><span class="nav-number">5.</span> <span class="nav-text">字符串截断</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#空值填充"><span class="nav-number">6.</span> <span class="nav-text">空值填充</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#统计行内出现空值的个数"><span class="nav-number">7.</span> <span class="nav-text">统计行内出现空值的个数</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
       
         <div class="back-to-top">
@@ -904,6 +1158,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.1.1"></script>
+<script src="/js/post-details.js?v=7.1.1"></script>
+
+
 
   
 
@@ -952,6 +1210,8 @@
 
 
 
+
+  
 
 
   
