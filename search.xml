@@ -4,6 +4,14 @@
     <title><![CDATA[A股估值表]]></title>
     <url>%2Fposts%2Fd2e1.html</url>
     <content type="text"><![CDATA[简介 以下A股股票评级表为2019年9月4日通过RIM模型与行业评级得到的A股股票评级表。其中主要good_company为公司评级得分，good_price为价格评级得分。满分均为5分，越高者，公司质地越好或价格越优。all_ranking为上述二者之和，供排序参考之用。 A股股票评级表]]></content>
+      <categories>
+        <category>投资</category>
+      </categories>
+      <tags>
+        <tag>估值</tag>
+        <tag>RIM</tag>
+        <tag>股票</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[常见数据预处理SQL方法]]></title>
