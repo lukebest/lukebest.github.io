@@ -116,7 +116,7 @@
 
 
   <meta name="description" content="简介 在图像处理中我们经常会遇到（灰度图）二值化的需求，一般情况下可以指定全局阈值进行二值化，那这种时候我们如何知道这个阈值的好坏呢？答案就是不停的尝试。如果是一副双峰图像（双峰图像是指图像直方图中存在两个峰），直观上应该是在两峰之间的峰谷附近取一个值。Otsu就是处理这个问题的，即根据图像直方图自动算出一个阈值。本文会先介绍和简单推导一下公式，然后再脑洞清奇地用代码探索一下Otsu的二值化和k">
-<meta name="keywords" content="kmean,Otsu,票据识别,二值化,原理,推导">
+<meta name="keywords" content="原理,推导,kmean,Otsu,票据识别,二值化">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Otsu算法">
 <meta property="og:url" content="https://lukebest.github.io/posts/c380.html">
@@ -295,7 +295,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">15</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">16</span></a>
 
   </li>
         
@@ -632,19 +632,19 @@
   
     <li class="popular-posts-item">
       
-        <div class="popular-posts-date">2019-04-11</div>
+        <div class="popular-posts-date">2019-04-10</div>
       
       
-      <div class="popular-posts-title"><a href="\posts\e647.html" rel="bookmark">提升树原理与推导</a></div>
+      <div class="popular-posts-title"><a href="\posts\917e.html" rel="bookmark">回归树原理与推导</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
-        <div class="popular-posts-date">2019-04-10</div>
+        <div class="popular-posts-date">2019-04-11</div>
       
       
-      <div class="popular-posts-title"><a href="\posts\917e.html" rel="bookmark">回归树原理与推导</a></div>
+      <div class="popular-posts-title"><a href="\posts\e647.html" rel="bookmark">提升树原理与推导</a></div>
       
     </li>
   
@@ -718,6 +718,10 @@
       
         <div class="post-tags">
           
+            <a href="/tags/原理/" rel="tag"># 原理</a>
+          
+            <a href="/tags/推导/" rel="tag"># 推导</a>
+          
             <a href="/tags/kmean/" rel="tag"># kmean</a>
           
             <a href="/tags/Otsu/" rel="tag"># Otsu</a>
@@ -725,10 +729,6 @@
             <a href="/tags/票据识别/" rel="tag"># 票据识别</a>
           
             <a href="/tags/二值化/" rel="tag"># 二值化</a>
-          
-            <a href="/tags/原理/" rel="tag"># 原理</a>
-          
-            <a href="/tags/推导/" rel="tag"># 推导</a>
           
         </div>
       
@@ -784,7 +784,7 @@
       
     </footer>
   </div>
-  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\d28f.html" title="Logistic Regression原理与推导" rel="bookmark">Logistic Regression原理与推导</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\e647.html" title="提升树原理与推导" rel="bookmark">提升树原理与推导</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\917e.html" title="回归树原理与推导" rel="bookmark">回归树原理与推导</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\933a.html" title="XGBoost原理与推导" rel="bookmark">XGBoost原理与推导</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\43ea.html" title="票据识别的图片前处理" rel="bookmark">票据识别的图片前处理</a></h3></div></li></ul>
+  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\d28f.html" title="Logistic Regression原理与推导" rel="bookmark">Logistic Regression原理与推导</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\917e.html" title="回归树原理与推导" rel="bookmark">回归树原理与推导</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\e647.html" title="提升树原理与推导" rel="bookmark">提升树原理与推导</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\933a.html" title="XGBoost原理与推导" rel="bookmark">XGBoost原理与推导</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\43ea.html" title="票据识别的图片前处理" rel="bookmark">票据识别的图片前处理</a></h3></div></li></ul>
   
   
   
@@ -850,7 +850,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">15</span>
+                    <span class="site-state-item-count">16</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1126,7 +1126,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">33k</span>
+    <span title="站点总字数">35k</span>
   
 
   
@@ -1137,7 +1137,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">30 分钟</span>
+    <span title="站点阅读时长">32 分钟</span>
   
 </div>
 

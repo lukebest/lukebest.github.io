@@ -115,17 +115,18 @@
 
 
 
-  <meta name="description" content="Stay hungry. Stay foolish.">
-<meta name="keywords" content="机器学习 算法分析 工程实现">
-<meta property="og:type" content="website">
-<meta property="og:title" content="心明录">
-<meta property="og:url" content="https://lukebest.github.io/tags/SGD/index.html">
+  <meta name="description" content="前言 本文会先对“对韭当割”现象的原因进行阐述。并且，笔者通过剩余收益估值（即RIM模型）、若干财务分析对整个A股市场的股票进行了数据分析，给出若干如何避免被割的方案，具体数据分析的结果与部分解读会在文后给出获取方法。 从猜硬币说起 游戏规则背景 我们先从一个游戏说起​。一位美女和一位男士玩猜硬币的游戏，这个游戏的规则如下： 美女根据自己意愿让硬币处于正面向上或者反面向上，并用手盖住，然">
+<meta name="keywords" content="估值,RIM,股票">
+<meta property="og:type" content="article">
+<meta property="og:title" content="从博弈、估值到内圣外王">
+<meta property="og:url" content="https://lukebest.github.io/posts/d256.html">
 <meta property="og:site_name" content="心明录">
-<meta property="og:description" content="Stay hungry. Stay foolish.">
+<meta property="og:description" content="前言 本文会先对“对韭当割”现象的原因进行阐述。并且，笔者通过剩余收益估值（即RIM模型）、若干财务分析对整个A股市场的股票进行了数据分析，给出若干如何避免被割的方案，具体数据分析的结果与部分解读会在文后给出获取方法。 从猜硬币说起 游戏规则背景 我们先从一个游戏说起​。一位美女和一位男士玩猜硬币的游戏，这个游戏的规则如下： 美女根据自己意愿让硬币处于正面向上或者反面向上，并用手盖住，然">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-09-05T01:48:58.578Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="心明录">
-<meta name="twitter:description" content="Stay hungry. Stay foolish.">
+<meta name="twitter:title" content="从博弈、估值到内圣外王">
+<meta name="twitter:description" content="前言 本文会先对“对韭当割”现象的原因进行阐述。并且，笔者通过剩余收益估值（即RIM模型）、若干财务分析对整个A股市场的股票进行了数据分析，给出若干如何避免被割的方案，具体数据分析的结果与部分解读会在文后给出获取方法。 从猜硬币说起 游戏规则背景 我们先从一个游戏说起​。一位美女和一位男士玩猜硬币的游戏，这个游戏的规则如下： 美女根据自己意愿让硬币处于正面向上或者反面向上，并用手盖住，然">
 
 
 
@@ -133,7 +134,7 @@
 
   
   
-  <link rel="canonical" href="https://lukebest.github.io/tags/SGD/">
+  <link rel="canonical" href="https://lukebest.github.io/posts/d256">
 
 
 
@@ -143,7 +144,7 @@
   };
 </script>
 
-  <title>标签: SGD | 心明录</title>
+  <title>从博弈、估值到内圣外王 | 心明录</title>
   
 
 
@@ -202,7 +203,7 @@
     
   
 
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-right ">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-right page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -301,7 +302,7 @@
         
         
           
-          <li class="menu-item menu-item-tags menu-item-active">
+          <li class="menu-item menu-item-tags">
 
     
     
@@ -400,83 +401,386 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h2>SGD<small>标签</small>
-        </h2>
-      </div>
+  
 
-      
-        
+  
+  
+  
+
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://lukebest.github.io/posts/d256.html">
 
-      <h3 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="瑾锋">
+      <meta itemprop="description" content="Stay hungry. Stay foolish.">
+      <meta itemprop="image" content="/images/avatar_luke.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="心明录">
+    </span>
+
+    
+      <header class="post-header">
+
         
-          <a class="post-title-link" href="/posts/d28f.html" itemprop="url">
-            
-              <span itemprop="name">Logistic Regression原理与推导</span>
-            
-          </a>
         
-      </h3>
+          <h2 class="post-title" itemprop="name headline">从博弈、估值到内圣外王
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-03T17:58:20+08:00" content="2019-04-03">
-          04-03
-        </time>
-      </div>
+              
+            
+          </h2>
+        
 
-    </header>
-  </article>
+        <div class="post-meta">
+          <span class="post-time">
 
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-09-07 16:29:41" itemprop="dateCreated datePublished" datetime="2019-09-07T16:29:41+08:00">2019-09-07</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-09-05 09:48:58" itemprop="dateModified" datetime="2019-09-05T09:48:58+08:00">2019-09-05</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/投资/" itemprop="url" rel="index"><span itemprop="name">投资</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/posts/d256.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/posts/d256.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+            <span id="/posts/d256.html" class="leancloud_visitors" data-flag-title="从博弈、估值到内圣外王">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读次数：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">1.5k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="前言">前言</h1>
+<p>本文会先对“对韭当割”现象的原因进行阐述。并且，笔者通过剩余收益估值（即RIM模型）、若干财务分析对整个A股市场的股票进行了数据分析，给出若干如何避免被割的方案，具体数据分析的结果与部分解读会在文后给出获取方法。</p>
+<h1 id="从猜硬币说起">从猜硬币说起</h1>
+<h2 id="游戏规则背景">游戏规则背景</h2>
+<p>我们先从一个游戏说起​。一位美女和一位男士玩猜硬币的游戏，这个游戏的规则如下：</p>
+<p>美女根据自己意愿让硬币处于正面向上或者反面向上，并用手盖住，然后由这名男士猜硬币向上的面是正或反。如果​硬币为正面向上，且男士猜对，美女则给男士3元；如果硬币为反面向上，且男士猜对，美女则给男士1元；否则，猜错的情况下，男士均要给美女2元。</p>
+<p>我们就可以把这个猜硬币的收益表格画出来，如下：</p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>正</th>
+<th>反</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>正</td>
+<td>3</td>
+<td>-2</td>
+</tr>
+<tr class="even">
+<td>反</td>
+<td>-2</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>到这里，我们接受过九年义务教育的同学们看着这个表格可以很快脱口而出“男士收益的数学期望是0”，一直玩下去男士反正不会亏，还为国家创造了GDP，何乐而不为？然而事实真的是这样吗？接下来，我们用简单的数学来考察一下这个问题。当然，对于看到“数学”二字就有生理反应的同学，可以跳过数学考察直接看结论。</p>
+<h2 id="数学考察">数学考察</h2>
+<p>假设美女出正面的概率是<span class="math inline">\(y\)</span>，那么出反面的概率就是<span class="math inline">\(1-y\)</span>，假设男士猜正面的概率是<span class="math inline">\(x\)</span>，那么他猜反面的概率就是<span class="math inline">\(1-x\)</span>。很显然，因为都是概率，所以<span class="math inline">\(x,y \in[0,1]\)</span>。</p>
+<p>那么男士赚钱的数学期望就是（即对应赚的钱乘以对应的概率再求和）： <span class="math display">\[ E_m=3(xy)+1(1-x)(1-y)-2y(1-x)-2x(1-y) \]</span> 化简有： <span class="math display">\[ E_m=8xy-3x-3y+1 \]</span> 这个游戏是个零和游戏，美女要赚到钱，也就是要男士亏钱，我们令<span class="math inline">\(E_m&lt;0\)</span>，把<span class="math inline">\(y\)</span>提出来，就得到如下式子：</p>
+$$
+<span class="math display">\[\begin{cases}
+
+y&lt;\frac{3x-1}{8x-3},8x-3&gt;0\\
+y&gt;\frac{3x-1}{8x-3},8x-3&lt;0\\
+x,y \in [0,1]
+\end{cases}\]</span>
+<p>$$</p>
+<p>利用函数单调性解一下上面的不等式并且取交集，很快我们可以得到一个令人绝望的结果：当<span class="math inline">\(\frac{1}{3}&lt;y&lt;\frac{2}{5}\)</span>时，<span class="math inline">\(E_m&lt;0\)</span>恒成立。</p>
+<h2 id="结论">结论</h2>
+<p>上面结论就是当<span class="math inline">\(\frac{1}{3}&lt;y&lt;\frac{2}{5}\)</span>时，<span class="math inline">\(E_m&lt;0\)</span>恒成立。也就是说当美女控制自己正面向上的概率在<span class="math inline">\(\frac{1}{3}\)</span>和<span class="math inline">\(\frac{2}{5}\)</span>之间时，在玩这个游戏次数足够多时，不管男士猜正面的概率是多少，男士是一定亏钱的。</p>
+<p>那么，我们把“美女”换成“庄家”，把“男士”换成“散户”，“美女出正，男士猜对”就是“庄家做多，散户猜对买入”，“美女出负，男士猜对”就是“庄家做空，散户猜对卖出”，其他两种情况就是“庄家做多你卖出”和“庄家做空你买入”了。</p>
+<p>也就是说股市中被割是每位韭菜的宿命，因为你的赚钱的期望在庄家的操控下就是负的。那么如何解决呢？</p>
+<h1 id="解决方案">解决方案</h1>
+<h1 id="a股股票统计与评级">A股股票统计与评级</h1>
+<p>以下A股股票评级表为2019年9月4日通过RIM模型与行业评级得到的A股股票评级表。其中主要good_company为公司评级得分，good_price为价格评级得分。满分均为5分，越高者，公司质地越好或价格越优。all_ranking为上述二者之和，供排序参考之用。</p>
+<p><a href="d2e1/stock_info_20190904.csv" title="A股股票评级表下载">A股股票评级表</a></p>
 
       
     </div>
 
+    
+      
+
+  <div class="popular-posts-header">相关文章</div>
+  <ul class="popular-posts">
+  
+    <li class="popular-posts-item">
+      
+        <div class="popular-posts-date">2019-09-04</div>
+      
+      
+      <div class="popular-posts-title"><a href="\posts\d2e1.html" rel="bookmark">A股估值表</a></div>
+      
+    </li>
+  
+  </ul>
+
+
+    
+
+    
+    
+    
+
+    
+      <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center;">
+  <img id="wechat_subscriber_qcode" src="/images/qrcode_wechat.jpg" alt="瑾锋 wechat" style="width: 200px; max-width: 100%;">
+  <div>文学向公众号</div>
+</div>
+
+    
+
+    
+      
+    
+    
+
+    
+      <div>
+        
+
+
+
+
+  
+
+
+
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>瑾锋</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    
+    <a href="https://lukebest.github.io/posts/d256.html" title="从博弈、估值到内圣外王">https://lukebest.github.io/posts/d256.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/估值/" rel="tag"># 估值</a>
+          
+            <a href="/tags/RIM/" rel="tag"># RIM</a>
+          
+            <a href="/tags/股票/" rel="tag"># 股票</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div class="social_share">
+            
+            
+              <div id="needsharebutton-postbottom">
+                <span class="btn">
+                  <i class="fa fa-share-alt" aria-hidden="true"></i>
+                </span>
+              </div>
+            
+            
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/posts/d2e1.html" rel="next" title="A股估值表">
+                <i class="fa fa-chevron-left"></i> A股估值表
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
+  <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\d2e1.html" title="A股估值表" rel="bookmark">A股估值表</a></h3></div></li></ul>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
 
         </div>
         
@@ -496,8 +800,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -738,6 +1051,23 @@
       </div>
 
       
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#从猜硬币说起"><span class="nav-number">2.</span> <span class="nav-text">从猜硬币说起</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#游戏规则背景"><span class="nav-number">2.1.</span> <span class="nav-text">游戏规则背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数学考察"><span class="nav-number">2.2.</span> <span class="nav-text">数学考察</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结论"><span class="nav-number">2.3.</span> <span class="nav-text">结论</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解决方案"><span class="nav-number">3.</span> <span class="nav-text">解决方案</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#a股股票统计与评级"><span class="nav-number">4.</span> <span class="nav-text">A股股票统计与评级</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
       
         <div class="back-to-top">
@@ -886,6 +1216,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.1.1"></script>
+<script src="/js/post-details.js?v=7.1.1"></script>
+
+
 
   
 
@@ -934,6 +1268,8 @@
 
 
 
+
+  
 
 
   
@@ -1271,6 +1607,46 @@
   
   
 
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling }
+        if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next) }
+      }
+    });
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
+    }
+  });
+</script>
+<script src="//cdn.staticfile.org/MathJax/MathJax-2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
   
 
 
