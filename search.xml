@@ -16,7 +16,7 @@
   <entry>
     <title><![CDATA[A股估值表]]></title>
     <url>%2Fposts%2Fd2e1.html</url>
-    <content type="text"><![CDATA[以下A股股票评级表为2019年9月4日通过RIM模型与行业评级得到的A股股票评级表。其中主要指标有成长指数与价值指数。满分理论上均为100。成长指数越高，公司质地越好。价值指数越高，价格越优。在生成成长指数时，参考了股票价格，生成价值指数时，也参考了公司质地。 A股股票评级表]]></content>
+    <content type="text"><![CDATA[如为微信打开，请点击右上角“在浏览器打开”。 以下A股股票评级表为通过RIM模型与行业评级得到的A股股票评级表（时间为2019年9月6日）。其中主要指标有成长指数与价值指数。满分理论上均为100。成长指数越高，公司质地越好。价值指数越高，价格越优。在生成成长指数时，参考了股票价格，生成价值指数时，也参考了公司质地。 其他字段未标明的字段释义如下： |字段|释义| | --- | --- | |code|代码| |name|名称 |industry|所属行业 |area|地区 |pe|市盈率 |outstanding|流通股本(亿) |totals|总股本(亿) |totalAssets|总资产(万) |liquidAssets|流动资产 |fixedAssets|固定资产 |reserved|公积金 |reservedPerShare|每股公积金 |esp|每股收益 |bvps|每股净资 |pb|市净率 |timeToMarket|上市日期 |undp|未分利润 |perundp| 每股未分配 |rev|收入同比(%) |profit|利润同比(%) |gpr|毛利率(%) |npr|净利润率(%) |holders|股东人数 A股股票评级表下载]]></content>
       <categories>
         <category>投资</category>
       </categories>
