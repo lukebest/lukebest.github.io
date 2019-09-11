@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[A股估值表]]></title>
-    <url>%2Fposts%2Fd2e1.html</url>
-    <content type="text"><![CDATA[如为微信打开，请点击右上角“在浏览器打开”。以下A股股票评级表为通过RIM模型与行业评级得到的A股股票评级表（时间为2019年9月6日）。其中主要指标有成长指数与价值指数。满分理论上均为100。成长指数越高，公司质地越好。价值指数越高，价格越优。在生成成长指数时，参考了股票价格，生成价值指数时，也参考了公司质地。 A股股票评级表下载 其他字段未标明的字段释义如下： 字段 释义 code 代码 name 名称 industry 所属行业 area 地区 pe 市盈率 outstanding 流通股本(亿) totals 总股本(亿) totalAssets 总资产(万) liquidAssets 流动资产 fixedAssets 固定资产 reserved 公积金 reservedPerShare 每股公积金 esp 每股收益 bvps 每股净资 pb 市净率 timeToMarket 上市日期 undp 未分利润 perundp 每股未分配 rev 收入同比(%) profit 利润同比(%) gpr 毛利率(%) npr 净利润率(%) holders 股东人数]]></content>
+    <title><![CDATA[最大期望算法原理与推导]]></title>
+    <url>%2Fposts%2Fc1c4.html</url>
+    <content type="text"><![CDATA[简介 EM算法，即最大期望算法（Expectation-maximization algorithm，又译期望最大化算法）在统计中被用于寻找，依赖于不可观察的隐性变量的概率模型中，参数的最大似然估计。在统计计算中，最大期望（EM）算法是在概率模型中寻找参数最大似然估计或者最大后验估计的算法，其中概率模型依赖于无法观测的隐性变量。最大期望算法经常用在机器学习和计算机视觉的数据聚类（Data Clustering）领域。最大期望算法经过两个步骤交替进行计算，第一步是计算期望（E），利用对隐藏变量的现有估计值，计算其最大似然估计值；第二步是最大化（M），最大化在E步上求得的最大似然值来计算参数的值。M步上找到的参数估计值被用于下一个E步计算中，这个过程不断交替进行。 即EM算法是一种迭代算法，主要用于求极大似然估计或者极大后验估计值。 以\(X\)表示观测数据，\(Z\)表示隐变量数据，\(\Theta\)表示参数，我们要求参数的值。这时可以选择一些参数估计方法，例如矩估计，极大似然估计，极大后验估计等。在这里我们选择极大似然估计，即求出使得对数似然函数 \[\ln p(X|\Theta)\] 取最大值时的\(\Theta\)值。而因为 \[\ln p(X|\Theta)=\ln\sum_Zp(X,Z|\Theta)=\ln\sum_Zp(X|Z,\Theta)p(Z|\Theta)\] 这种类型的表达式通过偏导求极值是比较难计算的，这个时候我们就用EM这种特殊的算法来求解。 EM算法的推导 我们引入一个可变的分布\(q(Z),\sum_Zq(Z)=1\)，现在我们来求\(\ln p(X|\Theta)\)的极值。]]></content>
       <categories>
-        <category>投资</category>
+        <category>机器学习</category>
       </categories>
       <tags>
-        <tag>估值</tag>
-        <tag>RIM</tag>
-        <tag>股票</tag>
+        <tag>原理</tag>
+        <tag>推导</tag>
+        <tag>kmean</tag>
+        <tag>EM</tag>
+        <tag>期望最大算法</tag>
+        <tag>迭代</tag>
       </tags>
   </entry>
   <entry>
@@ -42,7 +45,7 @@
   <entry>
     <title><![CDATA[Otsu算法]]></title>
     <url>%2Fposts%2Fc380.html</url>
-    <content type="text"><![CDATA[简介 在图像处理中我们经常会遇到（灰度图）二值化的需求，一般情况下可以指定全局阈值进行二值化，那这种时候我们如何知道这个阈值的好坏呢？答案就是不停的尝试。如果是一副双峰图像（双峰图像是指图像直方图中存在两个峰），直观上应该是在两峰之间的峰谷附近取一个值。Otsu就是处理这个问题的，即根据图像直方图自动算出一个阈值。本文会先介绍和简单推导一下公式，然后再脑洞清奇地用代码探索一下Otsu的二值化和kmean的二类聚类方法的效果是否有差异。 原理与公式 原理 Otsu算法的原理非常简单，算法假定该图像根据双模直方图（前景像素和背景像素）把包含两类像素，于是它要计算能将两类分开的最佳阈值，使得它们的类内方差最小；由于两两平方距离恒定，所以即它们的类间方差最大。 公式推导 在大津算法中，我们穷举搜索能使类内方差最小的阈值\(t\)。类内方差定义为两个类的方差的加权和： \[\sigma_w^2(t) = \omega_1(t)\sigma_1^2(t)+\omega_2(t)\sigma_2^2(t) \tag{1}\] 权重 \(\omega_i\)是被阈值\(t\)分开的两个类的概率，而 \(\sigma^2_ i\)是这两个类的类内方差。有： \[\omega_1(t)=\sum_{i=0}^t p(i) \tag{2}\] \[\omega_2(t)=\sum_{i=t+1}^l p(i) \tag{3}\] 类均值\(\mu_i(t)\)为： \[\mu_1(t)=\left[\sum_{i=0}^t p(i)\,x(i)\right]/\omega_1 \tag{4}\] \[\mu_2(t)=\left[\sum_{i=t+1}^l p(i)\,x(i)\right]/\omega_2 \tag{5}\] 其中\(x(i)\)为第\(i\)个直方图面元中心的值。 而类间方差： \[\sigma_b^2(t) = \sigma^2-\sigma_w^2(t)=\omega_1(t)\omega_2(t)[\mu_1(t)-\mu_2(t)]^2 \tag{6}\] 可知类间方差最大与类内方差最小等价。 代码 我们就采用使得类内方差(1)式最小的方案，Python代码如下 1234567891011121314151617181920212223242526import cv2import numpy as npimg = cv2.imread('test.jpg', 0)blur = cv2.GaussianBlur(img, (5, 5), 0)# find normalized_histogram, and its cumulative distribution functionhist = cv2.calcHist([blur], [0], None, [256], [0, 256])hist_norm = hist.ravel()/hist.max()Q = hist_norm.cumsum()bins = np.arange(256)fn_min = np.infthresh = -1for i in range(1, 256): p1, p2 = np.hsplit(hist_norm, [i]) # probabilities q1, q2 = Q[i], Q[255]-Q[i] # cum sum of classes b1, b2 = np.hsplit(bins, [i]) # weights # finding means and variances m1, m2 = np.sum(p1*b1)/q1, np.sum(p2*b2)/q2 v1, v2 = np.sum(((b1-m1)**2)*p1)/q1, np.sum(((b2-m2)**2)*p2)/q2 # calculates the minimization function fn = v1*q1 + v2*q2 if fn &lt; fn_min: fn_min = fn thresh = iprint("loop:", i)print("threshold:", thresh) kmean二值化思考 这是笔者的一个脑洞，直接在直方图上做kmean二类聚类，看看是否能够达到和Otsu算法一样的效果。我们先按kmean的思路模拟一下算法流程： 在直方图上任取两个整数点\(A_0\),\(B_0\)，\(A_0,B_0\in[0,255]\)； 在直方图上的其余点按距离归属为二类，易知\(A_i\),\(B_i\)的中点\(M_i\)即为分界点，\(M_i=(A_i+B_i)/2\)； 分别计算被\(M_i\)分割的两类的加权均值，并用两类的加权均值替换\(A_{i+1},B_{i+1}\)； 重复第2步和第3步，直到\(M_i\)变化幅度小于\(eps\)。 kmean代码 12345678910111213141516171819202122232425262728import cv2import numpy as npimg = cv2.imread('test.jpg', 0)blur = cv2.GaussianBlur(img, (5, 5), 0)# find normalized_histogram, and its cumulative distribution functionhist = cv2.calcHist([blur], [0], None, [256], [0, 256])hist_norm = hist.ravel()/hist.max()Q = hist_norm.cumsum()bins = np.arange(256)fn_min = np.infthresh = -1A = 64B = 192eps = 1count = 0for t in range(1, 256): i = int(round((A+B)/2)) p1, p2 = np.hsplit(hist_norm, [i]) # probabilities q1, q2 = Q[i], Q[255]-Q[i] # cum sum of classes b1, b2 = np.hsplit(bins, [i]) # weights # finding means and variances A, B = np.sum(p1*b1)/q1, np.sum(p2*b2)/q2 if abs(((A+B)/2)-i) &lt; eps: count = t breakprint("loop:", count)print("threshold:", i) 结果比较 运行上面两段代码如下： Otsu 12loop: 255threshold: 120 kmean 12loop: 2threshold: 120 从代码上分析也可以看到Otsu法事实上就是遍历直方图的横轴使得类内方差最小即可，迭代次数固定。而kmean方法一般情况下4次左右迭代即可找到与Otsu法一样的结果。 参考 大津算法]]></content>
+    <content type="text"><![CDATA[简介 在图像处理中我们经常会遇到（灰度图）二值化的需求，一般情况下可以指定全局阈值进行二值化，那这种时候我们如何知道这个阈值的好坏呢？答案就是不停的尝试。如果是一副双峰图像（双峰图像是指图像直方图中存在两个峰），直观上应该是在两峰之间的峰谷附近取一个值。Otsu就是处理这个问题的，即根据图像直方图自动算出一个阈值。本文会先介绍和简单推导一下公式，然后再脑洞清奇地用代码探索一下Otsu的二值化和kmean的二类聚类方法的效果是否有差异。 原理与公式 原理 Otsu算法的原理非常简单，算法假定该图像根据双模直方图（前景像素和背景像素）把包含两类像素，于是它要计算能将两类分开的最佳阈值，使得它们的类内方差最小；由于两两平方距离恒定，所以即它们的类间方差最大。 公式推导 在大津算法中，我们穷举搜索能使类内方差最小的阈值\(t\)。类内方差定义为两个类的方差的加权和： \[\sigma_w^2(t) = \omega_1(t)\sigma_1^2(t)+\omega_2(t)\sigma_2^2(t) \tag{1}\] 权重 \(\omega_i\)是被阈值\(t\)分开的两个类的概率，而 \(\sigma^2_ i\)是这两个类的类内方差。有： \[\omega_1(t)=\sum_{i=0}^t p(i) \tag{2}\] \[\omega_2(t)=\sum_{i=t+1}^l p(i) \tag{3}\] 类均值\(\mu_i(t)\)为： \[\mu_1(t)=\left[\sum_{i=0}^t p(i)\,x(i)\right]/\omega_1 \tag{4}\] \[\mu_2(t)=\left[\sum_{i=t+1}^l p(i)\,x(i)\right]/\omega_2 \tag{5}\] 其中\(x(i)\)为第\(i\)个直方图面元中心的值。 而类间方差： \[\sigma_b^2(t) = \sigma^2-\sigma_w^2(t)=\omega_1(t)\omega_2(t)[\mu_1(t)-\mu_2(t)]^2 \tag{6}\] 可知类间方差最大与类内方差最小等价。 代码 我们就采用使得类内方差(1)式最小的方案，Python代码如下 1234567891011121314151617181920212223242526import cv2import numpy as npimg = cv2.imread('test.jpg', 0)blur = cv2.GaussianBlur(img, (5, 5), 0)# find normalized_histogram, and its cumulative distribution functionhist = cv2.calcHist([blur], [0], None, [256], [0, 256])hist_norm = hist.ravel()/hist.max()Q = hist_norm.cumsum()bins = np.arange(256)fn_min = np.infthresh = -1for i in range(1, 256): p1, p2 = np.hsplit(hist_norm, [i]) # probabilities q1, q2 = Q[i], Q[255]-Q[i] # cum sum of classes b1, b2 = np.hsplit(bins, [i]) # weights # finding means and variances m1, m2 = np.sum(p1*b1)/q1, np.sum(p2*b2)/q2 v1, v2 = np.sum(((b1-m1)**2)*p1)/q1, np.sum(((b2-m2)**2)*p2)/q2 # calculates the minimization function fn = v1*q1 + v2*q2 if fn &lt; fn_min: fn_min = fn thresh = iprint("loop:", i)print("threshold:", thresh) kmean二值化思考 这是笔者的一个想法，直接在直方图上做kmean二类聚类，看看是否能够达到和Otsu算法一样的效果。我们先按kmean的思路模拟一下算法流程： 在直方图上任取两个整数点\(A_0\),\(B_0\)，\(A_0,B_0\in[0,255]\)； 在直方图上的其余点按距离归属为二类，易知\(A_i\),\(B_i\)的中点\(M_i\)即为分界点，\(M_i=(A_i+B_i)/2\)； 分别计算被\(M_i\)分割的两类的加权均值，并用两类的加权均值替换\(A_{i+1},B_{i+1}\)； 重复第2步和第3步，直到\(M_i\)变化幅度小于\(eps\)。 kmean代码 12345678910111213141516171819202122232425262728import cv2import numpy as npimg = cv2.imread('test.jpg', 0)blur = cv2.GaussianBlur(img, (5, 5), 0)# find normalized_histogram, and its cumulative distribution functionhist = cv2.calcHist([blur], [0], None, [256], [0, 256])hist_norm = hist.ravel()/hist.max()Q = hist_norm.cumsum()bins = np.arange(256)fn_min = np.infthresh = -1A = 64B = 192eps = 1count = 0for t in range(1, 256): i = int(round((A+B)/2)) p1, p2 = np.hsplit(hist_norm, [i]) # probabilities q1, q2 = Q[i], Q[255]-Q[i] # cum sum of classes b1, b2 = np.hsplit(bins, [i]) # weights # finding means and variances A, B = np.sum(p1*b1)/q1, np.sum(p2*b2)/q2 if abs(((A+B)/2)-i) &lt; eps: count = t breakprint("loop:", count)print("threshold:", i) 结果比较 运行上面两段代码如下： Otsu 12loop: 255threshold: 120 kmean 12loop: 2threshold: 120 从代码上分析也可以看到Otsu法事实上就是遍历直方图的横轴使得类内方差最小即可，迭代次数固定。而kmean方法一般情况下4次左右迭代即可找到与Otsu法一样的结果。事实上第二种算法也是用到了EM算法（可见最大期望算法原理与推导）的相关思想。 参考 大津算法]]></content>
       <categories>
         <category>图像处理</category>
       </categories>
@@ -53,6 +56,7 @@
         <tag>Otsu</tag>
         <tag>票据识别</tag>
         <tag>二值化</tag>
+        <tag>EM</tag>
       </tags>
   </entry>
   <entry>
