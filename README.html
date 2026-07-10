@@ -446,7 +446,11 @@ python .cursor/skills/okf-knowledge-base/scripts/generate_indexes.py .
 
 # 生成交互式概念关系图 viz.html（可选）
 python .cursor/skills/okf-knowledge-base/scripts/generate_viz.py .
+
+# 生成可部署的静态站（默认输出 site/，面向 https://lukebest.github.io/wiki/）
+python .cursor/skills/okf-knowledge-base/scripts/generate_site.py . --out site --base-path /wiki
 </code></pre>
+<p>公开站点：<a href="https://lukebest.github.io/wiki/">https://lukebest.github.io/wiki/</a>（由 <code>generate_site.py</code> 生成后推送到 <a href="https://github.com/lukebest/lukebest.github.io"><code>lukebest/lukebest.github.io</code></a> 的 <code>wiki/</code> 目录）。</p>
 <hr />
 <h2 id="agent">使用 Agent 查询知识库</h2>
 <p>查询的本质：<strong>先从已编译的 OKF concept 页作答</strong>，必要时再补充外部检索；高价值回答可回填为 <code>papers/</code>、<code>analyses/</code> 等页面并记入 <code>log.md</code>。</p>
