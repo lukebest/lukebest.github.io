@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Heterogeneous Inference · AI Infra Wiki</title>
+<meta name="description" content="GPU + LPU 异构推理，分别优化 prefill/decode"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --bg: #0f1419;
+  --bg2: #1a2332;
+  --bg3: #243044;
+  --text: #e7ecf3;
+  --muted: #8b9bb4;
+  --accent: #5b9fd4;
+  --accent2: #7dd3c0;
+  --border: #2d3a4f;
+  --code-bg: #0a0e14;
+  --radius: 8px;
+  --font: "IBM Plex Sans", "Noto Sans SC", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", "JetBrains Mono", ui-monospace, monospace;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; font-family: var(--font); background: var(--bg); color: var(--text);
+  line-height: 1.65; font-size: 16px;
+  background-image:
+    radial-gradient(ellipse 80% 50% at 10% -10%, rgba(91,159,212,.12), transparent),
+    radial-gradient(ellipse 60% 40% at 90% 0%, rgba(125,211,192,.08), transparent);
+  min-height: 100vh;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--accent2); text-decoration: underline; }
+.layout { display: grid; grid-template-columns: 260px 1fr; min-height: 100vh; }
+.sidebar {
+  background: var(--bg2); border-right: 1px solid var(--border);
+  padding: 1.25rem 1rem; position: sticky; top: 0; height: 100vh; overflow-y: auto;
+}
+.brand { font-weight: 700; font-size: 1.05rem; letter-spacing: -.02em; margin-bottom: .25rem; }
+.brand a { color: var(--text); text-decoration: none; }
+.brand-sub { color: var(--muted); font-size: .75rem; margin-bottom: 1.25rem; }
+.nav-section { margin-bottom: 1rem; }
+.nav-section h3 {
+  font-size: .7rem; text-transform: uppercase; letter-spacing: .08em;
+  color: var(--muted); margin: 0 0 .4rem; font-weight: 600;
+}
+.nav-section a {
+  display: block; padding: .28rem .5rem; border-radius: 4px;
+  color: var(--text); font-size: .85rem; text-decoration: none;
+}
+.nav-section a:hover, .nav-section a.active { background: var(--bg3); color: var(--accent2); }
+.main { padding: 2rem 2.5rem 4rem; max-width: 880px; }
+.meta {
+  display: flex; flex-wrap: wrap; gap: .5rem; align-items: center;
+  margin-bottom: 1.25rem; font-size: .8rem; color: var(--muted);
+}
+.badge {
+  display: inline-block; padding: .15rem .55rem; border-radius: 999px;
+  font-size: .72rem; font-weight: 600; background: var(--bg3); color: var(--text);
+}
+.badge.type { border: 1px solid var(--border); }
+.tag { background: transparent; border: 1px solid var(--border); color: var(--muted); }
+h1 { font-size: 1.85rem; margin: 0 0 .75rem; letter-spacing: -.03em; line-height: 1.25; }
+h2 { font-size: 1.35rem; margin-top: 2rem; border-bottom: 1px solid var(--border); padding-bottom: .35rem; }
+h3 { font-size: 1.1rem; margin-top: 1.5rem; }
+.desc { color: var(--muted); font-size: 1rem; margin: 0 0 1.5rem; }
+.content table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: .9rem; }
+.content th, .content td { border: 1px solid var(--border); padding: .45rem .65rem; text-align: left; }
+.content th { background: var(--bg2); }
+.content tr:nth-child(even) td { background: rgba(26,35,50,.5); }
+.content code {
+  font-family: var(--mono); font-size: .85em; background: var(--code-bg);
+  padding: .1em .35em; border-radius: 3px;
+}
+.content pre {
+  background: var(--code-bg); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 1rem; overflow-x: auto; font-size: .82rem;
+}
+.content pre code { background: none; padding: 0; }
+.content blockquote {
+  border-left: 3px solid var(--accent); margin: 1rem 0; padding: .25rem 1rem;
+  color: var(--muted); background: var(--bg2);
+}
+.content ul, .content ol { padding-left: 1.4rem; }
+.content img { max-width: 100%; }
+.search-box {
+  width: 100%; padding: .5rem .65rem; margin-bottom: 1rem;
+  background: var(--bg); border: 1px solid var(--border); border-radius: 6px;
+  color: var(--text); font-family: inherit; font-size: .85rem;
+}
+.search-box:focus { outline: 1px solid var(--accent); }
+.home-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem; margin-top: 1.5rem;
+}
+.card {
+  background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 1rem 1.1rem; transition: border-color .15s;
+}
+.card:hover { border-color: var(--accent); }
+.card h3 { margin: 0 0 .4rem; font-size: 1rem; }
+.card h3 a { color: var(--text); }
+.card p { margin: 0; font-size: .82rem; color: var(--muted); }
+.footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--border); font-size: .75rem; color: var(--muted); }
+.mobile-toggle { display: none; }
+@media (max-width: 800px) {
+  .layout { grid-template-columns: 1fr; }
+  .sidebar {
+    position: fixed; z-index: 20; transform: translateX(-100%);
+    transition: transform .2s; width: min(280px, 85vw);
+  }
+  .sidebar.open { transform: translateX(0); }
+  .mobile-toggle {
+    display: block; position: fixed; top: .75rem; left: .75rem; z-index: 30;
+    background: var(--bg2); border: 1px solid var(--border); color: var(--text);
+    padding: .4rem .7rem; border-radius: 6px; font-size: .85rem; cursor: pointer;
+  }
+  .main { padding: 3.5rem 1.25rem 3rem; }
+}
+</style>
+</head>
+<body>
+<button class="mobile-toggle" id="nav-toggle" type="button">菜单</button>
+<div class="layout">
+<aside class="sidebar" id="sidebar">
+  <div class="brand"><a href="../index.html">AI Infra Wiki</a></div>
+  <div class="brand-sub">OKF knowledge bundle</div>
+  <input class="search-box" id="site-search" type="search" placeholder="搜索概念…" autocomplete="off"/>
+  <div id="search-results" class="nav-section"></div>
+  <div class="nav-section"><h3>Browse</h3>
+<a href="../index.html">Home</a>
+<a href="index.html">Concepts</a>
+<a href="../entities/index.html">Entities</a>
+<a href="../papers/index.html">Papers</a>
+<a href="../analyses/index.html">Analyses</a>
+<a href="../summaries/index.html">Summaries</a>
+</div>
+<div class="nav-section"><h3>Home (3)</h3>
+<a class="" href="../README.html" title="About / README">About / README</a>
+<a class="" href="../SCHEMA.html" title="Schema">Schema</a>
+<a class="" href="../log.html" title="Update Log">Update Log</a>
+</div>
+<div class="nav-section"><h3>Concepts (96)</h3>
+<a class="" href="3d-stacked-ai-chip.html" title="3D-Stacked AI Chip">3D-Stacked AI Chip</a>
+<a class="" href="adaptive-routing-noc.html" title="Adaptive Routing for NoC">Adaptive Routing for NoC</a>
+<a class="" href="architecture-benchmark-methodology.html" title="Architecture Benchmark Methodology">Architecture Benchmark Methodology</a>
+<a class="" href="basic-data-flow-processor.html" title="Basic Data-Flow Processor">Basic Data-Flow Processor</a>
+<a class="" href="branch-prediction.html" title="Branch Prediction">Branch Prediction</a>
+<a class="" href="butterfly-min-topology.html" title="Butterfly and MIN Topology">Butterfly and MIN Topology</a>
+<a class="" href="cache-coherence.html" title="Cache Coherence">Cache Coherence</a>
+<a class="" href="cerebras-color-mechanism.html" title="Cerebras Color Mechanism">Cerebras Color Mechanism</a>
+<a class="" href="clos-fat-tree-topology.html" title="Clos and Fat-Tree Topology">Clos and Fat-Tree Topology</a>
+<a class="" href="cmx-stx.html" title="CMX &amp; STX">CMX &amp; STX</a>
+<a class="" href="collective-capable-noc.html" title="Collective-Capable NoC">Collective-Capable NoC</a>
+<a class="" href="constable-load-elimination.html" title="Constable Load Elimination">Constable Load Elimination</a>
+<a class="" href="core-group-dram-access.html" title="Core Group (DRAM Access Synchronization)">Core Group (DRAM Access Synchroniz…</a>
+<a class="" href="cpu-pipeline-fundamentals.html" title="CPU Pipeline Fundamentals">CPU Pipeline Fundamentals</a>
+<a class="" href="csa-hca.html" title="CSA and HCA (Hybrid Attention)">CSA and HCA (Hybrid Attention)</a>
+<a class="" href="deadlock-free-routing-cdg-dally.html" title="Deadlock-Free Routing CDG and Dally Theorem">Deadlock-Free Routing CDG and Dall…</a>
+<a class="" href="deterministic-execution.html" title="Deterministic Execution">Deterministic Execution</a>
+<a class="" href="deterministic-routing-dor.html" title="Deterministic Routing and DOR">Deterministic Routing and DOR</a>
+<a class="" href="disaggregated-inference.html" title="Disaggregated Inference">Disaggregated Inference</a>
+<a class="" href="distributed-gemm-algorithms.html" title="Distributed GEMM Algorithms">Distributed GEMM Algorithms</a>
+<a class="" href="dnn-accelerator-systolic-dataflow.html" title="DNN Accelerator Systolic Dataflow">DNN Accelerator Systolic Dataflow</a>
+<a class="" href="dram-memory-system.html" title="DRAM and Memory System">DRAM and Memory System</a>
+<a class="" href="dsa-processor-design-tradeoffs.html" title="DSA Processor Design Tradeoffs">DSA Processor Design Tradeoffs</a>
+<a class="" href="dsec-sandbox.html" title="DSec Sandbox Platform">DSec Sandbox Platform</a>
+<a class="" href="dspark-speculative-decoding.html" title="DSpark Speculative Decoding">DSpark Speculative Decoding</a>
+<a class="" href="duato-escape-vc-deadlock-free-routing.html" title="Duato Escape VC Deadlock-Free Routing">Duato Escape VC Deadlock-Free Rout…</a>
+<a class="" href="end-to-end-memory-data-path.html" title="End-to-End Memory Data Path">End-to-End Memory Data Path</a>
+<a class="" href="eyeriss-accelerator.html" title="Eyeriss Accelerator">Eyeriss Accelerator</a>
+<a class="" href="feather-accelerator.html" title="FEATHER Accelerator">FEATHER Accelerator</a>
+<a class="" href="flashattention.html" title="FlashAttention">FlashAttention</a>
+<a class="" href="flashattention-2.html" title="FlashAttention-2">FlashAttention-2</a>
+<a class="" href="flashattention-3.html" title="FlashAttention-3">FlashAttention-3</a>
+<a class="" href="flashdecoding-plus-plus.html" title="FlashDecoding++">FlashDecoding++</a>
+<a class="" href="flashmoe-kernel.html" title="FlashMoE Kernel">FlashMoE Kernel</a>
+<a class="" href="flattened-butterfly-topology.html" title="Flattened Butterfly 拓扑">Flattened Butterfly 拓扑</a>
+<a class="" href="fp4-qat.html" title="FP4 Quantization-Aware Training">FP4 Quantization-Aware Training</a>
+<a class="" href="gemm-vs-gemv.html" title="GEMM vs GEMV in LLM Inference">GEMM vs GEMV in LLM Inference</a>
+<a class="" href="gpu-simt-architecture.html" title="GPU SIMT Architecture">GPU SIMT Architecture</a>
+<a class=" active" href="heterogeneous-inference.html" title="Heterogeneous Inference">Heterogeneous Inference</a>
+<a class="" href="inference-capacity-trap.html" title="Inference Capacity Trap">Inference Capacity Trap</a>
+<a class="" href="instruction-level-parallelism.html" title="Instruction-Level Parallelism">Instruction-Level Parallelism</a>
+<a class="" href="interconnection-network-cost-model.html" title="Interconnection Network Cost Model">Interconnection Network Cost Model</a>
+<a class="" href="interconnection-network-design-space.html" title="Interconnection Network Design Space">Interconnection Network Design Space</a>
+<a class="" href="interconnection-network-protocol-stack.html" title="Interconnection Network Protocol Stack">Interconnection Network Protocol S…</a>
+<a class="" href="interconnection-topology-metrics.html" title="Interconnection Topology Metrics">Interconnection Topology Metrics</a>
+<a class="" href="isa-design-principles.html" title="ISA Design Principles">ISA Design Principles</a>
+<a class="" href="linear-ring-topology.html" title="Linear and Ring Topology">Linear and Ring Topology</a>
+<a class="" href="lpu-architecture.html" title="LPU Architecture">LPU Architecture</a>
+<a class="" href="m2n-communication.html" title="M2N Communication">M2N Communication</a>
+<a class="" href="mhc.html" title="Manifold-Constrained Hyper-Connections (mHC)">Manifold-Constrained Hyper-Connect…</a>
+<a class="" href="megamoe-kernel.html" title="MegaMoE Kernel (Expert Parallelism Overlap)">MegaMoE Kernel (Expert Parallelism…</a>
+<a class="" href="memory-consistency-model.html" title="Memory Consistency Model">Memory Consistency Model</a>
+<a class="" href="memory-fence-barrier.html" title="Memory Fence and Barrier">Memory Fence and Barrier</a>
+<a class="" href="memory-hierarchy-cache.html" title="Memory Hierarchy and Cache">Memory Hierarchy and Cache</a>
+<a class="" href="mesh-torus-topology.html" title="Mesh and Torus Topology">Mesh and Torus Topology</a>
+<a class="" href="mpi-reduce-allreduce-algorithms.html" title="MPI Reduce/AllReduce Algorithms">MPI Reduce/AllReduce Algorithms</a>
+<a class="" href="multi-plane-clos-topology.html" title="Multi-plane Clos Topology for AI Training">Multi-plane Clos Topology for AI T…</a>
+<a class="" href="multicore-smt-nuca.html" title="Multicore SMT and NUCA">Multicore SMT and NUCA</a>
+<a class="" href="muon-optimizer.html" title="Muon Optimizer">Muon Optimizer</a>
+<a class="" href="noc-fundamentals-hp-appendix-f.html" title="NoC Fundamentals (H&amp;P Appendix F)">NoC Fundamentals (H&amp;P Appendix F)</a>
+<a class="" href="noc-router-microarchitecture.html" title="NoC Router 微架构">NoC Router 微架构</a>
+<a class="" href="numeric-formats-ai-hardware.html" title="Numeric Formats for AI Hardware">Numeric Formats for AI Hardware</a>
+<a class="" href="nvidia-cpo-roadmap.html" title="NVIDIA CPO Roadmap">NVIDIA CPO Roadmap</a>
+<a class="" href="out-of-order-execution.html" title="Out-of-Order Execution">Out-of-Order Execution</a>
+<a class="" href="pagedattention-vllm.html" title="PagedAttention and vLLM Serving">PagedAttention and vLLM Serving</a>
+<a class="" href="parallelism-transition-point.html" title="Parallelism Transition Point">Parallelism Transition Point</a>
+<a class="" href="plasticine-accelerator.html" title="Plasticine Accelerator">Plasticine Accelerator</a>
+<a class="" href="prefill-decode-divergence.html" title="Prefill-Decode Resource Divergence">Prefill-Decode Resource Divergence</a>
+<a class="" href="quantitative-architecture-fundamentals.html" title="Quantitative Architecture Fundamentals">Quantitative Architecture Fundamen…</a>
+<a class="" href="reasoning-cliff.html" title="Reasoning Cliff">Reasoning Cliff</a>
+<a class="" href="spada-programming-language.html" title="SpaDA Programming Language">SpaDA Programming Language</a>
+<a class="" href="srv6-source-routing.html" title="SRv6 Source Routing for AI Supercomputers">SRv6 Source Routing for AI Superco…</a>
+<a class="" href="ssd-nvme-storage-system.html" title="SSD and NVMe Storage System">SSD and NVMe Storage System</a>
+<a class="" href="superscalar-cpu-research-2023-2026.html" title="Superscalar CPU Research (2023-2026)">Superscalar CPU Research (2023-2026)</a>
+<a class="" href="switching-elements.html" title="Switching Elements">Switching Elements</a>
+<a class="" href="switching-networks.html" title="Switching Networks">Switching Networks</a>
+<a class="" href="switching-principles.html" title="Switching Principles">Switching Principles</a>
+<a class="" href="tilelang.html" title="TileLang DSL">TileLang DSL</a>
+<a class="" href="tileloom-compiler.html" title="TileLoom Compiler">TileLoom Compiler</a>
+<a class="" href="topology-optimization-variants.html" title="Topology Optimization Variants">Topology Optimization Variants</a>
+<a class="" href="ub-transaction-layer.html" title="UB 事务层">UB 事务层</a>
+<a class="" href="ub-transport-layer.html" title="UB 传输层机制">UB 传输层机制</a>
+<a class="" href="ub-memory-management.html" title="UB 内存管理">UB 内存管理</a>
+<a class="" href="ub-data-link-layer.html" title="UB 数据链路层机制">UB 数据链路层机制</a>
+<a class="" href="ub-physical-layer.html" title="UB 物理层机制">UB 物理层机制</a>
+<a class="" href="ub-programming-models.html" title="UB 编程模型与 URMA">UB 编程模型与 URMA</a>
+<a class="" href="ub-network-layer.html" title="UB 网络层机制">UB 网络层机制</a>
+<a class="" href="ub-resource-management.html" title="UB 资源管理">UB 资源管理</a>
+<a class="" href="ub-urpc.html" title="URPC (UB 远程过程调用)">URPC (UB 远程过程调用)</a>
+<a class="" href="virtual-memory-tlb.html" title="Virtual Memory and TLB">Virtual Memory and TLB</a>
+<a class="" href="voxel-simulator.html" title="Voxel Simulator">Voxel Simulator</a>
+<a class="" href="waferllm-system.html" title="WaferLLM System">WaferLLM System</a>
+<a class="" href="wse-performance-model.html" title="WSE Performance Model">WSE Performance Model</a>
+<a class="" href="wse-quantitative-architecture-analysis.html" title="WSE Quantitative Architecture Analysis">WSE Quantitative Architecture Anal…</a>
+<a class="" href="wse-reduce-algorithms.html" title="WSE Reduce Algorithms">WSE Reduce Algorithms</a>
+<a class="" href="information-theoretic-value-model.html" title="智能体辅助编程的信息论价值模型">智能体辅助编程的信息论价值模型</a>
+</div>
+<div class="nav-section"><h3>Entities (10)</h3>
+<a class="" href="../entities/cassini.html" title="CASSINI">CASSINI</a>
+<a class="" href="../entities/cerebras-wse.html" title="Cerebras WSE">Cerebras WSE</a>
+<a class="" href="../entities/deepseek-v4.html" title="DeepSeek-V4">DeepSeek-V4</a>
+<a class="" href="../entities/graphcore-ipu.html" title="Graphcore IPU">Graphcore IPU</a>
+<a class="" href="../entities/kyber-rack.html" title="Kyber Rack">Kyber Rack</a>
+<a class="" href="../entities/mrc.html" title="MRC (Multipath Reliable Connection)">MRC (Multipath Reliable Connection)</a>
+<a class="" href="../entities/nvidia-groq-3-lpx.html" title="NVIDIA Groq 3 LPX">NVIDIA Groq 3 LPX</a>
+<a class="" href="../entities/nvidia-vera-rubin-nvl72.html" title="NVIDIA Vera Rubin NVL72">NVIDIA Vera Rubin NVL72</a>
+<a class="" href="../entities/unifiedbus-ub.html" title="UnifiedBus (UB)">UnifiedBus (UB)</a>
+<a class="" href="../entities/vera-etl256.html" title="Vera ETL256">Vera ETL256</a>
+</div>
+<div class="nav-section"><h3>Papers (25)</h3>
+<a class="" href="../papers/collective-capable-noc-ml-accelerators.html" title="A Lightweight High-Throughput Collective-Capable NoC for Large-Scale ML Accelerators">A Lightweight High-Throughput Coll…</a>
+<a class="" href="../papers/dennis-misunas-basic-data-flow-processor.html" title="A Preliminary Architecture for a Basic Data-Flow Processor">A Preliminary Architecture for a B…</a>
+<a class="" href="../papers/ai-accelerators-llm-inference.html" title="AI Accelerators for Large Language Model Inference: Architecture Analysis and Scaling Strategies">AI Accelerators for Large Language…</a>
+<a class="" href="../papers/constable-load-elimination.html" title="Constable: Safely Eliminating Load Instruction Execution">Constable: Safely Eliminating Load…</a>
+<a class="" href="../papers/dspark-speculative-decoding.html" title="DSpark: Confidence-Scheduled Speculative Decoding with Semi-Autoregressive Generation">DSpark: Confidence-Scheduled Specu…</a>
+<a class="" href="../papers/eyeriss-energy-efficient-cnn-accelerator.html" title="Eyeriss: An Energy-Efficient Reconfigurable Accelerator for Deep Convolutional Neural Networks">Eyeriss: An Energy-Efficient Recon…</a>
+<a class="" href="../papers/feather-reconfigurable-accelerator.html" title="FEATHER: A Reconfigurable Accelerator with Data Reordering Support for Low-Cost On-Chip Dataflow Switching">FEATHER: A Reconfigurable Accelera…</a>
+<a class="" href="../papers/flashattention-2-faster-attention.html" title="FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning">FlashAttention-2: Faster Attention…</a>
+<a class="" href="../papers/flashattention-3-asynchrony-low-precision.html" title="FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision">FlashAttention-3: Fast and Accurat…</a>
+<a class="" href="../papers/flashattention-io-aware-exact-attention.html" title="FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness">FlashAttention: Fast and Memory-Ef…</a>
+<a class="" href="../papers/flashdecoding-plus-plus-llm-gpu-inference.html" title="FlashDecoding++: Faster Large Language Model Inference on GPUs">FlashDecoding++: Faster Large Lang…</a>
+<a class="" href="../papers/flashmoe-fast-distributed-moe-single-kernel.html" title="FlashMoE: Fast Distributed MoE in a Single Kernel">FlashMoE: Fast Distributed MoE in …</a>
+<a class="" href="../papers/llm-inference-acceleration-comprehensive-hardware-survey.html" title="Large Language Model Inference Acceleration: A Comprehensive Hardware Perspective">Large Language Model Inference Acc…</a>
+<a class="" href="../papers/looplynx-scalable-dataflow-llm-inference.html" title="LoopLynx: A Scalable Dataflow Architecture for Efficient LLM Inference">LoopLynx: A Scalable Dataflow Arch…</a>
+<a class="" href="../papers/megascale-infer-2504.02263.html" title="MegaScale-Infer">MegaScale-Infer</a>
+<a class="" href="../papers/near-optimal-wafer-scale-reduce.html" title="Near-Optimal Wafer-Scale Reduce">Near-Optimal Wafer-Scale Reduce</a>
+<a class="" href="../papers/rabenseifner-collective-reduction-operations.html" title="Optimization of Collective Reduction Operations">Optimization of Collective Reducti…</a>
+<a class="" href="../papers/plasticine-reconfigurable-parallel-patterns.html" title="Plasticine: A Reconfigurable Architecture For Parallel Patterns">Plasticine: A Reconfigurable Archi…</a>
+<a class="" href="../papers/resilient-ai-supercomputer-networking-mrc-srv6.html" title="Resilient AI Supercomputer Networking using MRC and SRv6">Resilient AI Supercomputer Network…</a>
+<a class="" href="../papers/sambanova-sn40l-dataflow-coe.html" title="SambaNova SN40L: Scaling the AI Memory Wall with Dataflow and Composition of Experts">SambaNova SN40L: Scaling the AI Me…</a>
+<a class="" href="../papers/spada-spatial-dataflow-architecture.html" title="SpaDA: A Spatial Dataflow Architecture Programming Language">SpaDA: A Spatial Dataflow Architec…</a>
+<a class="" href="../papers/tileloom-automatic-dataflow-planning.html" title="TileLoom: Automatic Dataflow Planning for Tile-Based Languages">TileLoom: Automatic Dataflow Plann…</a>
+<a class="" href="../papers/understanding-inference-scaling-for-llms.html" title="Understanding Inference Scaling for LLMs">Understanding Inference Scaling fo…</a>
+<a class="" href="../papers/voxel-3d-stacked-ai-chip-llm-inference.html" title="Voxel: 3D-Stacked AI Chip Efficiency for LLM Inference">Voxel: 3D-Stacked AI Chip Efficien…</a>
+<a class="" href="../papers/waferllm-wafer-scale-llm-inference.html" title="WaferLLM: Large Language Model Inference at Wafer Scale">WaferLLM: Large Language Model Inf…</a>
+</div>
+<div class="nav-section"><h3>Analyses (3)</h3>
+<a class="" href="../analyses/cerebras-wse-vs-groq-network-comparison.html" title="Cerebras NoW vs Groq Switched 对比">Cerebras NoW vs Groq Switched 对比</a>
+<a class="" href="../analyses/waferllm-compiler-research-gaps.html" title="WaferLLM Compiler Research Gaps">WaferLLM Compiler Research Gaps</a>
+<a class="" href="../analyses/wse-nom-contradiction-analysis.html" title="WSE NoW 矛盾论分析">WSE NoW 矛盾论分析</a>
+</div>
+<div class="nav-section"><h3>Summaries (3)</h3>
+<a class="" href="../summaries/deepseek-v4.html" title="DeepSeek-V4: Towards Highly Efficient Million-Token Context Intelligence">DeepSeek-V4: Towards Highly Effici…</a>
+<a class="" href="../summaries/superscalar-cpu-research-2023-2026.html" title="Superscalar CPU Research (2023-2026)">Superscalar CPU Research (2023-2026)</a>
+<a class="" href="../summaries/distributed-gemm-and-compiler.html" title="分布式存储架构下的矩阵乘与编译器">分布式存储架构下的矩阵乘与编译器</a>
+</div>
+</aside>
+<main class="main">
+  <div class="meta"><span class="badge type" style="border-color:#3b82f6">Concept</span><span class="badge tag">inference</span><span class="badge tag">gpu</span><span class="badge tag">lpu</span><span class="badge tag">architecture</span><span class="badge tag">serving</span><span class="badge tag">agentic-ai</span></div>
+  <h1>Heterogeneous Inference</h1>
+  <p class="desc">GPU + LPU 异构推理，分别优化 prefill/decode</p>
+  <div class="content">
+  <h1 id="heterogeneous-inference">Heterogeneous Inference（异构推理）</h1>
+<p>使用不同类型的加速器分别处理推理流水线的不同阶段，以同时优化吞吐和延迟。</p>
+<h2 id="_1">动机</h2>
+<p>推理不是单一负载——prefill 和 decode 对硬件要求完全不同：<br />
+- <strong>Prefill</strong>：compute 密集，适合大 batch GPU 吞吐优化<br />
+- <strong>Decode</strong>：memory-bandwidth 密集，小 batch，延迟敏感</p>
+<p>即使同为 decode 阶段，不同操作的特性也不同：<br />
+- <strong>Attention</strong>：stateful（动态 KV cache），memory-bound，GPU 利用率不随 batch 提升<br />
+- <strong>FFN / MoE Expert</strong>：stateless，compute-bound（dense）或 sparse（MoE），利用率随 batch 提升</p>
+<p>单一架构无法同时最优化所有操作。</p>
+<h2 id="vera-rubin-lpx">Vera Rubin + LPX 异构方案</h2>
+<h3 id="_2">两种使用模式</h3>
+<h4 id="1-attention-ffn-disaggregationafd">1. Attention FFN Disaggregation（AFD）</h4>
+<ul>
+<li><strong>GPU 负责</strong>：Attention（decode 阶段，stateful，需要大量 HBM 存 KV cache）</li>
+<li><strong>LPU 负责</strong>：FFN / MoE expert（stateless，确定性架构适配静态工作负载）</li>
+<li>Ping-pong pipeline 掩盖 GPU↔LPU 通信延迟</li>
+<li>源自 [Megascale Infer 2504.02263<a href="../papers/megascale-infer-2504.02263.html">../papers/megascale-infer-2504.02263.html</a> 和 Step-3</li>
+</ul>
+<h4 id="2-speculative-decoding">2. Speculative Decoding</h4>
+<ul>
+<li><strong>LPU 运行</strong>：Draft model 或 MTP layer（利用低延迟）</li>
+<li><strong>GPU 验证</strong>：Main model warm prefill k 个 draft tokens</li>
+<li>通常 1.5-2× output tokens per decode step</li>
+<li>Draft model 需要 KV cache → 使用 FPGA 附加 DDR5（256 GB/FPGA）</li>
+<li>GPU 侧负载感知调度见 [DSpark Speculative Decoding<a href="dspark-speculative-decoding.html">dspark-speculative-decoding.html</a>（confidence + batch 容量动态截断 verify）</li>
+</ul>
+<h3 id="afd-work">AFD 为什么 work</h3>
+<p>MoE 稀疏性 → 每个 expert effective batch 小 → 解耦后 GPU HBM 全给 KV cache → 更多 token → expert batch 增大 → FFN 回到 compute-intensive</p>
+<h2 id="agentic-ai">Agentic AI 的推动</h2>
+<ul>
+<li>Agent 推理循环中延迟跨步骤累积</li>
+<li>稳定的 per-token 性能和强 tail-latency 表现至关重要</li>
+<li>需要 ~1000+ tokens/sec/user</li>
+</ul>
+<h2 id="_3">实证基础</h2>
+<p>[Understanding Inference Scaling For Llms<a href="../papers/understanding-inference-scaling-for-llms.html">../papers/understanding-inference-scaling-for-llms.html</a> 系统量化了 prefill/decode 的正交资源需求，为异构推理提供了实证基础：<br />
+- Prefill: compute-bound, 适合高 TFLOP GPU<br />
+- Decode: bandwidth-bound, 适合 memory-centric 架构（如 LPU SRAM）<br />
+- 见 [Prefill Decode Divergence<a href="prefill-decode-divergence.html">prefill-decode-divergence.html</a> 的详细分析</p>
+<h2 id="_4">相关页面</h2>
+<ul>
+<li>[Nvidia Groq 3 Lpx<a href="../entities/nvidia-groq-3-lpx.html">../entities/nvidia-groq-3-lpx.html</a> — LPX 实体</li>
+<li>[Nvidia Vera Rubin Nvl72<a href="../entities/nvidia-vera-rubin-nvl72.html">../entities/nvidia-vera-rubin-nvl72.html</a> — GPU 侧</li>
+<li>[Disaggregated Inference<a href="disaggregated-inference.html">disaggregated-inference.html</a> — 解耦推理概念</li>
+<li>[Lpu Architecture<a href="lpu-architecture.html">lpu-architecture.html</a> — LPU 架构</li>
+<li>[Prefill Decode Divergence<a href="prefill-decode-divergence.html">prefill-decode-divergence.html</a> — Prefill vs Decode 资源分歧</li>
+<li>[FlashDecoding++<a href="flashdecoding-plus-plus.html">flashdecoding-plus-plus.html</a> — 单 GPU decode kernel 优化（与异构分 tier 互补）</li>
+<li>[Understanding Inference Scaling For Llms<a href="../papers/understanding-inference-scaling-for-llms.html">../papers/understanding-inference-scaling-for-llms.html</a> — 推理 scaling 系统分析</li>
+</ul>
+<h1 id="citations">Citations</h1>
+<p>[1] [raw/articles/nvidia-groq3-lpx-blog-2026-04.md<a href="raw/articles/nvidia-groq3-lpx-blog-2026-04.html">raw/articles/nvidia-groq3-lpx-blog-2026-04.html</a><br />
+[2] <a href="raw/articles/GTC 2026 – The Inference Kingdom Expands.md">raw/articles/GTC 2026 – The Inference Kingdom Expands.md</a></p>
+  </div>
+  <footer class="footer">
+    Generated from <a href="https://github.com/lukebest/AI_infra_LLM_wiki">AI_infra_LLM_wiki</a>
+    · <a href="../index.html">Home</a>
+    · 2026-07-10 UTC
+  </footer>
+</main>
+</div>
+<script>window.__SEARCH__ = [{"id": "index", "title": "AI Infra LLM Wiki", "desc": "", "tags": [], "href": "../index.html"}, {"id": "log", "title": "Update Log", "desc": "", "tags": [], "href": "../log.html"}, {"id": "SCHEMA", "title": "Schema", "desc": "", "tags": [], "href": "../SCHEMA.html"}, {"id": "README", "title": "About / README", "desc": "", "tags": [], "href": "../README.html"}, {"id": "concepts/3d-stacked-ai-chip", "title": "3D-Stacked AI Chip", "desc": "3D 堆叠 AI 芯片：TSV 垂直堆叠 DRAM bank 于 AI core 之上，分布式内存与专用总线带来带宽扩展与利用率新挑战", "tags": ["accelerator", "chiplet", "memory-bandwidth", "memory", "noc", "interconnect", "inference", "architecture"], "href": "3d-stacked-ai-chip.html"}, {"id": "concepts/adaptive-routing-noc", "title": "Adaptive Routing for NoC", "desc": "D&T Ch.6-7 自适应路由：最小/非最小、Valiant VRR、VC 与拥塞感知；Duato 逃逸子网预告；DOR vs 自适应选型与 WSE/AllReduce", "tags": ["interconnect", "noc", "routing", "adaptive", "mesh", "virtual-channel", "duato", "wse"], "href": "adaptive-routing-noc.html"}, {"id": "concepts/architecture-benchmark-methodology", "title": "Architecture Benchmark Methodology", "desc": "体系结构量化评估方法论：几何均值、Speedup 计算、SPEC/MLPerf 原则与常见数据陷阱", "tags": ["architecture", "benchmark", "methodology", "formal-analysis"], "href": "architecture-benchmark-methodology.html"}, {"id": "concepts/basic-data-flow-processor", "title": "Basic Data-Flow Processor", "desc": "Dennis & Misunas (1975) 基本数据流处理器：token/actor 图、Instruction Cell + 仲裁/分发网络、decider/T-gate/merge 条件与迭代、Cell Block 两级存储作活跃指令 cache", "tags": ["architecture", "dataflow", "parallelism", "history", "deterministic"], "href": "basic-data-flow-processor.html"}, {"id": "concepts/branch-prediction", "title": "Branch Prediction", "desc": "分支预测：1-bit/2-bit 饱和计数器、局部与全局历史、TAGE/BTB、分支惩罚对 CPI 的量化影响", "tags": ["architecture", "cpu", "pipeline"], "href": "branch-prediction.html"}, {"id": "concepts/butterfly-min-topology", "title": "Butterfly and MIN Topology", "desc": "多级互连网络（MIN）：k-ary n-fly Butterfly、完美洗牌、自路由；Omega/Banyan/Delta 同构；Batcher-Banyan 无阻塞；与 Clos 路径多样性对比", "tags": ["interconnect", "noc", "topology", "butterfly", "banyan", "fabric"], "href": "butterfly-min-topology.html"}, {"id": "concepts/cache-coherence", "title": "Cache Coherence", "desc": "多核 Cache 一致性：MESI/MOESI 状态机、Snooping vs Directory、False Sharing，与 WSE 无共享地址空间的对比", "tags": ["architecture", "memory", "cache", "cpu", "multicore", "wse"], "href": "cache-coherence.html"}, {"id": "concepts/cerebras-color-mechanism", "title": "Cerebras Color Mechanism", "desc": "WSE Color 虚拟通道机制：静态路由+独立缓冲+Color×4任务调度+独立反压，Fabric/Local Color 双类型", "tags": ["cerebras", "wse", "fabric", "routing", "noc", "deterministic", "virtual-channel", "communication"], "href": "cerebras-color-mechanism.html"}, {"id": "concepts/clos-fat-tree-topology", "title": "Clos and Fat-Tree Topology", "desc": "间接网络：终端/交换分离、Clos C(n,m,r) 无阻塞条件、Fat-Tree 代价等价与 Beneš RNB，及 InfiniBand/Jupiter 与 WSE 规模分界", "tags": ["interconnect", "noc", "topology", "fabric", "infrastructure"], "href": "clos-fat-tree-topology.html"}, {"id": "concepts/cmx-stx", "title": "CMX & STX", "desc": "NVIDIA 推理存储平台：CMX（Tier G3.5 NVMe KV cache）+ STX（BF-4 存储 rack 参考架构）", "tags": ["nvidia", "storage", "inference", "kv-cache", "hardware"], "href": "cmx-stx.html"}, {"id": "concepts/collective-capable-noc", "title": "Collective-Capable NoC", "desc": "FlooNoC 扩展：AXI 多地址 mask、XY fork 组播、并行/宽归约；DCA 范式（互连借 FPU 做 in-network 算术归约，router +16.9%、tile <1%）", "tags": ["noc", "interconnect", "collective", "multicast", "reduction", "barrier", "accelerator", "mesh"], "href": "collective-capable-noc.html"}, {"id": "concepts/constable-load-elimination", "title": "Constable Load Elimination", "desc": "ISCA 2024 Best Paper：SLD/RMT/AMT 识别 likely-stable load 并跳过执行；12.4 KB/core、+5.1% perf、-3.4% 动态功耗、SMT +8.8%；与 LVP 正交", "tags": ["architecture", "cpu", "load-elimination", "ooo", "power", "llm", "isca"], "href": "constable-load-elimination.html"}, {"id": "concepts/core-group-dram-access", "title": "Core Group (DRAM Access Synchronization)", "desc": "3D AI 芯片 core group：物理相邻 core 组内通过 hardware tracker 同步 DRAM 访问，缓解 row-buffer 冲突", "tags": ["accelerator", "memory-bandwidth", "memory", "inference", "decode", "architecture", "mesh"], "href": "core-group-dram-access.html"}, {"id": "concepts/cpu-pipeline-fundamentals", "title": "CPU Pipeline Fundamentals", "desc": "五级流水线（IF/ID/EX/MEM/WB）、三大冒险（结构/数据/控制）、Forwarding 与分支惩罚", "tags": ["architecture", "cpu", "pipeline"], "href": "cpu-pipeline-fundamentals.html"}, {"id": "concepts/csa-hca", "title": "CSA and HCA (Hybrid Attention)", "desc": "两级压缩注意力：CSA 温和压缩+稀疏选择，HCA 激进压缩+dense attention", "tags": ["attention", "compression", "sparse", "architecture"], "href": "csa-hca.html"}, {"id": "concepts/deadlock-free-routing-cdg-dally", "title": "Deadlock-Free Routing CDG and Dally Theorem", "desc": "D&T Ch.8.1-8.4：通道依赖图 CDG、Dally & Seitz 无死锁定理、虫孔易死锁、Torus dateline/≥2 VC、Mesh 单 VC；WSE 选型", "tags": ["interconnect", "noc", "routing", "deadlock", "cdg", "virtual-channel", "torus", "mesh", "dally"], "href": "deadlock-free-routing-cdg-dally.html"}, {"id": "concepts/deterministic-execution", "title": "Deterministic Execution", "desc": "编译器控制时序、消除 jitter 的执行范式", "tags": ["deterministic", "compiler", "spatial-execution", "scheduling", "inference"], "href": "deterministic-execution.html"}, {"id": "concepts/deterministic-routing-dor", "title": "Deterministic Routing and DOR", "desc": "确定性路由与维序路由（DOR）：XY/Y-first、e-cube、源路由 vs 分布式；Mesh/Hypercube 最短路径与 CDG 无死锁直觉；WSE 工业选型", "tags": ["interconnect", "noc", "routing", "mesh", "hypercube", "dor", "wse"], "href": "deterministic-routing-dor.html"}, {"id": "concepts/disaggregated-inference", "title": "Disaggregated Inference", "desc": "解耦推理：attention/FFN 分离部署，独立扩展，batch 聚合", "tags": ["inference", "serving-system", "moe", "disaggregated-inference"], "href": "disaggregated-inference.html"}, {"id": "concepts/distributed-gemm-algorithms", "title": "Distributed GEMM Algorithms", "desc": "分布式内存矩阵乘算法谱系：Cannon（2D mesh ring-shift）、SUMMA（broadcast 外积）、2.5D/3D SUMMA（通信–内存权衡）；α+β 代价模型、SBP 切分 vs 映射放置；T10 rTensor 形式化 Cannon", "tags": ["gemm", "distributed-memory", "mpi", "tensor-parallelism", "mesh", "compiler", "communication"], "href": "distributed-gemm-algorithms.html"}, {"id": "concepts/dnn-accelerator-systolic-dataflow", "title": "DNN Accelerator Systolic Dataflow", "desc": "H&P Ch.7 DSA：脉动阵列、WS/OS/RS 数据复用、Roofline for NPU、TPU vs GPU vs WSE SLA；晶体管从控制迁到 MAC", "tags": ["accelerator", "dnn", "systolic", "dataflow", "tpu", "npu", "roofline", "dsa"], "href": "dnn-accelerator-systolic-dataflow.html"}, {"id": "concepts/dram-memory-system", "title": "DRAM and Memory System", "desc": "DRAM 访问时序与 Row Buffer、Channel/Bank 并行、DDR/HBM 带宽公式、内存墙与 Roofline Ridge Point、WSE 分布式 SRAM 对 HBM 的绕过", "tags": ["architecture", "memory", "memory-bandwidth", "dram", "hbm", "wse"], "href": "dram-memory-system.html"}, {"id": "concepts/dsa-processor-design-tradeoffs", "title": "DSA Processor Design Tradeoffs", "desc": "领域专用处理器设计取舍：现代 CPU 传统武器（OoO/Cache/分支预测/TLB）的能力代价矩阵 vs WSE SLA 核", "tags": ["architecture", "accelerator", "wse", "cpu", "deterministic", "compiler"], "href": "dsa-processor-design-tradeoffs.html"}, {"id": "concepts/dsec-sandbox", "title": "DSec Sandbox Platform", "desc": "DeepSeek Elastic Compute 沙箱平台，4 种执行基板，数十万并发", "tags": ["sandbox", "training-system", "inference-system"], "href": "dsec-sandbox.html"}, {"id": "concepts/dspark-speculative-decoding", "title": "DSpark Speculative Decoding", "desc": "DeepSeek 半自回归 speculative decoding：并行 DFlash backbone + Markov sequential head、confidence-scheduled 负载感知 verify，V4 生产 +60–85% 单用户速度", "tags": ["inference", "decode", "serving", "deepseek", "scheduling"], "href": "dspark-speculative-decoding.html"}, {"id": "concepts/duato-escape-vc-deadlock-free-routing", "title": "Duato Escape VC Deadlock-Free Routing", "desc": "D&T Ch.8.5-8.8：Duato 定理（逃逸子网）、自适应+逃逸 VC、避免 vs 恢复、协议层 Request/Response 死锁；Dally 的推广", "tags": ["interconnect", "noc", "routing", "deadlock", "duato", "escape-vc", "adaptive", "virtual-channel", "protocol"], "href": "duato-escape-vc-deadlock-free-routing.html"}, {"id": "concepts/end-to-end-memory-data-path", "title": "End-to-End Memory Data Path", "desc": "存储篇综合（Day 17-22）：load 全路径 AMAT 层级展开、内存墙时间线、一致性决策树、同步成本量级、WSE 消除 off-chip 的简化路径", "tags": ["architecture", "memory", "cache", "dram", "ssd", "noc", "wse", "amat"], "href": "end-to-end-memory-data-path.html"}, {"id": "concepts/eyeriss-accelerator", "title": "Eyeriss Accelerator", "desc": "MIT 65nm CNN 加速器：168 PE 空间阵列、Row Stationary (RS) 可重构 dataflow、四级存储层次、GIN 单周期组播 NoC、RLC 压缩与 PE data gating；AlexNet 83.1 GMAC/s/W", "tags": ["accelerator", "dnn", "cnn", "dataflow", "noc", "energy-efficiency"], "href": "eyeriss-accelerator.html"}, {"id": "concepts/feather-accelerator", "title": "FEATHER Accelerator", "desc": "可重构 DNN 加速器：NEST 2D PE 阵列 + BIRRD 蝶形归约/重排网络，RIR 在归约中隐藏 layout 切换，Layoutloop 联合 dataflow-layout 搜索", "tags": ["accelerator", "dataflow", "dnn", "architecture", "compiler"], "href": "feather-accelerator.html"}, {"id": "concepts/flashattention-2", "title": "FlashAttention-2", "desc": "IO-aware 精确 attention 第二代：减 non-matmul FLOP、序列维并行、warp 级 split-Q；相对 FlashAttention ~2×，A100 最高 73% 峰值 TFLOPs/s、训练 225 TFLOPs/s", "tags": ["inference", "training", "llm", "gpu", "attention", "kernel", "prefill"], "href": "flashattention-2.html"}, {"id": "concepts/flashattention-3", "title": "FlashAttention-3", "desc": "Hopper H100 IO-aware attention 第三代：TMA/WGMMA 异步 producer-consumer、GEMM-softmax 流水线、FP8 block quant+incoherent processing；FP16 740 TFLOPs/s、相对 FA2 1.5–2×", "tags": ["attention", "gpu", "llm", "training", "inference", "kernel", "prefill", "hopper", "fp8"], "href": "flashattention-3.html"}, {"id": "concepts/flashattention", "title": "FlashAttention", "desc": "IO-aware 精确 attention：SRAM tiling + online softmax + 反向重算；O(N) 内存、HBM 访问 IO-optimal；GPT-2 attention 7.6×、训练最高 3×", "tags": ["attention", "gpu", "llm", "training", "inference", "kernel", "prefill", "memory-hierarchy"], "href": "flashattention.html"}, {"id": "concepts/flashdecoding-plus-plus", "title": "FlashDecoding++", "desc": "GPU LLM 推理引擎：统一 max 值的异步 partial softmax、M 维 pad-8 flat GEMM+双缓冲、FastGEMV/CUTLASS 启发式 dataflow；相对 FlashDecoding 平均 1.37×、HF 最高 4.86×", "tags": ["inference", "llm", "gpu", "decode", "attention", "kernel", "serving"], "href": "flashdecoding-plus-plus.html"}, {"id": "concepts/flashmoe-kernel", "title": "FlashMoE Kernel", "desc": "NeurIPS 2025 单 persistent GPU kernel 融合分布式 MoE：actor 调度、NVSHMEM 设备端 RDMA、payload-efficient dispatch；8×H100 相对 SOTA 最高 6× 延迟、5.7× 吞吐、93% SM 利用率", "tags": ["moe", "gpu", "kernel", "expert-parallelism", "communication", "llm", "training", "inference"], "href": "flashmoe-kernel.html"}, {"id": "concepts/flattened-butterfly-topology", "title": "Flattened Butterfly 拓扑", "desc": "Flattened Butterfly 片上拓扑：高基数路由器降低直径，concentration + bypass channel，2-hop 直径，38% 功耗降低", "tags": ["topology", "noc", "high-radix", "on-chip", "butterfly", "mesh", "routing", "switch"], "href": "flattened-butterfly-topology.html"}, {"id": "concepts/fp4-qat", "title": "FP4 Quantization-Aware Training", "desc": "FP4 量化感知训练，无损 FP4→FP8 反量化", "tags": ["quantization", "training", "inference"], "href": "fp4-qat.html"}, {"id": "concepts/gemm-vs-gemv", "title": "GEMM vs GEMV in LLM Inference", "desc": "矩阵乘 vs 矩阵-向量乘：算子形状、算术强度（AI）、Roofline 类别、Prefill/Decode 对应关系；GEMM compute-bound（AI~1000），GEMV bandwidth-bound（AI~2）；H100 decode <1% 峰值 FLOPS，理论时间 vs 实际时间差 100×", "tags": ["gemm", "gemv", "arithmetic-intensity", "roofline", "compute-bound", "bandwidth-bound", "prefill", "decode", "matmul", "kernel"], "href": "gemm-vs-gemv.html"}, {"id": "concepts/gpu-simt-architecture", "title": "GPU SIMT Architecture", "desc": "H&P Ch.4 GPU/SIMT：Warp 锁步、Warp Divergence、Occupancy 延迟隐藏、H100 内存层次、Tensor Core；与 CPU OoO / WSE MIMD 对比", "tags": ["architecture", "gpu", "simt", "simd", "cuda", "tensor-core", "warp", "wse", "npu"], "href": "gpu-simt-architecture.html"}, {"id": "concepts/heterogeneous-inference", "title": "Heterogeneous Inference", "desc": "GPU + LPU 异构推理，分别优化 prefill/decode", "tags": ["inference", "gpu", "lpu", "architecture", "serving", "agentic-ai"], "href": "heterogeneous-inference.html"}, {"id": "concepts/inference-capacity-trap", "title": "Inference Capacity Trap", "desc": "推理容量陷阱：KV cache 饱和导致 preemption + recomputation，throughput 崩溃", "tags": ["inference", "reasoning", "capacity-trap", "kv-cache", "serving", "parallelism"], "href": "inference-capacity-trap.html"}, {"id": "concepts/information-theoretic-value-model", "title": "智能体辅助编程的信息论价值模型", "desc": "智能体辅助编程的信息论价值模型：V ∝ I(S;K)，知识与任务的匹配度决定 Agent 价值", "tags": ["ai-agent", "information-theory", "knowledge-management", "formal-analysis"], "href": "information-theoretic-value-model.html"}, {"id": "concepts/instruction-level-parallelism", "title": "Instruction-Level Parallelism", "desc": "指令级并行 ILP：超标量 vs VLIW、真依赖与名称依赖、静态/动态多发射权衡", "tags": ["architecture", "cpu", "pipeline", "parallelism"], "href": "instruction-level-parallelism.html"}, {"id": "concepts/interconnection-network-cost-model", "title": "Interconnection Network Cost Model", "desc": "互连网络开销与性能模型：节点/链路/交换成本、零负载延迟公式、注入带宽与二分带宽上界、直连网络 d≈O(log N)", "tags": ["interconnect", "noc", "topology", "latency", "throughput", "mesh", "fabric"], "href": "interconnection-network-cost-model.html"}, {"id": "concepts/interconnection-network-design-space", "title": "Interconnection Network Design Space", "desc": "Dally & Towles 互连网络四层设计空间（应用→拓扑/路由/流控→微架构）、基本术语与三大应用域", "tags": ["interconnect", "noc", "topology", "routing", "flow-control", "fabric", "mesh", "infrastructure"], "href": "interconnection-network-design-space.html"}, {"id": "concepts/interconnection-network-protocol-stack", "title": "Interconnection Network Protocol Stack", "desc": "互连网络四层协议栈（物理/链路/网络/传输）、Network Interface 边界，与 NoC 及 UB 的对应关系", "tags": ["interconnect", "noc", "protocol", "physical-layer", "data-link", "transport", "flow-control", "fabric"], "href": "interconnection-network-protocol-stack.html"}, {"id": "concepts/interconnection-topology-metrics", "title": "Interconnection Topology Metrics", "desc": "互连拓扑度量：度/直径/平均距离/二分带宽/对称性，k-ary n-cube 公式，Mesh vs Torus 对比", "tags": ["interconnect", "noc", "topology", "mesh", "fabric", "wse"], "href": "interconnection-topology-metrics.html"}, {"id": "concepts/isa-design-principles", "title": "ISA Design Principles", "desc": "指令集设计原则：Load/Store、RISC-V 编码、CISC vs RISC 历史教训、寄存器与条件码权衡", "tags": ["architecture", "cpu", "compiler", "programming-model"], "href": "isa-design-principles.html"}, {"id": "concepts/linear-ring-topology", "title": "Linear and Ring Topology", "desc": "线形阵列与环形拓扑：度/直径/二分带宽度量，双向环即 1-D Torus，NoC/SAN/Die-to-Die 应用与 Chordal Ring 扩展", "tags": ["interconnect", "noc", "topology", "mesh", "fabric"], "href": "linear-ring-topology.html"}, {"id": "concepts/lpu-architecture", "title": "LPU Architecture", "desc": "Groq LPU 推理专用架构：SRAM-first、显式数据搬运、编译器调度", "tags": ["lpu", "accelerator", "architecture", "deterministic", "inference"], "href": "lpu-architecture.html"}, {"id": "concepts/m2n-communication", "title": "M2N Communication", "desc": "M2N 不对称通信模式，disaggregated inference 核心，4.2× NCCL 优化", "tags": ["scale-up", "fabric", "serving-system", "moe"], "href": "m2n-communication.html"}, {"id": "concepts/megamoe-kernel", "title": "MegaMoE Kernel (Expert Parallelism Overlap)", "desc": "MoE 专家并行 mega-kernel，wave-based 通信计算全重叠", "tags": ["communication", "kernel", "parallelism", "moe"], "href": "megamoe-kernel.html"}, {"id": "concepts/memory-consistency-model", "title": "Memory Consistency Model", "desc": "内存一致性模型：Coherence vs Consistency、SC/TSO/ARM 重排规则、fence 契约、CAS/LL-SC 与 MCS 锁，及 WSE/NPU 同步设计", "tags": ["architecture", "memory", "cpu", "multicore", "wse", "deterministic"], "href": "memory-consistency-model.html"}, {"id": "concepts/memory-fence-barrier", "title": "Memory Fence and Barrier", "desc": "内存屏障：ISA 顺序语义、Store Buffer/Invalidate Queue 排空、NoC coherence 路径、x86/ARM/RISC-V 变体与 WSE 无 coherence 对照", "tags": ["architecture", "cpu", "noc", "protocol", "deterministic", "compiler"], "href": "memory-fence-barrier.html"}, {"id": "concepts/memory-hierarchy-cache", "title": "Memory Hierarchy and Cache", "desc": "内存墙、存储层次、Cache 映射与 3C 模型、AMAT 优化框架、与 WSE SRAM-only 设计的对比", "tags": ["architecture", "memory", "cache", "sram", "memory-bandwidth", "wse"], "href": "memory-hierarchy-cache.html"}, {"id": "concepts/mesh-torus-topology", "title": "Mesh and Torus Topology", "desc": "2-D Mesh/Torus 与 k-ary n-cube：度/直径/二分带宽、Dally 维度-延迟-吞吐量权衡、XY 维序路由，及 WSE/Blue Gene 选型", "tags": ["interconnect", "noc", "topology", "mesh", "fabric", "wse"], "href": "mesh-torus-topology.html"}, {"id": "concepts/mhc", "title": "Manifold-Constrained Hyper-Connections (mHC)", "desc": "流形约束超连接，Birkhoff polytope 约束残差映射", "tags": ["architecture", "optimization", "training"], "href": "mhc.html"}, {"id": "concepts/mpi-reduce-allreduce-algorithms", "title": "MPI Reduce/AllReduce Algorithms", "desc": "Rabenseifner ICCS 2004 五类 MPI 归约算法：二叉树、recursive doubling、halving&doubling、binary blocks、ring；α+nβ 代价模型与 (p,n) 自适应选择；MPICH-2 长向量基础", "tags": ["mpi", "collective", "allreduce", "reduce", "communication", "hpc", "ring", "topology"], "href": "mpi-reduce-allreduce-algorithms.html"}, {"id": "concepts/multi-plane-clos-topology", "title": "Multi-plane Clos Topology for AI Training", "desc": "多平面 CLOS 拓扑：2-tier 131K GPU，低延迟高冗余，MRC 容错，Z3 形式化分析，bitwise reproducibility", "tags": ["scale-up", "fabric", "topology", "switch", "infrastructure", "networking"], "href": "multi-plane-clos-topology.html"}, {"id": "concepts/multicore-smt-nuca", "title": "Multicore SMT and NUCA", "desc": "H&P Ch.5.7-5.9：Fine/Coarse/SMT 多线程、SMT 1.2-1.3× 收益、Amdahl+通信/一致性 Overhead、NUCA 非均匀 Cache、WSE 反 Amdahl 哲学", "tags": ["architecture", "cpu", "multicore", "smt", "numa", "nuca", "amdahl", "wse"], "href": "multicore-smt-nuca.html"}, {"id": "concepts/muon-optimizer", "title": "Muon Optimizer", "desc": "矩阵正交化优化器，Hybrid Newton-Schulz 迭代", "tags": ["optimization", "training"], "href": "muon-optimizer.html"}, {"id": "concepts/noc-fundamentals-hp-appendix-f", "title": "NoC Fundamentals (H&P Appendix F)", "desc": "H&P 附录 F 互连网络五问：拓扑/路由/流控/路由器/性能；直连 vs 间接、虫孔+VC、饱和吞吐与 WSE-scale 扩展指标", "tags": ["architecture", "interconnect", "noc", "topology", "routing", "flow-control", "wse", "hp"], "href": "noc-fundamentals-hp-appendix-f.html"}, {"id": "concepts/noc-router-microarchitecture", "title": "NoC Router 微架构", "desc": "NoC Router 微架构：链路级流控/EB/credit、Switch/仲裁器（RR/2D 矩阵）、WH/VC 流水线 Router、VA/SA 分配器优化", "tags": ["noc", "routing", "flow-control", "arbitration", "router", "switch", "virtual-channel", "wormhole", "credit"], "href": "noc-router-microarchitecture.html"}, {"id": "concepts/numeric-formats-ai-hardware", "title": "Numeric Formats for AI Hardware", "desc": "IEEE 754 浮点与 AI 数据格式（FP32/FP16/BF16/FP8/INT8）的精度、动态范围与硬件面积权衡", "tags": ["architecture", "quantization", "gpu", "accelerator", "training"], "href": "numeric-formats-ai-hardware.html"}, {"id": "concepts/nvidia-cpo-roadmap", "title": "NVIDIA CPO Roadmap", "desc": "NVIDIA CPO 用于 scale-up 的路线图：Rubin NVL576 测试 → Feynman NVL1152 volume ramp", "tags": ["nvidia", "cpo", "optical", "photonic", "scale-up", "fabric"], "href": "nvidia-cpo-roadmap.html"}, {"id": "concepts/out-of-order-execution", "title": "Out-of-Order Execution", "desc": "乱序执行：Tomasulo 算法、保留站、ROB 顺序提交、寄存器重命名与指令窗口 IPC 收益递减", "tags": ["architecture", "cpu", "pipeline", "scheduling"], "href": "out-of-order-execution.html"}, {"id": "concepts/pagedattention-vllm", "title": "PagedAttention and vLLM Serving", "desc": "vLLM 服务系统的核心 KV cache 内存管理：借鉴 OS 虚拟内存与分页机制，将 KV cache 切为 fixed-size block 跨请求共享/重映射；解决 KV cache fragmentation 与不可共享", "tags": ["llm", "inference", "serving", "kv-cache", "paged-attention", "vllm", "virtual-memory", "memory-management"], "href": "pagedattention-vllm.html"}, {"id": "concepts/parallelism-transition-point", "title": "Parallelism Transition Point", "desc": "并行度切换点：32B 是 DP→TP inflection，MoE 需 hybrid PP+TP", "tags": ["inference", "parallelism", "serving", "kv-cache", "gpu"], "href": "parallelism-transition-point.html"}, {"id": "concepts/plasticine-accelerator", "title": "Plasticine Accelerator", "desc": "Stanford ISCA 2017 CGRA：PCU/PMU 空间阵列直接支持 Map/FlatMap/Fold/HashReduce parallel patterns；28nm 112.8mm²、12.3 TFLOPS、相对 FPGA 最高 76.9× Perf/W", "tags": ["accelerator", "cgra", "reconfigurable", "dataflow", "parallel-patterns", "compiler"], "href": "plasticine-accelerator.html"}, {"id": "concepts/prefill-decode-divergence", "title": "Prefill-Decode Resource Divergence", "desc": "Prefill（compute-bound）vs Decode（bandwidth-bound）资源需求正交，>99% 时间在 decode", "tags": ["inference", "prefill", "decode", "kv-cache", "latency", "throughput"], "href": "prefill-decode-divergence.html"}, {"id": "concepts/quantitative-architecture-fundamentals", "title": "Quantitative Architecture Fundamentals", "desc": "Hennessy & Patterson 量化体系结构基石：CPU 性能公式、Amdahl 定律、局部性、功耗墙、Dennard Scaling 终结与暗硅", "tags": ["architecture", "cpu", "benchmark", "power", "wse"], "href": "quantitative-architecture-fundamentals.html"}, {"id": "concepts/reasoning-cliff", "title": "Reasoning Cliff", "desc": "推理悬崖：KV 线性增长使 HBM 饱和，scheduler 进入 convoy mode", "tags": ["inference", "reasoning", "capacity-trap", "kv-cache", "decode", "latency"], "href": "reasoning-cliff.html"}, {"id": "concepts/spada-programming-language", "title": "SpaDA Programming Language", "desc": "空间数据流编程语言：place/dataflow/compute 三构造、async/await、GT4Py→CSL 编译管线与 checkerboard 路由/task 融合优化，WSE-2 上 14× 减码、260 TFlop/s stencil", "tags": ["cerebras", "wse", "compiler", "dataflow", "hpc", "stencil"], "href": "spada-programming-language.html"}, {"id": "concepts/srv6-source-routing", "title": "SRv6 Source Routing for AI Supercomputers", "desc": "AI 超算静态源路由：SRv6 uSID uN 转发，禁用动态路由，与 MRC 协同", "tags": ["routing", "protocol", "scale-up", "switch", "fabric", "retransmission"], "href": "srv6-source-routing.html"}, {"id": "concepts/ssd-nvme-storage-system", "title": "SSD and NVMe Storage System", "desc": "片外存储：NAND/FTL/GC/写放大、RAID 0/1/5/6 写惩罚、NVMe 多队列与 PCIe 带宽、read() 延迟分解与 io_uring；WSE memoryX 与 CMX KV tier", "tags": ["architecture", "storage", "ssd", "nvme", "raid", "io", "inference", "wse"], "href": "ssd-nvme-storage-system.html"}, {"id": "concepts/superscalar-cpu-research-2023-2026", "title": "Superscalar CPU Research (2023-2026)", "desc": "2023-2026 超标量 CPU 顶会综述：异构旁路子系统（Constable/Bullseye/Prophet）、CVA6S+ 开源 baseline、OoO 边际饱和与 LLM memory-bound 优化；WSE/NPU 关联矩阵与核内同步 Gap", "tags": ["architecture", "cpu", "superscalar", "branch-prediction", "load-elimination", "risc-v", "llm", "wse"], "href": "superscalar-cpu-research-2023-2026.html"}, {"id": "concepts/switching-elements", "title": "Switching Elements", "desc": "交换单元：空分/时分交换，开关阵列与共享存储器/总线，性能指标", "tags": ["fabric", "topology", "tdm", "deterministic", "routing"], "href": "switching-elements.html"}, {"id": "concepts/switching-networks", "title": "Switching Networks", "desc": "交换网络：CLOS 三级网络（严格/可重排无阻塞），TST 网络，Banyan 网络", "tags": ["fabric", "topology", "routing", "scale-up", "deterministic"], "href": "switching-networks.html"}, {"id": "concepts/switching-principles", "title": "Switching Principles", "desc": "交换原理基础：电路/报文/分组/虫孔交换，历史演进，三对基本概念，交换系统结构", "tags": ["fabric", "routing", "deterministic", "tdm", "topology"], "href": "switching-principles.html"}, {"id": "concepts/tilelang", "title": "TileLang DSL", "desc": "Kernel 开发 DSL", "tags": ["kernel", "infrastructure", "training-system"], "href": "tilelang.html"}, {"id": "concepts/tileloom-compiler", "title": "TileLoom Compiler", "desc": "NUS TileLoom：MLIR 端到端 dataflow planning，Triton/Helion → spatiotemporal mapping + df 硬件模型；Tenstorrent 2-D mesh 上 FlashAttention ~2× TTNN", "tags": ["compiler", "dataflow", "mlir", "triton", "tenstorrent", "noc", "spatial-accelerator", "attention"], "href": "tileloom-compiler.html"}, {"id": "concepts/topology-optimization-variants", "title": "Topology Optimization Variants", "desc": "拓扑变体与优化：Folding、Concentrated/Collapsed Mesh、Express Cube、Dally 1990 最优维度定律、高基数路由器；Compression vs Expansion 权衡", "tags": ["interconnect", "noc", "topology", "mesh", "torus", "hypercube", "wse"], "href": "topology-optimization-variants.html"}, {"id": "concepts/ub-data-link-layer", "title": "UB 数据链路层机制", "desc": "UB 数据链路层：Flit/DLLDP/DLLCB 封装、CRC/Non-CRC 双模式、4 阶段链路状态机、Init Block 参数协商、16 VL 虚通道、Credit 流控（Exclusive/Sharing）、Go-Back-N 重传 + Retry Buffer 管理、双状态机（RETRY_REQ_SM/RETRY_ACK_SM）", "tags": ["interconnect", "scale-up", "fabric", "data-link", "flow-control", "retransmission"], "href": "ub-data-link-layer.html"}, {"id": "concepts/ub-memory-management", "title": "UB 内存管理", "desc": "UB 内存管理：Home-User 模型、UBMD、UMMU 两阶段地址翻译+权限检查、UB Decoder", "tags": ["interconnect", "scale-up", "memory", "hardware", "virtualization"], "href": "ub-memory-management.html"}, {"id": "concepts/ub-network-layer", "title": "UB 网络层机制", "desc": "UB 网络层：CNA/IP 双格式寻址、RT 路由（per-flow/per-packet）、SL-VL QoS、CAQM/FECN/FECN_RTT 拥塞标记、NPI 网络隔离、死锁避免、ICRC 完整性保护", "tags": ["interconnect", "scale-up", "fabric", "routing", "congestion-control", "networking"], "href": "ub-network-layer.html"}, {"id": "concepts/ub-physical-layer", "title": "UB 物理层机制", "desc": "UB 物理层：PCS FEC RS(128,120) T=2/4、eBCH-16 AMCTL、PMA SerDes NRZ/PAM4、LMSM 10 态链路训练、QDLWS 动态宽度切换、3 种均衡模式、FEC/CRC 动态切换", "tags": ["interconnect", "scale-up", "fabric", "physical-layer", "serdes", "fec", "link-training"], "href": "ub-physical-layer.html"}, {"id": "concepts/ub-programming-models", "title": "UB 编程模型与 URMA", "desc": "UB 编程模型：Load/Store 同步、URMA 异步访问（Jetty/事务队列/内存池化/死锁避免）", "tags": ["interconnect", "scale-up", "rpc", "memory", "programming-model"], "href": "ub-programming-models.html"}, {"id": "concepts/ub-resource-management", "title": "UB 资源管理", "desc": "UB 资源管理：UBFM、Entity 模型/池化/虚拟化、配置空间、管理命令、三级复位+三级错误 RAS", "tags": ["interconnect", "scale-up", "fabric", "virtualization", "hardware"], "href": "ub-resource-management.html"}, {"id": "concepts/ub-transaction-layer", "title": "UB 事务层", "desc": "UB 事务层：四类事务（Memory/Message/Maintenance/Management）、Full/Compact 包头、安全 Token 验证、四种服务模式（ROI/ROT/ROL/UNO）", "tags": ["interconnect", "scale-up", "fabric", "protocol", "hardware"], "href": "ub-transaction-layer.html"}, {"id": "concepts/ub-transport-layer", "title": "UB 传输层机制", "desc": "UB 传输层：四种模式（RTP/CTP/UTP/TP Bypass）、PSN 机制、Go-Back-N/Selective 重传、TPG 多路径负载均衡、LDCP/CAQM/DCQCN 拥塞控制、ROL 模式事务-传输联动", "tags": ["interconnect", "scale-up", "fabric", "transport", "congestion-control", "routing"], "href": "ub-transport-layer.html"}, {"id": "concepts/ub-urpc", "title": "URPC (UB 远程过程调用)", "desc": "URPC 远程过程调用：Client/Server/Worker，pass-by-value/reference，P2P 架构", "tags": ["interconnect", "scale-up", "rpc", "memory", "programming-model"], "href": "ub-urpc.html"}, {"id": "concepts/virtual-memory-tlb", "title": "Virtual Memory and TLB", "desc": "虚拟内存四作用、页表与 TLB、巨页与 TLB Shootdown、AMAT 含地址转换、WSE 无 MMU 的工程权衡", "tags": ["architecture", "memory", "cpu", "virtualization", "wse"], "href": "virtual-memory-tlb.html"}, {"id": "concepts/voxel-simulator", "title": "Voxel Simulator", "desc": "Voxel：编译器感知的 3D AI 芯片端到端仿真框架，支持 compute paradigm / mapping / NoC / DRAM 协同探索", "tags": ["architecture", "benchmark", "inference", "accelerator", "compiler"], "href": "voxel-simulator.html"}, {"id": "concepts/waferllm-system", "title": "WaferLLM System", "desc": "Edinburgh/MSR 晶圆级 LLM 推理：PLMR 设备模型、MeshGEMM/MeshGEMV、KV shift、prefill/decode 百万 core parallelism；WSE-2 上 10–20× SGLang/A100 集群", "tags": ["cerebras", "wse", "llm", "inference", "gemm", "gemv", "mesh", "noc", "plmr", "kv-cache"], "href": "waferllm-system.html"}, {"id": "concepts/wse-performance-model", "title": "WSE Performance Model", "desc": "WSE 通信性能模型：T=max(C,E/N)+L+(2TR+1)D，四瓶颈项（contention/energy/distance/depth），<4% 预测误差", "tags": ["cerebras", "wse", "performance-model", "communication", "mesh", "noc"], "href": "wse-performance-model.html"}, {"id": "concepts/wse-quantitative-architecture-analysis", "title": "WSE Quantitative Architecture Analysis", "desc": "arch-study Day 26：用 Amdahl/Roofline/Mesh 指标量化 WSE-3；片上 vs 片外带宽矛盾、良率容错、WaferLLM GEMV 606× 边界", "tags": ["cerebras", "wse", "amdahl", "roofline", "mesh", "noc", "yield", "llm"], "href": "wse-quantitative-architecture-analysis.html"}, {"id": "concepts/wse-reduce-algorithms", "title": "WSE Reduce Algorithms", "desc": "WSE Reduce/AllReduce 算法族：Star/Chain/Tree/Two-Phase/Auto-Gen，模型驱动选择，Auto-Gen ≤1.4× 下界", "tags": ["cerebras", "wse", "reduce", "allreduce", "collective", "communication", "mesh", "multicast", "routing"], "href": "wse-reduce-algorithms.html"}, {"id": "entities/cassini", "title": "CASSINI", "desc": "CASSINI 网络感知 ML 集群调度器：几何抽象交错通信相位，Affinity 图，1.6× 吞吐改善", "tags": ["nvidia", "inference", "serving", "scheduling", "fabric", "deterministic", "routing"], "href": "../entities/cassini.html"}, {"id": "entities/cerebras-wse", "title": "Cerebras WSE", "desc": "Cerebras 晶圆级 AI 加速器，24 color 确定性路由，900K 核心", "tags": ["cerebras", "wse", "accelerator", "deterministic", "inference", "mesh"], "href": "../entities/cerebras-wse.html"}, {"id": "entities/deepseek-v4", "title": "DeepSeek-V4", "desc": "V4 模型系列：1.6T/284B MoE，百万 token 上下文，CSA+HCA 混合注意力", "tags": ["model", "architecture", "training", "inference", "quantization", "attention", "moe", "compression"], "href": "../entities/deepseek-v4.html"}, {"id": "entities/graphcore-ipu", "title": "Graphcore IPU", "desc": "Graphcore Colossus Mk2 IPU：1472 全互联 core、896 MB 分布式 SRAM，Voxel 论文用于 3D AI chip 仿真验证", "tags": ["graphcore", "accelerator", "inference", "mesh", "sram", "memory-bandwidth", "benchmark"], "href": "../entities/graphcore-ipu.html"}, {"id": "entities/kyber-rack", "title": "Kyber Rack", "desc": "NVIDIA 第二种 rack 架构，144 GPU/rack，NVLink 7 switch，支持 NVL144/288/1152", "tags": ["nvidia", "scale-up", "fabric", "rack", "architecture", "cpo"], "href": "../entities/kyber-rack.html"}, {"id": "entities/mrc", "title": "MRC (Multipath Reliable Connection)", "desc": "Multipath Reliable Connection：OpenAI/Microsoft/AMD/NVIDIA/Broadcom 联合设计的多路径 RDMA 传输协议，包 spraying + 选择性重传，100K+ GPU 训练集群生产部署", "tags": ["transport", "protocol", "routing", "load-balancing", "congestion-control", "nvidia", "amd", "retransmission", "scale-up"], "href": "../entities/mrc.html"}, {"id": "entities/nvidia-groq-3-lpx", "title": "NVIDIA Groq 3 LPX", "desc": "NVIDIA rack-scale 低延迟推理加速器，256 LPU，LP30 Samsung SF4，AFD，C2C 三级拓扑", "tags": ["nvidia", "groq", "lpu", "accelerator", "inference", "deterministic", "scale-up"], "href": "../entities/nvidia-groq-3-lpx.html"}, {"id": "entities/nvidia-vera-rubin-nvl72", "title": "NVIDIA Vera Rubin NVL72", "desc": "NVIDIA Vera Rubin GPU 系统，含 NVL72/144/288/576/1152 系统谱系", "tags": ["nvidia", "gpu", "accelerator", "training", "inference", "scale-up"], "href": "../entities/nvidia-vera-rubin-nvl72.html"}, {"id": "entities/unifiedbus-ub", "title": "UnifiedBus (UB)", "desc": "Huawei UnifiedBus 高性能互连协议，SuperPoD-scale AI/HPC，统一协议栈，全资源池化", "tags": ["interconnect", "scale-up", "fabric", "huawei", "protocol", "switch"], "href": "../entities/unifiedbus-ub.html"}, {"id": "entities/vera-etl256", "title": "Vera ETL256", "desc": "256 CPU 独立 rack，Spectrum-6 ETL switch，液冷，全 copper 互联", "tags": ["nvidia", "cpu", "storage", "hardware", "networking"], "href": "../entities/vera-etl256.html"}, {"id": "papers/ai-accelerators-llm-inference", "title": "AI Accelerators for Large Language Model Inference: Architecture Analysis and Scaling Strategies", "desc": "首篇 LLM 推理加速器跨架构定量横评：五类（GPU/Systolic/SRAM-centric/WSE/Deterministic pipeline）六大操作域评估；expert parallelism 8.4× 参数-计算比但 2.1× 延迟方差", "tags": ["accelerator", "survey", "gpu", "tpu", "wse", "lpu", "inference", "scaling", "expert-parallelism"], "href": "../papers/ai-accelerators-llm-inference.html"}, {"id": "papers/collective-capable-noc-ml-accelerators", "title": "A Lightweight High-Throughput Collective-Capable NoC for Large-Scale ML Accelerators", "desc": "FlooNoC 扩展：multicast/归约/barrier + DCA 借 Snitch FPU；router +16.9% 面积，4×4 mesh 上 multicast 5.3×、reduction 2.8×，SUMMA GEMM 最高 3.8×", "tags": ["noc", "collective", "multicast", "reduction", "accelerator", "mesh", "gemm"], "href": "../papers/collective-capable-noc-ml-accelerators.html"}, {"id": "papers/constable-load-elimination", "title": "Constable: Safely Eliminating Load Instruction Execution", "desc": "ISCA 2024 Best Paper：likely-stable load 识别 + RMT/AMT 监控；12.4 KB/core；+5.1% perf、-3.4% 动态功耗、SMT +8.8%；与 EVES LVP 正交至 8.5%", "tags": ["architecture", "cpu", "load-elimination", "isca", "power", "ooo"], "href": "../papers/constable-load-elimination.html"}, {"id": "papers/dennis-misunas-basic-data-flow-processor", "title": "A Preliminary Architecture for a Basic Data-Flow Processor", "desc": "Dennis & Misunas (ISCA 1975) 基本数据流处理器：decider/T-gate/merge 条件迭代、Decision Units、Instruction Cell 两级存储作活跃指令 cache", "tags": ["architecture", "dataflow", "parallelism", "history"], "href": "../papers/dennis-misunas-basic-data-flow-processor.html"}, {"id": "papers/dspark-speculative-decoding", "title": "DSpark: Confidence-Scheduled Speculative Decoding with Semi-Autoregressive Generation", "desc": "DeepSeek 半自回归 speculative decoding + 负载感知 confidence verify；离线 τ +16–31%，V4 生产 per-user +57–85% vs MTP-1，开源 DeepSpec", "tags": ["inference", "decode", "serving", "deepseek", "speculative-decoding", "scheduling"], "href": "../papers/dspark-speculative-decoding.html"}, {"id": "papers/eyeriss-energy-efficient-cnn-accelerator", "title": "Eyeriss: An Energy-Efficient Reconfigurable Accelerator for Deep Convolutional Neural Networks", "desc": "MIT 65nm 168-PE CNN 加速器：Row Stationary dataflow、四级存储、GIN 组播 NoC、RLC+data gating；AlexNet 35 frames/s @278mW、0.0029 DRAM access/MAC", "tags": ["accelerator", "cnn", "dataflow", "dnn", "energy-efficiency"], "href": "../papers/eyeriss-energy-efficient-cnn-accelerator.html"}, {"id": "papers/feather-reconfigurable-accelerator", "title": "FEATHER: A Reconfigurable Accelerator with Data Reordering Support for Low-Cost On-Chip Dataflow Switching", "desc": "NEST+BIRRD 可重构加速器，RIR 在归约中做 arbitrary layout reorder；Layoutloop dataflow-layout 联合搜索，ResNet-50 1.27–2.89× 延迟、FPGA 2.65–3.91× 吞吐", "tags": ["accelerator", "dataflow", "dnn", "architecture", "compiler"], "href": "../papers/feather-reconfigurable-accelerator.html"}, {"id": "papers/flashattention-2-faster-attention", "title": "FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning", "desc": "IO-aware 精确 attention 第二代：减 non-matmul、seq 维并行、warp split-Q；相对 FlashAttention ~2×，A100 73% 峰值 TFLOPs/s、GPT 训练 225 TFLOPs/s", "tags": ["attention", "gpu", "llm", "training", "inference", "kernel", "prefill"], "href": "../papers/flashattention-2-faster-attention.html"}, {"id": "papers/flashattention-3-asynchrony-low-precision", "title": "FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision", "desc": "Hopper H100：TMA/WGMMA producer-consumer、2-stage GEMM-softmax 流水线、FP8 block quant+incoherent processing；FP16 740 TFLOPs/s、相对 FA2 1.5–2×", "tags": ["attention", "gpu", "llm", "hopper", "fp8", "kernel", "prefill"], "href": "../papers/flashattention-3-asynchrony-low-precision.html"}, {"id": "papers/flashattention-io-aware-exact-attention", "title": "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness", "desc": "IO-aware tiling + online softmax + 反向重算；O(N) 内存、IO-optimal HBM 访问；GPT-2 attention 7.6×、BERT 15% 快于 MLPerf 纪录、Path-X 16K 61.4%", "tags": ["attention", "gpu", "llm", "training", "kernel", "prefill"], "href": "../papers/flashattention-io-aware-exact-attention.html"}, {"id": "papers/flashdecoding-plus-plus-llm-gpu-inference", "title": "FlashDecoding++: Faster Large Language Model Inference on GPUs", "desc": "异步 unified-max softmax + M=8 flat GEMM 双缓冲 + FastGEMV/CUTLASS 启发式 dataflow；decode 相对 HF 最高 4.86×、FlashDecoding 平均 1.37×，NVIDIA/AMD 双平台", "tags": ["inference", "llm", "gpu", "decode", "attention", "kernel"], "href": "../papers/flashdecoding-plus-plus-llm-gpu-inference.html"}, {"id": "papers/flashmoe-fast-distributed-moe-single-kernel", "title": "FlashMoE: Fast Distributed MoE in a Single Kernel", "desc": "NeurIPS 2025：单 persistent GPU kernel 融合 MoE 计算与 NVSHMEM RDMA；actor 调度 + payload-efficient dispatch；8×H100 最高 6× 延迟、5.7× 吞吐、93% SM（FP32 vs FP16 基线）", "tags": ["moe", "gpu", "kernel", "expert-parallelism", "communication", "neurips"], "href": "../papers/flashmoe-fast-distributed-moe-single-kernel.html"}, {"id": "papers/llm-inference-acceleration-comprehensive-hardware-survey", "title": "Large Language Model Inference Acceleration: A Comprehensive Hardware Perspective", "desc": "LLM 推理加速硬件最完整综述：HBM-assisted vs SRAM-based 双路线、Quantization/Sparse/Speculative/Paged 关键专题、典型 FPGA/SoC 数据点", "tags": ["survey", "llm", "inference", "hardware", "quantization", "speculative-decoding", "sparse-attention", "fpga"], "href": "../papers/llm-inference-acceleration-comprehensive-hardware-survey.html"}, {"id": "papers/looplynx-scalable-dataflow-llm-inference", "title": "LoopLynx: A Scalable Dataflow Architecture for Efficient LLM Inference", "desc": "FPGA hybrid spatial-temporal dataflow：Macro Dataflow Kernels + state-machine 调度 + multi-FPGA ring；解决\"spatial dataflow 在 decode 串行依赖下利用率不足\"；双节点 1.67× A100、四节点 2.52× A100", "tags": ["dataflow", "fpga", "spatial", "temporal", "llm", "inference", "decode", "looplynx"], "href": "../papers/looplynx-scalable-dataflow-llm-inference.html"}, {"id": "papers/megascale-infer-2504.02263", "title": "MegaScale-Infer", "desc": "MegaScale-Infer：MoE disaggregated attention/FFN serving，ping-pong pipeline + M2N 通信库，1.90× 吞吐提升", "tags": ["moe", "disaggregated-inference", "expert-parallelism", "serving-system", "bytedance"], "href": "../papers/megascale-infer-2504.02263.html"}, {"id": "papers/near-optimal-wafer-scale-reduce", "title": "Near-Optimal Wafer-Scale Reduce", "desc": "WSE Reduce/AllReduce 首次系统研究：性能模型（<4% 误差）、5 种算法（Auto-Gen ≤1.4× 下界）、3.27× 快于 vendor", "tags": ["cerebras", "wse", "reduce", "allreduce", "collective", "mesh", "multicast", "performance-model", "communication"], "href": "../papers/near-optimal-wafer-scale-reduce.html"}, {"id": "papers/plasticine-reconfigurable-parallel-patterns", "title": "Plasticine: A Reconfigurable Architecture For Parallel Patterns", "desc": "Stanford CGRA 直接支持 Map/FlatMap/Fold/HashReduce；64 PCU+64 PMU @28nm 112.8mm²、12.3 TFLOPS；相对 Stratix V 最高 76.9× Perf/W、DHDL 数分钟编译", "tags": ["accelerator", "cgra", "reconfigurable", "parallel-patterns", "dataflow", "compiler"], "href": "../papers/plasticine-reconfigurable-parallel-patterns.html"}, {"id": "papers/rabenseifner-collective-reduction-operations", "title": "Optimization of Collective Reduction Operations", "desc": "Rabenseifner ICCS 2004：MPI Reduce/AllReduce 五算法（tree、doubling、RHD、binary blocks、ring）与 (p,n) 选择；占 MPI 时间 >40%；长向量相对 vendor 最高 100×", "tags": ["mpi", "collective", "allreduce", "reduce", "hpc", "communication"], "href": "../papers/rabenseifner-collective-reduction-operations.html"}, {"id": "papers/resilient-ai-supercomputer-networking-mrc-srv6", "title": "Resilient AI Supercomputer Networking using MRC and SRv6", "desc": "MRC+SRv6+multi-plane Clos：三管齐下的 100K+ GPU AI 训练网络容错方案，OpenAI/Microsoft 生产验证", "tags": ["scale-up", "routing", "transport", "switch", "protocol", "fabric", "load-balancing", "congestion-control", "nvidia", "amd"], "href": "../papers/resilient-ai-supercomputer-networking-mrc-srv6.html"}, {"id": "papers/sambanova-sn40l-dataflow-coe", "title": "SambaNova SN40L: Scaling the AI Memory Wall with Dataflow and Composition of Experts", "desc": "SN40L RDU（TSMC 5nm, 1040 PCU+PMU, 638 BF16 TFLOPS, 520 MiB SRAM+64 GiB HBM+1.5 TiB DDR）+ Samba-CoE（150 个 8B expert, 1T 总参）；streaming dataflow 编译期融合数百 op；vs DGX H100 3.7× speedup", "tags": ["sambanova", "rdu", "dataflow", "streaming", "memory-wall", "moe", "coe", "hbm", "sram"], "href": "../papers/sambanova-sn40l-dataflow-coe.html"}, {"id": "papers/spada-spatial-dataflow-architecture", "title": "SpaDA: A Spatial Dataflow Architecture Programming Language", "desc": "空间数据流语言 place/dataflow/compute + GT4Py→CSL 优化编译；WSE-2 14× 减码、collective 1.04× 手写 CSL、260 TFlop/s stencil、82× GEMV vs A100", "tags": ["cerebras", "wse", "compiler", "dataflow", "hpc", "stencil"], "href": "../papers/spada-spatial-dataflow-architecture.html"}, {"id": "papers/tileloom-automatic-dataflow-planning", "title": "TileLoom: Automatic Dataflow Planning for Tile-Based Languages", "desc": "MLIR 编译框架：Triton/Helion → spatiotemporal dataflow planning + df 硬件模型；Tenstorrent Wormhole/Blackhole 上 FlashAttention ~2× TTNN、Mamba Scan 最高 27× unfused", "tags": ["compiler", "dataflow", "mlir", "triton", "tenstorrent", "noc", "spatial-accelerator"], "href": "../papers/tileloom-automatic-dataflow-planning.html"}, {"id": "papers/understanding-inference-scaling-for-llms", "title": "Understanding Inference Scaling for LLMs", "desc": "Reasoning-centric LLM 推理系统瓶颈分析：Capacity Trap, Reasoning Cliff, DP→TP Transition, Prefill-Decode Divergence（8B-671B H200 实测）", "tags": ["inference", "reasoning", "parallelism", "kv-cache", "decode", "prefill", "latency", "throughput", "serving", "benchmark"], "href": "../papers/understanding-inference-scaling-for-llms.html"}, {"id": "papers/voxel-3d-stacked-ai-chip-llm-inference", "title": "Voxel: 3D-Stacked AI Chip Efficiency for LLM Inference", "desc": "Voxel 编译器感知 3D AI 芯片仿真框架：LLM prefill/decode 软硬件协同探索，Graphcore IPU 验证误差 ≤6.8%", "tags": ["accelerator", "chiplet", "memory-bandwidth", "inference", "prefill", "decode", "noc", "interconnect", "architecture", "benchmark"], "href": "../papers/voxel-3d-stacked-ai-chip-llm-inference.html"}, {"id": "papers/waferllm-wafer-scale-llm-inference", "title": "WaferLLM: Large Language Model Inference at Wafer Scale", "desc": "首个晶圆级 LLM 推理系统：PLMR 设备模型 + MeshGEMM/MeshGEMV + KV shift；WSE-2 上 E2E 10–20× SGLang/A100 集群、MeshGEMV 606× 单 A100", "tags": ["cerebras", "wse", "llm", "inference", "gemm", "gemv", "mesh", "noc", "plmr"], "href": "../papers/waferllm-wafer-scale-llm-inference.html"}, {"id": "analyses/cerebras-wse-vs-groq-network-comparison", "title": "Cerebras NoW vs Groq Switched 对比", "desc": "WSE 2D Mesh vs Groq High-radix Switched：拓扑、规模、MoE 场景、矛盾对比", "tags": ["architecture", "wse", "cerebras", "groq", "interconnect", "deterministic"], "href": "../analyses/cerebras-wse-vs-groq-network-comparison.html"}, {"id": "analyses/waferllm-compiler-research-gaps", "title": "WaferLLM Compiler Research Gaps", "desc": "WaferLLM (OSDI 2025) 作者本人承认但未解决的 3 个 decode 阶段瓶颈（48KB SRAM underutilization、edge cores、K=2 硬编码）→ 编译器视角的 research opportunity：MLIR PLMR-aware dialect + 3 个 pass", "tags": ["waferllm", "compiler", "mlir", "gap-analysis", "direction-2", "decode", "mesh-noc", "research-direction"], "href": "../analyses/waferllm-compiler-research-gaps.html"}, {"id": "analyses/wse-nom-contradiction-analysis", "title": "WSE NoW 矛盾论分析", "desc": "WSE NoW 矛盾分析：均匀性 vs 异构通信（主要矛盾），附六步框架 + 解决方案", "tags": ["architecture", "wse", "cerebras", "deterministic", "mesh"], "href": "../analyses/wse-nom-contradiction-analysis.html"}, {"id": "summaries/deepseek-v4", "title": "DeepSeek-V4: Towards Highly Efficient Million-Token Context Intelligence", "desc": "V4 模型系列：1.6T/284B MoE，百万 token 上下文，CSA+HCA 混合注意力", "tags": ["model", "architecture", "attention", "moe", "compression", "training", "inference", "quantization"], "href": "../summaries/deepseek-v4.html"}, {"id": "summaries/distributed-gemm-and-compiler", "title": "分布式存储架构下的矩阵乘与编译器", "desc": "知乎综述：Cannon/SUMMA/2.5D/3D 分布式 GEMM（MPI 实现+αβ 分析）、LLM Tesseract/NUS 3D 并行、Graphcore T10 rTensor 形式化 Cannon", "tags": ["gemm", "distributed-memory", "mpi", "compiler", "tensor-parallelism", "zhihu"], "href": "../summaries/distributed-gemm-and-compiler.html"}, {"id": "summaries/superscalar-cpu-research-2023-2026", "title": "Superscalar CPU Research (2023-2026)", "desc": "OpenClaw 综述：Constable/Bullseye/Prophet/CVA6S+、旁路子系统范式、OoO 边际饱和、WSE/LLM 关联矩阵与核内同步 Gap；Scout→Critic 8.2-8.4/10", "tags": ["architecture", "cpu", "superscalar", "isca", "research-survey"], "href": "../summaries/superscalar-cpu-research-2023-2026.html"}];</script>
+<script>
+(function(){
+  const btn = document.getElementById('nav-toggle');
+  const side = document.getElementById('sidebar');
+  if (btn && side) btn.addEventListener('click', () => side.classList.toggle('open'));
+  const q = document.getElementById('site-search');
+  const data = window.__SEARCH__ || [];
+  const box = document.getElementById('search-results');
+  if (!q || !box) return;
+  q.addEventListener('input', () => {
+    const s = q.value.trim().toLowerCase();
+    if (s.length < 2) { box.innerHTML = ''; return; }
+    const hits = data.filter(d =>
+      d.title.toLowerCase().includes(s) ||
+      d.desc.toLowerCase().includes(s) ||
+      d.tags.some(t => t.toLowerCase().includes(s)) ||
+      d.id.toLowerCase().includes(s)
+    ).slice(0, 20);
+    box.innerHTML = hits.map(h =>
+      `<a href="${h.href}">${h.title}</a>`
+    ).join('') || '<span style="color:var(--muted);font-size:.8rem">无结果</span>';
+  });
+})();
+</script>
+</body>
+</html>
