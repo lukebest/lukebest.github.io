@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+      <title>AI Infra Wiki</title>
+      <link>https://lukebest.github.io</link>
+      <description>最近的10条笔记 on AI Infra Wiki</description>
+      <generator>Quartz -- quartz.jzhao.xyz</generator>
+      <item>
+    <title>About</title>
+    <link>https://lukebest.github.io/README</link>
+    <guid>https://lukebest.github.io/README</guid>
+    <description>About this OKF knowledge wiki</description>
+    <pubDate>Fri, 10 Jul 2026 04:51:21 GMT</pubDate>
+  </item><item>
+    <title>Update Log</title>
+    <link>https://lukebest.github.io/log</link>
+    <guid>https://lukebest.github.io/log</guid>
+    <description>Bundle update history</description>
+    <pubDate>Fri, 10 Jul 2026 04:51:21 GMT</pubDate>
+  </item><item>
+    <title>Schema</title>
+    <link>https://lukebest.github.io/SCHEMA</link>
+    <guid>https://lukebest.github.io/SCHEMA</guid>
+    <description>OKF wiki schema and tag taxonomy</description>
+    <pubDate>Fri, 10 Jul 2026 04:51:21 GMT</pubDate>
+  </item><item>
+    <title>AI Infra LLM Wiki</title>
+    <link>https://lukebest.github.io/</link>
+    <guid>https://lukebest.github.io/</guid>
+    <description>Open Knowledge Format 知识库 — AI 基础设施、互连网络、晶圆级加速器与 LLM 推理系统</description>
+    <pubDate>Fri, 10 Jul 2026 04:51:21 GMT</pubDate>
+  </item><item>
+    <title>index</title>
+    <link>https://lukebest.github.io/summaries/</link>
+    <guid>https://lukebest.github.io/summaries/</guid>
+    <description>Summary DeepSeek-V4: Towards Highly Efficient Million-Token Context Intelligence - V4 模型系列：1.6T/284B MoE，百万 token 上下文，CSA+HCA 混合注意力 Superscalar CPU Research (2023-2026) - OpenClaw 综述：Constable/Bullseye/Prophet/CVA6S+、旁路子系统范式、OoO 边际饱和、WSE/LLM 关联矩阵与核内同步 Gap；Scout→Critic 8.2-8.4/10 分布式存储架构下的矩阵乘与编译器 - 知...</description>
+    <pubDate>Thu, 09 Jul 2026 06:31:06 GMT</pubDate>
+  </item><item>
+    <title>index</title>
+    <link>https://lukebest.github.io/papers/</link>
+    <guid>https://lukebest.github.io/papers/</guid>
+    <description>Paper MegaScale-Infer - MegaScale-Infer：MoE disaggregated attention/FFN serving，ping-pong pipeline + M2N 通信库，1.90× 吞吐提升 Resilient AI Supercomputer Networking using MRC and SRv6 - MRC+SRv6+multi-plane Clos：三管齐下的 100K+ GPU AI 训练网络容错方案，OpenAI/Microsoft 生产验证 Summary A Lightweight High-Throughput Collect...</description>
+    <pubDate>Thu, 09 Jul 2026 06:31:06 GMT</pubDate>
+  </item><item>
+    <title>index</title>
+    <link>https://lukebest.github.io/entities/</link>
+    <guid>https://lukebest.github.io/entities/</guid>
+    <description>Entity CASSINI - CASSINI 网络感知 ML 集群调度器：几何抽象交错通信相位，Affinity 图，1.6× 吞吐改善 Cerebras WSE - Cerebras 晶圆级 AI 加速器，24 color 确定性路由，900K 核心 DeepSeek-V4 - V4 模型系列：1.6T/284B MoE，百万 token 上下文，CSA+HCA 混合注意力 Graphcore IPU - Graphcore Colossus Mk2 IPU：1472 全互联 core、896 MB 分布式 SRAM，Voxel 论文用于 3D AI chip 仿真验证 Kyber Ra...</description>
+    <pubDate>Thu, 09 Jul 2026 06:31:06 GMT</pubDate>
+  </item><item>
+    <title>index</title>
+    <link>https://lukebest.github.io/concepts/</link>
+    <guid>https://lukebest.github.io/concepts/</guid>
+    <description>Concept 3D-Stacked AI Chip - 3D 堆叠 AI 芯片：TSV 垂直堆叠 DRAM bank 于 AI core 之上，分布式内存与专用总线带来带宽扩展与利用率新挑战 Adaptive Routing for NoC - D&amp;T Ch.6-7 自适应路由：最小/非最小、Valiant VRR、VC 与拥塞感知；Duato 逃逸子网预告；DOR vs 自适应选型与 WSE/AllReduce Architecture Benchmark Methodology - 体系结构量化评估方法论：几何均值、Speedup 计算、SPEC/MLPerf 原则与常见数据陷阱...</description>
+    <pubDate>Thu, 09 Jul 2026 06:31:06 GMT</pubDate>
+  </item><item>
+    <title>index</title>
+    <link>https://lukebest.github.io/analyses/</link>
+    <guid>https://lukebest.github.io/analyses/</guid>
+    <description>Analysis Cerebras NoW vs Groq Switched 对比 - WSE 2D Mesh vs Groq High-radix Switched：拓扑、规模、MoE 场景、矛盾对比 WaferLLM Compiler Research Gaps - WaferLLM (OSDI 2025) 作者本人承认但未解决的 3 个 decode 阶段瓶颈（48KB SRAM underutilization、edge cores、K=2 硬编码）→ 编译器视角的 research opportunity：MLIR PLMR-aware dialect + 3 个 pass WSE ...</description>
+    <pubDate>Thu, 09 Jul 2026 06:31:06 GMT</pubDate>
+  </item><item>
+    <title>Cerebras WSE</title>
+    <link>https://lukebest.github.io/entities/cerebras-wse</link>
+    <guid>https://lukebest.github.io/entities/cerebras-wse</guid>
+    <description>Cerebras 晶圆级 AI 加速器，24 color 确定性路由，900K 核心</description>
+    <pubDate>Thu, 09 Jul 2026 06:30:59 GMT</pubDate>
+  </item>
+    </channel>
+  </rss>
