@@ -6,29 +6,35 @@
       <description>最近的10条笔记 on AI Infra Wiki</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>AI Infra LLM Wiki</title>
-    <link>https://lukebest.github.io/</link>
-    <guid>https://lukebest.github.io/</guid>
-    <description>Open Knowledge Format 知识库 — AI 基础设施、互连网络、晶圆级加速器与 LLM 推理系统</description>
-    <pubDate>Wed, 26 Aug 2026 08:05:33 GMT</pubDate>
-  </item><item>
     <title>About</title>
     <link>https://lukebest.github.io/README</link>
     <guid>https://lukebest.github.io/README</guid>
     <description>About this OKF knowledge wiki</description>
-    <pubDate>Wed, 26 Aug 2026 08:05:33 GMT</pubDate>
+    <pubDate>Wed, 26 Aug 2026 08:07:29 GMT</pubDate>
   </item><item>
     <title>Schema</title>
     <link>https://lukebest.github.io/SCHEMA</link>
     <guid>https://lukebest.github.io/SCHEMA</guid>
     <description>OKF wiki schema and tag taxonomy</description>
-    <pubDate>Wed, 26 Aug 2026 08:05:33 GMT</pubDate>
+    <pubDate>Wed, 26 Aug 2026 08:07:29 GMT</pubDate>
   </item><item>
     <title>Update Log</title>
     <link>https://lukebest.github.io/log</link>
     <guid>https://lukebest.github.io/log</guid>
     <description>Bundle update history</description>
-    <pubDate>Wed, 26 Aug 2026 08:05:33 GMT</pubDate>
+    <pubDate>Wed, 26 Aug 2026 08:07:29 GMT</pubDate>
+  </item><item>
+    <title>AI Infra LLM Wiki</title>
+    <link>https://lukebest.github.io/</link>
+    <guid>https://lukebest.github.io/</guid>
+    <description>Open Knowledge Format 知识库 — AI 基础设施、互连网络、晶圆级加速器与 LLM 推理系统</description>
+    <pubDate>Wed, 26 Aug 2026 08:07:29 GMT</pubDate>
+  </item><item>
+    <title>index</title>
+    <link>https://lukebest.github.io/entities/</link>
+    <guid>https://lukebest.github.io/entities/</guid>
+    <description>Entity CASSINI - CASSINI 网络感知 ML 集群调度器：几何抽象交错通信相位，Affinity 图，1.6× 吞吐改善 Cerebras WSE - Cerebras 晶圆级加速器；HC2026 CS-4 = 3× WSE-3T；CS-6 预告 3D DRAM DeepSeek-V4 - V4 模型系列：1.6T/284B MoE，百万 token 上下文，CSA+HCA 混合注意力 Graphcore IPU - Graphcore Colossus Mk2 IPU：1472 全互联 core、896 MB 分布式 SRAM，Voxel 论文用于 3D AI chip ...</description>
+    <pubDate>Wed, 26 Aug 2026 08:06:40 GMT</pubDate>
   </item><item>
     <title>index</title>
     <link>https://lukebest.github.io/papers/</link>
@@ -58,12 +64,6 @@
     <link>https://lukebest.github.io/concepts/cxl-tiered-memory</link>
     <guid>https://lukebest.github.io/concepts/cxl-tiered-memory</guid>
     <description>CXL 扩展内存分层 — 页迁移（M5）、解耦内存数据通路（CosMoS）、fabric（Aurelia）；把冷页/容量迁出本机 DRAM</description>
-    <pubDate>Wed, 26 Aug 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>DRAM and Memory System</title>
-    <link>https://lukebest.github.io/concepts/dram-memory-system</link>
-    <guid>https://lukebest.github.io/concepts/dram-memory-system</guid>
-    <description>DRAM 访问时序与 Row Buffer、Channel/Bank 并行、DDR/HBM 带宽公式、内存墙与 Roofline Ridge Point、WSE 分布式 SRAM 对 HBM 的绕过</description>
     <pubDate>Wed, 26 Aug 2026 00:00:00 GMT</pubDate>
   </item>
     </channel>
