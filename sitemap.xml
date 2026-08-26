@@ -1,9 +1,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
     <loc>https://lukebest.github.io/README</loc>
-    <lastmod>2026-08-26T01:01:34.168Z</lastmod>
+    <lastmod>2026-08-26T08:01:20.599Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/SCHEMA</loc>
-    <lastmod>2026-08-26T01:01:34.168Z</lastmod>
+    <lastmod>2026-08-26T08:01:20.599Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/analyses/cerebras-wse-vs-groq-network-comparison</loc>
     <lastmod>2026-08-25T16:28:04.562Z</lastmod>
@@ -18,10 +18,10 @@
     <lastmod>2026-08-25T16:28:04.394Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/3d-stacked-ai-chip</loc>
-    <lastmod>2026-08-19T00:00:00.000Z</lastmod>
+    <lastmod>2026-08-26T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/3d-stacking-technologies</loc>
-    <lastmod>2026-08-21T00:00:00.000Z</lastmod>
+    <lastmod>2026-08-26T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/adaptive-routing-noc</loc>
     <lastmod>2026-08-25T16:28:03.982Z</lastmod>
@@ -108,7 +108,7 @@
     <lastmod>2026-08-25T16:28:04.562Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/dram-memory-system</loc>
-    <lastmod>2026-08-21T00:00:00.000Z</lastmod>
+    <lastmod>2026-08-26T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/dsa-processor-design-tradeoffs</loc>
     <lastmod>2026-08-25T16:28:03.990Z</lastmod>
@@ -249,7 +249,7 @@
     <lastmod>2026-08-25T16:28:04.558Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/network-on-wafer</loc>
-    <lastmod>2026-08-24T00:00:00.000Z</lastmod>
+    <lastmod>2026-08-26T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/noc-fundamentals-hp-appendix-f</loc>
     <lastmod>2026-08-25T16:28:04.034Z</lastmod>
@@ -273,7 +273,7 @@
     <lastmod>2026-08-25T16:28:04.562Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/nvlink-nvswitch-scale-up-fabric</loc>
-    <lastmod>2026-08-25T16:28:04.562Z</lastmod>
+    <lastmod>2026-08-26T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/out-of-order-execution</loc>
     <lastmod>2026-08-25T16:28:04.410Z</lastmod>
@@ -336,7 +336,7 @@
     <lastmod>2026-08-25T16:28:04.394Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/tsv-3d-physical-layer</loc>
-    <lastmod>2026-08-21T00:00:00.000Z</lastmod>
+    <lastmod>2026-08-26T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/ub-data-link-layer</loc>
     <lastmod>2026-08-25T16:28:04.394Z</lastmod>
@@ -414,7 +414,7 @@
     <lastmod>2026-08-25T16:28:04.678Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/entities/nvidia-vera-rubin-nvl72</loc>
-    <lastmod>2026-08-25T16:28:04.722Z</lastmod>
+    <lastmod>2026-08-26T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/entities/unifiedbus-ub</loc>
     <lastmod>2026-08-25T16:28:04.686Z</lastmod>
@@ -423,10 +423,10 @@
     <lastmod>2026-08-25T16:28:04.670Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/</loc>
-    <lastmod>2026-08-26T01:01:34.164Z</lastmod>
+    <lastmod>2026-08-26T08:01:20.579Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/log</loc>
-    <lastmod>2026-08-26T01:01:34.168Z</lastmod>
+    <lastmod>2026-08-26T08:01:20.599Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/3dls-3d-logic-stacked-disaggregated-llm-serving</loc>
     <lastmod>2026-08-25T16:28:06.066Z</lastmod>
@@ -477,7 +477,7 @@
     <lastmod>2026-08-25T16:28:04.726Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/dash-dual-path-hbf-moe-inference</loc>
-    <lastmod>2026-08-25T16:29:09.502Z</lastmod>
+    <lastmod>2026-08-26T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/dennis-misunas-basic-data-flow-processor</loc>
     <lastmod>2026-08-25T16:28:04.706Z</lastmod>
@@ -521,6 +521,27 @@
     <loc>https://lukebest.github.io/papers/fovea-physical-implication-aware-wafer-scale-dse</loc>
     <lastmod>2026-08-25T16:28:06.150Z</lastmod>
   </url><url>
+    <loc>https://lukebest.github.io/papers/hc2026-dmatrix-raptor-3d-dram</loc>
+    <lastmod>2026-08-26T00:00:00.000Z</lastmod>
+  </url><url>
+    <loc>https://lukebest.github.io/papers/hc2026-handy-hbm-tutorial</loc>
+    <lastmod>2026-08-26T00:00:00.000Z</lastmod>
+  </url><url>
+    <loc>https://lukebest.github.io/papers/hc2026-nvidia-riscv-nvlink-fusion</loc>
+    <lastmod>2026-08-26T00:00:00.000Z</lastmod>
+  </url><url>
+    <loc>https://lukebest.github.io/papers/hc2026-oxmiq-hbf</loc>
+    <lastmod>2026-08-26T00:00:00.000Z</lastmod>
+  </url><url>
+    <loc>https://lukebest.github.io/papers/hc2026-pistil-20-chiplet-slm</loc>
+    <lastmod>2026-08-26T00:00:00.000Z</lastmod>
+  </url><url>
+    <loc>https://lukebest.github.io/papers/hc2026-samsung-hbm-base-die</loc>
+    <lastmod>2026-08-26T00:00:00.000Z</lastmod>
+  </url><url>
+    <loc>https://lukebest.github.io/papers/hc2026-skhynix-hbm-advanced-packaging</loc>
+    <lastmod>2026-08-26T00:00:00.000Z</lastmod>
+  </url><url>
     <loc>https://lukebest.github.io/papers/hcache-fast-state-restoration</loc>
     <lastmod>2026-08-25T16:28:04.674Z</lastmod>
   </url><url>
@@ -534,7 +555,7 @@
     <lastmod>2026-08-25T16:28:04.710Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/hybrid-bonding-3d-integration-recent</loc>
-    <lastmod>2026-08-25T16:28:06.054Z</lastmod>
+    <lastmod>2026-08-26T07:59:19.679Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/hydra-heterogeneous-chiplet-dse-hybrid-llm</loc>
     <lastmod>2026-08-25T16:29:10.066Z</lastmod>
@@ -543,7 +564,7 @@
     <lastmod>2026-08-25T16:28:04.706Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/</loc>
-    <lastmod>2026-08-25T16:28:04.718Z</lastmod>
+    <lastmod>2026-08-26T07:59:55.247Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/katti-tsv-technology-roadmap-2010</loc>
     <lastmod>2026-08-25T16:28:06.058Z</lastmod>
@@ -585,7 +606,7 @@
     <lastmod>2026-08-25T16:28:06.058Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/nvidia-nvlink-hopper-blackwell</loc>
-    <lastmod>2026-08-25T16:28:04.718Z</lastmod>
+    <lastmod>2026-08-26T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/optimizing-comm-comp-parallelism-training</loc>
     <lastmod>2026-08-25T16:28:04.718Z</lastmod>
