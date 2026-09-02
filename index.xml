@@ -10,61 +10,61 @@
     <link>https://lukebest.github.io/README</link>
     <guid>https://lukebest.github.io/README</guid>
     <description>About this OKF knowledge wiki</description>
-    <pubDate>Tue, 01 Sep 2026 01:00:55 GMT</pubDate>
+    <pubDate>Wed, 02 Sep 2026 01:13:04 GMT</pubDate>
   </item><item>
     <title>Schema</title>
     <link>https://lukebest.github.io/SCHEMA</link>
     <guid>https://lukebest.github.io/SCHEMA</guid>
     <description>OKF wiki schema and tag taxonomy</description>
-    <pubDate>Tue, 01 Sep 2026 01:00:55 GMT</pubDate>
+    <pubDate>Wed, 02 Sep 2026 01:13:04 GMT</pubDate>
   </item><item>
     <title>Update Log</title>
     <link>https://lukebest.github.io/log</link>
     <guid>https://lukebest.github.io/log</guid>
     <description>Bundle update history</description>
-    <pubDate>Tue, 01 Sep 2026 01:00:55 GMT</pubDate>
+    <pubDate>Wed, 02 Sep 2026 01:13:04 GMT</pubDate>
   </item><item>
     <title>AI Infra LLM Wiki</title>
     <link>https://lukebest.github.io/</link>
     <guid>https://lukebest.github.io/</guid>
     <description>Open Knowledge Format 知识库 — AI 基础设施、互连网络、晶圆级加速器与 LLM 推理系统</description>
-    <pubDate>Tue, 01 Sep 2026 01:00:55 GMT</pubDate>
+    <pubDate>Wed, 02 Sep 2026 01:13:04 GMT</pubDate>
   </item><item>
     <title>index</title>
     <link>https://lukebest.github.io/papers/</link>
     <guid>https://lukebest.github.io/papers/</guid>
     <description>Paper Hot Chips 2026 Handy HBM Tutorial - Objective Analysis — HBM 吃 3× DDR 晶圆面积；DRAM 产能十年未涨；PIM/base-die 被推理推上台 Hot Chips 2026 Samsung HBM Base Die - Samsung — HBM4/4E B-die 改 4 nm logic；cHBM→aHBM→zHBM（WoW+HCB 取消 2.5D interposer） Hot Chips 2026 SK hynix HBM Packaging - SK hynix — HBM4 12Hi 量产/16Hi ...</description>
-    <pubDate>Mon, 31 Aug 2026 01:04:06 GMT</pubDate>
+    <pubDate>Wed, 02 Sep 2026 01:08:13 GMT</pubDate>
+  </item><item>
+    <title>Disaggregated Inference</title>
+    <link>https://lukebest.github.io/concepts/disaggregated-inference</link>
+    <guid>https://lukebest.github.io/concepts/disaggregated-inference</guid>
+    <description>解耦推理：attention/FFN 分离部署，独立扩展，batch 聚合</description>
+    <pubDate>Wed, 02 Sep 2026 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>Heterogeneous Inference</title>
+    <link>https://lukebest.github.io/concepts/heterogeneous-inference</link>
+    <guid>https://lukebest.github.io/concepts/heterogeneous-inference</guid>
+    <description>GPU + LPU 异构推理，分别优化 prefill/decode</description>
+    <pubDate>Wed, 02 Sep 2026 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>Interconnection Network Design Space</title>
+    <link>https://lukebest.github.io/concepts/interconnection-network-design-space</link>
+    <guid>https://lukebest.github.io/concepts/interconnection-network-design-space</guid>
+    <description>Dally & Towles 互连网络四层设计空间（应用→拓扑/路由/流控→微架构）、基本术语与三大应用域</description>
+    <pubDate>Wed, 02 Sep 2026 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>CHIPSMORE: Compute-in-Interconnect and -Memory Chiplets for Multi-Mode Multi-Request LLM Inference</title>
+    <link>https://lukebest.github.io/papers/chipsmore-cim-chiplets-llm-inference</link>
+    <guid>https://lukebest.github.io/papers/chipsmore-cim-chiplets-llm-inference</guid>
+    <description>NUS — RRAM-ACIM+SRAM-DCIM + IPCN in-network DMAC；vs H100 Mistral-7B INT8 最高 2.38× 吞吐、27× 能效（仿真）</description>
+    <pubDate>Wed, 02 Sep 2026 00:00:00 GMT</pubDate>
   </item><item>
     <title>LLM Distributed Training Collectives</title>
     <link>https://lukebest.github.io/concepts/llm-distributed-training-collectives</link>
     <guid>https://lukebest.github.io/concepts/llm-distributed-training-collectives</guid>
     <description>H&P Ch.6/10 语境下 LLM 训练集体通信：AllReduce/AllGather/All-to-All；Ring vs Tree；DP/TP/PP/EP 配方；通信-计算重叠与 WSE 片上 vs 跨 wafer</description>
     <pubDate>Mon, 31 Aug 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>NVLink NVSwitch Scale-Up Fabric</title>
-    <link>https://lukebest.github.io/concepts/nvlink-nvswitch-scale-up-fabric</link>
-    <guid>https://lukebest.github.io/concepts/nvlink-nvswitch-scale-up-fabric</guid>
-    <description>Hopper/Blackwell/Rubin NVLink + NVSwitch — 固定 fat-tree；NVLink 6 3.6 TB/s all-to-all；与 TPU v4 OCS 对照</description>
-    <pubDate>Mon, 31 Aug 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Understanding the Synchronization Tax in GPU Scale-Up Domains</title>
-    <link>https://lukebest.github.io/papers/synchronization-tax-gpu-scale-up</link>
-    <guid>https://lukebest.github.io/papers/synchronization-tax-gpu-scale-up</guid>
-    <description>Cornell — 8-GPU 域集体通信 >50% 是 barrier 等待；最优带宽随域规模下降（512 vs 8 GPU 为 2.06×）</description>
-    <pubDate>Mon, 31 Aug 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>HYDRA: Heterogeneous Chiplet DSE for Hybrid LLM Serving</title>
-    <link>https://lukebest.github.io/papers/hydra-heterogeneous-chiplet-dse-hybrid-llm</link>
-    <guid>https://lukebest.github.io/papers/hydra-heterogeneous-chiplet-dse-hybrid-llm</guid>
-    <description>UW–Madison/Ulsan — 2.5D 异构 chiplet 上 Hybrid LLM serving 的宏架构+运行时联合 DSE；平均 1.55× 吞吐、TTFT −43.7%，最高 2.3×；Markov 剪枝 2520–8520×</description>
-    <pubDate>Sat, 29 Aug 2026 07:11:44 GMT</pubDate>
-  </item><item>
-    <title>ReXpert: ReRAM Near-Memory FFN Pool for Disaggregated MoE</title>
-    <link>https://lukebest.github.io/papers/rexpert-reram-nmc-disaggregated-moe</link>
-    <guid>https://lukebest.github.io/papers/rexpert-reram-nmc-disaggregated-moe</guid>
-    <description>HKUST/阿里云 — 驻留 expert + core 内组播；occupancy 0.328→0.519；iso-compute vs H20 FFN 池 9.5×、权重搬运能 20×；H20-attn 混合 TPOT 1.25–10.4×</description>
-    <pubDate>Sat, 29 Aug 2026 07:11:43 GMT</pubDate>
   </item>
     </channel>
   </rss>
