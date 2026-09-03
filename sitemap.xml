@@ -1,9 +1,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
     <loc>https://lukebest.github.io/README</loc>
-    <lastmod>2026-09-02T01:13:04.169Z</lastmod>
+    <lastmod>2026-09-03T01:03:40.973Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/SCHEMA</loc>
-    <lastmod>2026-09-02T01:13:04.169Z</lastmod>
+    <lastmod>2026-09-03T01:03:40.973Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/analyses/cerebras-wse-vs-groq-network-comparison</loc>
     <lastmod>2026-08-29T07:10:53.651Z</lastmod>
@@ -69,7 +69,7 @@
     <lastmod>2026-08-29T07:10:53.619Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/collective-capable-noc</loc>
-    <lastmod>2026-08-29T07:10:53.635Z</lastmod>
+    <lastmod>2026-09-03T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/constable-load-elimination</loc>
     <lastmod>2026-08-29T07:10:53.627Z</lastmod>
@@ -84,7 +84,7 @@
     <lastmod>2026-08-29T07:10:53.639Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/cxl-tiered-memory</loc>
-    <lastmod>2026-08-26T00:00:00.000Z</lastmod>
+    <lastmod>2026-09-03T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/cybernetics-and-scientific-methodology</loc>
     <lastmod>2026-08-29T07:10:53.619Z</lastmod>
@@ -99,7 +99,7 @@
     <lastmod>2026-08-13T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/disaggregated-inference</loc>
-    <lastmod>2026-09-02T00:00:00.000Z</lastmod>
+    <lastmod>2026-09-03T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/distributed-gemm-algorithms</loc>
     <lastmod>2026-08-29T07:10:53.639Z</lastmod>
@@ -162,7 +162,7 @@
     <lastmod>2026-08-29T07:10:53.639Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/heterogeneous-inference</loc>
-    <lastmod>2026-09-02T00:00:00.000Z</lastmod>
+    <lastmod>2026-09-03T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/high-radix-clos-adaptive-routing</loc>
     <lastmod>2026-08-29T07:10:53.711Z</lastmod>
@@ -183,7 +183,7 @@
     <lastmod>2026-08-29T07:10:53.635Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/interconnection-network-design-space</loc>
-    <lastmod>2026-09-02T00:00:00.000Z</lastmod>
+    <lastmod>2026-09-03T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/interconnection-network-protocol-stack</loc>
     <lastmod>2026-08-27T00:00:00.000Z</lastmod>
@@ -423,10 +423,10 @@
     <lastmod>2026-08-29T07:10:53.891Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/</loc>
-    <lastmod>2026-09-02T01:13:04.149Z</lastmod>
+    <lastmod>2026-09-03T01:03:40.953Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/log</loc>
-    <lastmod>2026-09-02T01:13:04.169Z</lastmod>
+    <lastmod>2026-09-03T01:03:40.973Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/3dls-3d-logic-stacked-disaggregated-llm-serving</loc>
     <lastmod>2026-08-29T07:10:55.251Z</lastmod>
@@ -490,6 +490,9 @@
   </url><url>
     <loc>https://lukebest.github.io/papers/dspark-speculative-decoding</loc>
     <lastmod>2026-08-29T07:10:53.915Z</lastmod>
+  </url><url>
+    <loc>https://lukebest.github.io/papers/dynande-near-data-expert-scheduling</loc>
+    <lastmod>2026-09-03T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/dynax-sparse-attention-acceleration</loc>
     <lastmod>2026-08-29T07:10:53.919Z</lastmod>
@@ -615,13 +618,16 @@
     <lastmod>2026-08-29T07:10:53.935Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/</loc>
-    <lastmod>2026-09-02T01:08:13.629Z</lastmod>
+    <lastmod>2026-09-03T01:01:54.065Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/katti-tsv-technology-roadmap-2010</loc>
     <lastmod>2026-08-29T07:10:55.175Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/kim-adaptive-routing-high-radix-clos</loc>
     <lastmod>2026-08-29T07:10:53.915Z</lastmod>
+  </url><url>
+    <loc>https://lukebest.github.io/papers/leap-imc-noc-llm-inference</loc>
+    <lastmod>2026-09-03T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/llm-inference-acceleration-comprehensive-hardware-survey</loc>
     <lastmod>2026-08-29T07:10:53.943Z</lastmod>
