@@ -10,61 +10,61 @@
     <link>https://lukebest.github.io/README</link>
     <guid>https://lukebest.github.io/README</guid>
     <description>About this OKF knowledge wiki</description>
-    <pubDate>Fri, 04 Sep 2026 01:03:47 GMT</pubDate>
-  </item><item>
-    <title>Update Log</title>
-    <link>https://lukebest.github.io/log</link>
-    <guid>https://lukebest.github.io/log</guid>
-    <description>Bundle update history</description>
-    <pubDate>Fri, 04 Sep 2026 01:03:47 GMT</pubDate>
+    <pubDate>Mon, 07 Sep 2026 01:10:44 GMT</pubDate>
   </item><item>
     <title>Schema</title>
     <link>https://lukebest.github.io/SCHEMA</link>
     <guid>https://lukebest.github.io/SCHEMA</guid>
     <description>OKF wiki schema and tag taxonomy</description>
-    <pubDate>Fri, 04 Sep 2026 01:03:47 GMT</pubDate>
+    <pubDate>Mon, 07 Sep 2026 01:10:44 GMT</pubDate>
   </item><item>
     <title>AI Infra LLM Wiki</title>
     <link>https://lukebest.github.io/</link>
     <guid>https://lukebest.github.io/</guid>
     <description>Open Knowledge Format 知识库 — AI 基础设施、互连网络、晶圆级加速器与 LLM 推理系统</description>
-    <pubDate>Fri, 04 Sep 2026 01:03:47 GMT</pubDate>
+    <pubDate>Mon, 07 Sep 2026 01:10:44 GMT</pubDate>
+  </item><item>
+    <title>Update Log</title>
+    <link>https://lukebest.github.io/log</link>
+    <guid>https://lukebest.github.io/log</guid>
+    <description>Bundle update history</description>
+    <pubDate>Mon, 07 Sep 2026 01:10:44 GMT</pubDate>
   </item><item>
     <title>index</title>
     <link>https://lukebest.github.io/papers/</link>
     <guid>https://lukebest.github.io/papers/</guid>
     <description>Paper Hot Chips 2026 Handy HBM Tutorial - Objective Analysis — HBM 吃 3× DDR 晶圆面积；DRAM 产能十年未涨；PIM/base-die 被推理推上台 Hot Chips 2026 Samsung HBM Base Die - Samsung — HBM4/4E B-die 改 4 nm logic；cHBM→aHBM→zHBM（WoW+HCB 取消 2.5D interposer） Hot Chips 2026 SK hynix HBM Packaging - SK hynix — HBM4 12Hi 量产/16Hi ...</description>
-    <pubDate>Fri, 04 Sep 2026 01:01:03 GMT</pubDate>
+    <pubDate>Mon, 07 Sep 2026 01:09:21 GMT</pubDate>
   </item><item>
-    <title>Disaggregated Inference</title>
-    <link>https://lukebest.github.io/concepts/disaggregated-inference</link>
-    <guid>https://lukebest.github.io/concepts/disaggregated-inference</guid>
-    <description>解耦推理：attention/FFN 分离部署，独立扩展，batch 聚合</description>
-    <pubDate>Fri, 04 Sep 2026 00:00:00 GMT</pubDate>
+    <title>GPU SIMT Architecture</title>
+    <link>https://lukebest.github.io/concepts/gpu-simt-architecture</link>
+    <guid>https://lukebest.github.io/concepts/gpu-simt-architecture</guid>
+    <description>H&P Ch.4 GPU/SIMT：Warp 锁步、Warp Divergence、Occupancy 延迟隐藏、H100 内存层次、Tensor Core；与 CPU OoO / WSE MIMD 对比</description>
+    <pubDate>Mon, 07 Sep 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>NVIDIA CPO Roadmap</title>
-    <link>https://lukebest.github.io/concepts/nvidia-cpo-roadmap</link>
-    <guid>https://lukebest.github.io/concepts/nvidia-cpo-roadmap</guid>
-    <description>NVIDIA CPO 用于 scale-up 的路线图：Rubin NVL576 测试 → Feynman NVL1152 volume ramp</description>
-    <pubDate>Fri, 04 Sep 2026 00:00:00 GMT</pubDate>
+    <title>LLM Distributed Training Collectives</title>
+    <link>https://lukebest.github.io/concepts/llm-distributed-training-collectives</link>
+    <guid>https://lukebest.github.io/concepts/llm-distributed-training-collectives</guid>
+    <description>H&P Ch.6/10 语境下 LLM 训练集体通信：AllReduce/AllGather/All-to-All；Ring vs Tree；DP/TP/PP/EP 配方；通信-计算重叠与 WSE 片上 vs 跨 wafer</description>
+    <pubDate>Mon, 07 Sep 2026 00:00:00 GMT</pubDate>
   </item><item>
     <title>NVLink NVSwitch Scale-Up Fabric</title>
     <link>https://lukebest.github.io/concepts/nvlink-nvswitch-scale-up-fabric</link>
     <guid>https://lukebest.github.io/concepts/nvlink-nvswitch-scale-up-fabric</guid>
     <description>Hopper/Blackwell/Rubin NVLink + NVSwitch — 固定 fat-tree；NVLink 6 3.6 TB/s all-to-all；与 TPU v4 OCS 对照</description>
-    <pubDate>Fri, 04 Sep 2026 00:00:00 GMT</pubDate>
+    <pubDate>Mon, 07 Sep 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>AInfer-PD: Communication-Safe In-Place Prefill–Decode Multiplexing for Distributed MoE</title>
-    <link>https://lukebest.github.io/papers/ainfer-pd-inplace-prefill-decode-moe</link>
-    <guid>https://lukebest.github.io/papers/ainfer-pd-inplace-prefill-decode-moe</guid>
-    <description>Ant — MoE rollout 同机 P/D 复用；turnstile 排交叉集体 + DeepEP 相位私有态；vs Normal −7.1–22.5%、vs SGLang −24.8–32.9%（H20）</description>
-    <pubDate>Fri, 04 Sep 2026 00:00:00 GMT</pubDate>
+    <title>BASP: Communication-Efficient Batch-Aware Sequence Parallelism for LLM Training</title>
+    <link>https://lukebest.github.io/papers/basp-batch-aware-sequence-parallelism</link>
+    <guid>https://lukebest.github.io/papers/basp-batch-aware-sequence-parallelism</guid>
+    <description>Clemson — 按 micro-batch 切 Ulysses all-to-all 子组；Llama/Qwen 相对 Ulysses 1.17–1.32×，B=8 时 A2A 可降约 85×（8×A100）</description>
+    <pubDate>Mon, 07 Sep 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>Scaling Inference Prefill with High-Radix Photonic Interconnects</title>
-    <link>https://lukebest.github.io/papers/scaling-inference-prefill-photonic</link>
-    <guid>https://lukebest.github.io/papers/scaling-inference-prefill-photonic</guid>
-    <description>3D 光子 scale-up（4× BW、1152 radix）量化 MoE prefill；高 batch 2.1–3.2×、跨 pod 边界生产平台 2.2–4.5×（分析模型）</description>
-    <pubDate>Fri, 04 Sep 2026 00:00:00 GMT</pubDate>
+    <title>CREDIT: Cost-guided Reduction-reuse with Efficient DSMEM Inter-CTA Tiling</title>
+    <link>https://lukebest.github.io/papers/credit-dsmem-inter-cta-tiling</link>
+    <guid>https://lukebest.github.io/papers/credit-dsmem-inter-cta-tiling</guid>
+    <description>UW–Madison — Hopper/Blackwell DSMEM 何时划算；reduction-reuse 变换 + 成本模型 91.7%；5090/H100 几何均值 1.466×/1.318×</description>
+    <pubDate>Mon, 07 Sep 2026 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>
