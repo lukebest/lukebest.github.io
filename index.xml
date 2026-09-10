@@ -10,61 +10,61 @@
     <link>https://lukebest.github.io/README</link>
     <guid>https://lukebest.github.io/README</guid>
     <description>About this OKF knowledge wiki</description>
-    <pubDate>Wed, 09 Sep 2026 01:13:05 GMT</pubDate>
+    <pubDate>Thu, 10 Sep 2026 01:00:38 GMT</pubDate>
   </item><item>
     <title>Schema</title>
     <link>https://lukebest.github.io/SCHEMA</link>
     <guid>https://lukebest.github.io/SCHEMA</guid>
     <description>OKF wiki schema and tag taxonomy</description>
-    <pubDate>Wed, 09 Sep 2026 01:13:05 GMT</pubDate>
+    <pubDate>Thu, 10 Sep 2026 01:00:38 GMT</pubDate>
   </item><item>
     <title>Update Log</title>
     <link>https://lukebest.github.io/log</link>
     <guid>https://lukebest.github.io/log</guid>
     <description>Bundle update history</description>
-    <pubDate>Wed, 09 Sep 2026 01:13:05 GMT</pubDate>
+    <pubDate>Thu, 10 Sep 2026 01:00:38 GMT</pubDate>
   </item><item>
     <title>AI Infra LLM Wiki</title>
     <link>https://lukebest.github.io/</link>
     <guid>https://lukebest.github.io/</guid>
     <description>Open Knowledge Format 知识库 — AI 基础设施、互连网络、晶圆级加速器与 LLM 推理系统</description>
-    <pubDate>Wed, 09 Sep 2026 01:13:05 GMT</pubDate>
+    <pubDate>Thu, 10 Sep 2026 01:00:38 GMT</pubDate>
   </item><item>
-    <title>HYDRA: Heterogeneous Chiplet DSE for Hybrid LLM Serving</title>
-    <link>https://lukebest.github.io/papers/hydra-heterogeneous-chiplet-dse-hybrid-llm</link>
-    <guid>https://lukebest.github.io/papers/hydra-heterogeneous-chiplet-dse-hybrid-llm</guid>
-    <description>UW–Madison/Ulsan — 2.5D 异构 chiplet 上 Hybrid LLM serving 的宏架构+运行时联合 DSE；平均 1.55× 吞吐、TTFT −43.7%，最高 2.3×；Markov 剪枝 2520–8520×</description>
-    <pubDate>Tue, 08 Sep 2026 03:38:33 GMT</pubDate>
+    <title>index</title>
+    <link>https://lukebest.github.io/papers/</link>
+    <guid>https://lukebest.github.io/papers/</guid>
+    <description>Paper WaferTrans: IOMMU-free VA Translation for Wafer-scale GPUs - 清华 — 片上 PPD 去掉 CPU-IOMMU；vs Trans-FW 平均 2.5×（Seq/Adj 3.1×） HDA-MoE: Hybrid Parallelism for MoE on 3D NMP - 北大/阿里 DAMO — 离线 hybrid 放置 + 在线调度；vs TP 1.1–3.4×、vs HD-MoE 1.1–1.3× Sharing a Fabric with Collective Communication - NTU/LLNL —...</description>
+    <pubDate>Thu, 10 Sep 2026 00:59:32 GMT</pubDate>
   </item><item>
-    <title>ReXpert: ReRAM Near-Memory FFN Pool for Disaggregated MoE</title>
-    <link>https://lukebest.github.io/papers/rexpert-reram-nmc-disaggregated-moe</link>
-    <guid>https://lukebest.github.io/papers/rexpert-reram-nmc-disaggregated-moe</guid>
-    <description>HKUST/阿里云 — 驻留 expert + core 内组播；occupancy 0.328→0.519；iso-compute vs H20 FFN 池 9.5×、权重搬运能 20×；H20-attn 混合 TPOT 1.25–10.4×</description>
-    <pubDate>Tue, 08 Sep 2026 03:38:31 GMT</pubDate>
+    <title>3D Stacking Technologies</title>
+    <link>https://lukebest.github.io/concepts/3d-stacking-technologies</link>
+    <guid>https://lukebest.github.io/concepts/3d-stacking-technologies</guid>
+    <description>3D 集成三路线对垒：TSV-based (via-middle 商业主流)、Monolithic 3D (实验性高密度)、Hybrid Bonding (Cu-Cu 是 2024 商业现实)；对 3D NoC 设计的根本含义对比</description>
+    <pubDate>Thu, 10 Sep 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>DICE: Detailed Inter-Chiplet End-to-End PHY Modeling</title>
-    <link>https://lukebest.github.io/papers/dice-detailed-inter-chiplet-end-to-end-phy-modeling</link>
-    <guid>https://lukebest.github.io/papers/dice-detailed-inter-chiplet-end-to-end-phy-modeling</guid>
-    <description>Uppsala — gem5 运行时建模 chiplet PHY（QC-LDPC/PAM4/AWGN）；相对 HeteroGarnet IPC 平均偏移 6.8%、最高 27.6%；EPYC 9454P 跨 die 最大 C2C RMSE 89.5 vs 141.2 cycle</description>
-    <pubDate>Tue, 08 Sep 2026 03:37:48 GMT</pubDate>
+    <title>Interconnection Network Design Space</title>
+    <link>https://lukebest.github.io/concepts/interconnection-network-design-space</link>
+    <guid>https://lukebest.github.io/concepts/interconnection-network-design-space</guid>
+    <description>Dally & Towles 互连网络四层设计空间（应用→拓扑/路由/流控→微架构）、基本术语与三大应用域</description>
+    <pubDate>Thu, 10 Sep 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>Fovea: Physical-Implication-Aware Wafer-Scale DSE</title>
-    <link>https://lukebest.github.io/papers/fovea-physical-implication-aware-wafer-scale-dse</link>
-    <guid>https://lukebest.github.io/papers/fovea-physical-implication-aware-wafer-scale-dse</guid>
-    <description>清华 — 晶圆级 DSE 先构造物理可行空间再按分析–参考误差画 Decision Domain；70 对 LLM 训练全部找回参考最优，相对穷尽参考平均 4.13×、最高 7.80×</description>
-    <pubDate>Tue, 08 Sep 2026 03:37:27 GMT</pubDate>
+    <title>LLM Distributed Training Collectives</title>
+    <link>https://lukebest.github.io/concepts/llm-distributed-training-collectives</link>
+    <guid>https://lukebest.github.io/concepts/llm-distributed-training-collectives</guid>
+    <description>H&P Ch.6/10 语境下 LLM 训练集体通信：AllReduce/AllGather/All-to-All；Ring vs Tree；DP/TP/PP/EP 配方；通信-计算重叠与 WSE 片上 vs 跨 wafer</description>
+    <pubDate>Thu, 10 Sep 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>ThAME: 3D Memory-Enabled Heterogeneous Accelerator for LLM MoE</title>
-    <link>https://lukebest.github.io/papers/thame-3d-memory-enabled-heterogeneous-moe</link>
-    <guid>https://lukebest.github.io/papers/thame-3d-memory-enabled-heterogeneous-moe</guid>
-    <description>WSU ESWEEK-26 — FeFET-NAND PNM 存 expert、DRAM-PNM 做 attention、分层树 NoC 扛非确定 scatter-gather；相对 H3D-T 最高 15.7× TBT、9.8× 能效</description>
-    <pubDate>Tue, 08 Sep 2026 03:37:27 GMT</pubDate>
+    <title>Network-on-Wafer</title>
+    <link>https://lukebest.github.io/concepts/network-on-wafer</link>
+    <guid>https://lukebest.github.io/concepts/network-on-wafer</guid>
+    <description>晶圆级互连（NoW）：field stitching / chiplet-on-fanout / WoW hybrid bonding 三条物理路线决定拓扑是否能同层直连；放置即拓扑</description>
+    <pubDate>Thu, 10 Sep 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>C2C-Explorer: Chip-to-Chip Interconnect DSE for LLM Systems</title>
-    <link>https://lukebest.github.io/papers/c2c-explorer-chip-to-chip-interconnect-llm</link>
-    <guid>https://lukebest.github.io/papers/c2c-explorer-chip-to-chip-interconnect-llm</guid>
-    <description>DAC 2026 — LLM 工作负载驱动的 scale-up C2C 仿真与贝叶斯 DSE；FPGA 原型时序误差 2.46–8.23%；DeepSeek-R1 combine goodput +44.1%、buffer −98.4%</description>
-    <pubDate>Tue, 08 Sep 2026 03:37:27 GMT</pubDate>
+    <title>HDA-MoE: Hybrid Parallelism for MoE on 3D Near-Memory Processing</title>
+    <link>https://lukebest.github.io/papers/hda-moe-3d-nmp-hybrid-parallel</link>
+    <guid>https://lukebest.github.io/papers/hda-moe-3d-nmp-hybrid-parallel</guid>
+    <description>北大/阿里 DAMO — 3D NMP 上离线 hybrid 放置 + 在线自适应调度；vs TP 1.1–3.4×、vs HD-MoE 1.1–1.3×（仿真）</description>
+    <pubDate>Thu, 10 Sep 2026 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>
