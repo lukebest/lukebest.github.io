@@ -10,61 +10,61 @@
     <link>https://lukebest.github.io/README</link>
     <guid>https://lukebest.github.io/README</guid>
     <description>About this OKF knowledge wiki</description>
-    <pubDate>Thu, 10 Sep 2026 01:00:38 GMT</pubDate>
+    <pubDate>Thu, 10 Sep 2026 01:26:55 GMT</pubDate>
   </item><item>
     <title>Schema</title>
     <link>https://lukebest.github.io/SCHEMA</link>
     <guid>https://lukebest.github.io/SCHEMA</guid>
     <description>OKF wiki schema and tag taxonomy</description>
-    <pubDate>Thu, 10 Sep 2026 01:00:38 GMT</pubDate>
+    <pubDate>Thu, 10 Sep 2026 01:26:55 GMT</pubDate>
   </item><item>
     <title>Update Log</title>
     <link>https://lukebest.github.io/log</link>
     <guid>https://lukebest.github.io/log</guid>
     <description>Bundle update history</description>
-    <pubDate>Thu, 10 Sep 2026 01:00:38 GMT</pubDate>
+    <pubDate>Thu, 10 Sep 2026 01:26:55 GMT</pubDate>
   </item><item>
     <title>AI Infra LLM Wiki</title>
     <link>https://lukebest.github.io/</link>
     <guid>https://lukebest.github.io/</guid>
     <description>Open Knowledge Format 知识库 — AI 基础设施、互连网络、晶圆级加速器与 LLM 推理系统</description>
-    <pubDate>Thu, 10 Sep 2026 01:00:38 GMT</pubDate>
+    <pubDate>Thu, 10 Sep 2026 01:26:55 GMT</pubDate>
   </item><item>
-    <title>index</title>
-    <link>https://lukebest.github.io/papers/</link>
-    <guid>https://lukebest.github.io/papers/</guid>
-    <description>Paper WaferTrans: IOMMU-free VA Translation for Wafer-scale GPUs - 清华 — 片上 PPD 去掉 CPU-IOMMU；vs Trans-FW 平均 2.5×（Seq/Adj 3.1×） HDA-MoE: Hybrid Parallelism for MoE on 3D NMP - 北大/阿里 DAMO — 离线 hybrid 放置 + 在线调度；vs TP 1.1–3.4×、vs HD-MoE 1.1–1.3× Sharing a Fabric with Collective Communication - NTU/LLNL —...</description>
-    <pubDate>Thu, 10 Sep 2026 00:59:32 GMT</pubDate>
+    <title>Mozart: Modularized and Efficient MoE Training on 3.5D Wafer-Scale Chiplet Architectures</title>
+    <link>https://lukebest.github.io/papers/mozart-35d-wafer-scale-moe-training</link>
+    <guid>https://lukebest.github.io/papers/mozart-35d-wafer-scale-moe-training</guid>
+    <description>UNC/UMN — 3.5D 晶圆级 NoP-Tree + 专家共激活布局与流式调度；Qwen3-30B / OLMoE / DeepSeek-MoE post-training 相对 baseline 1.92× / 2.37× / 2.17×</description>
+    <pubDate>Thu, 10 Sep 2026 01:26:45 GMT</pubDate>
   </item><item>
-    <title>3D Stacking Technologies</title>
-    <link>https://lukebest.github.io/concepts/3d-stacking-technologies</link>
-    <guid>https://lukebest.github.io/concepts/3d-stacking-technologies</guid>
-    <description>3D 集成三路线对垒：TSV-based (via-middle 商业主流)、Monolithic 3D (实验性高密度)、Hybrid Bonding (Cu-Cu 是 2024 商业现实)；对 3D NoC 设计的根本含义对比</description>
-    <pubDate>Thu, 10 Sep 2026 00:00:00 GMT</pubDate>
+    <title>Multi-Branch Self-Drafting for LLM Inference Acceleration</title>
+    <link>https://lukebest.github.io/papers/multi-branch-self-drafting-llm-inference</link>
+    <guid>https://lukebest.github.io/papers/multi-branch-self-drafting-llm-inference</guid>
+    <description>AAAI-25 Self-Draft — multi-branch in-model drafting without extra draft model; 2.0–3.2 tokens/step and ~2× throughput vs AR decode</description>
+    <pubDate>Thu, 10 Sep 2026 01:26:45 GMT</pubDate>
   </item><item>
-    <title>Interconnection Network Design Space</title>
-    <link>https://lukebest.github.io/concepts/interconnection-network-design-space</link>
-    <guid>https://lukebest.github.io/concepts/interconnection-network-design-space</guid>
-    <description>Dally & Towles 互连网络四层设计空间（应用→拓扑/路由/流控→微架构）、基本术语与三大应用域</description>
-    <pubDate>Thu, 10 Sep 2026 00:00:00 GMT</pubDate>
+    <title>Near-Optimal Wafer-Scale Reduce</title>
+    <link>https://lukebest.github.io/papers/near-optimal-wafer-scale-reduce</link>
+    <guid>https://lukebest.github.io/papers/near-optimal-wafer-scale-reduce</guid>
+    <description>WSE Reduce/AllReduce 首次系统研究：性能模型（<4% 误差）、5 种算法（Auto-Gen ≤1.4× 下界）、3.27× 快于 vendor</description>
+    <pubDate>Thu, 10 Sep 2026 01:26:45 GMT</pubDate>
   </item><item>
-    <title>LLM Distributed Training Collectives</title>
-    <link>https://lukebest.github.io/concepts/llm-distributed-training-collectives</link>
-    <guid>https://lukebest.github.io/concepts/llm-distributed-training-collectives</guid>
-    <description>H&P Ch.6/10 语境下 LLM 训练集体通信：AllReduce/AllGather/All-to-All；Ring vs Tree；DP/TP/PP/EP 配方；通信-计算重叠与 WSE 片上 vs 跨 wafer</description>
-    <pubDate>Thu, 10 Sep 2026 00:00:00 GMT</pubDate>
+    <title>Network Design for Wafer-Scale Systems with Wafer-on-Wafer Hybrid Bonding</title>
+    <link>https://lukebest.github.io/papers/network-design-wafer-scale-wow-hybrid-bonding</link>
+    <guid>https://lukebest.github.io/papers/network-design-wafer-scale-wow-hybrid-bonding</guid>
+    <description>ETH Iff et al. — WoW hybrid bonding 下 reticle 放置即拓扑；Aligned/Interleaved/Rotated/Contoured 相对 mesh-like baseline 吞吐最高 +250%、延迟 -36%、每字节能量 -38%</description>
+    <pubDate>Thu, 10 Sep 2026 01:26:45 GMT</pubDate>
   </item><item>
-    <title>Network-on-Wafer</title>
-    <link>https://lukebest.github.io/concepts/network-on-wafer</link>
-    <guid>https://lukebest.github.io/concepts/network-on-wafer</guid>
-    <description>晶圆级互连（NoW）：field stitching / chiplet-on-fanout / WoW hybrid bonding 三条物理路线决定拓扑是否能同层直连；放置即拓扑</description>
-    <pubDate>Thu, 10 Sep 2026 00:00:00 GMT</pubDate>
+    <title>Optimizing the Parallelism of Communication and Computation in Distributed Training Platform</title>
+    <link>https://lukebest.github.io/papers/optimizing-comm-comp-parallelism-training</link>
+    <guid>https://lukebest.github.io/papers/optimizing-comm-comp-parallelism-training</guid>
+    <description>ICA3PP 2023 — Torus-Ring 分层训练平台上重叠通信与计算，ResNet50 +23.8–25.6%，Transformer +11.7–12.8%</description>
+    <pubDate>Thu, 10 Sep 2026 01:26:45 GMT</pubDate>
   </item><item>
-    <title>HDA-MoE: Hybrid Parallelism for MoE on 3D Near-Memory Processing</title>
-    <link>https://lukebest.github.io/papers/hda-moe-3d-nmp-hybrid-parallel</link>
-    <guid>https://lukebest.github.io/papers/hda-moe-3d-nmp-hybrid-parallel</guid>
-    <description>北大/阿里 DAMO — 3D NMP 上离线 hybrid 放置 + 在线自适应调度；vs TP 1.1–3.4×、vs HD-MoE 1.1–1.3×（仿真）</description>
-    <pubDate>Thu, 10 Sep 2026 00:00:00 GMT</pubDate>
+    <title>PANDA: Adaptive Prefetching and Decentralized Scheduling for Dataflow Architectures</title>
+    <link>https://lukebest.github.io/papers/panda-adaptive-prefetch-dataflow</link>
+    <guid>https://lukebest.github.io/papers/panda-adaptive-prefetch-dataflow</guid>
+    <description>ACM TACO 2025 — 应用自适应 prefetch + PE 去中心化调度；相对 Plasticine 1.90×、REVEL 2.53× geomean 性能</description>
+    <pubDate>Thu, 10 Sep 2026 01:26:45 GMT</pubDate>
   </item>
     </channel>
   </rss>
