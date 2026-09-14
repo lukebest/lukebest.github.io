@@ -10,61 +10,61 @@
     <link>https://lukebest.github.io/README</link>
     <guid>https://lukebest.github.io/README</guid>
     <description>About this OKF knowledge wiki</description>
-    <pubDate>Thu, 10 Sep 2026 01:26:55 GMT</pubDate>
+    <pubDate>Mon, 14 Sep 2026 01:13:09 GMT</pubDate>
   </item><item>
     <title>Schema</title>
     <link>https://lukebest.github.io/SCHEMA</link>
     <guid>https://lukebest.github.io/SCHEMA</guid>
     <description>OKF wiki schema and tag taxonomy</description>
-    <pubDate>Thu, 10 Sep 2026 01:26:55 GMT</pubDate>
+    <pubDate>Mon, 14 Sep 2026 01:13:09 GMT</pubDate>
   </item><item>
     <title>Update Log</title>
     <link>https://lukebest.github.io/log</link>
     <guid>https://lukebest.github.io/log</guid>
     <description>Bundle update history</description>
-    <pubDate>Thu, 10 Sep 2026 01:26:55 GMT</pubDate>
+    <pubDate>Mon, 14 Sep 2026 01:13:09 GMT</pubDate>
   </item><item>
     <title>AI Infra LLM Wiki</title>
     <link>https://lukebest.github.io/</link>
     <guid>https://lukebest.github.io/</guid>
     <description>Open Knowledge Format 知识库 — AI 基础设施、互连网络、晶圆级加速器与 LLM 推理系统</description>
-    <pubDate>Thu, 10 Sep 2026 01:26:55 GMT</pubDate>
+    <pubDate>Mon, 14 Sep 2026 01:13:09 GMT</pubDate>
   </item><item>
-    <title>Mozart: Modularized and Efficient MoE Training on 3.5D Wafer-Scale Chiplet Architectures</title>
-    <link>https://lukebest.github.io/papers/mozart-35d-wafer-scale-moe-training</link>
-    <guid>https://lukebest.github.io/papers/mozart-35d-wafer-scale-moe-training</guid>
-    <description>UNC/UMN — 3.5D 晶圆级 NoP-Tree + 专家共激活布局与流式调度；Qwen3-30B / OLMoE / DeepSeek-MoE post-training 相对 baseline 1.92× / 2.37× / 2.17×</description>
-    <pubDate>Thu, 10 Sep 2026 01:26:45 GMT</pubDate>
+    <title>index</title>
+    <link>https://lukebest.github.io/papers/</link>
+    <guid>https://lukebest.github.io/papers/</guid>
+    <description>Paper Composable CXL Memory as K8s Shared Memory for LLM Serving - Seagate — DRA+DAX 组合 CXL；Qwen2.5-7B 跨节点 prefix TTFT 5.5–36.6×，sharing gap 1–4% Entwine: Tiled Computation and Fine-Grained GPU Communication - 中科院 — tile×SM 通信预算；GEMM–RS vs NCCL geomean 1.232×（最高 1.433×） Fengshui: Chiplet Ecosystem a...</description>
+    <pubDate>Mon, 14 Sep 2026 01:10:24 GMT</pubDate>
   </item><item>
-    <title>Multi-Branch Self-Drafting for LLM Inference Acceleration</title>
-    <link>https://lukebest.github.io/papers/multi-branch-self-drafting-llm-inference</link>
-    <guid>https://lukebest.github.io/papers/multi-branch-self-drafting-llm-inference</guid>
-    <description>AAAI-25 Self-Draft — multi-branch in-model drafting without extra draft model; 2.0–3.2 tokens/step and ~2× throughput vs AR decode</description>
-    <pubDate>Thu, 10 Sep 2026 01:26:45 GMT</pubDate>
+    <title>CXL Tiered Memory</title>
+    <link>https://lukebest.github.io/concepts/cxl-tiered-memory</link>
+    <guid>https://lukebest.github.io/concepts/cxl-tiered-memory</guid>
+    <description>CXL 扩展内存分层 — 页迁移（M5）、解耦内存数据通路（CosMoS）、fabric（Aurelia）；把冷页/容量迁出本机 DRAM</description>
+    <pubDate>Mon, 14 Sep 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>Near-Optimal Wafer-Scale Reduce</title>
-    <link>https://lukebest.github.io/papers/near-optimal-wafer-scale-reduce</link>
-    <guid>https://lukebest.github.io/papers/near-optimal-wafer-scale-reduce</guid>
-    <description>WSE Reduce/AllReduce 首次系统研究：性能模型（<4% 误差）、5 种算法（Auto-Gen ≤1.4× 下界）、3.27× 快于 vendor</description>
-    <pubDate>Thu, 10 Sep 2026 01:26:45 GMT</pubDate>
+    <title>Disaggregated Inference</title>
+    <link>https://lukebest.github.io/concepts/disaggregated-inference</link>
+    <guid>https://lukebest.github.io/concepts/disaggregated-inference</guid>
+    <description>解耦推理：attention/FFN 分离部署，独立扩展，batch 聚合</description>
+    <pubDate>Mon, 14 Sep 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>Network Design for Wafer-Scale Systems with Wafer-on-Wafer Hybrid Bonding</title>
-    <link>https://lukebest.github.io/papers/network-design-wafer-scale-wow-hybrid-bonding</link>
-    <guid>https://lukebest.github.io/papers/network-design-wafer-scale-wow-hybrid-bonding</guid>
-    <description>ETH Iff et al. — WoW hybrid bonding 下 reticle 放置即拓扑；Aligned/Interleaved/Rotated/Contoured 相对 mesh-like baseline 吞吐最高 +250%、延迟 -36%、每字节能量 -38%</description>
-    <pubDate>Thu, 10 Sep 2026 01:26:45 GMT</pubDate>
+    <title>Interconnection Network Design Space</title>
+    <link>https://lukebest.github.io/concepts/interconnection-network-design-space</link>
+    <guid>https://lukebest.github.io/concepts/interconnection-network-design-space</guid>
+    <description>Dally & Towles 互连网络四层设计空间（应用→拓扑/路由/流控→微架构）、基本术语与三大应用域</description>
+    <pubDate>Mon, 14 Sep 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>Optimizing the Parallelism of Communication and Computation in Distributed Training Platform</title>
-    <link>https://lukebest.github.io/papers/optimizing-comm-comp-parallelism-training</link>
-    <guid>https://lukebest.github.io/papers/optimizing-comm-comp-parallelism-training</guid>
-    <description>ICA3PP 2023 — Torus-Ring 分层训练平台上重叠通信与计算，ResNet50 +23.8–25.6%，Transformer +11.7–12.8%</description>
-    <pubDate>Thu, 10 Sep 2026 01:26:45 GMT</pubDate>
+    <title>Interconnection Network Protocol Stack</title>
+    <link>https://lukebest.github.io/concepts/interconnection-network-protocol-stack</link>
+    <guid>https://lukebest.github.io/concepts/interconnection-network-protocol-stack</guid>
+    <description>互连网络四层协议栈（物理/链路/网络/传输）、Network Interface 边界，与 NoC 及 UB 的对应关系</description>
+    <pubDate>Mon, 14 Sep 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>PANDA: Adaptive Prefetching and Decentralized Scheduling for Dataflow Architectures</title>
-    <link>https://lukebest.github.io/papers/panda-adaptive-prefetch-dataflow</link>
-    <guid>https://lukebest.github.io/papers/panda-adaptive-prefetch-dataflow</guid>
-    <description>ACM TACO 2025 — 应用自适应 prefetch + PE 去中心化调度；相对 Plasticine 1.90×、REVEL 2.53× geomean 性能</description>
-    <pubDate>Thu, 10 Sep 2026 01:26:45 GMT</pubDate>
+    <title>LLM Distributed Training Collectives</title>
+    <link>https://lukebest.github.io/concepts/llm-distributed-training-collectives</link>
+    <guid>https://lukebest.github.io/concepts/llm-distributed-training-collectives</guid>
+    <description>H&P Ch.6/10 语境下 LLM 训练集体通信：AllReduce/AllGather/All-to-All；Ring vs Tree；DP/TP/PP/EP 配方；通信-计算重叠与 WSE 片上 vs 跨 wafer</description>
+    <pubDate>Mon, 14 Sep 2026 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>
