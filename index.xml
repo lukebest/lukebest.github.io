@@ -10,25 +10,49 @@
     <link>https://lukebest.github.io/README</link>
     <guid>https://lukebest.github.io/README</guid>
     <description>About this OKF knowledge wiki</description>
-    <pubDate>Mon, 14 Sep 2026 01:13:09 GMT</pubDate>
+    <pubDate>Mon, 14 Sep 2026 08:35:48 GMT</pubDate>
   </item><item>
     <title>Schema</title>
     <link>https://lukebest.github.io/SCHEMA</link>
     <guid>https://lukebest.github.io/SCHEMA</guid>
     <description>OKF wiki schema and tag taxonomy</description>
-    <pubDate>Mon, 14 Sep 2026 01:13:09 GMT</pubDate>
+    <pubDate>Mon, 14 Sep 2026 08:35:48 GMT</pubDate>
   </item><item>
     <title>Update Log</title>
     <link>https://lukebest.github.io/log</link>
     <guid>https://lukebest.github.io/log</guid>
     <description>Bundle update history</description>
-    <pubDate>Mon, 14 Sep 2026 01:13:09 GMT</pubDate>
+    <pubDate>Mon, 14 Sep 2026 08:35:48 GMT</pubDate>
   </item><item>
     <title>AI Infra LLM Wiki</title>
     <link>https://lukebest.github.io/</link>
     <guid>https://lukebest.github.io/</guid>
     <description>Open Knowledge Format 知识库 — AI 基础设施、互连网络、晶圆级加速器与 LLM 推理系统</description>
-    <pubDate>Mon, 14 Sep 2026 01:13:09 GMT</pubDate>
+    <pubDate>Mon, 14 Sep 2026 08:35:48 GMT</pubDate>
+  </item><item>
+    <title>index</title>
+    <link>https://lukebest.github.io/analyses/ai-infra-book/</link>
+    <guid>https://lukebest.github.io/analyses/ai-infra-book/</guid>
+    <description>Summary 李博杰《深入理解 AI Infra》章节摘要（工作层，非正文转载）。实体：深入理解 AI Infra。源 stub：bojieli-ai-infra-book.md。 Ch.0 前言 - 从约束推导设计；五个数据搬移问题 Ch.1 初识 AI Infra - 容量/算力/带宽/延迟；MFU/MBU Ch.2 模型架构 - 权重/KV/MoE 公式 Ch.3 推理与训练负载 - 到达、Agent、6ND、RL Ch.4 加速器架构 - Roofline 与三代架构 Ch.5 算子与运行时 - 分块、融合、Graph Ch.6 超节点 - 并行、集体、NVLink/TPU/UB、E...</description>
+    <pubDate>Mon, 14 Sep 2026 08:35:18 GMT</pubDate>
+  </item><item>
+    <title>index</title>
+    <link>https://lukebest.github.io/analyses/</link>
+    <guid>https://lukebest.github.io/analyses/</guid>
+    <description>Analysis Cerebras NoW vs Groq Switched 对比 - WSE 2D Mesh vs Groq High-radix Switched：拓扑、规模、MoE 场景、矛盾对比 WaferLLM Compiler Research Gaps - WaferLLM (OSDI 2025) 作者本人承认但未解决的 3 个 decode 阶段瓶颈（48KB SRAM underutilization、edge cores、K=2 硬编码）→ 编译器视角的 research opportunity：MLIR PLMR-aware dialect + 3 个 pass WSE ...</description>
+    <pubDate>Mon, 14 Sep 2026 08:35:18 GMT</pubDate>
+  </item><item>
+    <title>index</title>
+    <link>https://lukebest.github.io/concepts/</link>
+    <guid>https://lukebest.github.io/concepts/</guid>
+    <description>Concept 3D-Stacked AI Chip - 3D 堆叠 AI 芯片：TSV 垂直堆叠 DRAM bank 于 AI core 之上，分布式内存与专用总线带来带宽扩展与利用率新挑战 3D Stacking Technologies - 3D 集成三路线对垒：TSV-based (商业主流)、Monolithic (实验)、Hybrid Bonding (Cu-Cu 当代商业)；对 3D NoC 设计的根本含义对比 Adaptive Routing for NoC - D&amp;T Ch.6-7 自适应路由：最小/非最小、Valiant VRR、VC 与拥塞感知；Duato 逃逸子...</description>
+    <pubDate>Mon, 14 Sep 2026 08:35:18 GMT</pubDate>
+  </item><item>
+    <title>index</title>
+    <link>https://lukebest.github.io/entities/</link>
+    <guid>https://lukebest.github.io/entities/</guid>
+    <description>Entity CASSINI - CASSINI 网络感知 ML 集群调度器：几何抽象交错通信相位，Affinity 图，1.6× 吞吐改善 Cerebras WSE - Cerebras 晶圆级加速器；HC2026 CS-4 = 3× WSE-3T；CS-6 预告 3D DRAM DeepSeek-V4 - V4 模型系列：1.6T/284B MoE，百万 token 上下文，CSA+HCA 混合注意力 Graphcore IPU - Graphcore Colossus Mk2 IPU：1472 全互联 core、896 MB 分布式 SRAM，Voxel 论文用于 3D AI chip ...</description>
+    <pubDate>Mon, 14 Sep 2026 08:35:18 GMT</pubDate>
   </item><item>
     <title>index</title>
     <link>https://lukebest.github.io/papers/</link>
@@ -36,34 +60,10 @@
     <description>Paper Composable CXL Memory as K8s Shared Memory for LLM Serving - Seagate — DRA+DAX 组合 CXL；Qwen2.5-7B 跨节点 prefix TTFT 5.5–36.6×，sharing gap 1–4% Entwine: Tiled Computation and Fine-Grained GPU Communication - 中科院 — tile×SM 通信预算；GEMM–RS vs NCCL geomean 1.232×（最高 1.433×） Fengshui: Chiplet Ecosystem a...</description>
     <pubDate>Mon, 14 Sep 2026 01:10:24 GMT</pubDate>
   </item><item>
-    <title>CXL Tiered Memory</title>
-    <link>https://lukebest.github.io/concepts/cxl-tiered-memory</link>
-    <guid>https://lukebest.github.io/concepts/cxl-tiered-memory</guid>
-    <description>CXL 扩展内存分层 — 页迁移（M5）、解耦内存数据通路（CosMoS）、fabric（Aurelia）；把冷页/容量迁出本机 DRAM</description>
-    <pubDate>Mon, 14 Sep 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Disaggregated Inference</title>
-    <link>https://lukebest.github.io/concepts/disaggregated-inference</link>
-    <guid>https://lukebest.github.io/concepts/disaggregated-inference</guid>
-    <description>解耦推理：attention/FFN 分离部署，独立扩展，batch 聚合</description>
-    <pubDate>Mon, 14 Sep 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Interconnection Network Design Space</title>
-    <link>https://lukebest.github.io/concepts/interconnection-network-design-space</link>
-    <guid>https://lukebest.github.io/concepts/interconnection-network-design-space</guid>
-    <description>Dally & Towles 互连网络四层设计空间（应用→拓扑/路由/流控→微架构）、基本术语与三大应用域</description>
-    <pubDate>Mon, 14 Sep 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Interconnection Network Protocol Stack</title>
-    <link>https://lukebest.github.io/concepts/interconnection-network-protocol-stack</link>
-    <guid>https://lukebest.github.io/concepts/interconnection-network-protocol-stack</guid>
-    <description>互连网络四层协议栈（物理/链路/网络/传输）、Network Interface 边界，与 NoC 及 UB 的对应关系</description>
-    <pubDate>Mon, 14 Sep 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>LLM Distributed Training Collectives</title>
-    <link>https://lukebest.github.io/concepts/llm-distributed-training-collectives</link>
-    <guid>https://lukebest.github.io/concepts/llm-distributed-training-collectives</guid>
-    <description>H&P Ch.6/10 语境下 LLM 训练集体通信：AllReduce/AllGather/All-to-All；Ring vs Tree；DP/TP/PP/EP 配方；通信-计算重叠与 WSE 片上 vs 跨 wafer</description>
+    <title>AI Infra Book Ch.0 Preface</title>
+    <link>https://lukebest.github.io/analyses/ai-infra-book/ch00-preface</link>
+    <guid>https://lukebest.github.io/analyses/ai-infra-book/ch00-preface</guid>
+    <description>李博杰书前言—从约束推导设计、五个数据搬移问题、十二章三部分阅读地图</description>
     <pubDate>Mon, 14 Sep 2026 00:00:00 GMT</pubDate>
   </item>
     </channel>
