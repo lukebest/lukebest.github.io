@@ -10,61 +10,61 @@
     <link>https://lukebest.github.io/README</link>
     <guid>https://lukebest.github.io/README</guid>
     <description>About this OKF knowledge wiki</description>
-    <pubDate>Tue, 15 Sep 2026 01:10:53 GMT</pubDate>
+    <pubDate>Wed, 16 Sep 2026 01:10:35 GMT</pubDate>
   </item><item>
     <title>Schema</title>
     <link>https://lukebest.github.io/SCHEMA</link>
     <guid>https://lukebest.github.io/SCHEMA</guid>
     <description>OKF wiki schema and tag taxonomy</description>
-    <pubDate>Tue, 15 Sep 2026 01:10:53 GMT</pubDate>
+    <pubDate>Wed, 16 Sep 2026 01:10:35 GMT</pubDate>
   </item><item>
     <title>Update Log</title>
     <link>https://lukebest.github.io/log</link>
     <guid>https://lukebest.github.io/log</guid>
     <description>Bundle update history</description>
-    <pubDate>Tue, 15 Sep 2026 01:10:53 GMT</pubDate>
+    <pubDate>Wed, 16 Sep 2026 01:10:35 GMT</pubDate>
   </item><item>
     <title>AI Infra LLM Wiki</title>
     <link>https://lukebest.github.io/</link>
     <guid>https://lukebest.github.io/</guid>
     <description>Open Knowledge Format 知识库 — AI 基础设施、互连网络、晶圆级加速器与 LLM 推理系统</description>
-    <pubDate>Tue, 15 Sep 2026 01:10:53 GMT</pubDate>
+    <pubDate>Wed, 16 Sep 2026 01:10:35 GMT</pubDate>
   </item><item>
     <title>index</title>
     <link>https://lukebest.github.io/papers/</link>
     <guid>https://lukebest.github.io/papers/</guid>
-    <description>Paper Vortex: Extreme Compression for Efficient LLM Inference - Duke — 脉动 bi-flow VQ+稀疏；相对 SOTA 8.03×–23.7× 加速、5.68×–12.5× 能耗（仿真） Dissecting GPU Utilization for LLM Inference on Hopper - KTH — H100 NVL vLLM/FA3；decode GMMA fill 1.6–12.5%，SOL 冷 92% vs decode 7.9% RoofLang: AI-Driven Architecting of L...</description>
-    <pubDate>Tue, 15 Sep 2026 01:10:21 GMT</pubDate>
+    <description>Paper Trillion-Parameter MoE in a Box: HBF Memory Provisioning - Huawei — 权重驻 HBF 后状态层 1.4–4.0 s⁻¹（vs HBM3e 33.3）；HBF×6 暴露 2.30 TB/s BOOST: Concurrent Host+HBM Access for LLM Inference - GT/NVIDIA/Stanford — Grace Hopper iso-batch TPOT +4.3%、高吞吐 +31%（vs prefetch +15%） PDD: Cross-Datacenter Prefill-D...</description>
+    <pubDate>Wed, 16 Sep 2026 01:08:41 GMT</pubDate>
+  </item><item>
+    <title>CXL Tiered Memory</title>
+    <link>https://lukebest.github.io/concepts/cxl-tiered-memory</link>
+    <guid>https://lukebest.github.io/concepts/cxl-tiered-memory</guid>
+    <description>CXL 扩展内存分层 — 页迁移（M5）、解耦内存数据通路（CosMoS）、fabric（Aurelia）；把冷页/容量迁出本机 DRAM</description>
+    <pubDate>Wed, 16 Sep 2026 00:00:00 GMT</pubDate>
   </item><item>
     <title>Disaggregated Inference</title>
     <link>https://lukebest.github.io/concepts/disaggregated-inference</link>
     <guid>https://lukebest.github.io/concepts/disaggregated-inference</guid>
     <description>解耦推理：attention/FFN 分离部署，独立扩展，batch 聚合</description>
-    <pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>DNN Accelerator Systolic Dataflow</title>
-    <link>https://lukebest.github.io/concepts/dnn-accelerator-systolic-dataflow</link>
-    <guid>https://lukebest.github.io/concepts/dnn-accelerator-systolic-dataflow</guid>
-    <description>H&P Ch.7 DSA：脉动阵列、WS/OS/RS 数据复用、Roofline for NPU、TPU vs GPU vs WSE SLA；晶体管从控制迁到 MAC</description>
-    <pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+    <pubDate>Wed, 16 Sep 2026 00:00:00 GMT</pubDate>
   </item><item>
     <title>End-to-End Memory Data Path</title>
     <link>https://lukebest.github.io/concepts/end-to-end-memory-data-path</link>
     <guid>https://lukebest.github.io/concepts/end-to-end-memory-data-path</guid>
     <description>存储篇综合（Day 17-22）：load 全路径 AMAT 层级展开、内存墙时间线、一致性决策树、同步成本量级、WSE 消除 off-chip 的简化路径</description>
-    <pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+    <pubDate>Wed, 16 Sep 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>FlashAttention-3</title>
-    <link>https://lukebest.github.io/concepts/flashattention-3</link>
-    <guid>https://lukebest.github.io/concepts/flashattention-3</guid>
-    <description>Hopper H100 IO-aware attention 第三代：TMA/WGMMA 异步 producer-consumer、GEMM-softmax 流水线、FP8 block quant+incoherent processing；FP16 740 TFLOPs/s、相对 FA2 1.5–2×</description>
-    <pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+    <title>Heterogeneous Inference</title>
+    <link>https://lukebest.github.io/concepts/heterogeneous-inference</link>
+    <guid>https://lukebest.github.io/concepts/heterogeneous-inference</guid>
+    <description>GPU + LPU 异构推理，分别优化 prefill/decode</description>
+    <pubDate>Wed, 16 Sep 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>GEMM vs GEMV in LLM Inference</title>
-    <link>https://lukebest.github.io/concepts/gemm-vs-gemv</link>
-    <guid>https://lukebest.github.io/concepts/gemm-vs-gemv</guid>
-    <description>矩阵乘 vs 矩阵-向量乘：算子形状、算术强度（AI）、Roofline 类别、Prefill/Decode 对应关系；GEMM compute-bound（AI~1000），GEMV bandwidth-bound（AI~2）；H100 decode <1% 峰值 FLOPS，理论时间 vs 实际时间差 100×</description>
-    <pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+    <title>BOOST: Concurrent Host+HBM Access for LLM Inference</title>
+    <link>https://lukebest.github.io/papers/boost-concurrent-host-hbm-llm-inference</link>
+    <guid>https://lukebest.github.io/papers/boost-concurrent-host-hbm-llm-inference</guid>
+    <description>GT/NVIDIA/Stanford — wave-aware 并发吃满 host+HBM；Grace Hopper 上 iso-batch TPOT +4.3%、高吞吐 +31%（vs prefetch +15%）</description>
+    <pubDate>Wed, 16 Sep 2026 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>

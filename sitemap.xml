@@ -1,9 +1,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
     <loc>https://lukebest.github.io/README</loc>
-    <lastmod>2026-09-15T01:10:53.680Z</lastmod>
+    <lastmod>2026-09-16T01:10:35.990Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/SCHEMA</loc>
-    <lastmod>2026-09-15T01:10:53.680Z</lastmod>
+    <lastmod>2026-09-16T01:10:35.990Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/analyses/ai-infra-book/ch00-preface</loc>
     <lastmod>2026-09-14T00:00:00.000Z</lastmod>
@@ -132,7 +132,7 @@
     <lastmod>2026-09-09T03:52:37.952Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/cxl-tiered-memory</loc>
-    <lastmod>2026-09-14T00:00:00.000Z</lastmod>
+    <lastmod>2026-09-16T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/cybernetics-and-scientific-methodology</loc>
     <lastmod>2026-09-09T03:52:37.936Z</lastmod>
@@ -147,7 +147,7 @@
     <lastmod>2026-08-13T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/disaggregated-inference</loc>
-    <lastmod>2026-09-15T00:00:00.000Z</lastmod>
+    <lastmod>2026-09-16T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/distributed-gemm-algorithms</loc>
     <lastmod>2026-09-09T03:52:38.336Z</lastmod>
@@ -171,7 +171,7 @@
     <lastmod>2026-09-09T03:52:38.332Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/end-to-end-memory-data-path</loc>
-    <lastmod>2026-09-15T00:00:00.000Z</lastmod>
+    <lastmod>2026-09-16T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/eyeriss-accelerator</loc>
     <lastmod>2026-09-09T03:52:38.336Z</lastmod>
@@ -210,7 +210,7 @@
     <lastmod>2026-09-15T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/heterogeneous-inference</loc>
-    <lastmod>2026-09-14T00:00:00.000Z</lastmod>
+    <lastmod>2026-09-16T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/high-radix-clos-adaptive-routing</loc>
     <lastmod>2026-09-09T03:52:38.332Z</lastmod>
@@ -474,10 +474,10 @@
     <lastmod>2026-09-09T03:52:38.588Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/</loc>
-    <lastmod>2026-09-15T01:10:53.664Z</lastmod>
+    <lastmod>2026-09-16T01:10:35.970Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/log</loc>
-    <lastmod>2026-09-15T01:10:53.680Z</lastmod>
+    <lastmod>2026-09-16T01:10:35.990Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/3dls-3d-logic-stacked-disaggregated-llm-serving</loc>
     <lastmod>2026-09-10T01:26:45.622Z</lastmod>
@@ -508,6 +508,9 @@
   </url><url>
     <loc>https://lukebest.github.io/papers/batude-monolithic-3d-review-2011</loc>
     <lastmod>2026-09-09T03:52:39.768Z</lastmod>
+  </url><url>
+    <loc>https://lukebest.github.io/papers/boost-concurrent-host-hbm-llm-inference</loc>
+    <lastmod>2026-09-16T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/c2c-explorer-chip-to-chip-interconnect-llm</loc>
     <lastmod>2026-09-10T01:26:45.622Z</lastmod>
@@ -705,7 +708,7 @@
     <lastmod>2026-09-10T01:26:45.626Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/</loc>
-    <lastmod>2026-09-15T01:10:21.668Z</lastmod>
+    <lastmod>2026-09-16T01:08:41.914Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/katti-tsv-technology-roadmap-2010</loc>
     <lastmod>2026-09-09T03:52:39.768Z</lastmod>
@@ -760,6 +763,9 @@
   </url><url>
     <loc>https://lukebest.github.io/papers/panda-adaptive-prefetch-dataflow</loc>
     <lastmod>2026-09-10T01:26:45.630Z</lastmod>
+  </url><url>
+    <loc>https://lukebest.github.io/papers/pdd-cross-datacenter-prefill-decode-disaggregation</loc>
+    <lastmod>2026-09-16T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/phost-coflow-aware-packet-scheduling</loc>
     <lastmod>2026-09-10T01:26:45.630Z</lastmod>
@@ -830,8 +836,14 @@
     <loc>https://lukebest.github.io/papers/tpu-v4-optically-reconfigurable</loc>
     <lastmod>2026-09-09T03:52:38.680Z</lastmod>
   </url><url>
+    <loc>https://lukebest.github.io/papers/trillion-param-moe-hbf-memory-provisioning</loc>
+    <lastmod>2026-09-16T00:00:00.000Z</lastmod>
+  </url><url>
     <loc>https://lukebest.github.io/papers/understanding-inference-scaling-for-llms</loc>
     <lastmod>2026-09-10T01:26:45.630Z</lastmod>
+  </url><url>
+    <loc>https://lukebest.github.io/papers/unison-near-memory-scheduler-llm-agents</loc>
+    <lastmod>2026-09-16T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/venus-versatile-reconfigurable-accelerator</loc>
     <lastmod>2026-09-10T01:26:45.630Z</lastmod>
