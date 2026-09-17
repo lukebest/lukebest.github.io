@@ -10,61 +10,61 @@
     <link>https://lukebest.github.io/README</link>
     <guid>https://lukebest.github.io/README</guid>
     <description>About this OKF knowledge wiki</description>
-    <pubDate>Wed, 16 Sep 2026 01:10:35 GMT</pubDate>
+    <pubDate>Thu, 17 Sep 2026 01:05:47 GMT</pubDate>
   </item><item>
     <title>Schema</title>
     <link>https://lukebest.github.io/SCHEMA</link>
     <guid>https://lukebest.github.io/SCHEMA</guid>
     <description>OKF wiki schema and tag taxonomy</description>
-    <pubDate>Wed, 16 Sep 2026 01:10:35 GMT</pubDate>
+    <pubDate>Thu, 17 Sep 2026 01:05:47 GMT</pubDate>
   </item><item>
     <title>Update Log</title>
     <link>https://lukebest.github.io/log</link>
     <guid>https://lukebest.github.io/log</guid>
     <description>Bundle update history</description>
-    <pubDate>Wed, 16 Sep 2026 01:10:35 GMT</pubDate>
+    <pubDate>Thu, 17 Sep 2026 01:05:47 GMT</pubDate>
   </item><item>
     <title>AI Infra LLM Wiki</title>
     <link>https://lukebest.github.io/</link>
     <guid>https://lukebest.github.io/</guid>
     <description>Open Knowledge Format 知识库 — AI 基础设施、互连网络、晶圆级加速器与 LLM 推理系统</description>
-    <pubDate>Wed, 16 Sep 2026 01:10:35 GMT</pubDate>
+    <pubDate>Thu, 17 Sep 2026 01:05:47 GMT</pubDate>
   </item><item>
     <title>index</title>
     <link>https://lukebest.github.io/papers/</link>
     <guid>https://lukebest.github.io/papers/</guid>
-    <description>Paper Trillion-Parameter MoE in a Box: HBF Memory Provisioning - Huawei — 权重驻 HBF 后状态层 1.4–4.0 s⁻¹（vs HBM3e 33.3）；HBF×6 暴露 2.30 TB/s BOOST: Concurrent Host+HBM Access for LLM Inference - GT/NVIDIA/Stanford — Grace Hopper iso-batch TPOT +4.3%、高吞吐 +31%（vs prefetch +15%） PDD: Cross-Datacenter Prefill-D...</description>
-    <pubDate>Wed, 16 Sep 2026 01:08:41 GMT</pubDate>
+    <description>Paper PipeSwift: Pipeline Parallel Agentic Serving - 清华等 — JCT-aware PP+MTP；vs SGLang EP 1.21–1.45×、vs vLLM PP2 1.60–2.33×、vs PD-disagg 1.14–1.54×（64 H800） Nested BSP - Huawei 廖恒 — Nested BSP + UB 端到端 peer；与 τ Scaling law 配对 Budgeted Express-Mesh - 清华 — traffic-aware express；高负载 Tornado Greedy vs Ra...</description>
+    <pubDate>Thu, 17 Sep 2026 01:05:06 GMT</pubDate>
   </item><item>
-    <title>CXL Tiered Memory</title>
-    <link>https://lukebest.github.io/concepts/cxl-tiered-memory</link>
-    <guid>https://lukebest.github.io/concepts/cxl-tiered-memory</guid>
-    <description>CXL 扩展内存分层 — 页迁移（M5）、解耦内存数据通路（CosMoS）、fabric（Aurelia）；把冷页/容量迁出本机 DRAM</description>
-    <pubDate>Wed, 16 Sep 2026 00:00:00 GMT</pubDate>
+    <title>AI Infra Supernode</title>
+    <link>https://lukebest.github.io/concepts/ai-infra-supernode</link>
+    <guid>https://lukebest.github.io/concepts/ai-infra-supernode</guid>
+    <description>超节点：高带宽低延迟互联的一组加速器；介于单卡与数据中心之间的协作域，规模由容量/延迟/功率/故障域共同决定</description>
+    <pubDate>Thu, 17 Sep 2026 00:00:00 GMT</pubDate>
   </item><item>
     <title>Disaggregated Inference</title>
     <link>https://lukebest.github.io/concepts/disaggregated-inference</link>
     <guid>https://lukebest.github.io/concepts/disaggregated-inference</guid>
     <description>解耦推理：attention/FFN 分离部署，独立扩展，batch 聚合</description>
-    <pubDate>Wed, 16 Sep 2026 00:00:00 GMT</pubDate>
+    <pubDate>Thu, 17 Sep 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>End-to-End Memory Data Path</title>
-    <link>https://lukebest.github.io/concepts/end-to-end-memory-data-path</link>
-    <guid>https://lukebest.github.io/concepts/end-to-end-memory-data-path</guid>
-    <description>存储篇综合（Day 17-22）：load 全路径 AMAT 层级展开、内存墙时间线、一致性决策树、同步成本量级、WSE 消除 off-chip 的简化路径</description>
-    <pubDate>Wed, 16 Sep 2026 00:00:00 GMT</pubDate>
+    <title>DNN Accelerator Systolic Dataflow</title>
+    <link>https://lukebest.github.io/concepts/dnn-accelerator-systolic-dataflow</link>
+    <guid>https://lukebest.github.io/concepts/dnn-accelerator-systolic-dataflow</guid>
+    <description>H&P Ch.7 DSA：脉动阵列、WS/OS/RS 数据复用、Roofline for NPU、TPU vs GPU vs WSE SLA；晶体管从控制迁到 MAC</description>
+    <pubDate>Thu, 17 Sep 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>Heterogeneous Inference</title>
-    <link>https://lukebest.github.io/concepts/heterogeneous-inference</link>
-    <guid>https://lukebest.github.io/concepts/heterogeneous-inference</guid>
-    <description>GPU + LPU 异构推理，分别优化 prefill/decode</description>
-    <pubDate>Wed, 16 Sep 2026 00:00:00 GMT</pubDate>
+    <title>Mesh and Torus Topology</title>
+    <link>https://lukebest.github.io/concepts/mesh-torus-topology</link>
+    <guid>https://lukebest.github.io/concepts/mesh-torus-topology</guid>
+    <description>2-D Mesh/Torus 与 k-ary n-cube：度/直径/二分带宽、Dally 维度-延迟-吞吐量权衡、XY 维序路由，及 WSE/Blue Gene 选型</description>
+    <pubDate>Thu, 17 Sep 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>BOOST: Concurrent Host+HBM Access for LLM Inference</title>
-    <link>https://lukebest.github.io/papers/boost-concurrent-host-hbm-llm-inference</link>
-    <guid>https://lukebest.github.io/papers/boost-concurrent-host-hbm-llm-inference</guid>
-    <description>GT/NVIDIA/Stanford — wave-aware 并发吃满 host+HBM；Grace Hopper 上 iso-batch TPOT +4.3%、高吞吐 +31%（vs prefetch +15%）</description>
-    <pubDate>Wed, 16 Sep 2026 00:00:00 GMT</pubDate>
+    <title>Topology Optimization Variants</title>
+    <link>https://lukebest.github.io/concepts/topology-optimization-variants</link>
+    <guid>https://lukebest.github.io/concepts/topology-optimization-variants</guid>
+    <description>拓扑变体与优化：Folding、Concentrated/Collapsed Mesh、Express Cube、Dally 1990 最优维度定律、高基数路由器；Compression vs Expansion 权衡</description>
+    <pubDate>Thu, 17 Sep 2026 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>

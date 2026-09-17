@@ -1,9 +1,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
     <loc>https://lukebest.github.io/README</loc>
-    <lastmod>2026-09-16T01:10:35.990Z</lastmod>
+    <lastmod>2026-09-17T01:05:47.317Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/SCHEMA</loc>
-    <lastmod>2026-09-16T01:10:35.990Z</lastmod>
+    <lastmod>2026-09-17T01:05:47.313Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/analyses/ai-infra-book/ch00-preface</loc>
     <lastmod>2026-09-14T00:00:00.000Z</lastmod>
@@ -72,7 +72,7 @@
     <lastmod>2026-09-09T03:52:37.840Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/ai-infra-supernode</loc>
-    <lastmod>2026-09-14T00:00:00.000Z</lastmod>
+    <lastmod>2026-09-17T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/aic-folded-multi-ring-noc</loc>
     <lastmod>2026-08-13T00:00:00.000Z</lastmod>
@@ -147,13 +147,13 @@
     <lastmod>2026-08-13T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/disaggregated-inference</loc>
-    <lastmod>2026-09-16T00:00:00.000Z</lastmod>
+    <lastmod>2026-09-17T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/distributed-gemm-algorithms</loc>
     <lastmod>2026-09-09T03:52:38.336Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/dnn-accelerator-systolic-dataflow</loc>
-    <lastmod>2026-09-15T00:00:00.000Z</lastmod>
+    <lastmod>2026-09-17T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/dram-memory-system</loc>
     <lastmod>2026-08-28T00:00:00.000Z</lastmod>
@@ -273,7 +273,7 @@
     <lastmod>2026-09-09T03:52:37.840Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/mesh-torus-topology</loc>
-    <lastmod>2026-08-13T00:00:00.000Z</lastmod>
+    <lastmod>2026-09-17T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/mhc</loc>
     <lastmod>2026-09-09T03:52:37.960Z</lastmod>
@@ -378,7 +378,7 @@
     <lastmod>2026-09-09T03:52:38.336Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/topology-optimization-variants</loc>
-    <lastmod>2026-08-13T00:00:00.000Z</lastmod>
+    <lastmod>2026-09-17T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/tpu-v4-ocs-reconfigurable-fabric</loc>
     <lastmod>2026-08-26T00:00:00.000Z</lastmod>
@@ -468,16 +468,16 @@
     <lastmod>2026-08-26T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/entities/unifiedbus-ub</loc>
-    <lastmod>2026-09-14T00:00:00.000Z</lastmod>
+    <lastmod>2026-09-17T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/entities/vera-etl256</loc>
     <lastmod>2026-09-09T03:52:38.588Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/</loc>
-    <lastmod>2026-09-16T01:10:35.970Z</lastmod>
+    <lastmod>2026-09-17T01:05:47.293Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/log</loc>
-    <lastmod>2026-09-16T01:10:35.990Z</lastmod>
+    <lastmod>2026-09-17T01:05:47.313Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/3dls-3d-logic-stacked-disaggregated-llm-serving</loc>
     <lastmod>2026-09-10T01:26:45.622Z</lastmod>
@@ -511,6 +511,9 @@
   </url><url>
     <loc>https://lukebest.github.io/papers/boost-concurrent-host-hbm-llm-inference</loc>
     <lastmod>2026-09-16T00:00:00.000Z</lastmod>
+  </url><url>
+    <loc>https://lukebest.github.io/papers/budgeted-express-mesh-noc</loc>
+    <lastmod>2026-09-17T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/c2c-explorer-chip-to-chip-interconnect-llm</loc>
     <lastmod>2026-09-10T01:26:45.622Z</lastmod>
@@ -708,7 +711,7 @@
     <lastmod>2026-09-10T01:26:45.626Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/</loc>
-    <lastmod>2026-09-16T01:08:41.914Z</lastmod>
+    <lastmod>2026-09-17T01:05:06.873Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/katti-tsv-technology-roadmap-2010</loc>
     <lastmod>2026-09-09T03:52:39.768Z</lastmod>
@@ -752,6 +755,9 @@
     <loc>https://lukebest.github.io/papers/near-optimal-wafer-scale-reduce</loc>
     <lastmod>2026-09-10T01:26:45.630Z</lastmod>
   </url><url>
+    <loc>https://lukebest.github.io/papers/nested-parallel-von-neumann-nested-bsp</loc>
+    <lastmod>2026-09-17T00:00:00.000Z</lastmod>
+  </url><url>
     <loc>https://lukebest.github.io/papers/network-design-wafer-scale-wow-hybrid-bonding</loc>
     <lastmod>2026-09-10T01:26:45.630Z</lastmod>
   </url><url>
@@ -769,6 +775,9 @@
   </url><url>
     <loc>https://lukebest.github.io/papers/phost-coflow-aware-packet-scheduling</loc>
     <lastmod>2026-09-10T01:26:45.630Z</lastmod>
+  </url><url>
+    <loc>https://lukebest.github.io/papers/pipeswift-pipeline-parallel-agentic-serving</loc>
+    <lastmod>2026-09-17T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/plasticine-reconfigurable-parallel-patterns</loc>
     <lastmod>2026-09-10T01:26:45.630Z</lastmod>
@@ -862,6 +871,9 @@
   </url><url>
     <loc>https://lukebest.github.io/papers/wafertrans-iommu-free-wafer-scale-gpu</loc>
     <lastmod>2026-09-10T00:00:00.000Z</lastmod>
+  </url><url>
+    <loc>https://lukebest.github.io/papers/world-model-hardware-accelerator-wmha</loc>
+    <lastmod>2026-09-17T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/summaries/arch-study-30d-knowledge-map</loc>
     <lastmod>2026-09-09T03:52:39.548Z</lastmod>
