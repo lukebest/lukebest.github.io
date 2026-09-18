@@ -1,9 +1,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
     <loc>https://lukebest.github.io/README</loc>
-    <lastmod>2026-09-17T01:05:47.317Z</lastmod>
+    <lastmod>2026-09-18T01:09:55.885Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/SCHEMA</loc>
-    <lastmod>2026-09-17T01:05:47.313Z</lastmod>
+    <lastmod>2026-09-18T01:09:55.881Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/analyses/ai-infra-book/ch00-preface</loc>
     <lastmod>2026-09-14T00:00:00.000Z</lastmod>
@@ -132,7 +132,7 @@
     <lastmod>2026-09-09T03:52:37.952Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/cxl-tiered-memory</loc>
-    <lastmod>2026-09-16T00:00:00.000Z</lastmod>
+    <lastmod>2026-09-18T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/cybernetics-and-scientific-methodology</loc>
     <lastmod>2026-09-09T03:52:37.936Z</lastmod>
@@ -147,7 +147,7 @@
     <lastmod>2026-08-13T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/disaggregated-inference</loc>
-    <lastmod>2026-09-17T00:00:00.000Z</lastmod>
+    <lastmod>2026-09-18T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/distributed-gemm-algorithms</loc>
     <lastmod>2026-09-09T03:52:38.336Z</lastmod>
@@ -171,7 +171,7 @@
     <lastmod>2026-09-09T03:52:38.332Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/end-to-end-memory-data-path</loc>
-    <lastmod>2026-09-16T00:00:00.000Z</lastmod>
+    <lastmod>2026-09-18T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/eyeriss-accelerator</loc>
     <lastmod>2026-09-09T03:52:38.336Z</lastmod>
@@ -474,10 +474,10 @@
     <lastmod>2026-09-09T03:52:38.588Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/</loc>
-    <lastmod>2026-09-17T01:05:47.293Z</lastmod>
+    <lastmod>2026-09-18T01:09:55.865Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/log</loc>
-    <lastmod>2026-09-17T01:05:47.313Z</lastmod>
+    <lastmod>2026-09-18T01:09:55.881Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/3dls-3d-logic-stacked-disaggregated-llm-serving</loc>
     <lastmod>2026-09-10T01:26:45.622Z</lastmod>
@@ -496,6 +496,9 @@
   </url><url>
     <loc>https://lukebest.github.io/papers/alibaba-hpn-datacenter-network-llm</loc>
     <lastmod>2026-09-10T01:26:45.622Z</lastmod>
+  </url><url>
+    <loc>https://lukebest.github.io/papers/ask-tool-progress-agent-kv-serving</loc>
+    <lastmod>2026-09-18T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/aurelia-cxl-fabric-tentacle</loc>
     <lastmod>2026-09-10T01:26:45.622Z</lastmod>
@@ -581,6 +584,9 @@
     <loc>https://lukebest.github.io/papers/eyeriss-energy-efficient-cnn-accelerator</loc>
     <lastmod>2026-09-10T01:26:45.626Z</lastmod>
   </url><url>
+    <loc>https://lukebest.github.io/papers/fathom-sparse-decoding-offloaded-kv</loc>
+    <lastmod>2026-09-18T00:00:00.000Z</lastmod>
+  </url><url>
     <loc>https://lukebest.github.io/papers/feather-reconfigurable-accelerator</loc>
     <lastmod>2026-09-10T01:26:45.626Z</lastmod>
   </url><url>
@@ -616,6 +622,9 @@
   </url><url>
     <loc>https://lukebest.github.io/papers/fovea-physical-implication-aware-wafer-scale-dse</loc>
     <lastmod>2026-09-10T01:26:45.626Z</lastmod>
+  </url><url>
+    <loc>https://lukebest.github.io/papers/hbflex-flexible-memory-hbf-llm</loc>
+    <lastmod>2026-09-18T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/hc2026-amd-helios-ualoe</loc>
     <lastmod>2026-08-26T00:00:00.000Z</lastmod>
@@ -711,7 +720,7 @@
     <lastmod>2026-09-10T01:26:45.626Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/</loc>
-    <lastmod>2026-09-17T01:05:06.873Z</lastmod>
+    <lastmod>2026-09-18T01:09:17.381Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/katti-tsv-technology-roadmap-2010</loc>
     <lastmod>2026-09-09T03:52:39.768Z</lastmod>

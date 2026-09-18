@@ -10,61 +10,61 @@
     <link>https://lukebest.github.io/README</link>
     <guid>https://lukebest.github.io/README</guid>
     <description>About this OKF knowledge wiki</description>
-    <pubDate>Thu, 17 Sep 2026 01:05:47 GMT</pubDate>
+    <pubDate>Fri, 18 Sep 2026 01:09:55 GMT</pubDate>
   </item><item>
     <title>Schema</title>
     <link>https://lukebest.github.io/SCHEMA</link>
     <guid>https://lukebest.github.io/SCHEMA</guid>
     <description>OKF wiki schema and tag taxonomy</description>
-    <pubDate>Thu, 17 Sep 2026 01:05:47 GMT</pubDate>
+    <pubDate>Fri, 18 Sep 2026 01:09:55 GMT</pubDate>
   </item><item>
     <title>Update Log</title>
     <link>https://lukebest.github.io/log</link>
     <guid>https://lukebest.github.io/log</guid>
     <description>Bundle update history</description>
-    <pubDate>Thu, 17 Sep 2026 01:05:47 GMT</pubDate>
+    <pubDate>Fri, 18 Sep 2026 01:09:55 GMT</pubDate>
   </item><item>
     <title>AI Infra LLM Wiki</title>
     <link>https://lukebest.github.io/</link>
     <guid>https://lukebest.github.io/</guid>
     <description>Open Knowledge Format 知识库 — AI 基础设施、互连网络、晶圆级加速器与 LLM 推理系统</description>
-    <pubDate>Thu, 17 Sep 2026 01:05:47 GMT</pubDate>
+    <pubDate>Fri, 18 Sep 2026 01:09:55 GMT</pubDate>
   </item><item>
     <title>index</title>
     <link>https://lukebest.github.io/papers/</link>
     <guid>https://lukebest.github.io/papers/</guid>
-    <description>Paper PipeSwift: Pipeline Parallel Agentic Serving - 清华等 — JCT-aware PP+MTP；vs SGLang EP 1.21–1.45×、vs vLLM PP2 1.60–2.33×、vs PD-disagg 1.14–1.54×（64 H800） Nested BSP - Huawei 廖恒 — Nested BSP + UB 端到端 peer；与 τ Scaling law 配对 Budgeted Express-Mesh - 清华 — traffic-aware express；高负载 Tornado Greedy vs Ra...</description>
-    <pubDate>Thu, 17 Sep 2026 01:05:06 GMT</pubDate>
+    <description>Paper HBFlex: Full-HBF Memory for Fine-Grained LLM KV - 北大/阿里 — 全 HBF；吞吐 vs FlashAccel 最高 1.58×、vs H3 最高 3.30× Ask the Tool: Progress-Aware KV for Agentic Serving - 清华/阿里云 — 工具 progress；p90 TTFT after tool vs LRU −20.7%/−20.8% Fathom: Per-Query Bit-Plane Scan for Offloaded KV - 独立 — host 卸荷；Qwen3-8B...</description>
+    <pubDate>Fri, 18 Sep 2026 01:09:17 GMT</pubDate>
   </item><item>
-    <title>AI Infra Supernode</title>
-    <link>https://lukebest.github.io/concepts/ai-infra-supernode</link>
-    <guid>https://lukebest.github.io/concepts/ai-infra-supernode</guid>
-    <description>超节点：高带宽低延迟互联的一组加速器；介于单卡与数据中心之间的协作域，规模由容量/延迟/功率/故障域共同决定</description>
-    <pubDate>Thu, 17 Sep 2026 00:00:00 GMT</pubDate>
+    <title>CXL Tiered Memory</title>
+    <link>https://lukebest.github.io/concepts/cxl-tiered-memory</link>
+    <guid>https://lukebest.github.io/concepts/cxl-tiered-memory</guid>
+    <description>CXL 扩展内存分层 — 页迁移（M5）、解耦内存数据通路（CosMoS）、fabric（Aurelia）；把冷页/容量迁出本机 DRAM</description>
+    <pubDate>Fri, 18 Sep 2026 00:00:00 GMT</pubDate>
   </item><item>
     <title>Disaggregated Inference</title>
     <link>https://lukebest.github.io/concepts/disaggregated-inference</link>
     <guid>https://lukebest.github.io/concepts/disaggregated-inference</guid>
     <description>解耦推理：attention/FFN 分离部署，独立扩展，batch 聚合</description>
-    <pubDate>Thu, 17 Sep 2026 00:00:00 GMT</pubDate>
+    <pubDate>Fri, 18 Sep 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>DNN Accelerator Systolic Dataflow</title>
-    <link>https://lukebest.github.io/concepts/dnn-accelerator-systolic-dataflow</link>
-    <guid>https://lukebest.github.io/concepts/dnn-accelerator-systolic-dataflow</guid>
-    <description>H&P Ch.7 DSA：脉动阵列、WS/OS/RS 数据复用、Roofline for NPU、TPU vs GPU vs WSE SLA；晶体管从控制迁到 MAC</description>
-    <pubDate>Thu, 17 Sep 2026 00:00:00 GMT</pubDate>
+    <title>End-to-End Memory Data Path</title>
+    <link>https://lukebest.github.io/concepts/end-to-end-memory-data-path</link>
+    <guid>https://lukebest.github.io/concepts/end-to-end-memory-data-path</guid>
+    <description>存储篇综合（Day 17-22）：load 全路径 AMAT 层级展开、内存墙时间线、一致性决策树、同步成本量级、WSE 消除 off-chip 的简化路径</description>
+    <pubDate>Fri, 18 Sep 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>Mesh and Torus Topology</title>
-    <link>https://lukebest.github.io/concepts/mesh-torus-topology</link>
-    <guid>https://lukebest.github.io/concepts/mesh-torus-topology</guid>
-    <description>2-D Mesh/Torus 与 k-ary n-cube：度/直径/二分带宽、Dally 维度-延迟-吞吐量权衡、XY 维序路由，及 WSE/Blue Gene 选型</description>
-    <pubDate>Thu, 17 Sep 2026 00:00:00 GMT</pubDate>
+    <title>Ask the Tool: Progress-Aware KV for Agentic Serving</title>
+    <link>https://lukebest.github.io/papers/ask-tool-progress-agent-kv-serving</link>
+    <guid>https://lukebest.github.io/papers/ask-tool-progress-agent-kv-serving</guid>
+    <description>清华/阿里云 — 工具 progress 指导 KV；p90 TTFT after tool vs LRU −20.7%/−20.8%；接近 oracle</description>
+    <pubDate>Fri, 18 Sep 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>Topology Optimization Variants</title>
-    <link>https://lukebest.github.io/concepts/topology-optimization-variants</link>
-    <guid>https://lukebest.github.io/concepts/topology-optimization-variants</guid>
-    <description>拓扑变体与优化：Folding、Concentrated/Collapsed Mesh、Express Cube、Dally 1990 最优维度定律、高基数路由器；Compression vs Expansion 权衡</description>
-    <pubDate>Thu, 17 Sep 2026 00:00:00 GMT</pubDate>
+    <title>Fathom: Per-Query Bit-Plane Scan for Offloaded KV</title>
+    <link>https://lukebest.github.io/papers/fathom-sparse-decoding-offloaded-kv</link>
+    <guid>https://lukebest.github.io/papers/fathom-sparse-decoding-offloaded-kv</guid>
+    <description>独立 — host 卸荷 KV 上 per-query 读深；Qwen3-8B@1M vs 136-bit 扫 1.67×；同 time 少读 18%</description>
+    <pubDate>Fri, 18 Sep 2026 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>
