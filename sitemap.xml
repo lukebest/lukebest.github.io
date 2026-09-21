@@ -1,9 +1,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
     <loc>https://lukebest.github.io/README</loc>
-    <lastmod>2026-09-18T01:09:55.885Z</lastmod>
+    <lastmod>2026-09-21T01:00:14.704Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/SCHEMA</loc>
-    <lastmod>2026-09-18T01:09:55.881Z</lastmod>
+    <lastmod>2026-09-21T01:00:14.704Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/analyses/ai-infra-book/ch00-preface</loc>
     <lastmod>2026-09-14T00:00:00.000Z</lastmod>
@@ -171,7 +171,7 @@
     <lastmod>2026-09-09T03:52:38.332Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/end-to-end-memory-data-path</loc>
-    <lastmod>2026-09-18T00:00:00.000Z</lastmod>
+    <lastmod>2026-09-21T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/eyeriss-accelerator</loc>
     <lastmod>2026-09-09T03:52:38.336Z</lastmod>
@@ -231,7 +231,7 @@
     <lastmod>2026-09-09T03:52:37.936Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/interconnection-network-design-space</loc>
-    <lastmod>2026-09-14T00:00:00.000Z</lastmod>
+    <lastmod>2026-09-21T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/interconnection-network-protocol-stack</loc>
     <lastmod>2026-09-14T00:00:00.000Z</lastmod>
@@ -273,7 +273,7 @@
     <lastmod>2026-09-09T03:52:37.840Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/mesh-torus-topology</loc>
-    <lastmod>2026-09-17T00:00:00.000Z</lastmod>
+    <lastmod>2026-09-21T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/mhc</loc>
     <lastmod>2026-09-09T03:52:37.960Z</lastmod>
@@ -474,10 +474,10 @@
     <lastmod>2026-09-09T03:52:38.588Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/</loc>
-    <lastmod>2026-09-18T01:09:55.865Z</lastmod>
+    <lastmod>2026-09-21T01:00:14.688Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/log</loc>
-    <lastmod>2026-09-18T01:09:55.881Z</lastmod>
+    <lastmod>2026-09-21T01:00:14.704Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/3dls-3d-logic-stacked-disaggregated-llm-serving</loc>
     <lastmod>2026-09-10T01:26:45.622Z</lastmod>
@@ -720,7 +720,7 @@
     <lastmod>2026-09-10T01:26:45.626Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/</loc>
-    <lastmod>2026-09-18T01:09:17.381Z</lastmod>
+    <lastmod>2026-09-21T01:00:00.317Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/katti-tsv-technology-roadmap-2010</loc>
     <lastmod>2026-09-09T03:52:39.768Z</lastmod>
@@ -748,6 +748,9 @@
   </url><url>
     <loc>https://lukebest.github.io/papers/megascale-infer-2504.02263</loc>
     <lastmod>2026-09-10T01:26:45.626Z</lastmod>
+  </url><url>
+    <loc>https://lukebest.github.io/papers/meshkv-noc-kv-cache-fabric</loc>
+    <lastmod>2026-09-21T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/mixed-precision-training</loc>
     <lastmod>2026-09-10T01:26:45.626Z</lastmod>

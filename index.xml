@@ -10,60 +10,60 @@
     <link>https://lukebest.github.io/README</link>
     <guid>https://lukebest.github.io/README</guid>
     <description>About this OKF knowledge wiki</description>
-    <pubDate>Fri, 18 Sep 2026 01:09:55 GMT</pubDate>
+    <pubDate>Mon, 21 Sep 2026 01:00:14 GMT</pubDate>
   </item><item>
     <title>Schema</title>
     <link>https://lukebest.github.io/SCHEMA</link>
     <guid>https://lukebest.github.io/SCHEMA</guid>
     <description>OKF wiki schema and tag taxonomy</description>
-    <pubDate>Fri, 18 Sep 2026 01:09:55 GMT</pubDate>
+    <pubDate>Mon, 21 Sep 2026 01:00:14 GMT</pubDate>
   </item><item>
     <title>Update Log</title>
     <link>https://lukebest.github.io/log</link>
     <guid>https://lukebest.github.io/log</guid>
     <description>Bundle update history</description>
-    <pubDate>Fri, 18 Sep 2026 01:09:55 GMT</pubDate>
+    <pubDate>Mon, 21 Sep 2026 01:00:14 GMT</pubDate>
   </item><item>
     <title>AI Infra LLM Wiki</title>
     <link>https://lukebest.github.io/</link>
     <guid>https://lukebest.github.io/</guid>
     <description>Open Knowledge Format 知识库 — AI 基础设施、互连网络、晶圆级加速器与 LLM 推理系统</description>
-    <pubDate>Fri, 18 Sep 2026 01:09:55 GMT</pubDate>
+    <pubDate>Mon, 21 Sep 2026 01:00:14 GMT</pubDate>
   </item><item>
     <title>index</title>
     <link>https://lukebest.github.io/papers/</link>
     <guid>https://lukebest.github.io/papers/</guid>
-    <description>Paper HBFlex: Full-HBF Memory for Fine-Grained LLM KV - 北大/阿里 — 全 HBF；吞吐 vs FlashAccel 最高 1.58×、vs H3 最高 3.30× Ask the Tool: Progress-Aware KV for Agentic Serving - 清华/阿里云 — 工具 progress；p90 TTFT after tool vs LRU −20.7%/−20.8% Fathom: Per-Query Bit-Plane Scan for Offloaded KV - 独立 — host 卸荷；Qwen3-8B...</description>
-    <pubDate>Fri, 18 Sep 2026 01:09:17 GMT</pubDate>
-  </item><item>
-    <title>CXL Tiered Memory</title>
-    <link>https://lukebest.github.io/concepts/cxl-tiered-memory</link>
-    <guid>https://lukebest.github.io/concepts/cxl-tiered-memory</guid>
-    <description>CXL 扩展内存分层 — 页迁移（M5）、解耦内存数据通路（CosMoS）、fabric（Aurelia）；把冷页/容量迁出本机 DRAM</description>
-    <pubDate>Fri, 18 Sep 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Disaggregated Inference</title>
-    <link>https://lukebest.github.io/concepts/disaggregated-inference</link>
-    <guid>https://lukebest.github.io/concepts/disaggregated-inference</guid>
-    <description>解耦推理：attention/FFN 分离部署，独立扩展，batch 聚合</description>
-    <pubDate>Fri, 18 Sep 2026 00:00:00 GMT</pubDate>
+    <description>Paper MeshKV: NoC KV Cache Fabric for Tiled Decode - UCLA/Columbia — 片上 KV NoC；流量最高 −58%、KV 利用率 2.1×、多流吞吐 1.9× HBFlex: Full-HBF Memory for Fine-Grained LLM KV - 北大/阿里 — 全 HBF；吞吐 vs FlashAccel 最高 1.58×、vs H3 最高 3.30× Ask the Tool: Progress-Aware KV for Agentic Serving - 清华/阿里云 — 工具 progress；p90 TTFT ...</description>
+    <pubDate>Mon, 21 Sep 2026 01:00:00 GMT</pubDate>
   </item><item>
     <title>End-to-End Memory Data Path</title>
     <link>https://lukebest.github.io/concepts/end-to-end-memory-data-path</link>
     <guid>https://lukebest.github.io/concepts/end-to-end-memory-data-path</guid>
     <description>存储篇综合（Day 17-22）：load 全路径 AMAT 层级展开、内存墙时间线、一致性决策树、同步成本量级、WSE 消除 off-chip 的简化路径</description>
-    <pubDate>Fri, 18 Sep 2026 00:00:00 GMT</pubDate>
+    <pubDate>Mon, 21 Sep 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>Ask the Tool: Progress-Aware KV for Agentic Serving</title>
-    <link>https://lukebest.github.io/papers/ask-tool-progress-agent-kv-serving</link>
-    <guid>https://lukebest.github.io/papers/ask-tool-progress-agent-kv-serving</guid>
-    <description>清华/阿里云 — 工具 progress 指导 KV；p90 TTFT after tool vs LRU −20.7%/−20.8%；接近 oracle</description>
-    <pubDate>Fri, 18 Sep 2026 00:00:00 GMT</pubDate>
+    <title>Interconnection Network Design Space</title>
+    <link>https://lukebest.github.io/concepts/interconnection-network-design-space</link>
+    <guid>https://lukebest.github.io/concepts/interconnection-network-design-space</guid>
+    <description>Dally & Towles 互连网络四层设计空间（应用→拓扑/路由/流控→微架构）、基本术语与三大应用域</description>
+    <pubDate>Mon, 21 Sep 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>Fathom: Per-Query Bit-Plane Scan for Offloaded KV</title>
-    <link>https://lukebest.github.io/papers/fathom-sparse-decoding-offloaded-kv</link>
-    <guid>https://lukebest.github.io/papers/fathom-sparse-decoding-offloaded-kv</guid>
-    <description>独立 — host 卸荷 KV 上 per-query 读深；Qwen3-8B@1M vs 136-bit 扫 1.67×；同 time 少读 18%</description>
+    <title>Mesh and Torus Topology</title>
+    <link>https://lukebest.github.io/concepts/mesh-torus-topology</link>
+    <guid>https://lukebest.github.io/concepts/mesh-torus-topology</guid>
+    <description>2-D Mesh/Torus 与 k-ary n-cube：度/直径/二分带宽、Dally 维度-延迟-吞吐量权衡、XY 维序路由，及 WSE/Blue Gene 选型</description>
+    <pubDate>Mon, 21 Sep 2026 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>MeshKV: NoC KV Cache Fabric for Tiled Decode</title>
+    <link>https://lukebest.github.io/papers/meshkv-noc-kv-cache-fabric</link>
+    <guid>https://lukebest.github.io/papers/meshkv-noc-kv-cache-fabric</guid>
+    <description>UCLA/Columbia — 片上 KV 当 NoC 流量；FPGA 8×8 互连流量最高 −58%、KV 利用率 2.1×、多流吞吐 1.9×</description>
+    <pubDate>Mon, 21 Sep 2026 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>CXL Tiered Memory</title>
+    <link>https://lukebest.github.io/concepts/cxl-tiered-memory</link>
+    <guid>https://lukebest.github.io/concepts/cxl-tiered-memory</guid>
+    <description>CXL 扩展内存分层 — 页迁移（M5）、解耦内存数据通路（CosMoS）、fabric（Aurelia）；把冷页/容量迁出本机 DRAM</description>
     <pubDate>Fri, 18 Sep 2026 00:00:00 GMT</pubDate>
   </item>
     </channel>
