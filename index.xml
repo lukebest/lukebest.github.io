@@ -10,61 +10,61 @@
     <link>https://lukebest.github.io/README</link>
     <guid>https://lukebest.github.io/README</guid>
     <description>About this OKF knowledge wiki</description>
-    <pubDate>Mon, 21 Sep 2026 01:00:14 GMT</pubDate>
-  </item><item>
-    <title>Schema</title>
-    <link>https://lukebest.github.io/SCHEMA</link>
-    <guid>https://lukebest.github.io/SCHEMA</guid>
-    <description>OKF wiki schema and tag taxonomy</description>
-    <pubDate>Mon, 21 Sep 2026 01:00:14 GMT</pubDate>
+    <pubDate>Tue, 22 Sep 2026 01:13:01 GMT</pubDate>
   </item><item>
     <title>Update Log</title>
     <link>https://lukebest.github.io/log</link>
     <guid>https://lukebest.github.io/log</guid>
     <description>Bundle update history</description>
-    <pubDate>Mon, 21 Sep 2026 01:00:14 GMT</pubDate>
+    <pubDate>Tue, 22 Sep 2026 01:13:01 GMT</pubDate>
+  </item><item>
+    <title>Schema</title>
+    <link>https://lukebest.github.io/SCHEMA</link>
+    <guid>https://lukebest.github.io/SCHEMA</guid>
+    <description>OKF wiki schema and tag taxonomy</description>
+    <pubDate>Tue, 22 Sep 2026 01:13:01 GMT</pubDate>
   </item><item>
     <title>AI Infra LLM Wiki</title>
     <link>https://lukebest.github.io/</link>
     <guid>https://lukebest.github.io/</guid>
     <description>Open Knowledge Format 知识库 — AI 基础设施、互连网络、晶圆级加速器与 LLM 推理系统</description>
-    <pubDate>Mon, 21 Sep 2026 01:00:14 GMT</pubDate>
+    <pubDate>Tue, 22 Sep 2026 01:13:01 GMT</pubDate>
+  </item><item>
+    <title>index</title>
+    <link>https://lukebest.github.io/concepts/</link>
+    <guid>https://lukebest.github.io/concepts/</guid>
+    <description>Concept 3D-Stacked AI Chip - 3D 堆叠 AI 芯片：TSV 垂直堆叠 DRAM bank 于 AI core 之上，分布式内存与专用总线带来带宽扩展与利用率新挑战 3D Stacking Technologies - 3D 集成三路线对垒：TSV-based (商业主流)、Monolithic (实验)、Hybrid Bonding (Cu-Cu 当代商业)；对 3D NoC 设计的根本含义对比 Adaptive Routing for NoC - D&amp;T Ch.6-7 自适应路由：最小/非最小、Valiant VRR、VC 与拥塞感知；Duato 逃逸子...</description>
+    <pubDate>Tue, 22 Sep 2026 01:11:52 GMT</pubDate>
   </item><item>
     <title>index</title>
     <link>https://lukebest.github.io/papers/</link>
     <guid>https://lukebest.github.io/papers/</guid>
-    <description>Paper MeshKV: NoC KV Cache Fabric for Tiled Decode - UCLA/Columbia — 片上 KV NoC；流量最高 −58%、KV 利用率 2.1×、多流吞吐 1.9× HBFlex: Full-HBF Memory for Fine-Grained LLM KV - 北大/阿里 — 全 HBF；吞吐 vs FlashAccel 最高 1.58×、vs H3 最高 3.30× Ask the Tool: Progress-Aware KV for Agentic Serving - 清华/阿里云 — 工具 progress；p90 TTFT ...</description>
-    <pubDate>Mon, 21 Sep 2026 01:00:00 GMT</pubDate>
+    <description>Paper CARDAN: Scratchpad MoE Multi-Engine Dataflow - UC Merced/Yotta — Trainium3；HBM read −26–50%；batch-1 1.15–1.31×、batch-16 1.70× Weave: Dynamic SM Scheduling for MoE Overlap - 上交/NUS/阿里 — 4×H100 EP4；MoE layer 2.89×、端到端 1.33×（摘要汇总） COMET: FPGA Packet Tracking for EC-RDMA WAN - 东北大学/Microsoft — Agi...</description>
+    <pubDate>Tue, 22 Sep 2026 01:08:18 GMT</pubDate>
   </item><item>
-    <title>End-to-End Memory Data Path</title>
-    <link>https://lukebest.github.io/concepts/end-to-end-memory-data-path</link>
-    <guid>https://lukebest.github.io/concepts/end-to-end-memory-data-path</guid>
-    <description>存储篇综合（Day 17-22）：load 全路径 AMAT 层级展开、内存墙时间线、一致性决策树、同步成本量级、WSE 消除 off-chip 的简化路径</description>
-    <pubDate>Mon, 21 Sep 2026 00:00:00 GMT</pubDate>
+    <title>DNN Accelerator Systolic Dataflow</title>
+    <link>https://lukebest.github.io/concepts/dnn-accelerator-systolic-dataflow</link>
+    <guid>https://lukebest.github.io/concepts/dnn-accelerator-systolic-dataflow</guid>
+    <description>H&P Ch.7 DSA：脉动阵列、WS/OS/RS 数据复用、Roofline for NPU、TPU vs GPU vs WSE SLA；晶体管从控制迁到 MAC</description>
+    <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>Interconnection Network Design Space</title>
-    <link>https://lukebest.github.io/concepts/interconnection-network-design-space</link>
-    <guid>https://lukebest.github.io/concepts/interconnection-network-design-space</guid>
-    <description>Dally & Towles 互连网络四层设计空间（应用→拓扑/路由/流控→微架构）、基本术语与三大应用域</description>
-    <pubDate>Mon, 21 Sep 2026 00:00:00 GMT</pubDate>
+    <title>DSec Sandbox Platform</title>
+    <link>https://lukebest.github.io/concepts/dsec-sandbox</link>
+    <guid>https://lukebest.github.io/concepts/dsec-sandbox</guid>
+    <description>DeepSeek Elastic Compute 沙箱平台，4 种执行基板，数十万并发</description>
+    <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>Mesh and Torus Topology</title>
-    <link>https://lukebest.github.io/concepts/mesh-torus-topology</link>
-    <guid>https://lukebest.github.io/concepts/mesh-torus-topology</guid>
-    <description>2-D Mesh/Torus 与 k-ary n-cube：度/直径/二分带宽、Dally 维度-延迟-吞吐量权衡、XY 维序路由，及 WSE/Blue Gene 选型</description>
-    <pubDate>Mon, 21 Sep 2026 00:00:00 GMT</pubDate>
+    <title>Interconnection Network Protocol Stack</title>
+    <link>https://lukebest.github.io/concepts/interconnection-network-protocol-stack</link>
+    <guid>https://lukebest.github.io/concepts/interconnection-network-protocol-stack</guid>
+    <description>互连网络四层协议栈（物理/链路/网络/传输）、Network Interface 边界，与 NoC 及 UB 的对应关系</description>
+    <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>MeshKV: NoC KV Cache Fabric for Tiled Decode</title>
-    <link>https://lukebest.github.io/papers/meshkv-noc-kv-cache-fabric</link>
-    <guid>https://lukebest.github.io/papers/meshkv-noc-kv-cache-fabric</guid>
-    <description>UCLA/Columbia — 片上 KV 当 NoC 流量；FPGA 8×8 互连流量最高 −58%、KV 利用率 2.1×、多流吞吐 1.9×</description>
-    <pubDate>Mon, 21 Sep 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>CXL Tiered Memory</title>
-    <link>https://lukebest.github.io/concepts/cxl-tiered-memory</link>
-    <guid>https://lukebest.github.io/concepts/cxl-tiered-memory</guid>
-    <description>CXL 扩展内存分层 — 页迁移（M5）、解耦内存数据通路（CosMoS）、fabric（Aurelia）；把冷页/容量迁出本机 DRAM</description>
-    <pubDate>Fri, 18 Sep 2026 00:00:00 GMT</pubDate>
+    <title>LLM Distributed Training Collectives</title>
+    <link>https://lukebest.github.io/concepts/llm-distributed-training-collectives</link>
+    <guid>https://lukebest.github.io/concepts/llm-distributed-training-collectives</guid>
+    <description>H&P Ch.6/10 语境下 LLM 训练集体通信：AllReduce/AllGather/All-to-All；Ring vs Tree；DP/TP/PP/EP 配方；通信-计算重叠与 WSE 片上 vs 跨 wafer</description>
+    <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>
