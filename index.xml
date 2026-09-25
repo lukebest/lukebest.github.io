@@ -10,61 +10,61 @@
     <link>https://lukebest.github.io/README</link>
     <guid>https://lukebest.github.io/README</guid>
     <description>About this OKF knowledge wiki</description>
-    <pubDate>Thu, 24 Sep 2026 01:14:15 GMT</pubDate>
+    <pubDate>Fri, 25 Sep 2026 01:03:12 GMT</pubDate>
   </item><item>
     <title>Schema</title>
     <link>https://lukebest.github.io/SCHEMA</link>
     <guid>https://lukebest.github.io/SCHEMA</guid>
     <description>OKF wiki schema and tag taxonomy</description>
-    <pubDate>Thu, 24 Sep 2026 01:14:15 GMT</pubDate>
+    <pubDate>Fri, 25 Sep 2026 01:03:12 GMT</pubDate>
   </item><item>
     <title>Update Log</title>
     <link>https://lukebest.github.io/log</link>
     <guid>https://lukebest.github.io/log</guid>
     <description>Bundle update history</description>
-    <pubDate>Thu, 24 Sep 2026 01:14:15 GMT</pubDate>
+    <pubDate>Fri, 25 Sep 2026 01:03:12 GMT</pubDate>
   </item><item>
     <title>AI Infra LLM Wiki</title>
     <link>https://lukebest.github.io/</link>
     <guid>https://lukebest.github.io/</guid>
     <description>Open Knowledge Format 知识库 — AI 基础设施、互连网络、晶圆级加速器与 LLM 推理系统</description>
-    <pubDate>Thu, 24 Sep 2026 01:14:15 GMT</pubDate>
-  </item><item>
-    <title>index</title>
-    <link>https://lukebest.github.io/concepts/</link>
-    <guid>https://lukebest.github.io/concepts/</guid>
-    <description>Concept 3D-Stacked AI Chip - 3D 堆叠 AI 芯片：TSV 垂直堆叠 DRAM bank 于 AI core 之上，分布式内存与专用总线带来带宽扩展与利用率新挑战 3D Stacking Technologies - 3D 集成三路线对垒：TSV-based (商业主流)、Monolithic (实验)、Hybrid Bonding (Cu-Cu 当代商业)；对 3D NoC 设计的根本含义对比 Adaptive Routing for NoC - D&amp;T Ch.6-7 自适应路由：最小/非最小、Valiant VRR、VC 与拥塞感知；Duato 逃逸子...</description>
-    <pubDate>Thu, 24 Sep 2026 01:13:48 GMT</pubDate>
+    <pubDate>Fri, 25 Sep 2026 01:03:12 GMT</pubDate>
   </item><item>
     <title>index</title>
     <link>https://lukebest.github.io/papers/</link>
     <guid>https://lukebest.github.io/papers/</guid>
-    <description>Paper HBF for Agentic LLM - 热集 HBM + 冷池 HBF；14 ms TBT、resume +≈0.1 ms、会话 24×；−7.6 kW/8-GPU D Elasticity for Agentic Serving - Meta — decode 租约弹性 prefill；吞吐 geomean +16.2–17.4%，高负载最高 +43.4% EMA: Elastic Memory Across GPUs - 伯克利 — 机内互借 HBM；吞吐最高 +52%，达 2× 容量静态的 96% Tessera: Dynamic Block-Sparse Attenti...</description>
-    <pubDate>Thu, 24 Sep 2026 01:13:13 GMT</pubDate>
+    <description>Paper Flux: OCS Optimal Scheduling for LLM Training - imec/Antwerp — vs RotorNet/BvN；iteration 最高 10×、峰值 NIC buffer &gt;1000× Co-Fabric: Unified xPU Interconnection - IEIT — 64-xPU 3D-Mesh vs RoCE；延迟 &gt;50%↓、带宽 2–5×、R1 +30–80%、成本 −80% HBF for Agentic LLM - 热集 HBM + 冷池 HBF；14 ms TBT、resume +≈0.1 ms、...</description>
+    <pubDate>Fri, 25 Sep 2026 01:02:50 GMT</pubDate>
   </item><item>
-    <title>Disaggregated Inference</title>
-    <link>https://lukebest.github.io/concepts/disaggregated-inference</link>
-    <guid>https://lukebest.github.io/concepts/disaggregated-inference</guid>
-    <description>解耦推理：attention/FFN 分离部署，独立扩展，batch 聚合</description>
-    <pubDate>Thu, 24 Sep 2026 00:00:00 GMT</pubDate>
+    <title>AI Infra Supernode</title>
+    <link>https://lukebest.github.io/concepts/ai-infra-supernode</link>
+    <guid>https://lukebest.github.io/concepts/ai-infra-supernode</guid>
+    <description>超节点：高带宽低延迟互联的一组加速器；介于单卡与数据中心之间的协作域，规模由容量/延迟/功率/故障域共同决定</description>
+    <pubDate>Fri, 25 Sep 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>End-to-End Memory Data Path</title>
-    <link>https://lukebest.github.io/concepts/end-to-end-memory-data-path</link>
-    <guid>https://lukebest.github.io/concepts/end-to-end-memory-data-path</guid>
-    <description>存储篇综合（Day 17-22）：load 全路径 AMAT 层级展开、内存墙时间线、一致性决策树、同步成本量级、WSE 消除 off-chip 的简化路径</description>
-    <pubDate>Thu, 24 Sep 2026 00:00:00 GMT</pubDate>
+    <title>Interconnection Network Design Space</title>
+    <link>https://lukebest.github.io/concepts/interconnection-network-design-space</link>
+    <guid>https://lukebest.github.io/concepts/interconnection-network-design-space</guid>
+    <description>Dally & Towles 互连网络四层设计空间（应用→拓扑/路由/流控→微架构）、基本术语与三大应用域</description>
+    <pubDate>Fri, 25 Sep 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>GPU SIMT Architecture</title>
-    <link>https://lukebest.github.io/concepts/gpu-simt-architecture</link>
-    <guid>https://lukebest.github.io/concepts/gpu-simt-architecture</guid>
-    <description>H&P Ch.4 GPU/SIMT：Warp 锁步、Warp Divergence、Occupancy 延迟隐藏、H100 内存层次、Tensor Core；与 CPU OoO / WSE MIMD 对比</description>
-    <pubDate>Thu, 24 Sep 2026 00:00:00 GMT</pubDate>
+    <title>Interconnection Network Protocol Stack</title>
+    <link>https://lukebest.github.io/concepts/interconnection-network-protocol-stack</link>
+    <guid>https://lukebest.github.io/concepts/interconnection-network-protocol-stack</guid>
+    <description>互连网络四层协议栈（物理/链路/网络/传输）、Network Interface 边界，与 NoC 及 UB 的对应关系</description>
+    <pubDate>Fri, 25 Sep 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>Prefill-Decode Resource Divergence</title>
-    <link>https://lukebest.github.io/concepts/prefill-decode-divergence</link>
-    <guid>https://lukebest.github.io/concepts/prefill-decode-divergence</guid>
-    <description>Prefill（compute-bound）vs Decode（bandwidth-bound）资源需求正交，>99% 时间在 decode</description>
-    <pubDate>Thu, 24 Sep 2026 00:00:00 GMT</pubDate>
+    <title>LLM Distributed Training Collectives</title>
+    <link>https://lukebest.github.io/concepts/llm-distributed-training-collectives</link>
+    <guid>https://lukebest.github.io/concepts/llm-distributed-training-collectives</guid>
+    <description>H&P Ch.6/10 语境下 LLM 训练集体通信：AllReduce/AllGather/All-to-All；Ring vs Tree；DP/TP/PP/EP 配方；通信-计算重叠与 WSE 片上 vs 跨 wafer</description>
+    <pubDate>Fri, 25 Sep 2026 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>NVLink NVSwitch Scale-Up Fabric</title>
+    <link>https://lukebest.github.io/concepts/nvlink-nvswitch-scale-up-fabric</link>
+    <guid>https://lukebest.github.io/concepts/nvlink-nvswitch-scale-up-fabric</guid>
+    <description>Hopper/Blackwell/Rubin NVLink + NVSwitch — 固定 fat-tree；NVLink 6 3.6 TB/s all-to-all；与 TPU v4 OCS 对照</description>
+    <pubDate>Fri, 25 Sep 2026 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>
