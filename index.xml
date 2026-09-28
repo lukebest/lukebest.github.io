@@ -10,61 +10,61 @@
     <link>https://lukebest.github.io/README</link>
     <guid>https://lukebest.github.io/README</guid>
     <description>About this OKF knowledge wiki</description>
-    <pubDate>Fri, 25 Sep 2026 01:03:12 GMT</pubDate>
-  </item><item>
-    <title>Schema</title>
-    <link>https://lukebest.github.io/SCHEMA</link>
-    <guid>https://lukebest.github.io/SCHEMA</guid>
-    <description>OKF wiki schema and tag taxonomy</description>
-    <pubDate>Fri, 25 Sep 2026 01:03:12 GMT</pubDate>
+    <pubDate>Mon, 28 Sep 2026 01:04:29 GMT</pubDate>
   </item><item>
     <title>Update Log</title>
     <link>https://lukebest.github.io/log</link>
     <guid>https://lukebest.github.io/log</guid>
     <description>Bundle update history</description>
-    <pubDate>Fri, 25 Sep 2026 01:03:12 GMT</pubDate>
+    <pubDate>Mon, 28 Sep 2026 01:04:29 GMT</pubDate>
+  </item><item>
+    <title>Schema</title>
+    <link>https://lukebest.github.io/SCHEMA</link>
+    <guid>https://lukebest.github.io/SCHEMA</guid>
+    <description>OKF wiki schema and tag taxonomy</description>
+    <pubDate>Mon, 28 Sep 2026 01:04:29 GMT</pubDate>
   </item><item>
     <title>AI Infra LLM Wiki</title>
     <link>https://lukebest.github.io/</link>
     <guid>https://lukebest.github.io/</guid>
     <description>Open Knowledge Format 知识库 — AI 基础设施、互连网络、晶圆级加速器与 LLM 推理系统</description>
-    <pubDate>Fri, 25 Sep 2026 01:03:12 GMT</pubDate>
+    <pubDate>Mon, 28 Sep 2026 01:04:29 GMT</pubDate>
   </item><item>
     <title>index</title>
     <link>https://lukebest.github.io/papers/</link>
     <guid>https://lukebest.github.io/papers/</guid>
-    <description>Paper Flux: OCS Optimal Scheduling for LLM Training - imec/Antwerp — vs RotorNet/BvN；iteration 最高 10×、峰值 NIC buffer &gt;1000× Co-Fabric: Unified xPU Interconnection - IEIT — 64-xPU 3D-Mesh vs RoCE；延迟 &gt;50%↓、带宽 2–5×、R1 +30–80%、成本 −80% HBF for Agentic LLM - 热集 HBM + 冷池 HBF；14 ms TBT、resume +≈0.1 ms、...</description>
-    <pubDate>Fri, 25 Sep 2026 01:02:50 GMT</pubDate>
+    <description>Paper HBF-Sim: Extensible HBF Simulator for GPU Memory - 华东师大/上海创智 — 媒体吞吐最高 15.94×；page-service 放大 −41.9%；条带化 kernel 最高 3.94× HeteroReason: FPGA–GPU Speculative Reasoning - Imperial/清华/Bristol — MICRO’26；延迟 1.01–1.42×、能效 1.25–1.57×；回退最高 +4.2% When Fancy Eviction Fails: Prefix-Cache Replacement - Har...</description>
+    <pubDate>Mon, 28 Sep 2026 01:00:33 GMT</pubDate>
   </item><item>
-    <title>AI Infra Supernode</title>
-    <link>https://lukebest.github.io/concepts/ai-infra-supernode</link>
-    <guid>https://lukebest.github.io/concepts/ai-infra-supernode</guid>
-    <description>超节点：高带宽低延迟互联的一组加速器；介于单卡与数据中心之间的协作域，规模由容量/延迟/功率/故障域共同决定</description>
-    <pubDate>Fri, 25 Sep 2026 00:00:00 GMT</pubDate>
+    <title>Disaggregated Inference</title>
+    <link>https://lukebest.github.io/concepts/disaggregated-inference</link>
+    <guid>https://lukebest.github.io/concepts/disaggregated-inference</guid>
+    <description>解耦推理：attention/FFN 分离部署，独立扩展，batch 聚合</description>
+    <pubDate>Mon, 28 Sep 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>Interconnection Network Design Space</title>
-    <link>https://lukebest.github.io/concepts/interconnection-network-design-space</link>
-    <guid>https://lukebest.github.io/concepts/interconnection-network-design-space</guid>
-    <description>Dally & Towles 互连网络四层设计空间（应用→拓扑/路由/流控→微架构）、基本术语与三大应用域</description>
-    <pubDate>Fri, 25 Sep 2026 00:00:00 GMT</pubDate>
+    <title>DSpark Speculative Decoding</title>
+    <link>https://lukebest.github.io/concepts/dspark-speculative-decoding</link>
+    <guid>https://lukebest.github.io/concepts/dspark-speculative-decoding</guid>
+    <description>DeepSeek 半自回归 speculative decoding：并行 DFlash backbone + Markov sequential head、confidence-scheduled 负载感知 verify，V4 生产 +60–85% 单用户速度</description>
+    <pubDate>Mon, 28 Sep 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>Interconnection Network Protocol Stack</title>
-    <link>https://lukebest.github.io/concepts/interconnection-network-protocol-stack</link>
-    <guid>https://lukebest.github.io/concepts/interconnection-network-protocol-stack</guid>
-    <description>互连网络四层协议栈（物理/链路/网络/传输）、Network Interface 边界，与 NoC 及 UB 的对应关系</description>
-    <pubDate>Fri, 25 Sep 2026 00:00:00 GMT</pubDate>
+    <title>End-to-End Memory Data Path</title>
+    <link>https://lukebest.github.io/concepts/end-to-end-memory-data-path</link>
+    <guid>https://lukebest.github.io/concepts/end-to-end-memory-data-path</guid>
+    <description>存储篇综合（Day 17-22）：load 全路径 AMAT 层级展开、内存墙时间线、一致性决策树、同步成本量级、WSE 消除 off-chip 的简化路径</description>
+    <pubDate>Mon, 28 Sep 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>LLM Distributed Training Collectives</title>
-    <link>https://lukebest.github.io/concepts/llm-distributed-training-collectives</link>
-    <guid>https://lukebest.github.io/concepts/llm-distributed-training-collectives</guid>
-    <description>H&P Ch.6/10 语境下 LLM 训练集体通信：AllReduce/AllGather/All-to-All；Ring vs Tree；DP/TP/PP/EP 配方；通信-计算重叠与 WSE 片上 vs 跨 wafer</description>
-    <pubDate>Fri, 25 Sep 2026 00:00:00 GMT</pubDate>
+    <title>Heterogeneous Inference</title>
+    <link>https://lukebest.github.io/concepts/heterogeneous-inference</link>
+    <guid>https://lukebest.github.io/concepts/heterogeneous-inference</guid>
+    <description>GPU + LPU 异构推理，分别优化 prefill/decode</description>
+    <pubDate>Mon, 28 Sep 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>NVLink NVSwitch Scale-Up Fabric</title>
-    <link>https://lukebest.github.io/concepts/nvlink-nvswitch-scale-up-fabric</link>
-    <guid>https://lukebest.github.io/concepts/nvlink-nvswitch-scale-up-fabric</guid>
-    <description>Hopper/Blackwell/Rubin NVLink + NVSwitch — 固定 fat-tree；NVLink 6 3.6 TB/s all-to-all；与 TPU v4 OCS 对照</description>
-    <pubDate>Fri, 25 Sep 2026 00:00:00 GMT</pubDate>
+    <title>Memory Hierarchy and Cache</title>
+    <link>https://lukebest.github.io/concepts/memory-hierarchy-cache</link>
+    <guid>https://lukebest.github.io/concepts/memory-hierarchy-cache</guid>
+    <description>内存墙、存储层次、Cache 映射与 3C 模型、AMAT 优化框架、与 WSE SRAM-only 设计的对比</description>
+    <pubDate>Mon, 28 Sep 2026 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>
