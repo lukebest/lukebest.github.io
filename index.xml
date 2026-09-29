@@ -10,61 +10,61 @@
     <link>https://lukebest.github.io/README</link>
     <guid>https://lukebest.github.io/README</guid>
     <description>About this OKF knowledge wiki</description>
-    <pubDate>Mon, 28 Sep 2026 01:04:29 GMT</pubDate>
+    <pubDate>Tue, 29 Sep 2026 01:07:30 GMT</pubDate>
   </item><item>
     <title>Update Log</title>
     <link>https://lukebest.github.io/log</link>
     <guid>https://lukebest.github.io/log</guid>
     <description>Bundle update history</description>
-    <pubDate>Mon, 28 Sep 2026 01:04:29 GMT</pubDate>
+    <pubDate>Tue, 29 Sep 2026 01:07:30 GMT</pubDate>
   </item><item>
     <title>Schema</title>
     <link>https://lukebest.github.io/SCHEMA</link>
     <guid>https://lukebest.github.io/SCHEMA</guid>
     <description>OKF wiki schema and tag taxonomy</description>
-    <pubDate>Mon, 28 Sep 2026 01:04:29 GMT</pubDate>
+    <pubDate>Tue, 29 Sep 2026 01:07:30 GMT</pubDate>
   </item><item>
     <title>AI Infra LLM Wiki</title>
     <link>https://lukebest.github.io/</link>
     <guid>https://lukebest.github.io/</guid>
     <description>Open Knowledge Format 知识库 — AI 基础设施、互连网络、晶圆级加速器与 LLM 推理系统</description>
-    <pubDate>Mon, 28 Sep 2026 01:04:29 GMT</pubDate>
+    <pubDate>Tue, 29 Sep 2026 01:07:30 GMT</pubDate>
   </item><item>
     <title>index</title>
     <link>https://lukebest.github.io/papers/</link>
     <guid>https://lukebest.github.io/papers/</guid>
-    <description>Paper HBF-Sim: Extensible HBF Simulator for GPU Memory - 华东师大/上海创智 — 媒体吞吐最高 15.94×；page-service 放大 −41.9%；条带化 kernel 最高 3.94× HeteroReason: FPGA–GPU Speculative Reasoning - Imperial/清华/Bristol — MICRO’26；延迟 1.01–1.42×、能效 1.25–1.57×；回退最高 +4.2% When Fancy Eviction Fails: Prefix-Cache Replacement - Har...</description>
-    <pubDate>Mon, 28 Sep 2026 01:00:33 GMT</pubDate>
+    <description>Paper EAServe: Encode-Aware Disaggregated MLLM Serving - UGA 等 — PACT’26；goodput vs Dynamo 最高 4.3×、vs vLLM 1.7×；A100 4.91 req/s DynBranch: Speculative Subgraph Reuse for Agentic Serving - NUS — 32B@4×H200；vs 最强基线延迟最高 −32%；vs 无复用底 −46–66% The KV Cache Is the New Memory Wall (SoK) - Singh — 五域 taxonom...</description>
+    <pubDate>Tue, 29 Sep 2026 01:05:54 GMT</pubDate>
   </item><item>
     <title>Disaggregated Inference</title>
     <link>https://lukebest.github.io/concepts/disaggregated-inference</link>
     <guid>https://lukebest.github.io/concepts/disaggregated-inference</guid>
     <description>解耦推理：attention/FFN 分离部署，独立扩展，batch 聚合</description>
-    <pubDate>Mon, 28 Sep 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>DSpark Speculative Decoding</title>
-    <link>https://lukebest.github.io/concepts/dspark-speculative-decoding</link>
-    <guid>https://lukebest.github.io/concepts/dspark-speculative-decoding</guid>
-    <description>DeepSeek 半自回归 speculative decoding：并行 DFlash backbone + Markov sequential head、confidence-scheduled 负载感知 verify，V4 生产 +60–85% 单用户速度</description>
-    <pubDate>Mon, 28 Sep 2026 00:00:00 GMT</pubDate>
+    <pubDate>Tue, 29 Sep 2026 00:00:00 GMT</pubDate>
   </item><item>
     <title>End-to-End Memory Data Path</title>
     <link>https://lukebest.github.io/concepts/end-to-end-memory-data-path</link>
     <guid>https://lukebest.github.io/concepts/end-to-end-memory-data-path</guid>
     <description>存储篇综合（Day 17-22）：load 全路径 AMAT 层级展开、内存墙时间线、一致性决策树、同步成本量级、WSE 消除 off-chip 的简化路径</description>
-    <pubDate>Mon, 28 Sep 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Heterogeneous Inference</title>
-    <link>https://lukebest.github.io/concepts/heterogeneous-inference</link>
-    <guid>https://lukebest.github.io/concepts/heterogeneous-inference</guid>
-    <description>GPU + LPU 异构推理，分别优化 prefill/decode</description>
-    <pubDate>Mon, 28 Sep 2026 00:00:00 GMT</pubDate>
+    <pubDate>Tue, 29 Sep 2026 00:00:00 GMT</pubDate>
   </item><item>
     <title>Memory Hierarchy and Cache</title>
     <link>https://lukebest.github.io/concepts/memory-hierarchy-cache</link>
     <guid>https://lukebest.github.io/concepts/memory-hierarchy-cache</guid>
     <description>内存墙、存储层次、Cache 映射与 3C 模型、AMAT 优化框架、与 WSE SRAM-only 设计的对比</description>
-    <pubDate>Mon, 28 Sep 2026 00:00:00 GMT</pubDate>
+    <pubDate>Tue, 29 Sep 2026 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>Prefill-Decode Resource Divergence</title>
+    <link>https://lukebest.github.io/concepts/prefill-decode-divergence</link>
+    <guid>https://lukebest.github.io/concepts/prefill-decode-divergence</guid>
+    <description>Prefill（compute-bound）vs Decode（bandwidth-bound）资源需求正交，>99% 时间在 decode</description>
+    <pubDate>Tue, 29 Sep 2026 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>DynBranch: Speculative Subgraph Reuse for Agentic Serving</title>
+    <link>https://lukebest.github.io/papers/dynbranch-speculative-subgraph-agentic</link>
+    <guid>https://lukebest.github.io/papers/dynbranch-speculative-subgraph-agentic</guid>
+    <description>NUS — Qwen3-32B@4×H200；相对最强基线均值延迟最高 −32%；相对无复用底 −46–66%</description>
+    <pubDate>Tue, 29 Sep 2026 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>
