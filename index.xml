@@ -10,61 +10,61 @@
     <link>https://lukebest.github.io/README</link>
     <guid>https://lukebest.github.io/README</guid>
     <description>About this OKF knowledge wiki</description>
-    <pubDate>Wed, 30 Sep 2026 00:58:59 GMT</pubDate>
+    <pubDate>Thu, 01 Oct 2026 00:59:11 GMT</pubDate>
   </item><item>
     <title>Schema</title>
     <link>https://lukebest.github.io/SCHEMA</link>
     <guid>https://lukebest.github.io/SCHEMA</guid>
     <description>OKF wiki schema and tag taxonomy</description>
-    <pubDate>Wed, 30 Sep 2026 00:58:59 GMT</pubDate>
-  </item><item>
-    <title>Update Log</title>
-    <link>https://lukebest.github.io/log</link>
-    <guid>https://lukebest.github.io/log</guid>
-    <description>Bundle update history</description>
-    <pubDate>Wed, 30 Sep 2026 00:58:59 GMT</pubDate>
+    <pubDate>Thu, 01 Oct 2026 00:59:11 GMT</pubDate>
   </item><item>
     <title>AI Infra LLM Wiki</title>
     <link>https://lukebest.github.io/</link>
     <guid>https://lukebest.github.io/</guid>
     <description>Open Knowledge Format 知识库 — AI 基础设施、互连网络、晶圆级加速器与 LLM 推理系统</description>
-    <pubDate>Wed, 30 Sep 2026 00:58:59 GMT</pubDate>
+    <pubDate>Thu, 01 Oct 2026 00:59:11 GMT</pubDate>
+  </item><item>
+    <title>Update Log</title>
+    <link>https://lukebest.github.io/log</link>
+    <guid>https://lukebest.github.io/log</guid>
+    <description>Bundle update history</description>
+    <pubDate>Thu, 01 Oct 2026 00:59:11 GMT</pubDate>
+  </item><item>
+    <title>FlashMoE Kernel</title>
+    <link>https://lukebest.github.io/concepts/flashmoe-kernel</link>
+    <guid>https://lukebest.github.io/concepts/flashmoe-kernel</guid>
+    <description>NeurIPS 2025 单 persistent GPU kernel 融合分布式 MoE：actor 调度、NVSHMEM 设备端 RDMA、payload-efficient dispatch；8×H100 相对 SOTA 最高 6× 延迟、5.7× 吞吐、93% SM 利用率</description>
+    <pubDate>Thu, 01 Oct 2026 00:58:12 GMT</pubDate>
   </item><item>
     <title>index</title>
     <link>https://lukebest.github.io/papers/</link>
     <guid>https://lukebest.github.io/papers/</guid>
-    <description>Paper SpecStream: Resource-Efficient Speculative Decoding with Streamed KV - 西交大 — A800；vs 卸荷基线吞吐 Qwen3 1.41× / InternLM2.5 1.32×；同 GPU 每 GPU 吞吐均值 +55.4% SPIMOE: Hybrid Sparse Reasoning MoE on Heterogeneous PIM - 北航 — ICCAD’26；vs A100 最高 8.35×；MoE FFN vs PIMoE 最高 3.33× RR-Evict: Round-Robin Prefix C...</description>
-    <pubDate>Wed, 30 Sep 2026 00:58:05 GMT</pubDate>
-  </item><item>
-    <title>RR-Evict: Round-Robin Prefix Cache Eviction for Agentic Serving</title>
-    <link>https://lukebest.github.io/papers/rrevict-prefix-cache-eviction-agentic</link>
-    <guid>https://lukebest.github.io/papers/rrevict-prefix-cache-eviction-agentic</guid>
-    <description>UCSD — SGLang@H100；vs LRU P99 TTFT 最高 −75.4%、P99 未缓存 prompt token 最高 −65.7%；vs completion-aware LRU 最高 −46.9%/−30.6%</description>
-    <pubDate>Wed, 30 Sep 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>SpecStream: Resource-Efficient Speculative Decoding with Streamed KV</title>
-    <link>https://lukebest.github.io/papers/specstream-resource-efficient-speculative-decoding</link>
-    <guid>https://lukebest.github.io/papers/specstream-resource-efficient-speculative-decoding</guid>
-    <description>西交大 — SGLang；A800；vs 卸荷基线吞吐 Qwen3 均值 1.41×、InternLM2.5 1.32×；同 GPU 相对分卡投机每 GPU 吞吐均值 +55.4%</description>
-    <pubDate>Wed, 30 Sep 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>SPIMOE: Hybrid Sparse Reasoning MoE on Heterogeneous PIM</title>
-    <link>https://lukebest.github.io/papers/spimoe-hybrid-sparsity-reasoning-moe-pim</link>
-    <guid>https://lukebest.github.io/papers/spimoe-hybrid-sparsity-reasoning-moe-pim</guid>
-    <description>北航 — ICCAD’26；SRAM-PIM+HBM-PIM；vs A100 端到端最高 8.35×（Qwen3-30B-A3B, b=8,s=256）；MoE FFN vs PIMoE 最高 3.33×</description>
-    <pubDate>Wed, 30 Sep 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Disaggregated Inference</title>
-    <link>https://lukebest.github.io/concepts/disaggregated-inference</link>
-    <guid>https://lukebest.github.io/concepts/disaggregated-inference</guid>
-    <description>解耦推理：attention/FFN 分离部署，独立扩展，batch 聚合</description>
-    <pubDate>Tue, 29 Sep 2026 00:00:00 GMT</pubDate>
+    <description>Paper Mixture-of-Kittens: MoE Megakernel for NVL72s - Stanford/Cursor — NVL72；vs 最强公开基线最高 2.37×；512 GPU 生产 e2e 1.41× Janus: Agentic Serving with SSD-Centric Sparse KV - 上交大等 — TTFT 最高 1.57–3.69×（均值 1.22–1.85×）；关键路径 SSD I/O &lt;6.5% Purlin: Separating Orchestration from Collectives Datapath - Stanfor...</description>
+    <pubDate>Thu, 01 Oct 2026 00:57:44 GMT</pubDate>
   </item><item>
     <title>End-to-End Memory Data Path</title>
     <link>https://lukebest.github.io/concepts/end-to-end-memory-data-path</link>
     <guid>https://lukebest.github.io/concepts/end-to-end-memory-data-path</guid>
     <description>存储篇综合（Day 17-22）：load 全路径 AMAT 层级展开、内存墙时间线、一致性决策树、同步成本量级、WSE 消除 off-chip 的简化路径</description>
-    <pubDate>Tue, 29 Sep 2026 00:00:00 GMT</pubDate>
+    <pubDate>Thu, 01 Oct 2026 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>LLM Distributed Training Collectives</title>
+    <link>https://lukebest.github.io/concepts/llm-distributed-training-collectives</link>
+    <guid>https://lukebest.github.io/concepts/llm-distributed-training-collectives</guid>
+    <description>H&P Ch.6/10 语境下 LLM 训练集体通信：AllReduce/AllGather/All-to-All；Ring vs Tree；DP/TP/PP/EP 配方；通信-计算重叠与 WSE 片上 vs 跨 wafer</description>
+    <pubDate>Thu, 01 Oct 2026 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>Memory Hierarchy and Cache</title>
+    <link>https://lukebest.github.io/concepts/memory-hierarchy-cache</link>
+    <guid>https://lukebest.github.io/concepts/memory-hierarchy-cache</guid>
+    <description>内存墙、存储层次、Cache 映射与 3C 模型、AMAT 优化框架、与 WSE SRAM-only 设计的对比</description>
+    <pubDate>Thu, 01 Oct 2026 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>NVLink NVSwitch Scale-Up Fabric</title>
+    <link>https://lukebest.github.io/concepts/nvlink-nvswitch-scale-up-fabric</link>
+    <guid>https://lukebest.github.io/concepts/nvlink-nvswitch-scale-up-fabric</guid>
+    <description>Hopper/Blackwell/Rubin NVLink + NVSwitch — 固定 fat-tree；NVLink 6 3.6 TB/s all-to-all；与 TPU v4 OCS 对照</description>
+    <pubDate>Thu, 01 Oct 2026 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>
