@@ -10,61 +10,61 @@
     <link>https://lukebest.github.io/README</link>
     <guid>https://lukebest.github.io/README</guid>
     <description>About this OKF knowledge wiki</description>
-    <pubDate>Fri, 02 Oct 2026 01:04:41 GMT</pubDate>
-  </item><item>
-    <title>Update Log</title>
-    <link>https://lukebest.github.io/log</link>
-    <guid>https://lukebest.github.io/log</guid>
-    <description>Bundle update history</description>
-    <pubDate>Fri, 02 Oct 2026 01:04:41 GMT</pubDate>
+    <pubDate>Mon, 05 Oct 2026 01:03:40 GMT</pubDate>
   </item><item>
     <title>Schema</title>
     <link>https://lukebest.github.io/SCHEMA</link>
     <guid>https://lukebest.github.io/SCHEMA</guid>
     <description>OKF wiki schema and tag taxonomy</description>
-    <pubDate>Fri, 02 Oct 2026 01:04:41 GMT</pubDate>
+    <pubDate>Mon, 05 Oct 2026 01:03:40 GMT</pubDate>
+  </item><item>
+    <title>Update Log</title>
+    <link>https://lukebest.github.io/log</link>
+    <guid>https://lukebest.github.io/log</guid>
+    <description>Bundle update history</description>
+    <pubDate>Mon, 05 Oct 2026 01:03:40 GMT</pubDate>
   </item><item>
     <title>AI Infra LLM Wiki</title>
     <link>https://lukebest.github.io/</link>
     <guid>https://lukebest.github.io/</guid>
     <description>Open Knowledge Format 知识库 — AI 基础设施、互连网络、晶圆级加速器与 LLM 推理系统</description>
-    <pubDate>Fri, 02 Oct 2026 01:04:41 GMT</pubDate>
+    <pubDate>Mon, 05 Oct 2026 01:03:40 GMT</pubDate>
   </item><item>
     <title>index</title>
     <link>https://lukebest.github.io/papers/</link>
     <guid>https://lukebest.github.io/papers/</guid>
-    <description>Paper Characterizing HBF for LLM Serving - Berkeley/Furiosa — HBM–HBF–host + buffered 调度；完成时间 −36.1–87.0%；能耗最高 −55.8%；寿命 4.77→14.82 年 ThunderEP: PCIe Consumer-GPU MoE EP - 首尔大学 — dispatch/combine vs NCCL 2.00×/1.53×；prefill 最高 1.66×、decode 最高 1.26× HAPMoE: Heterogeneity-Aware MoE Parallelism - 异构集群 ...</description>
-    <pubDate>Fri, 02 Oct 2026 01:03:33 GMT</pubDate>
-  </item><item>
-    <title>End-to-End Memory Data Path</title>
-    <link>https://lukebest.github.io/concepts/end-to-end-memory-data-path</link>
-    <guid>https://lukebest.github.io/concepts/end-to-end-memory-data-path</guid>
-    <description>存储篇综合（Day 17-22）：load 全路径 AMAT 层级展开、内存墙时间线、一致性决策树、同步成本量级、WSE 消除 off-chip 的简化路径</description>
-    <pubDate>Fri, 02 Oct 2026 00:00:00 GMT</pubDate>
+    <description>Paper MegaFlux: Skew-Resilient MoE Megakernels - Princeton+NVIDIA — megakernel 内运行时热专家复制；8×B200 前向/反向几何均值 1.45×/1.28×（峰值 2.14×/2.64×） GPU-Initiated Communication Dissected - Koç+fal — IBGDA vs CPU proxy；发起 0.7 µs/完成 4.0 µs；库额外最高 4.6 µs；~3000 连接 all-to-all 丢 59% 消息率 RapidMoE: Residual Offloading MoE ...</description>
+    <pubDate>Mon, 05 Oct 2026 01:02:46 GMT</pubDate>
   </item><item>
     <title>Heterogeneous Inference</title>
     <link>https://lukebest.github.io/concepts/heterogeneous-inference</link>
     <guid>https://lukebest.github.io/concepts/heterogeneous-inference</guid>
     <description>GPU + LPU 异构推理，分别优化 prefill/decode</description>
-    <pubDate>Fri, 02 Oct 2026 00:00:00 GMT</pubDate>
+    <pubDate>Mon, 05 Oct 2026 00:00:00 GMT</pubDate>
   </item><item>
     <title>LLM Distributed Training Collectives</title>
     <link>https://lukebest.github.io/concepts/llm-distributed-training-collectives</link>
     <guid>https://lukebest.github.io/concepts/llm-distributed-training-collectives</guid>
     <description>H&P Ch.6/10 语境下 LLM 训练集体通信：AllReduce/AllGather/All-to-All；Ring vs Tree；DP/TP/PP/EP 配方；通信-计算重叠与 WSE 片上 vs 跨 wafer</description>
-    <pubDate>Fri, 02 Oct 2026 00:00:00 GMT</pubDate>
+    <pubDate>Mon, 05 Oct 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>Memory Hierarchy and Cache</title>
-    <link>https://lukebest.github.io/concepts/memory-hierarchy-cache</link>
-    <guid>https://lukebest.github.io/concepts/memory-hierarchy-cache</guid>
-    <description>内存墙、存储层次、Cache 映射与 3C 模型、AMAT 优化框架、与 WSE SRAM-only 设计的对比</description>
-    <pubDate>Fri, 02 Oct 2026 00:00:00 GMT</pubDate>
+    <title>MegaMoE Kernel (Expert Parallelism Overlap)</title>
+    <link>https://lukebest.github.io/concepts/megamoe-kernel</link>
+    <guid>https://lukebest.github.io/concepts/megamoe-kernel</guid>
+    <description>MoE 专家并行 mega-kernel，wave-based 通信计算全重叠</description>
+    <pubDate>Mon, 05 Oct 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>Characterizing High Bandwidth Flash for LLM Serving</title>
-    <link>https://lukebest.github.io/papers/characterizing-hbf-llm-serving</link>
-    <guid>https://lukebest.github.io/papers/characterizing-hbf-llm-serving</guid>
-    <description>Berkeley/Furiosa — HBM–HBF–host 分层 + buffered 调度；完成时间相对 HBM-only 最高 −36.1–87.0%；能效最高 −55.8%；寿命 4.77→14.82 年</description>
-    <pubDate>Fri, 02 Oct 2026 00:00:00 GMT</pubDate>
+    <title>Network Interface and System-Level Design</title>
+    <link>https://lukebest.github.io/concepts/network-interface-and-system-design</link>
+    <guid>https://lukebest.github.io/concepts/network-interface-and-system-design</guid>
+    <description>Dally & Towles Ch.13–14 — NI 翻译官；End-to-End；服务模型；流控 vs 拥塞控制；Max-Min Fairness；开环/闭环</description>
+    <pubDate>Mon, 05 Oct 2026 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>GPU-Initiated Communication: Dissecting Down to the Bone</title>
+    <link>https://lukebest.github.io/papers/gpu-initiated-communication-dissected</link>
+    <guid>https://lukebest.github.io/papers/gpu-initiated-communication-dissected</guid>
+    <description>Koç+fal — GPU–NIC 边界剖析 IBGDA vs CPU proxy；最小 GPU 路径发起 0.7 µs、完成 4.0 µs，库额外最高 4.6 µs；与 bulk 共享队列延迟升 1–3 个数量级；~3000 连接时 all-to-all 丢 59% NIC 消息率</description>
+    <pubDate>Mon, 05 Oct 2026 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>
