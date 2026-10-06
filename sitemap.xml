@@ -1,9 +1,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
     <loc>https://lukebest.github.io/README</loc>
-    <lastmod>2026-10-05T01:03:40.955Z</lastmod>
+    <lastmod>2026-10-06T01:08:09.050Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/SCHEMA</loc>
-    <lastmod>2026-10-05T01:03:40.955Z</lastmod>
+    <lastmod>2026-10-06T01:08:09.046Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/analyses/ai-infra-book/ch00-preface</loc>
     <lastmod>2026-09-14T00:00:00.000Z</lastmod>
@@ -147,7 +147,7 @@
     <lastmod>2026-08-13T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/disaggregated-inference</loc>
-    <lastmod>2026-09-29T00:00:00.000Z</lastmod>
+    <lastmod>2026-10-06T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/distributed-gemm-algorithms</loc>
     <lastmod>2026-10-02T10:15:08.203Z</lastmod>
@@ -195,7 +195,7 @@
     <lastmod>2026-10-02T10:15:08.203Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/flattened-butterfly-topology</loc>
-    <lastmod>2026-10-02T10:15:08.203Z</lastmod>
+    <lastmod>2026-10-06T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/flow-control-fundamentals</loc>
     <lastmod>2026-10-02T10:15:08.203Z</lastmod>
@@ -210,7 +210,7 @@
     <lastmod>2026-09-24T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/heterogeneous-inference</loc>
-    <lastmod>2026-10-05T00:00:00.000Z</lastmod>
+    <lastmod>2026-10-06T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/high-radix-clos-adaptive-routing</loc>
     <lastmod>2026-10-02T10:15:09.735Z</lastmod>
@@ -231,7 +231,7 @@
     <lastmod>2026-10-02T10:15:09.735Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/interconnection-network-design-space</loc>
-    <lastmod>2026-09-25T00:00:00.000Z</lastmod>
+    <lastmod>2026-10-06T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/interconnection-network-protocol-stack</loc>
     <lastmod>2026-09-25T00:00:00.000Z</lastmod>
@@ -252,7 +252,7 @@
     <lastmod>2026-08-13T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/llm-distributed-training-collectives</loc>
-    <lastmod>2026-10-05T00:00:00.000Z</lastmod>
+    <lastmod>2026-10-06T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/lpu-architecture</loc>
     <lastmod>2026-10-02T10:15:09.727Z</lastmod>
@@ -474,16 +474,19 @@
     <lastmod>2026-10-02T10:15:09.735Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/</loc>
-    <lastmod>2026-10-05T01:03:40.919Z</lastmod>
+    <lastmod>2026-10-06T01:08:09.022Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/log</loc>
-    <lastmod>2026-10-05T01:03:40.955Z</lastmod>
+    <lastmod>2026-10-06T01:08:09.050Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/3dls-3d-logic-stacked-disaggregated-llm-serving</loc>
     <lastmod>2026-10-02T10:15:15.535Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/aethereal-network-on-chip</loc>
     <lastmod>2026-10-02T10:15:09.947Z</lastmod>
+  </url><url>
+    <loc>https://lukebest.github.io/papers/afore-afd-expert-reconfiguration</loc>
+    <lastmod>2026-10-06T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/ahrr-agents-hls-chip-design</loc>
     <lastmod>2026-09-23T00:00:00.000Z</lastmod>
@@ -604,6 +607,9 @@
   </url><url>
     <loc>https://lukebest.github.io/papers/easerve-encode-aware-disaggregated-mllm</loc>
     <lastmod>2026-09-29T00:00:00.000Z</lastmod>
+  </url><url>
+    <loc>https://lukebest.github.io/papers/edgeagent-uma-multi-agent-edge-inference</loc>
+    <lastmod>2026-10-06T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/einsummable-multi-gpu-parallelism</loc>
     <lastmod>2026-09-07T00:00:00.000Z</lastmod>
@@ -774,7 +780,7 @@
     <lastmod>2026-10-02T10:15:10.035Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/</loc>
-    <lastmod>2026-10-05T01:02:46.759Z</lastmod>
+    <lastmod>2026-10-06T01:07:47.226Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/janus-agentic-ssd-sparse-kv</loc>
     <lastmod>2026-10-01T00:00:00.000Z</lastmod>
@@ -805,6 +811,9 @@
   </url><url>
     <loc>https://lukebest.github.io/papers/maia-200-sdla</loc>
     <lastmod>2026-08-27T00:00:00.000Z</lastmod>
+  </url><url>
+    <loc>https://lukebest.github.io/papers/mcm-gpu-divide-and-conquer-disaggregation</loc>
+    <lastmod>2026-10-06T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/megaflux-skew-resilient-moe-megakernels</loc>
     <lastmod>2026-10-05T00:00:00.000Z</lastmod>
@@ -868,6 +877,9 @@
   </url><url>
     <loc>https://lukebest.github.io/papers/rabenseifner-collective-reduction-operations</loc>
     <lastmod>2026-10-02T10:15:10.091Z</lastmod>
+  </url><url>
+    <loc>https://lukebest.github.io/papers/railwave-ep-rail-incast-scheduling</loc>
+    <lastmod>2026-10-06T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/rapidmoe-residual-offloading-moe-inference</loc>
     <lastmod>2026-10-05T00:00:00.000Z</lastmod>
