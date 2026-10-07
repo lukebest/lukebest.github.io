@@ -10,61 +10,61 @@
     <link>https://lukebest.github.io/README</link>
     <guid>https://lukebest.github.io/README</guid>
     <description>About this OKF knowledge wiki</description>
-    <pubDate>Tue, 06 Oct 2026 01:08:09 GMT</pubDate>
+    <pubDate>Wed, 07 Oct 2026 01:06:24 GMT</pubDate>
   </item><item>
     <title>Update Log</title>
     <link>https://lukebest.github.io/log</link>
     <guid>https://lukebest.github.io/log</guid>
     <description>Bundle update history</description>
-    <pubDate>Tue, 06 Oct 2026 01:08:09 GMT</pubDate>
+    <pubDate>Wed, 07 Oct 2026 01:06:24 GMT</pubDate>
   </item><item>
     <title>Schema</title>
     <link>https://lukebest.github.io/SCHEMA</link>
     <guid>https://lukebest.github.io/SCHEMA</guid>
     <description>OKF wiki schema and tag taxonomy</description>
-    <pubDate>Tue, 06 Oct 2026 01:08:09 GMT</pubDate>
+    <pubDate>Wed, 07 Oct 2026 01:06:24 GMT</pubDate>
   </item><item>
     <title>AI Infra LLM Wiki</title>
     <link>https://lukebest.github.io/</link>
     <guid>https://lukebest.github.io/</guid>
     <description>Open Knowledge Format 知识库 — AI 基础设施、互连网络、晶圆级加速器与 LLM 推理系统</description>
-    <pubDate>Tue, 06 Oct 2026 01:08:09 GMT</pubDate>
+    <pubDate>Wed, 07 Oct 2026 01:06:24 GMT</pubDate>
   </item><item>
     <title>index</title>
     <link>https://lukebest.github.io/papers/</link>
     <guid>https://lukebest.github.io/papers/</guid>
-    <description>Paper Divide and Conquer: MCM GPU Disaggregation - Cantabria — MCM GPU 扩展策略×拓扑 DSE；16-chiplet Torus/256 SM 性能 2.40×、能耗 −4.45×；Ring 在 64 chiplet 跌破单片 10% RailWave: EP Rail &amp; Incast Scheduling - 中山大学等 — DeepEP 下 RailBalance + 循环置换波次；GLM-4.5-Air 回放 P50 通信 H800 2.02–5.84×、H20 1.74–4.36× AFORE: AFD E...</description>
-    <pubDate>Tue, 06 Oct 2026 01:07:47 GMT</pubDate>
+    <description>Paper VLA Workload Characterization for Embodied AI - KAIST ASPLOS’27 — batch-1 闭环 VLA 刻画；动作张量维度定访存/计算受限；Orin 降频省能 24–32%；重叠执行 −56 pp / 3.9× / 5.1× 无 Pareto 最优 HiNa-MoE: CPU AMX MoE Inference - 国防科大 PACT’26 — AMX 非侵入 MoE 算子；FFN 最高 3.37×、端到端 decode 最高 2.09× LLM Inference Parallelism: Compute–Comm Tra...</description>
+    <pubDate>Wed, 07 Oct 2026 01:05:57 GMT</pubDate>
   </item><item>
-    <title>Disaggregated Inference</title>
-    <link>https://lukebest.github.io/concepts/disaggregated-inference</link>
-    <guid>https://lukebest.github.io/concepts/disaggregated-inference</guid>
-    <description>解耦推理：attention/FFN 分离部署，独立扩展，batch 聚合</description>
-    <pubDate>Tue, 06 Oct 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Flattened Butterfly 拓扑</title>
-    <link>https://lukebest.github.io/concepts/flattened-butterfly-topology</link>
-    <guid>https://lukebest.github.io/concepts/flattened-butterfly-topology</guid>
-    <description>Flattened Butterfly 片上拓扑：高基数路由器降低直径，concentration + bypass channel，2-hop 直径，38% 功耗降低</description>
-    <pubDate>Tue, 06 Oct 2026 00:00:00 GMT</pubDate>
+    <title>DRAM and Memory System</title>
+    <link>https://lukebest.github.io/concepts/dram-memory-system</link>
+    <guid>https://lukebest.github.io/concepts/dram-memory-system</guid>
+    <description>DRAM 访问时序与 Row Buffer、Channel/Bank 并行、DDR/HBM 带宽公式、内存墙与 Roofline Ridge Point、WSE 分布式 SRAM 对 HBM 的绕过</description>
+    <pubDate>Wed, 07 Oct 2026 00:00:00 GMT</pubDate>
   </item><item>
     <title>Heterogeneous Inference</title>
     <link>https://lukebest.github.io/concepts/heterogeneous-inference</link>
     <guid>https://lukebest.github.io/concepts/heterogeneous-inference</guid>
     <description>GPU + LPU 异构推理，分别优化 prefill/decode</description>
-    <pubDate>Tue, 06 Oct 2026 00:00:00 GMT</pubDate>
+    <pubDate>Wed, 07 Oct 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>Interconnection Network Design Space</title>
-    <link>https://lukebest.github.io/concepts/interconnection-network-design-space</link>
-    <guid>https://lukebest.github.io/concepts/interconnection-network-design-space</guid>
-    <description>Dally & Towles 互连网络四层设计空间（应用→拓扑/路由/流控→微架构）、基本术语与三大应用域</description>
-    <pubDate>Tue, 06 Oct 2026 00:00:00 GMT</pubDate>
+    <title>Parallelism Transition Point</title>
+    <link>https://lukebest.github.io/concepts/parallelism-transition-point</link>
+    <guid>https://lukebest.github.io/concepts/parallelism-transition-point</guid>
+    <description>并行度切换点：32B 是 DP→TP inflection，MoE 需 hybrid PP+TP</description>
+    <pubDate>Wed, 07 Oct 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>LLM Distributed Training Collectives</title>
-    <link>https://lukebest.github.io/concepts/llm-distributed-training-collectives</link>
-    <guid>https://lukebest.github.io/concepts/llm-distributed-training-collectives</guid>
-    <description>H&P Ch.6/10 语境下 LLM 训练集体通信：AllReduce/AllGather/All-to-All；Ring vs Tree；DP/TP/PP/EP 配方；通信-计算重叠与 WSE 片上 vs 跨 wafer</description>
-    <pubDate>Tue, 06 Oct 2026 00:00:00 GMT</pubDate>
+    <title>Prefill-Decode Resource Divergence</title>
+    <link>https://lukebest.github.io/concepts/prefill-decode-divergence</link>
+    <guid>https://lukebest.github.io/concepts/prefill-decode-divergence</guid>
+    <description>Prefill（compute-bound）vs Decode（bandwidth-bound）资源需求正交，>99% 时间在 decode</description>
+    <pubDate>Wed, 07 Oct 2026 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>HiNa-MoE: High-Performance, Non-Intrusive MoE Inference on CPUs with Matrix Engines</title>
+    <link>https://lukebest.github.io/papers/hina-moe-cpu-amx-moe-inference</link>
+    <guid>https://lukebest.github.io/papers/hina-moe-cpu-amx-moe-inference</guid>
+    <description>国防科大（PACT'26）— Intel AMX 上 MoE CPU 算子库：不改权重布局、页交错下 NUMA-aware 切分、decode MV→MM；FFN kernel 最高 3.37×、端到端 decode 最高 2.09×，可插拔到 IPEX/KTransformers</description>
+    <pubDate>Wed, 07 Oct 2026 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>
