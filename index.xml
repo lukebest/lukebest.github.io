@@ -10,61 +10,61 @@
     <link>https://lukebest.github.io/README</link>
     <guid>https://lukebest.github.io/README</guid>
     <description>About this OKF knowledge wiki</description>
-    <pubDate>Wed, 07 Oct 2026 01:06:24 GMT</pubDate>
+    <pubDate>Thu, 08 Oct 2026 01:00:11 GMT</pubDate>
   </item><item>
     <title>Update Log</title>
     <link>https://lukebest.github.io/log</link>
     <guid>https://lukebest.github.io/log</guid>
     <description>Bundle update history</description>
-    <pubDate>Wed, 07 Oct 2026 01:06:24 GMT</pubDate>
+    <pubDate>Thu, 08 Oct 2026 01:00:11 GMT</pubDate>
   </item><item>
     <title>Schema</title>
     <link>https://lukebest.github.io/SCHEMA</link>
     <guid>https://lukebest.github.io/SCHEMA</guid>
     <description>OKF wiki schema and tag taxonomy</description>
-    <pubDate>Wed, 07 Oct 2026 01:06:24 GMT</pubDate>
+    <pubDate>Thu, 08 Oct 2026 01:00:11 GMT</pubDate>
   </item><item>
     <title>AI Infra LLM Wiki</title>
     <link>https://lukebest.github.io/</link>
     <guid>https://lukebest.github.io/</guid>
     <description>Open Knowledge Format 知识库 — AI 基础设施、互连网络、晶圆级加速器与 LLM 推理系统</description>
-    <pubDate>Wed, 07 Oct 2026 01:06:24 GMT</pubDate>
+    <pubDate>Thu, 08 Oct 2026 01:00:11 GMT</pubDate>
   </item><item>
     <title>index</title>
     <link>https://lukebest.github.io/papers/</link>
     <guid>https://lukebest.github.io/papers/</guid>
-    <description>Paper VLA Workload Characterization for Embodied AI - KAIST ASPLOS’27 — batch-1 闭环 VLA 刻画；动作张量维度定访存/计算受限；Orin 降频省能 24–32%；重叠执行 −56 pp / 3.9× / 5.1× 无 Pareto 最优 HiNa-MoE: CPU AMX MoE Inference - 国防科大 PACT’26 — AMX 非侵入 MoE 算子；FFN 最高 3.37×、端到端 decode 最高 2.09× LLM Inference Parallelism: Compute–Comm Tra...</description>
-    <pubDate>Wed, 07 Oct 2026 01:05:57 GMT</pubDate>
+    <description>Paper HBF - SNU/KAIST/UIUC — agent harness 定 KV 寿命，短命进 HBM、长命进 HBF；HBF 寿命 vs HBM-first 1.19–3.13×（3.3–12.2 device-years） DynaCore: Shape-Adaptive Array + Disaggregated Quantization - Duke — 脉动 MEU 非对称重塑 + Split-K，prefill W8A8 / decode W4A16；TTFT vs FIGLUT/Planaria 3.50×/2.97×、TPOT 36.55×/8.02× T-CCL...</description>
+    <pubDate>Thu, 08 Oct 2026 00:59:48 GMT</pubDate>
   </item><item>
-    <title>DRAM and Memory System</title>
-    <link>https://lukebest.github.io/concepts/dram-memory-system</link>
-    <guid>https://lukebest.github.io/concepts/dram-memory-system</guid>
-    <description>DRAM 访问时序与 Row Buffer、Channel/Bank 并行、DDR/HBM 带宽公式、内存墙与 Roofline Ridge Point、WSE 分布式 SRAM 对 HBM 的绕过</description>
-    <pubDate>Wed, 07 Oct 2026 00:00:00 GMT</pubDate>
+    <title>M2N Communication</title>
+    <link>https://lukebest.github.io/concepts/m2n-communication</link>
+    <guid>https://lukebest.github.io/concepts/m2n-communication</guid>
+    <description>M2N 不对称通信模式，disaggregated inference 核心，4.2× NCCL 优化</description>
+    <pubDate>Thu, 08 Oct 2026 00:59:21 GMT</pubDate>
   </item><item>
-    <title>Heterogeneous Inference</title>
-    <link>https://lukebest.github.io/concepts/heterogeneous-inference</link>
-    <guid>https://lukebest.github.io/concepts/heterogeneous-inference</guid>
-    <description>GPU + LPU 异构推理，分别优化 prefill/decode</description>
-    <pubDate>Wed, 07 Oct 2026 00:00:00 GMT</pubDate>
+    <title>DNN Accelerator Systolic Dataflow</title>
+    <link>https://lukebest.github.io/concepts/dnn-accelerator-systolic-dataflow</link>
+    <guid>https://lukebest.github.io/concepts/dnn-accelerator-systolic-dataflow</guid>
+    <description>H&P Ch.7 DSA：脉动阵列、WS/OS/RS 数据复用、Roofline for NPU、TPU vs GPU vs WSE SLA；晶体管从控制迁到 MAC</description>
+    <pubDate>Thu, 08 Oct 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>Parallelism Transition Point</title>
-    <link>https://lukebest.github.io/concepts/parallelism-transition-point</link>
-    <guid>https://lukebest.github.io/concepts/parallelism-transition-point</guid>
-    <description>并行度切换点：32B 是 DP→TP inflection，MoE 需 hybrid PP+TP</description>
-    <pubDate>Wed, 07 Oct 2026 00:00:00 GMT</pubDate>
+    <title>End-to-End Memory Data Path</title>
+    <link>https://lukebest.github.io/concepts/end-to-end-memory-data-path</link>
+    <guid>https://lukebest.github.io/concepts/end-to-end-memory-data-path</guid>
+    <description>存储篇综合（Day 17-22）：load 全路径 AMAT 层级展开、内存墙时间线、一致性决策树、同步成本量级、WSE 消除 off-chip 的简化路径</description>
+    <pubDate>Thu, 08 Oct 2026 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>LLM Distributed Training Collectives</title>
+    <link>https://lukebest.github.io/concepts/llm-distributed-training-collectives</link>
+    <guid>https://lukebest.github.io/concepts/llm-distributed-training-collectives</guid>
+    <description>H&P Ch.6/10 语境下 LLM 训练集体通信：AllReduce/AllGather/All-to-All；Ring vs Tree；DP/TP/PP/EP 配方；通信-计算重叠与 WSE 片上 vs 跨 wafer</description>
+    <pubDate>Thu, 08 Oct 2026 00:00:00 GMT</pubDate>
   </item><item>
     <title>Prefill-Decode Resource Divergence</title>
     <link>https://lukebest.github.io/concepts/prefill-decode-divergence</link>
     <guid>https://lukebest.github.io/concepts/prefill-decode-divergence</guid>
     <description>Prefill（compute-bound）vs Decode（bandwidth-bound）资源需求正交，>99% 时间在 decode</description>
-    <pubDate>Wed, 07 Oct 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>HiNa-MoE: High-Performance, Non-Intrusive MoE Inference on CPUs with Matrix Engines</title>
-    <link>https://lukebest.github.io/papers/hina-moe-cpu-amx-moe-inference</link>
-    <guid>https://lukebest.github.io/papers/hina-moe-cpu-amx-moe-inference</guid>
-    <description>国防科大（PACT'26）— Intel AMX 上 MoE CPU 算子库：不改权重布局、页交错下 NUMA-aware 切分、decode MV→MM；FFN kernel 最高 3.37×、端到端 decode 最高 2.09×，可插拔到 IPEX/KTransformers</description>
-    <pubDate>Wed, 07 Oct 2026 00:00:00 GMT</pubDate>
+    <pubDate>Thu, 08 Oct 2026 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>
