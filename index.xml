@@ -10,61 +10,61 @@
     <link>https://lukebest.github.io/README</link>
     <guid>https://lukebest.github.io/README</guid>
     <description>About this OKF knowledge wiki</description>
-    <pubDate>Thu, 08 Oct 2026 01:00:11 GMT</pubDate>
-  </item><item>
-    <title>Update Log</title>
-    <link>https://lukebest.github.io/log</link>
-    <guid>https://lukebest.github.io/log</guid>
-    <description>Bundle update history</description>
-    <pubDate>Thu, 08 Oct 2026 01:00:11 GMT</pubDate>
+    <pubDate>Mon, 12 Oct 2026 01:02:37 GMT</pubDate>
   </item><item>
     <title>Schema</title>
     <link>https://lukebest.github.io/SCHEMA</link>
     <guid>https://lukebest.github.io/SCHEMA</guid>
     <description>OKF wiki schema and tag taxonomy</description>
-    <pubDate>Thu, 08 Oct 2026 01:00:11 GMT</pubDate>
+    <pubDate>Mon, 12 Oct 2026 01:02:37 GMT</pubDate>
+  </item><item>
+    <title>Update Log</title>
+    <link>https://lukebest.github.io/log</link>
+    <guid>https://lukebest.github.io/log</guid>
+    <description>Bundle update history</description>
+    <pubDate>Mon, 12 Oct 2026 01:02:37 GMT</pubDate>
   </item><item>
     <title>AI Infra LLM Wiki</title>
     <link>https://lukebest.github.io/</link>
     <guid>https://lukebest.github.io/</guid>
     <description>Open Knowledge Format 知识库 — AI 基础设施、互连网络、晶圆级加速器与 LLM 推理系统</description>
-    <pubDate>Thu, 08 Oct 2026 01:00:11 GMT</pubDate>
+    <pubDate>Mon, 12 Oct 2026 01:02:37 GMT</pubDate>
   </item><item>
     <title>index</title>
     <link>https://lukebest.github.io/papers/</link>
     <guid>https://lukebest.github.io/papers/</guid>
-    <description>Paper HBF - SNU/KAIST/UIUC — agent harness 定 KV 寿命，短命进 HBM、长命进 HBF；HBF 寿命 vs HBM-first 1.19–3.13×（3.3–12.2 device-years） DynaCore: Shape-Adaptive Array + Disaggregated Quantization - Duke — 脉动 MEU 非对称重塑 + Split-K，prefill W8A8 / decode W4A16；TTFT vs FIGLUT/Planaria 3.50×/2.97×、TPOT 36.55×/8.02× T-CCL...</description>
-    <pubDate>Thu, 08 Oct 2026 00:59:48 GMT</pubDate>
+    <description>Paper Ofan: Destination-Aware Switch Load Balancing - UC Berkeley/Technion/NVIDIA — 胖树上目的地无关的包喷洒会出现 Θ(√m) 排队；交换机目的地感知负载均衡 Ofan 做到 O(1)，P4/Tofino 可实现；Llama-3 405B FSDP2 CCT 膨胀降 16–39× Expert Coupling: Correlated Placement &amp; Token Shuffling - Zyphra — MoE 预训练早期路由已呈专家共现与跨层相关；相关专家同卡放置 + 下一层预测的 token...</description>
+    <pubDate>Mon, 12 Oct 2026 01:00:40 GMT</pubDate>
   </item><item>
-    <title>M2N Communication</title>
-    <link>https://lukebest.github.io/concepts/m2n-communication</link>
-    <guid>https://lukebest.github.io/concepts/m2n-communication</guid>
-    <description>M2N 不对称通信模式，disaggregated inference 核心，4.2× NCCL 优化</description>
-    <pubDate>Thu, 08 Oct 2026 00:59:21 GMT</pubDate>
-  </item><item>
-    <title>DNN Accelerator Systolic Dataflow</title>
-    <link>https://lukebest.github.io/concepts/dnn-accelerator-systolic-dataflow</link>
-    <guid>https://lukebest.github.io/concepts/dnn-accelerator-systolic-dataflow</guid>
-    <description>H&P Ch.7 DSA：脉动阵列、WS/OS/RS 数据复用、Roofline for NPU、TPU vs GPU vs WSE SLA；晶体管从控制迁到 MAC</description>
-    <pubDate>Thu, 08 Oct 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>End-to-End Memory Data Path</title>
-    <link>https://lukebest.github.io/concepts/end-to-end-memory-data-path</link>
-    <guid>https://lukebest.github.io/concepts/end-to-end-memory-data-path</guid>
-    <description>存储篇综合（Day 17-22）：load 全路径 AMAT 层级展开、内存墙时间线、一致性决策树、同步成本量级、WSE 消除 off-chip 的简化路径</description>
-    <pubDate>Thu, 08 Oct 2026 00:00:00 GMT</pubDate>
+    <title>Clos and Fat-Tree Topology</title>
+    <link>https://lukebest.github.io/concepts/clos-fat-tree-topology</link>
+    <guid>https://lukebest.github.io/concepts/clos-fat-tree-topology</guid>
+    <description>间接网络：终端/交换分离、Clos C(n,m,r) 无阻塞条件、Fat-Tree 代价等价与 Beneš RNB，及 InfiniBand/Jupiter 与 WSE 规模分界</description>
+    <pubDate>Mon, 12 Oct 2026 00:00:00 GMT</pubDate>
   </item><item>
     <title>LLM Distributed Training Collectives</title>
     <link>https://lukebest.github.io/concepts/llm-distributed-training-collectives</link>
     <guid>https://lukebest.github.io/concepts/llm-distributed-training-collectives</guid>
     <description>H&P Ch.6/10 语境下 LLM 训练集体通信：AllReduce/AllGather/All-to-All；Ring vs Tree；DP/TP/PP/EP 配方；通信-计算重叠与 WSE 片上 vs 跨 wafer</description>
-    <pubDate>Thu, 08 Oct 2026 00:00:00 GMT</pubDate>
+    <pubDate>Mon, 12 Oct 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>Prefill-Decode Resource Divergence</title>
-    <link>https://lukebest.github.io/concepts/prefill-decode-divergence</link>
-    <guid>https://lukebest.github.io/concepts/prefill-decode-divergence</guid>
-    <description>Prefill（compute-bound）vs Decode（bandwidth-bound）资源需求正交，>99% 时间在 decode</description>
-    <pubDate>Thu, 08 Oct 2026 00:00:00 GMT</pubDate>
+    <title>Memory Hierarchy and Cache</title>
+    <link>https://lukebest.github.io/concepts/memory-hierarchy-cache</link>
+    <guid>https://lukebest.github.io/concepts/memory-hierarchy-cache</guid>
+    <description>内存墙、存储层次、Cache 映射与 3C 模型、AMAT 优化框架、与 WSE SRAM-only 设计的对比</description>
+    <pubDate>Mon, 12 Oct 2026 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>CacheFit: The Rising Cost of Cache Replacement and Constraint-Driven Redesign of Last-Level Cache Replacement Policies</title>
+    <link>https://lukebest.github.io/papers/cachefit-cost-aware-llc-replacement</link>
+    <guid>https://lukebest.github.io/papers/cachefit-cost-aware-llc-replacement</guid>
+    <description>NC State — ChampSim + 电路级成本模型 HARCOM + LLM 提议策略，把面积/功耗/延迟预算放进 LLC 替换策略搜索目标；Fit-MPPPB 存储 −60.3%、静态功耗 −56.3%、IPC +1.1%</description>
+    <pubDate>Mon, 12 Oct 2026 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>Expert Coupling in MoE Pretraining: Reducing All-to-All Overhead with Correlated Placement and Token Shuffling</title>
+    <link>https://lukebest.github.io/papers/expert-coupling-moe-pretraining-all-to-all</link>
+    <guid>https://lukebest.github.io/papers/expert-coupling-moe-pretraining-all-to-all</guid>
+    <description>Zyphra — MoE 预训练早期路由已呈专家共现与跨层相关；相关专家同卡放置 + 下一层预测的 token 洗牌，MI300X 上 all-to-all 1.16–2.63×、step 最高 1.41×，不改路由与参数</description>
+    <pubDate>Mon, 12 Oct 2026 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>
