@@ -1,9 +1,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
     <loc>https://lukebest.github.io/README</loc>
-    <lastmod>2026-10-13T01:12:02.498Z</lastmod>
+    <lastmod>2026-10-14T01:08:49.325Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/SCHEMA</loc>
-    <lastmod>2026-10-13T01:12:02.494Z</lastmod>
+    <lastmod>2026-10-14T01:08:49.325Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/analyses/ai-infra-book/ch00-preface</loc>
     <lastmod>2026-09-14T00:00:00.000Z</lastmod>
@@ -165,13 +165,13 @@
     <lastmod>2026-09-22T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/dspark-speculative-decoding</loc>
-    <lastmod>2026-09-28T00:00:00.000Z</lastmod>
+    <lastmod>2026-10-14T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/duato-escape-vc-deadlock-free-routing</loc>
     <lastmod>2026-10-12T03:03:34.878Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/end-to-end-memory-data-path</loc>
-    <lastmod>2026-10-08T00:00:00.000Z</lastmod>
+    <lastmod>2026-10-14T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/eyeriss-accelerator</loc>
     <lastmod>2026-10-12T03:03:34.894Z</lastmod>
@@ -474,13 +474,16 @@
     <lastmod>2026-10-12T03:03:36.306Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/</loc>
-    <lastmod>2026-10-13T01:12:02.470Z</lastmod>
+    <lastmod>2026-10-14T01:08:49.301Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/log</loc>
-    <lastmod>2026-10-13T01:12:02.498Z</lastmod>
+    <lastmod>2026-10-14T01:08:49.325Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/3dls-3d-logic-stacked-disaggregated-llm-serving</loc>
     <lastmod>2026-10-12T03:03:41.494Z</lastmod>
+  </url><url>
+    <loc>https://lukebest.github.io/papers/adaptive-dhisparse-speculative-hierarchical-kv</loc>
+    <lastmod>2026-10-14T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/aethereal-network-on-chip</loc>
     <lastmod>2026-10-12T03:03:36.498Z</lastmod>
@@ -628,6 +631,9 @@
   </url><url>
     <loc>https://lukebest.github.io/papers/ema-elastic-memory-across-gpus</loc>
     <lastmod>2026-09-24T00:00:00.000Z</lastmod>
+  </url><url>
+    <loc>https://lukebest.github.io/papers/ember-uvm-oversubscription-discrete-gpu</loc>
+    <lastmod>2026-10-14T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/entwine-tiled-computation-fine-grained-gpu-comm</loc>
     <lastmod>2026-09-14T00:00:00.000Z</lastmod>
@@ -801,7 +807,7 @@
     <lastmod>2026-10-12T03:03:36.542Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/</loc>
-    <lastmod>2026-10-13T01:10:17.146Z</lastmod>
+    <lastmod>2026-10-14T01:08:30.053Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/janus-agentic-ssd-sparse-kv</loc>
     <lastmod>2026-10-01T00:00:00.000Z</lastmod>

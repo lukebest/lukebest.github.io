@@ -10,60 +10,60 @@
     <link>https://lukebest.github.io/README</link>
     <guid>https://lukebest.github.io/README</guid>
     <description>About this OKF knowledge wiki</description>
-    <pubDate>Tue, 13 Oct 2026 01:12:02 GMT</pubDate>
-  </item><item>
-    <title>Update Log</title>
-    <link>https://lukebest.github.io/log</link>
-    <guid>https://lukebest.github.io/log</guid>
-    <description>Bundle update history</description>
-    <pubDate>Tue, 13 Oct 2026 01:12:02 GMT</pubDate>
+    <pubDate>Wed, 14 Oct 2026 01:08:49 GMT</pubDate>
   </item><item>
     <title>Schema</title>
     <link>https://lukebest.github.io/SCHEMA</link>
     <guid>https://lukebest.github.io/SCHEMA</guid>
     <description>OKF wiki schema and tag taxonomy</description>
-    <pubDate>Tue, 13 Oct 2026 01:12:02 GMT</pubDate>
+    <pubDate>Wed, 14 Oct 2026 01:08:49 GMT</pubDate>
+  </item><item>
+    <title>Update Log</title>
+    <link>https://lukebest.github.io/log</link>
+    <guid>https://lukebest.github.io/log</guid>
+    <description>Bundle update history</description>
+    <pubDate>Wed, 14 Oct 2026 01:08:49 GMT</pubDate>
   </item><item>
     <title>AI Infra LLM Wiki</title>
     <link>https://lukebest.github.io/</link>
     <guid>https://lukebest.github.io/</guid>
     <description>Open Knowledge Format 知识库 — AI 基础设施、互连网络、晶圆级加速器与 LLM 推理系统</description>
-    <pubDate>Tue, 13 Oct 2026 01:12:02 GMT</pubDate>
+    <pubDate>Wed, 14 Oct 2026 01:08:49 GMT</pubDate>
   </item><item>
     <title>index</title>
     <link>https://lukebest.github.io/papers/</link>
     <guid>https://lukebest.github.io/papers/</guid>
-    <description>Paper CacheFlex: Software-Managed L2 Scratchpad for Wide Vectors - UW/Rutgers MICRO’26 — 私有 L2 部分 way 运行时转 SPM，ISA 扩展 + 双 LSQ；SVE VL=16 GEMM 几何均值 1.44×、访存能耗 −40%，整层 prefill 最高 1.78×，面积为 L2 的 2.02% PCM: Programmable Congestion Management for RDMA NICs - ETH/Broadcom/Microsoft — 可移植 signal/trigger/con...</description>
-    <pubDate>Tue, 13 Oct 2026 01:10:17 GMT</pubDate>
+    <description>Paper Ember: Practical UVM Oversubscription on Discrete GPUs - TUM — 分配先映射 host、GPU 硬件访问计数器挑热区上提、衰减批量回收；1.5× 超订比 UVM 快 6.8–10.6×，16 GB 封顶跑 Qwen 14B/32B 生成快 4.7–16×；GH200 上约 3.5× Adaptive DHiSparse: Speculative Decoding over Load-Adaptive KV Hierarchy - Umans AI — host 卸荷稀疏 KV 上接 DSpark/DFlash2，驻留随负载...</description>
+    <pubDate>Wed, 14 Oct 2026 01:08:30 GMT</pubDate>
+  </item><item>
+    <title>DSpark Speculative Decoding</title>
+    <link>https://lukebest.github.io/concepts/dspark-speculative-decoding</link>
+    <guid>https://lukebest.github.io/concepts/dspark-speculative-decoding</guid>
+    <description>DeepSeek 半自回归 speculative decoding：并行 DFlash backbone + Markov sequential head、confidence-scheduled 负载感知 verify，V4 生产 +60–85% 单用户速度</description>
+    <pubDate>Wed, 14 Oct 2026 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>End-to-End Memory Data Path</title>
+    <link>https://lukebest.github.io/concepts/end-to-end-memory-data-path</link>
+    <guid>https://lukebest.github.io/concepts/end-to-end-memory-data-path</guid>
+    <description>存储篇综合（Day 17-22）：load 全路径 AMAT 层级展开、内存墙时间线、一致性决策树、同步成本量级、WSE 消除 off-chip 的简化路径</description>
+    <pubDate>Wed, 14 Oct 2026 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>Adaptive DHiSparse: Speculative Decoding over a Load-Adaptive KV Hierarchy</title>
+    <link>https://lukebest.github.io/papers/adaptive-dhisparse-speculative-hierarchical-kv</link>
+    <guid>https://lukebest.github.io/papers/adaptive-dhisparse-speculative-hierarchical-kv</guid>
+    <description>Umans AI — 在 host 卸荷的分层稀疏 KV 上接入 DSpark/DFlash2 投机解码，并让 GPU 驻留历史随负载伸缩；B300、GLM-5.3 100K/C128 每块 decode GPU 793 tok/s（HiSparse 的 1.45×），同延迟约束下并发最高 4×；DeepSeek-V4.1-Flash 500K/C512 达常驻服务 1.85×</description>
+    <pubDate>Wed, 14 Oct 2026 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>Ember: Making Unified Virtual Memory Practical for Discrete-Memory GPUs</title>
+    <link>https://lukebest.github.io/papers/ember-uvm-oversubscription-discrete-gpu</link>
+    <guid>https://lukebest.github.io/papers/ember-uvm-oversubscription-discrete-gpu</guid>
+    <description>TUM — UVM 超订时缺页驱动放置把互连带宽浪费在搬页上；Ember 让分配先映射在 host、用 GPU 约 256 个硬件访问计数器挑热区上提、按衰减批量回收；1.5× 超订下比 UVM 快 6.8–10.6×，GPU 封顶 16 GB 跑 Qwen 14B/32B 生成快 4.7–16×</description>
+    <pubDate>Wed, 14 Oct 2026 00:00:00 GMT</pubDate>
   </item><item>
     <title>Memory Hierarchy and Cache</title>
     <link>https://lukebest.github.io/concepts/memory-hierarchy-cache</link>
     <guid>https://lukebest.github.io/concepts/memory-hierarchy-cache</guid>
     <description>内存墙、存储层次、Cache 映射与 3C 模型、AMAT 优化框架、与 WSE SRAM-only 设计的对比</description>
-    <pubDate>Tue, 13 Oct 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Network Interface and System-Level Design</title>
-    <link>https://lukebest.github.io/concepts/network-interface-and-system-design</link>
-    <guid>https://lukebest.github.io/concepts/network-interface-and-system-design</guid>
-    <description>Dally & Towles Ch.13–14 — NI 翻译官；End-to-End；服务模型；流控 vs 拥塞控制；Max-Min Fairness；开环/闭环</description>
-    <pubDate>Tue, 13 Oct 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Out-of-Order Execution</title>
-    <link>https://lukebest.github.io/concepts/out-of-order-execution</link>
-    <guid>https://lukebest.github.io/concepts/out-of-order-execution</guid>
-    <description>乱序执行：Tomasulo 算法、保留站、ROB 顺序提交、寄存器重命名与指令窗口 IPC 收益递减</description>
-    <pubDate>Tue, 13 Oct 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>PagedAttention and vLLM Serving</title>
-    <link>https://lukebest.github.io/concepts/pagedattention-vllm</link>
-    <guid>https://lukebest.github.io/concepts/pagedattention-vllm</guid>
-    <description>vLLM 服务系统的核心 KV cache 内存管理：借鉴 OS 虚拟内存与分页机制，将 KV cache 切为 fixed-size block 跨请求共享/重映射；解决 KV cache fragmentation 与不可共享</description>
-    <pubDate>Tue, 13 Oct 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Deploying RDMA for Large-Scale Inference and Training Workloads (ByteExpress)</title>
-    <link>https://lukebest.github.io/papers/byteexpress-rdma-deployment-inference-training</link>
-    <guid>https://lukebest.github.io/papers/byteexpress-rdma-deployment-inference-training</guid>
-    <description>字节跳动/复旦 — 参数服务器式推荐推理/训练里两年多的 RDMA 生产经验：RDMA 感知分配器+零拷贝、QP 复用、接收 credit、软件发送窗口、RPC 层恢复；推理 fetch 平均/P99 延迟 −35.7%/−43.7%、CPU −10.69%；训练只靠 DCQCN 时 P99 反而劣于 TCP，加软件窗口后 push P99 −74.0% 且无 PFC 暂停</description>
     <pubDate>Tue, 13 Oct 2026 00:00:00 GMT</pubDate>
   </item>
     </channel>
