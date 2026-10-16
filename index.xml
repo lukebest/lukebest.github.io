@@ -10,61 +10,61 @@
     <link>https://lukebest.github.io/README</link>
     <guid>https://lukebest.github.io/README</guid>
     <description>About this OKF knowledge wiki</description>
-    <pubDate>Thu, 15 Oct 2026 01:07:27 GMT</pubDate>
-  </item><item>
-    <title>Update Log</title>
-    <link>https://lukebest.github.io/log</link>
-    <guid>https://lukebest.github.io/log</guid>
-    <description>Bundle update history</description>
-    <pubDate>Thu, 15 Oct 2026 01:07:27 GMT</pubDate>
+    <pubDate>Fri, 16 Oct 2026 01:04:52 GMT</pubDate>
   </item><item>
     <title>Schema</title>
     <link>https://lukebest.github.io/SCHEMA</link>
     <guid>https://lukebest.github.io/SCHEMA</guid>
     <description>OKF wiki schema and tag taxonomy</description>
-    <pubDate>Thu, 15 Oct 2026 01:07:27 GMT</pubDate>
+    <pubDate>Fri, 16 Oct 2026 01:04:52 GMT</pubDate>
+  </item><item>
+    <title>Update Log</title>
+    <link>https://lukebest.github.io/log</link>
+    <guid>https://lukebest.github.io/log</guid>
+    <description>Bundle update history</description>
+    <pubDate>Fri, 16 Oct 2026 01:04:52 GMT</pubDate>
   </item><item>
     <title>AI Infra LLM Wiki</title>
     <link>https://lukebest.github.io/</link>
     <guid>https://lukebest.github.io/</guid>
     <description>Open Knowledge Format 知识库 — AI 基础设施、互连网络、晶圆级加速器与 LLM 推理系统</description>
-    <pubDate>Thu, 15 Oct 2026 01:07:27 GMT</pubDate>
+    <pubDate>Fri, 16 Oct 2026 01:04:52 GMT</pubDate>
   </item><item>
     <title>index</title>
     <link>https://lukebest.github.io/papers/</link>
     <guid>https://lukebest.github.io/papers/</guid>
-    <description>Paper FORGE: On-Chip Procedural Weight Generation for MoE - UW-Madison/NVIDIA ASPLOS’27 — 专家权重改为旋转角种子，SM 内 0.032 mm² RGU 现场生成权重 tile；替换 30% MoE 层，专家 FFN 2.3–3.2×、KV 容量 1.2–2.6×、系统吞吐 1.3–2.8×，精度低于同预算 LoRA HBM2 Power Characterization on Real Chips - ETH SAFARI MICRO’26 — 36 颗 HBM2 实测：读电流为 refresh 3.1×...</description>
-    <pubDate>Thu, 15 Oct 2026 01:06:52 GMT</pubDate>
+    <description>Paper LizTail: Segment-Reconfigurable Systolic Arrays - UESTC — 128×128 切 32 段端点回折；LLM decode 几何均值 25.67× vs TPU-like，CNN 5.02×，EDP 最高降 38.23× FastEEP: Intra-Instance Elastic EP MoE Serving - SJTU IPADS — 实例内改 EP；相对 vLLM Elastic EP 4.5–11.7×（几何均值 7.0×），缩放 4.2–13.4 s CacheSmith: Adaptive KV Reuse for...</description>
+    <pubDate>Fri, 16 Oct 2026 01:04:07 GMT</pubDate>
+  </item><item>
+    <title>DNN Accelerator Systolic Dataflow</title>
+    <link>https://lukebest.github.io/concepts/dnn-accelerator-systolic-dataflow</link>
+    <guid>https://lukebest.github.io/concepts/dnn-accelerator-systolic-dataflow</guid>
+    <description>H&P Ch.7 DSA：脉动阵列、WS/OS/RS 数据复用、Roofline for NPU、TPU vs GPU vs WSE SLA；晶体管从控制迁到 MAC</description>
+    <pubDate>Fri, 16 Oct 2026 00:00:00 GMT</pubDate>
   </item><item>
     <title>DRAM and Memory System</title>
     <link>https://lukebest.github.io/concepts/dram-memory-system</link>
     <guid>https://lukebest.github.io/concepts/dram-memory-system</guid>
     <description>DRAM 访问时序与 Row Buffer、Channel/Bank 并行、DDR/HBM 带宽公式、内存墙与 Roofline Ridge Point、WSE 分布式 SRAM 对 HBM 的绕过</description>
-    <pubDate>Thu, 15 Oct 2026 00:00:00 GMT</pubDate>
+    <pubDate>Fri, 16 Oct 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>GPU SIMT Architecture</title>
-    <link>https://lukebest.github.io/concepts/gpu-simt-architecture</link>
-    <guid>https://lukebest.github.io/concepts/gpu-simt-architecture</guid>
-    <description>H&P Ch.4 GPU/SIMT：Warp 锁步、Warp Divergence、Occupancy 延迟隐藏、H100 内存层次、Tensor Core；与 CPU OoO / WSE MIMD 对比</description>
-    <pubDate>Thu, 15 Oct 2026 00:00:00 GMT</pubDate>
+    <title>End-to-End Memory Data Path</title>
+    <link>https://lukebest.github.io/concepts/end-to-end-memory-data-path</link>
+    <guid>https://lukebest.github.io/concepts/end-to-end-memory-data-path</guid>
+    <description>存储篇综合（Day 17-22）：load 全路径 AMAT 层级展开、内存墙时间线、一致性决策树、同步成本量级、WSE 消除 off-chip 的简化路径</description>
+    <pubDate>Fri, 16 Oct 2026 00:00:00 GMT</pubDate>
   </item><item>
     <title>LLM Distributed Training Collectives</title>
     <link>https://lukebest.github.io/concepts/llm-distributed-training-collectives</link>
     <guid>https://lukebest.github.io/concepts/llm-distributed-training-collectives</guid>
     <description>H&P Ch.6/10 语境下 LLM 训练集体通信：AllReduce/AllGather/All-to-All；Ring vs Tree；DP/TP/PP/EP 配方；通信-计算重叠与 WSE 片上 vs 跨 wafer</description>
-    <pubDate>Thu, 15 Oct 2026 00:00:00 GMT</pubDate>
+    <pubDate>Fri, 16 Oct 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>Memory Consistency Model</title>
-    <link>https://lukebest.github.io/concepts/memory-consistency-model</link>
-    <guid>https://lukebest.github.io/concepts/memory-consistency-model</guid>
-    <description>内存一致性模型：Coherence vs Consistency、SC/TSO/ARM 重排规则、fence 契约、CAS/LL-SC 与 MCS 锁，及 WSE/NPU 同步设计</description>
-    <pubDate>Thu, 15 Oct 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Mesh and Torus Topology</title>
-    <link>https://lukebest.github.io/concepts/mesh-torus-topology</link>
-    <guid>https://lukebest.github.io/concepts/mesh-torus-topology</guid>
-    <description>2-D Mesh/Torus 与 k-ary n-cube：度/直径/二分带宽、Dally 维度-延迟-吞吐量权衡、XY 维序路由，及 WSE/Blue Gene 选型</description>
-    <pubDate>Thu, 15 Oct 2026 00:00:00 GMT</pubDate>
+    <title>PagedAttention and vLLM Serving</title>
+    <link>https://lukebest.github.io/concepts/pagedattention-vllm</link>
+    <guid>https://lukebest.github.io/concepts/pagedattention-vllm</guid>
+    <description>vLLM 服务系统的核心 KV cache 内存管理：借鉴 OS 虚拟内存与分页机制，将 KV cache 切为 fixed-size block 跨请求共享/重映射；解决 KV cache fragmentation 与不可共享</description>
+    <pubDate>Fri, 16 Oct 2026 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>
