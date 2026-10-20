@@ -10,61 +10,61 @@
     <link>https://lukebest.github.io/README</link>
     <guid>https://lukebest.github.io/README</guid>
     <description>About this OKF knowledge wiki</description>
-    <pubDate>Mon, 19 Oct 2026 01:06:46 GMT</pubDate>
+    <pubDate>Tue, 20 Oct 2026 01:07:17 GMT</pubDate>
   </item><item>
     <title>Schema</title>
     <link>https://lukebest.github.io/SCHEMA</link>
     <guid>https://lukebest.github.io/SCHEMA</guid>
     <description>OKF wiki schema and tag taxonomy</description>
-    <pubDate>Mon, 19 Oct 2026 01:06:46 GMT</pubDate>
+    <pubDate>Tue, 20 Oct 2026 01:07:17 GMT</pubDate>
   </item><item>
     <title>Update Log</title>
     <link>https://lukebest.github.io/log</link>
     <guid>https://lukebest.github.io/log</guid>
     <description>Bundle update history</description>
-    <pubDate>Mon, 19 Oct 2026 01:06:46 GMT</pubDate>
+    <pubDate>Tue, 20 Oct 2026 01:07:17 GMT</pubDate>
   </item><item>
     <title>AI Infra LLM Wiki</title>
     <link>https://lukebest.github.io/</link>
     <guid>https://lukebest.github.io/</guid>
     <description>Open Knowledge Format 知识库 — AI 基础设施、互连网络、晶圆级加速器与 LLM 推理系统</description>
-    <pubDate>Mon, 19 Oct 2026 01:06:46 GMT</pubDate>
-  </item><item>
-    <title>index</title>
-    <link>https://lukebest.github.io/concepts/</link>
-    <guid>https://lukebest.github.io/concepts/</guid>
-    <description>Concept 3D-Stacked AI Chip - 3D 堆叠 AI 芯片：TSV 垂直堆叠 DRAM bank 于 AI core 之上，分布式内存与专用总线带来带宽扩展与利用率新挑战 3D Stacking Technologies - 3D 集成三路线对垒：TSV-based (商业主流)、Monolithic (实验)、Hybrid Bonding (Cu-Cu 当代商业)；对 3D NoC 设计的根本含义对比 Adaptive Routing for NoC - D&amp;T Ch.6-7 自适应路由：最小/非最小、Valiant VRR、VC 与拥塞感知；Duato 逃逸子...</description>
-    <pubDate>Mon, 19 Oct 2026 01:05:32 GMT</pubDate>
+    <pubDate>Tue, 20 Oct 2026 01:07:17 GMT</pubDate>
   </item><item>
     <title>index</title>
     <link>https://lukebest.github.io/papers/</link>
     <guid>https://lukebest.github.io/papers/</guid>
-    <description>Paper Meta × AMD: End-to-End Co-Design for AI Training on MI350X - Meta/AMD MICRO’26 — 首份 hyperscaler AMD 生产训练报告：吃满 1.6× HBM、Origami 解析 GEMM 选型 93%、agent 化 kernel 1.6–2×、LL64 AllGather 2×；相对直接移植最高 1.5×，十模型几何均值 101.2% of B200 Remote KV Tiers for Context-Parallel Prefill - Multiverse — GLM-5.3/8×B300 ...</description>
-    <pubDate>Mon, 19 Oct 2026 01:05:32 GMT</pubDate>
+    <description>Paper Understanding KV Residency in Agentic LLM Workloads - Microsoft M365/IISc — 4 条生产 trace &gt;1.21 亿调用；P99 Research 会话 81.6 GiB 超 H100，全驻留约 501.8 TB（推理只占 5.6%）；1 小时空闲上限 3.6×；1/10 预算下 LRU/FNU/int4 MRR 重算 62.9%/31.1%/13.6%；跨部署复用 88.9%→29.0% TileDRAM: Tile-to-DRAM Layouts for 3D DRAM GPGPUs - 上海科技大...</description>
+    <pubDate>Tue, 20 Oct 2026 01:06:34 GMT</pubDate>
   </item><item>
-    <title>Numeric Formats for AI Hardware</title>
-    <link>https://lukebest.github.io/concepts/numeric-formats-ai-hardware</link>
-    <guid>https://lukebest.github.io/concepts/numeric-formats-ai-hardware</guid>
-    <description>IEEE 754 浮点与 AI 数据格式（FP32/FP16/BF16/FP8/INT8）的精度、动态范围与硬件面积权衡</description>
-    <pubDate>Mon, 19 Oct 2026 01:05:18 GMT</pubDate>
-  </item><item>
-    <title>Superscalar CPU Research (2023-2026)</title>
-    <link>https://lukebest.github.io/concepts/superscalar-cpu-research-2023-2026</link>
-    <guid>https://lukebest.github.io/concepts/superscalar-cpu-research-2023-2026</guid>
-    <description>2023-2026 超标量 CPU 顶会综述：异构旁路子系统（Constable/Bullseye/Prophet）、CVA6S+ 开源 baseline、OoO 边际饱和与 LLM memory-bound 优化；WSE/NPU 关联矩阵与核内同步 Gap</description>
-    <pubDate>Mon, 19 Oct 2026 01:05:18 GMT</pubDate>
+    <title>3D-Stacked AI Chip</title>
+    <link>https://lukebest.github.io/concepts/3d-stacked-ai-chip</link>
+    <guid>https://lukebest.github.io/concepts/3d-stacked-ai-chip</guid>
+    <description>3D 堆叠 AI 芯片：TSV 垂直堆叠 DRAM bank 于 AI core 之上，分布式内存与专用总线带来带宽扩展与利用率新挑战</description>
+    <pubDate>Tue, 20 Oct 2026 00:00:00 GMT</pubDate>
   </item><item>
     <title>Disaggregated Inference</title>
     <link>https://lukebest.github.io/concepts/disaggregated-inference</link>
     <guid>https://lukebest.github.io/concepts/disaggregated-inference</guid>
     <description>解耦推理：attention/FFN 分离部署，独立扩展，batch 聚合</description>
-    <pubDate>Mon, 19 Oct 2026 00:00:00 GMT</pubDate>
+    <pubDate>Tue, 20 Oct 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>GPU SIMT Architecture</title>
-    <link>https://lukebest.github.io/concepts/gpu-simt-architecture</link>
-    <guid>https://lukebest.github.io/concepts/gpu-simt-architecture</guid>
-    <description>H&P Ch.4 GPU/SIMT：Warp 锁步、Warp Divergence、Occupancy 延迟隐藏、H100 内存层次、Tensor Core；与 CPU OoO / WSE MIMD 对比</description>
-    <pubDate>Mon, 19 Oct 2026 00:00:00 GMT</pubDate>
+    <title>DRAM and Memory System</title>
+    <link>https://lukebest.github.io/concepts/dram-memory-system</link>
+    <guid>https://lukebest.github.io/concepts/dram-memory-system</guid>
+    <description>DRAM 访问时序与 Row Buffer、Channel/Bank 并行、DDR/HBM 带宽公式、内存墙与 Roofline Ridge Point、WSE 分布式 SRAM 对 HBM 的绕过</description>
+    <pubDate>Tue, 20 Oct 2026 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>DSA Processor Design Tradeoffs</title>
+    <link>https://lukebest.github.io/concepts/dsa-processor-design-tradeoffs</link>
+    <guid>https://lukebest.github.io/concepts/dsa-processor-design-tradeoffs</guid>
+    <description>领域专用处理器设计取舍：现代 CPU 传统武器（OoO/Cache/分支预测/TLB）的能力代价矩阵 vs WSE SLA 核</description>
+    <pubDate>Tue, 20 Oct 2026 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>End-to-End Memory Data Path</title>
+    <link>https://lukebest.github.io/concepts/end-to-end-memory-data-path</link>
+    <guid>https://lukebest.github.io/concepts/end-to-end-memory-data-path</guid>
+    <description>存储篇综合（Day 17-22）：load 全路径 AMAT 层级展开、内存墙时间线、一致性决策树、同步成本量级、WSE 消除 off-chip 的简化路径</description>
+    <pubDate>Tue, 20 Oct 2026 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>
