@@ -10,61 +10,61 @@
     <link>https://lukebest.github.io/README</link>
     <guid>https://lukebest.github.io/README</guid>
     <description>About this OKF knowledge wiki</description>
-    <pubDate>Tue, 20 Oct 2026 01:07:17 GMT</pubDate>
-  </item><item>
-    <title>Schema</title>
-    <link>https://lukebest.github.io/SCHEMA</link>
-    <guid>https://lukebest.github.io/SCHEMA</guid>
-    <description>OKF wiki schema and tag taxonomy</description>
-    <pubDate>Tue, 20 Oct 2026 01:07:17 GMT</pubDate>
+    <pubDate>Wed, 21 Oct 2026 00:56:45 GMT</pubDate>
   </item><item>
     <title>Update Log</title>
     <link>https://lukebest.github.io/log</link>
     <guid>https://lukebest.github.io/log</guid>
     <description>Bundle update history</description>
-    <pubDate>Tue, 20 Oct 2026 01:07:17 GMT</pubDate>
+    <pubDate>Wed, 21 Oct 2026 00:56:45 GMT</pubDate>
+  </item><item>
+    <title>Schema</title>
+    <link>https://lukebest.github.io/SCHEMA</link>
+    <guid>https://lukebest.github.io/SCHEMA</guid>
+    <description>OKF wiki schema and tag taxonomy</description>
+    <pubDate>Wed, 21 Oct 2026 00:56:45 GMT</pubDate>
   </item><item>
     <title>AI Infra LLM Wiki</title>
     <link>https://lukebest.github.io/</link>
     <guid>https://lukebest.github.io/</guid>
     <description>Open Knowledge Format 知识库 — AI 基础设施、互连网络、晶圆级加速器与 LLM 推理系统</description>
-    <pubDate>Tue, 20 Oct 2026 01:07:17 GMT</pubDate>
+    <pubDate>Wed, 21 Oct 2026 00:56:45 GMT</pubDate>
   </item><item>
     <title>index</title>
     <link>https://lukebest.github.io/papers/</link>
     <guid>https://lukebest.github.io/papers/</guid>
-    <description>Paper Understanding KV Residency in Agentic LLM Workloads - Microsoft M365/IISc — 4 条生产 trace &gt;1.21 亿调用；P99 Research 会话 81.6 GiB 超 H100，全驻留约 501.8 TB（推理只占 5.6%）；1 小时空闲上限 3.6×；1/10 预算下 LRU/FNU/int4 MRR 重算 62.9%/31.1%/13.6%；跨部署复用 88.9%→29.0% TileDRAM: Tile-to-DRAM Layouts for 3D DRAM GPGPUs - 上海科技大...</description>
-    <pubDate>Tue, 20 Oct 2026 01:06:34 GMT</pubDate>
+    <description>Paper DuoPD: Hybrid GPU–PNM PD Disaggregation - SNU — HBM4 逻辑 die 内 PNM 跑整段 decode、GPU 并发 prefill，TSV 层共享带宽；吞吐比 PD 分离最高 2.23×，PNM 6.51 mm² MX-Like Tensor Core for NPU - KU Leuven 等 — 126 种块缩放配置 28 nm 综合；FP4 下推荐 UE5M3，比 NVFP4-like 降 25.3% 困惑度劣化，+0.06% 面积 / +0.49% 功耗 KVCompass: Internet-Scale Prefix C...</description>
+    <pubDate>Wed, 21 Oct 2026 00:56:27 GMT</pubDate>
+  </item><item>
+    <title>Numeric Formats for AI Hardware</title>
+    <link>https://lukebest.github.io/concepts/numeric-formats-ai-hardware</link>
+    <guid>https://lukebest.github.io/concepts/numeric-formats-ai-hardware</guid>
+    <description>IEEE 754 浮点与 AI 数据格式（FP32/FP16/BF16/FP8/INT8）的精度、动态范围与硬件面积权衡</description>
+    <pubDate>Wed, 21 Oct 2026 00:56:27 GMT</pubDate>
   </item><item>
     <title>3D-Stacked AI Chip</title>
     <link>https://lukebest.github.io/concepts/3d-stacked-ai-chip</link>
     <guid>https://lukebest.github.io/concepts/3d-stacked-ai-chip</guid>
     <description>3D 堆叠 AI 芯片：TSV 垂直堆叠 DRAM bank 于 AI core 之上，分布式内存与专用总线带来带宽扩展与利用率新挑战</description>
-    <pubDate>Tue, 20 Oct 2026 00:00:00 GMT</pubDate>
+    <pubDate>Wed, 21 Oct 2026 00:00:00 GMT</pubDate>
   </item><item>
     <title>Disaggregated Inference</title>
     <link>https://lukebest.github.io/concepts/disaggregated-inference</link>
     <guid>https://lukebest.github.io/concepts/disaggregated-inference</guid>
     <description>解耦推理：attention/FFN 分离部署，独立扩展，batch 聚合</description>
-    <pubDate>Tue, 20 Oct 2026 00:00:00 GMT</pubDate>
+    <pubDate>Wed, 21 Oct 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>DRAM and Memory System</title>
-    <link>https://lukebest.github.io/concepts/dram-memory-system</link>
-    <guid>https://lukebest.github.io/concepts/dram-memory-system</guid>
-    <description>DRAM 访问时序与 Row Buffer、Channel/Bank 并行、DDR/HBM 带宽公式、内存墙与 Roofline Ridge Point、WSE 分布式 SRAM 对 HBM 的绕过</description>
-    <pubDate>Tue, 20 Oct 2026 00:00:00 GMT</pubDate>
+    <title>PagedAttention and vLLM Serving</title>
+    <link>https://lukebest.github.io/concepts/pagedattention-vllm</link>
+    <guid>https://lukebest.github.io/concepts/pagedattention-vllm</guid>
+    <description>vLLM 服务系统的核心 KV cache 内存管理：借鉴 OS 虚拟内存与分页机制，将 KV cache 切为 fixed-size block 跨请求共享/重映射；解决 KV cache fragmentation 与不可共享</description>
+    <pubDate>Wed, 21 Oct 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>DSA Processor Design Tradeoffs</title>
-    <link>https://lukebest.github.io/concepts/dsa-processor-design-tradeoffs</link>
-    <guid>https://lukebest.github.io/concepts/dsa-processor-design-tradeoffs</guid>
-    <description>领域专用处理器设计取舍：现代 CPU 传统武器（OoO/Cache/分支预测/TLB）的能力代价矩阵 vs WSE SLA 核</description>
-    <pubDate>Tue, 20 Oct 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>End-to-End Memory Data Path</title>
-    <link>https://lukebest.github.io/concepts/end-to-end-memory-data-path</link>
-    <guid>https://lukebest.github.io/concepts/end-to-end-memory-data-path</guid>
-    <description>存储篇综合（Day 17-22）：load 全路径 AMAT 层级展开、内存墙时间线、一致性决策树、同步成本量级、WSE 消除 off-chip 的简化路径</description>
-    <pubDate>Tue, 20 Oct 2026 00:00:00 GMT</pubDate>
+    <title>DuoPD: Hybrid GPU and Processing-Near-Memory with Shared DRAM for PD Disaggregation</title>
+    <link>https://lukebest.github.io/papers/duopd-hybrid-gpu-pnm-pd-disaggregation</link>
+    <guid>https://lukebest.github.io/papers/duopd-hybrid-gpu-pnm-pd-disaggregation</guid>
+    <description>SNU — HBM4 逻辑 die 内嵌 PNM 跑完整 decode，GPU 同时跑 prefill，经 TSV 层分时共享带宽；端到端吞吐比常规 PD 分离最高 2.23×；PNM 6.51 mm²（7 nm 折算）放得进 38.6 mm² 空余</description>
+    <pubDate>Wed, 21 Oct 2026 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>
