@@ -10,61 +10,61 @@
     <link>https://lukebest.github.io/README</link>
     <guid>https://lukebest.github.io/README</guid>
     <description>About this OKF knowledge wiki</description>
-    <pubDate>Wed, 21 Oct 2026 00:56:45 GMT</pubDate>
-  </item><item>
-    <title>Update Log</title>
-    <link>https://lukebest.github.io/log</link>
-    <guid>https://lukebest.github.io/log</guid>
-    <description>Bundle update history</description>
-    <pubDate>Wed, 21 Oct 2026 00:56:45 GMT</pubDate>
+    <pubDate>Thu, 22 Oct 2026 01:06:00 GMT</pubDate>
   </item><item>
     <title>Schema</title>
     <link>https://lukebest.github.io/SCHEMA</link>
     <guid>https://lukebest.github.io/SCHEMA</guid>
     <description>OKF wiki schema and tag taxonomy</description>
-    <pubDate>Wed, 21 Oct 2026 00:56:45 GMT</pubDate>
+    <pubDate>Thu, 22 Oct 2026 01:06:00 GMT</pubDate>
+  </item><item>
+    <title>Update Log</title>
+    <link>https://lukebest.github.io/log</link>
+    <guid>https://lukebest.github.io/log</guid>
+    <description>Bundle update history</description>
+    <pubDate>Thu, 22 Oct 2026 01:06:00 GMT</pubDate>
   </item><item>
     <title>AI Infra LLM Wiki</title>
     <link>https://lukebest.github.io/</link>
     <guid>https://lukebest.github.io/</guid>
     <description>Open Knowledge Format 知识库 — AI 基础设施、互连网络、晶圆级加速器与 LLM 推理系统</description>
-    <pubDate>Wed, 21 Oct 2026 00:56:45 GMT</pubDate>
+    <pubDate>Thu, 22 Oct 2026 01:06:00 GMT</pubDate>
   </item><item>
     <title>index</title>
     <link>https://lukebest.github.io/papers/</link>
     <guid>https://lukebest.github.io/papers/</guid>
-    <description>Paper DuoPD: Hybrid GPU–PNM PD Disaggregation - SNU — HBM4 逻辑 die 内 PNM 跑整段 decode、GPU 并发 prefill，TSV 层共享带宽；吞吐比 PD 分离最高 2.23×，PNM 6.51 mm² MX-Like Tensor Core for NPU - KU Leuven 等 — 126 种块缩放配置 28 nm 综合；FP4 下推荐 UE5M3，比 NVFP4-like 降 25.3% 困惑度劣化，+0.06% 面积 / +0.49% 功耗 KVCompass: Internet-Scale Prefix C...</description>
-    <pubDate>Wed, 21 Oct 2026 00:56:27 GMT</pubDate>
-  </item><item>
-    <title>Numeric Formats for AI Hardware</title>
-    <link>https://lukebest.github.io/concepts/numeric-formats-ai-hardware</link>
-    <guid>https://lukebest.github.io/concepts/numeric-formats-ai-hardware</guid>
-    <description>IEEE 754 浮点与 AI 数据格式（FP32/FP16/BF16/FP8/INT8）的精度、动态范围与硬件面积权衡</description>
-    <pubDate>Wed, 21 Oct 2026 00:56:27 GMT</pubDate>
+    <description>Paper 3D-MoE: Complementarity-Guided MoE Decode on 3D NMP - 中科院计算所/爱丁堡 — 专家负载互补分组 + 逻辑 die 局部广播热专家权重；MoE 层比 EP 4.63×，端到端比最强 NMP 基线 1.58–1.86×，面积 +2.11% The Token-Energy Law of LLM Decode - NVIDIA/TTU/TACC — 每 token 能耗 = 权重字节项 + KV 字节项 + 时间项；GH200/GB300 留出误差 ≤3.73% M3D-FLOW: Monolithic 3D PNM for Nor...</description>
+    <pubDate>Thu, 22 Oct 2026 01:05:20 GMT</pubDate>
   </item><item>
     <title>3D-Stacked AI Chip</title>
     <link>https://lukebest.github.io/concepts/3d-stacked-ai-chip</link>
     <guid>https://lukebest.github.io/concepts/3d-stacked-ai-chip</guid>
     <description>3D 堆叠 AI 芯片：TSV 垂直堆叠 DRAM bank 于 AI core 之上，分布式内存与专用总线带来带宽扩展与利用率新挑战</description>
-    <pubDate>Wed, 21 Oct 2026 00:00:00 GMT</pubDate>
+    <pubDate>Thu, 22 Oct 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>Disaggregated Inference</title>
-    <link>https://lukebest.github.io/concepts/disaggregated-inference</link>
-    <guid>https://lukebest.github.io/concepts/disaggregated-inference</guid>
-    <description>解耦推理：attention/FFN 分离部署，独立扩展，batch 聚合</description>
-    <pubDate>Wed, 21 Oct 2026 00:00:00 GMT</pubDate>
+    <title>In-Core Nonlinear Operator Acceleration</title>
+    <link>https://lukebest.github.io/concepts/in-core-nonlinear-operator-acceleration</link>
+    <guid>https://lukebest.github.io/concepts/in-core-nonlinear-operator-acceleration</guid>
+    <description>核内非线性运算加速：softmax、GELU/SiLU、LayerNorm/RMSNorm 与 exp/除法/rsqrt 单元在 GPU/NPU/FPGA 上的实现路线（融合在线算法、专用归约单元、快速内建指令、量化后多阈值比较）与 wiki 内已有案例索引</description>
+    <pubDate>Thu, 22 Oct 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>PagedAttention and vLLM Serving</title>
-    <link>https://lukebest.github.io/concepts/pagedattention-vllm</link>
-    <guid>https://lukebest.github.io/concepts/pagedattention-vllm</guid>
-    <description>vLLM 服务系统的核心 KV cache 内存管理：借鉴 OS 虚拟内存与分页机制，将 KV cache 切为 fixed-size block 跨请求共享/重映射；解决 KV cache fragmentation 与不可共享</description>
-    <pubDate>Wed, 21 Oct 2026 00:00:00 GMT</pubDate>
+    <title>Prefill-Decode Resource Divergence</title>
+    <link>https://lukebest.github.io/concepts/prefill-decode-divergence</link>
+    <guid>https://lukebest.github.io/concepts/prefill-decode-divergence</guid>
+    <description>Prefill（compute-bound）vs Decode（bandwidth-bound）资源需求正交，>99% 时间在 decode</description>
+    <pubDate>Thu, 22 Oct 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>DuoPD: Hybrid GPU and Processing-Near-Memory with Shared DRAM for PD Disaggregation</title>
-    <link>https://lukebest.github.io/papers/duopd-hybrid-gpu-pnm-pd-disaggregation</link>
-    <guid>https://lukebest.github.io/papers/duopd-hybrid-gpu-pnm-pd-disaggregation</guid>
-    <description>SNU — HBM4 逻辑 die 内嵌 PNM 跑完整 decode，GPU 同时跑 prefill，经 TSV 层分时共享带宽；端到端吞吐比常规 PD 分离最高 2.23×；PNM 6.51 mm²（7 nm 折算）放得进 38.6 mm² 空余</description>
-    <pubDate>Wed, 21 Oct 2026 00:00:00 GMT</pubDate>
+    <title>3D-MoE: Complementarity-Guided Hardware-Software Co-Design for MoE Decode on 3D-Stacked NMP</title>
+    <link>https://lukebest.github.io/papers/3d-moe-complementarity-nmp-moe-decode</link>
+    <guid>https://lukebest.github.io/papers/3d-moe-complementarity-nmp-moe-decode</guid>
+    <description>中科院计算所/爱丁堡 — 利用专家负载跨 decode 步此消彼长的「互补性」做离线分组，3D 堆叠近存（NMP）逻辑 die 上加轻量 Collaborative Memory-Network 局部广播热专家权重；MoE 层比 EP 平均 4.63×，端到端比最强 NMP 基线 1.58–1.86×，面积 +2.11%</description>
+    <pubDate>Thu, 22 Oct 2026 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>M3D-FLOW: A Monolithic 3-D-Stackable Processing-Near-DRAM Architecture for Generative Normalizing Flow Applications</title>
+    <link>https://lukebest.github.io/papers/m3d-flow-monolithic-3d-pnm-normalizing-flow</link>
+    <guid>https://lukebest.github.io/papers/m3d-flow-monolithic-3d-pnm-normalizing-flow</guid>
+    <description>肯塔基大学/科罗拉多州立 — Cu-Cu 混合键合逻辑 die + 单片 3D 可堆叠 DRAM；尾数乘法走随机计算（面积 13× 小、功耗 46× 低）、指数与加法留二进制；非线性全部 LUT 化在 PE 内完成；比已有 PNM 至少 6.6× 性能、3× 能效（CASES'26 / TCAD）</description>
+    <pubDate>Thu, 22 Oct 2026 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>
