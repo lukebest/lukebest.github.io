@@ -1,9 +1,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
     <loc>https://lukebest.github.io/README</loc>
-    <lastmod>2026-10-22T01:06:00.451Z</lastmod>
+    <lastmod>2026-10-23T01:00:13.253Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/SCHEMA</loc>
-    <lastmod>2026-10-22T01:06:00.447Z</lastmod>
+    <lastmod>2026-10-23T01:00:13.249Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/analyses/ai-infra-book/ch00-preface</loc>
     <lastmod>2026-09-14T00:00:00.000Z</lastmod>
@@ -147,7 +147,7 @@
     <lastmod>2026-08-13T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/disaggregated-inference</loc>
-    <lastmod>2026-10-21T00:00:00.000Z</lastmod>
+    <lastmod>2026-10-23T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/distributed-gemm-algorithms</loc>
     <lastmod>2026-10-12T03:03:34.894Z</lastmod>
@@ -210,7 +210,7 @@
     <lastmod>2026-10-19T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/heterogeneous-inference</loc>
-    <lastmod>2026-10-07T00:00:00.000Z</lastmod>
+    <lastmod>2026-10-23T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/high-radix-clos-adaptive-routing</loc>
     <lastmod>2026-10-12T03:03:36.390Z</lastmod>
@@ -255,7 +255,7 @@
     <lastmod>2026-08-13T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/llm-distributed-training-collectives</loc>
-    <lastmod>2026-10-19T00:00:00.000Z</lastmod>
+    <lastmod>2026-10-23T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/lpu-architecture</loc>
     <lastmod>2026-10-12T03:03:36.318Z</lastmod>
@@ -342,7 +342,7 @@
     <lastmod>2026-08-18T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/prefill-decode-divergence</loc>
-    <lastmod>2026-10-22T00:00:00.000Z</lastmod>
+    <lastmod>2026-10-23T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/quantitative-architecture-fundamentals</loc>
     <lastmod>2026-10-12T03:03:36.318Z</lastmod>
@@ -477,10 +477,10 @@
     <lastmod>2026-10-12T03:03:36.306Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/</loc>
-    <lastmod>2026-10-22T01:06:00.427Z</lastmod>
+    <lastmod>2026-10-23T01:00:13.237Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/log</loc>
-    <lastmod>2026-10-22T01:06:00.447Z</lastmod>
+    <lastmod>2026-10-23T01:00:13.253Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/3d-moe-complementarity-nmp-moe-decode</loc>
     <lastmod>2026-10-22T00:00:00.000Z</lastmod>
@@ -731,6 +731,9 @@
     <loc>https://lukebest.github.io/papers/hapmoe-heterogeneity-aware-moe-parallelism</loc>
     <lastmod>2026-10-02T00:00:00.000Z</lastmod>
   </url><url>
+    <loc>https://lukebest.github.io/papers/hawk-gpu-npu-heterogeneous-kv-transfer</loc>
+    <lastmod>2026-10-23T00:00:00.000Z</lastmod>
+  </url><url>
     <loc>https://lukebest.github.io/papers/hbflex-flexible-memory-hbf-llm</loc>
     <lastmod>2026-09-18T00:00:00.000Z</lastmod>
   </url><url>
@@ -846,7 +849,7 @@
     <lastmod>2026-10-12T03:03:36.542Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/</loc>
-    <lastmod>2026-10-22T01:05:20.855Z</lastmod>
+    <lastmod>2026-10-23T00:59:30.617Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/janus-agentic-ssd-sparse-kv</loc>
     <lastmod>2026-10-01T00:00:00.000Z</lastmod>
@@ -893,6 +896,9 @@
     <loc>https://lukebest.github.io/papers/maia-200-sdla</loc>
     <lastmod>2026-08-27T00:00:00.000Z</lastmod>
   </url><url>
+    <loc>https://lukebest.github.io/papers/mccl-measurement-based-collective-communication</loc>
+    <lastmod>2026-10-23T00:00:00.000Z</lastmod>
+  </url><url>
     <loc>https://lukebest.github.io/papers/mcm-gpu-divide-and-conquer-disaggregation</loc>
     <lastmod>2026-10-06T00:00:00.000Z</lastmod>
   </url><url>
@@ -928,6 +934,9 @@
   </url><url>
     <loc>https://lukebest.github.io/papers/mx-like-tensor-core-npu-codesign</loc>
     <lastmod>2026-10-21T00:00:00.000Z</lastmod>
+  </url><url>
+    <loc>https://lukebest.github.io/papers/nanocp-dynamic-context-parallelism-moe</loc>
+    <lastmod>2026-10-23T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/nccl-m2n-layout-topology-aware-resharding</loc>
     <lastmod>2026-10-08T00:00:00.000Z</lastmod>
