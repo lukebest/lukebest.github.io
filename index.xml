@@ -10,61 +10,61 @@
     <link>https://lukebest.github.io/README</link>
     <guid>https://lukebest.github.io/README</guid>
     <description>About this OKF knowledge wiki</description>
-    <pubDate>Fri, 23 Oct 2026 01:00:13 GMT</pubDate>
-  </item><item>
-    <title>Update Log</title>
-    <link>https://lukebest.github.io/log</link>
-    <guid>https://lukebest.github.io/log</guid>
-    <description>Bundle update history</description>
-    <pubDate>Fri, 23 Oct 2026 01:00:13 GMT</pubDate>
+    <pubDate>Mon, 26 Oct 2026 00:57:58 GMT</pubDate>
   </item><item>
     <title>Schema</title>
     <link>https://lukebest.github.io/SCHEMA</link>
     <guid>https://lukebest.github.io/SCHEMA</guid>
     <description>OKF wiki schema and tag taxonomy</description>
-    <pubDate>Fri, 23 Oct 2026 01:00:13 GMT</pubDate>
+    <pubDate>Mon, 26 Oct 2026 00:57:58 GMT</pubDate>
+  </item><item>
+    <title>Update Log</title>
+    <link>https://lukebest.github.io/log</link>
+    <guid>https://lukebest.github.io/log</guid>
+    <description>Bundle update history</description>
+    <pubDate>Mon, 26 Oct 2026 00:57:58 GMT</pubDate>
   </item><item>
     <title>AI Infra LLM Wiki</title>
     <link>https://lukebest.github.io/</link>
     <guid>https://lukebest.github.io/</guid>
     <description>Open Knowledge Format 知识库 — AI 基础设施、互连网络、晶圆级加速器与 LLM 推理系统</description>
-    <pubDate>Fri, 23 Oct 2026 01:00:13 GMT</pubDate>
+    <pubDate>Mon, 26 Oct 2026 00:57:58 GMT</pubDate>
+  </item><item>
+    <title>Numeric Formats for AI Hardware</title>
+    <link>https://lukebest.github.io/concepts/numeric-formats-ai-hardware</link>
+    <guid>https://lukebest.github.io/concepts/numeric-formats-ai-hardware</guid>
+    <description>IEEE 754 浮点与 AI 数据格式（FP32/FP16/BF16/FP8/INT8）的精度、动态范围与硬件面积权衡</description>
+    <pubDate>Mon, 26 Oct 2026 00:57:35 GMT</pubDate>
   </item><item>
     <title>index</title>
     <link>https://lukebest.github.io/papers/</link>
     <guid>https://lukebest.github.io/papers/</guid>
-    <description>Paper HAWK: GPU–NPU Heterogeneous KV Transfer - Georgia Tech/ETRI — GPU prefill + Tenstorrent NPU decode；布局感知 RDMA；同 SLO 吞吐差 ≤7.88%，功耗效率最高 1.26×、成本效率最高 1.72× MCCL: Measurement-based Collective Communication - EURECOM 等 PACMNET/CoNEXT’26 — 测量闭环集体；灰障下训练时间最高 4.99×；热切换 ≈12 ms，开销 &lt;2% NanoCP: Dynamic C...</description>
-    <pubDate>Fri, 23 Oct 2026 00:59:30 GMT</pubDate>
+    <description>Paper SnakeCharmer: GPU Prefetch Backend Control - MICRO’26 — GPU 预取效用/时机/放置联合控制；比 Snake 性能 +12.8%、能效 +20.8%，2.7 KB/SM FIGFLEX: Mixed-Precision FP-INT GEMM Accelerator - UC Irvine — radix-4 + INT3 车道融合，吞吐随比特下降而上升；3-bit 下吞吐/面积比 AxCore 1.56×、FIGLUT 1.42× Reorienting the Vector Axis: FlashAttention on ...</description>
+    <pubDate>Mon, 26 Oct 2026 00:57:35 GMT</pubDate>
   </item><item>
-    <title>Disaggregated Inference</title>
-    <link>https://lukebest.github.io/concepts/disaggregated-inference</link>
-    <guid>https://lukebest.github.io/concepts/disaggregated-inference</guid>
-    <description>解耦推理：attention/FFN 分离部署，独立扩展，batch 聚合</description>
-    <pubDate>Fri, 23 Oct 2026 00:00:00 GMT</pubDate>
+    <title>In-Core Nonlinear Operator Acceleration</title>
+    <link>https://lukebest.github.io/concepts/in-core-nonlinear-operator-acceleration</link>
+    <guid>https://lukebest.github.io/concepts/in-core-nonlinear-operator-acceleration</guid>
+    <description>核内非线性运算加速：softmax、GELU/SiLU、LayerNorm/RMSNorm 与 exp/除法/rsqrt 单元在 GPU/NPU/FPGA 上的实现路线（融合在线算法、专用归约单元、快速内建指令、量化后多阈值比较）与 wiki 内已有案例索引</description>
+    <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>Heterogeneous Inference</title>
-    <link>https://lukebest.github.io/concepts/heterogeneous-inference</link>
-    <guid>https://lukebest.github.io/concepts/heterogeneous-inference</guid>
-    <description>GPU + LPU 异构推理，分别优化 prefill/decode</description>
-    <pubDate>Fri, 23 Oct 2026 00:00:00 GMT</pubDate>
+    <title>Memory Hierarchy and Cache</title>
+    <link>https://lukebest.github.io/concepts/memory-hierarchy-cache</link>
+    <guid>https://lukebest.github.io/concepts/memory-hierarchy-cache</guid>
+    <description>内存墙、存储层次、Cache 映射与 3C 模型、AMAT 优化框架、与 WSE SRAM-only 设计的对比</description>
+    <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>LLM Distributed Training Collectives</title>
-    <link>https://lukebest.github.io/concepts/llm-distributed-training-collectives</link>
-    <guid>https://lukebest.github.io/concepts/llm-distributed-training-collectives</guid>
-    <description>H&P Ch.6/10 语境下 LLM 训练集体通信：AllReduce/AllGather/All-to-All；Ring vs Tree；DP/TP/PP/EP 配方；通信-计算重叠与 WSE 片上 vs 跨 wafer</description>
-    <pubDate>Fri, 23 Oct 2026 00:00:00 GMT</pubDate>
+    <title>FIGFLEX: A Mixed-Precision FP-INT GEMM Accelerator Co-Designed with Low-Bit LLM Quantization</title>
+    <link>https://lukebest.github.io/papers/figflex-mixed-precision-fp-int-gemm</link>
+    <guid>https://lukebest.github.io/papers/figflex-mixed-precision-fp-int-gemm</guid>
+    <description>UC Irvine — 权重量化 LLM 的 FP-INT GEMM 加速器：radix-4 移位加 + INT3 车道融合，吞吐随比特数下降而上升；3-bit 混合精度下单位面积吞吐比 AxCore 1.56×、比 FIGLUT 1.42×</description>
+    <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>Prefill-Decode Resource Divergence</title>
-    <link>https://lukebest.github.io/concepts/prefill-decode-divergence</link>
-    <guid>https://lukebest.github.io/concepts/prefill-decode-divergence</guid>
-    <description>Prefill（compute-bound）vs Decode（bandwidth-bound）资源需求正交，>99% 时间在 decode</description>
-    <pubDate>Fri, 23 Oct 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>HAWK: Heterogeneity-Aware KV Cache Transfer for GPU-NPU Phase-Disaggregated LLM Inference</title>
-    <link>https://lukebest.github.io/papers/hawk-gpu-npu-heterogeneous-kv-transfer</link>
-    <guid>https://lukebest.github.io/papers/hawk-gpu-npu-heterogeneous-kv-transfer</guid>
-    <description>Georgia Tech/ETRI — GPU prefill + Tenstorrent NPU decode；布局感知 RDMA KV 传输；同 SLO 下相对 GPU-only 吞吐差距 ≤7.88%，功耗效率最高 1.26×、成本效率最高 1.72×</description>
-    <pubDate>Fri, 23 Oct 2026 00:00:00 GMT</pubDate>
+    <title>Reorienting the Vector Axis: Restructuring FlashAttention for Long-Vector Processors</title>
+    <link>https://lukebest.github.io/papers/flashattention-long-vector-riscv</link>
+    <guid>https://lukebest.github.io/papers/flashattention-long-vector-riscv</guid>
+    <description>BSC/UPC — 在 16384-bit 向量寄存器的 EPAC RISC-V 芯片上重排 FlashAttention：转置分数块让 query 沿连续轴、exp 多项式系数搬到标量寄存器；硅上整核 cycle 降 1.84–2.08×，FP 利用率 16.2%→29.7%</description>
+    <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>

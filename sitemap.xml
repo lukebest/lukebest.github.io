@@ -1,9 +1,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
     <loc>https://lukebest.github.io/README</loc>
-    <lastmod>2026-10-23T01:00:13.253Z</lastmod>
+    <lastmod>2026-10-26T00:57:58.767Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/SCHEMA</loc>
-    <lastmod>2026-10-23T01:00:13.249Z</lastmod>
+    <lastmod>2026-10-26T00:57:58.767Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/analyses/ai-infra-book/ch00-preface</loc>
     <lastmod>2026-09-14T00:00:00.000Z</lastmod>
@@ -216,7 +216,7 @@
     <lastmod>2026-10-12T03:03:36.390Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/in-core-nonlinear-operator-acceleration</loc>
-    <lastmod>2026-10-22T00:00:00.000Z</lastmod>
+    <lastmod>2026-10-26T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/</loc>
     <lastmod>2026-10-19T01:05:32.778Z</lastmod>
@@ -273,7 +273,7 @@
     <lastmod>2026-10-12T03:03:36.298Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/memory-hierarchy-cache</loc>
-    <lastmod>2026-10-13T00:00:00.000Z</lastmod>
+    <lastmod>2026-10-26T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/mesh-torus-topology</loc>
     <lastmod>2026-10-15T00:00:00.000Z</lastmod>
@@ -318,7 +318,7 @@
     <lastmod>2026-10-12T03:03:36.306Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/numeric-formats-ai-hardware</loc>
-    <lastmod>2026-10-21T00:56:27.298Z</lastmod>
+    <lastmod>2026-10-26T00:57:35.639Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/nvidia-cpo-roadmap</loc>
     <lastmod>2026-09-04T00:00:00.000Z</lastmod>
@@ -477,10 +477,10 @@
     <lastmod>2026-10-12T03:03:36.306Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/</loc>
-    <lastmod>2026-10-23T01:00:13.237Z</lastmod>
+    <lastmod>2026-10-26T00:57:58.739Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/log</loc>
-    <lastmod>2026-10-23T01:00:13.253Z</lastmod>
+    <lastmod>2026-10-26T00:57:58.767Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/3d-moe-complementarity-nmp-moe-decode</loc>
     <lastmod>2026-10-22T00:00:00.000Z</lastmod>
@@ -686,6 +686,9 @@
     <loc>https://lukebest.github.io/papers/fengshui-chiplet-ecosystem-basic-codesign</loc>
     <lastmod>2026-09-14T00:00:00.000Z</lastmod>
   </url><url>
+    <loc>https://lukebest.github.io/papers/figflex-mixed-precision-fp-int-gemm</loc>
+    <lastmod>2026-10-26T00:00:00.000Z</lastmod>
+  </url><url>
     <loc>https://lukebest.github.io/papers/flashattention-2-faster-attention</loc>
     <lastmod>2026-10-12T03:03:36.358Z</lastmod>
   </url><url>
@@ -694,6 +697,9 @@
   </url><url>
     <loc>https://lukebest.github.io/papers/flashattention-io-aware-exact-attention</loc>
     <lastmod>2026-10-12T03:03:36.318Z</lastmod>
+  </url><url>
+    <loc>https://lukebest.github.io/papers/flashattention-long-vector-riscv</loc>
+    <lastmod>2026-10-26T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/flashdecoding-plus-plus-llm-gpu-inference</loc>
     <lastmod>2026-10-12T03:03:36.358Z</lastmod>
@@ -849,7 +855,7 @@
     <lastmod>2026-10-12T03:03:36.542Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/</loc>
-    <lastmod>2026-10-23T00:59:30.617Z</lastmod>
+    <lastmod>2026-10-26T00:57:35.635Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/janus-agentic-ssd-sparse-kv</loc>
     <lastmod>2026-10-01T00:00:00.000Z</lastmod>
@@ -1036,6 +1042,9 @@
   </url><url>
     <loc>https://lukebest.github.io/papers/smartmem-layout-transformation-elimination</loc>
     <lastmod>2026-10-12T03:03:37.014Z</lastmod>
+  </url><url>
+    <loc>https://lukebest.github.io/papers/snakecharmer-gpu-prefetch-backend-control</loc>
+    <lastmod>2026-10-26T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/sp-allreduce-symmetric-tree-tori</loc>
     <lastmod>2026-10-15T00:00:00.000Z</lastmod>
