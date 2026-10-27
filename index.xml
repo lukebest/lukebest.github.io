@@ -10,61 +10,61 @@
     <link>https://lukebest.github.io/README</link>
     <guid>https://lukebest.github.io/README</guid>
     <description>About this OKF knowledge wiki</description>
-    <pubDate>Mon, 26 Oct 2026 00:57:58 GMT</pubDate>
+    <pubDate>Tue, 27 Oct 2026 01:02:55 GMT</pubDate>
   </item><item>
     <title>Schema</title>
     <link>https://lukebest.github.io/SCHEMA</link>
     <guid>https://lukebest.github.io/SCHEMA</guid>
     <description>OKF wiki schema and tag taxonomy</description>
-    <pubDate>Mon, 26 Oct 2026 00:57:58 GMT</pubDate>
+    <pubDate>Tue, 27 Oct 2026 01:02:55 GMT</pubDate>
   </item><item>
     <title>Update Log</title>
     <link>https://lukebest.github.io/log</link>
     <guid>https://lukebest.github.io/log</guid>
     <description>Bundle update history</description>
-    <pubDate>Mon, 26 Oct 2026 00:57:58 GMT</pubDate>
+    <pubDate>Tue, 27 Oct 2026 01:02:55 GMT</pubDate>
   </item><item>
     <title>AI Infra LLM Wiki</title>
     <link>https://lukebest.github.io/</link>
     <guid>https://lukebest.github.io/</guid>
     <description>Open Knowledge Format 知识库 — AI 基础设施、互连网络、晶圆级加速器与 LLM 推理系统</description>
-    <pubDate>Mon, 26 Oct 2026 00:57:58 GMT</pubDate>
-  </item><item>
-    <title>Numeric Formats for AI Hardware</title>
-    <link>https://lukebest.github.io/concepts/numeric-formats-ai-hardware</link>
-    <guid>https://lukebest.github.io/concepts/numeric-formats-ai-hardware</guid>
-    <description>IEEE 754 浮点与 AI 数据格式（FP32/FP16/BF16/FP8/INT8）的精度、动态范围与硬件面积权衡</description>
-    <pubDate>Mon, 26 Oct 2026 00:57:35 GMT</pubDate>
+    <pubDate>Tue, 27 Oct 2026 01:02:55 GMT</pubDate>
   </item><item>
     <title>index</title>
     <link>https://lukebest.github.io/papers/</link>
     <guid>https://lukebest.github.io/papers/</guid>
-    <description>Paper SnakeCharmer: GPU Prefetch Backend Control - MICRO’26 — GPU 预取效用/时机/放置联合控制；比 Snake 性能 +12.8%、能效 +20.8%，2.7 KB/SM FIGFLEX: Mixed-Precision FP-INT GEMM Accelerator - UC Irvine — radix-4 + INT3 车道融合，吞吐随比特下降而上升；3-bit 下吞吐/面积比 AxCore 1.56×、FIGLUT 1.42× Reorienting the Vector Axis: FlashAttention on ...</description>
-    <pubDate>Mon, 26 Oct 2026 00:57:35 GMT</pubDate>
+    <description>Paper TranSAGE: Spatial Accelerator Generation for Transformers - ASPLOS’27 — 多算子流水簇空间加速器生成器；decode 比 A100 吞吐 1.62×、能效 8.57×，比 Gemmini/LEGO 最高 11.33× KVStream: Parallel Storage Tiers for KV Prefix Retrieval - Argonne 等 — NVMe+PFS 复制与完成驱动路由；离线吞吐比 LMCache 最高 1.49×，突发 TTFT 最高降 6.1× Embodied Emissions o...</description>
+    <pubDate>Tue, 27 Oct 2026 01:02:38 GMT</pubDate>
   </item><item>
-    <title>In-Core Nonlinear Operator Acceleration</title>
-    <link>https://lukebest.github.io/concepts/in-core-nonlinear-operator-acceleration</link>
-    <guid>https://lukebest.github.io/concepts/in-core-nonlinear-operator-acceleration</guid>
-    <description>核内非线性运算加速：softmax、GELU/SiLU、LayerNorm/RMSNorm 与 exp/除法/rsqrt 单元在 GPU/NPU/FPGA 上的实现路线（融合在线算法、专用归约单元、快速内建指令、量化后多阈值比较）与 wiki 内已有案例索引</description>
-    <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
+    <title>SSD and NVMe Storage System</title>
+    <link>https://lukebest.github.io/concepts/ssd-nvme-storage-system</link>
+    <guid>https://lukebest.github.io/concepts/ssd-nvme-storage-system</guid>
+    <description>片外存储：NAND/FTL/GC/写放大、RAID 0/1/5/6 写惩罚、NVMe 多队列与 PCIe 带宽、read() 延迟分解与 io_uring；WSE memoryX 与 CMX KV tier</description>
+    <pubDate>Tue, 27 Oct 2026 01:02:38 GMT</pubDate>
   </item><item>
-    <title>Memory Hierarchy and Cache</title>
-    <link>https://lukebest.github.io/concepts/memory-hierarchy-cache</link>
-    <guid>https://lukebest.github.io/concepts/memory-hierarchy-cache</guid>
-    <description>内存墙、存储层次、Cache 映射与 3C 模型、AMAT 优化框架、与 WSE SRAM-only 设计的对比</description>
-    <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
+    <title>3D Stacking Technologies</title>
+    <link>https://lukebest.github.io/concepts/3d-stacking-technologies</link>
+    <guid>https://lukebest.github.io/concepts/3d-stacking-technologies</guid>
+    <description>3D 集成三路线对垒：TSV-based (via-middle 商业主流)、Monolithic 3D (实验性高密度)、Hybrid Bonding (Cu-Cu 是 2024 商业现实)；对 3D NoC 设计的根本含义对比</description>
+    <pubDate>Tue, 27 Oct 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>FIGFLEX: A Mixed-Precision FP-INT GEMM Accelerator Co-Designed with Low-Bit LLM Quantization</title>
-    <link>https://lukebest.github.io/papers/figflex-mixed-precision-fp-int-gemm</link>
-    <guid>https://lukebest.github.io/papers/figflex-mixed-precision-fp-int-gemm</guid>
-    <description>UC Irvine — 权重量化 LLM 的 FP-INT GEMM 加速器：radix-4 移位加 + INT3 车道融合，吞吐随比特数下降而上升；3-bit 混合精度下单位面积吞吐比 AxCore 1.56×、比 FIGLUT 1.42×</description>
-    <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
+    <title>DNN Accelerator Systolic Dataflow</title>
+    <link>https://lukebest.github.io/concepts/dnn-accelerator-systolic-dataflow</link>
+    <guid>https://lukebest.github.io/concepts/dnn-accelerator-systolic-dataflow</guid>
+    <description>H&P Ch.7 DSA：脉动阵列、WS/OS/RS 数据复用、Roofline for NPU、TPU vs GPU vs WSE SLA；晶体管从控制迁到 MAC</description>
+    <pubDate>Tue, 27 Oct 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>Reorienting the Vector Axis: Restructuring FlashAttention for Long-Vector Processors</title>
-    <link>https://lukebest.github.io/papers/flashattention-long-vector-riscv</link>
-    <guid>https://lukebest.github.io/papers/flashattention-long-vector-riscv</guid>
-    <description>BSC/UPC — 在 16384-bit 向量寄存器的 EPAC RISC-V 芯片上重排 FlashAttention：转置分数块让 query 沿连续轴、exp 多项式系数搬到标量寄存器；硅上整核 cycle 降 1.84–2.08×，FP 利用率 16.2%→29.7%</description>
-    <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
+    <title>Embodied Emissions of 2.5D and 3D Scaling in Chipletized GPUs for Low-Carbon AI</title>
+    <link>https://lukebest.github.io/papers/embodied-emissions-2p5d-3d-chiplet-gpu</link>
+    <guid>https://lukebest.github.io/papers/embodied-emissions-2p5d-3d-chiplet-gpu</guid>
+    <description>imec 短文 — 以 MI300X 式 chiplet GPU 为基线，算力与 HBM 容量翻倍：2.5D 摊大封装隐含碳 +141%，3D（XCD 叠 XCD + 16-Hi HBM）+89%；2.5D 训练仿真只快 6.8–13.5%</description>
+    <pubDate>Tue, 27 Oct 2026 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>KVStream: Adaptive Parallel Storage Management for KV Caching in Large-Scale LLM Serving</title>
+    <link>https://lukebest.github.io/papers/kvstream-parallel-storage-kv-cache</link>
+    <guid>https://lukebest.github.io/papers/kvstream-parallel-storage-kv-cache</guid>
+    <description>Argonne/RIT/IIT — 长上下文前缀 KV 溢出到存储时，把节点 NVMe 和闲置的并行文件系统一起用：批量读、写后置、每块全层复制、空闲层抢下一块；离线吞吐比 LMCache 最高 1.49×，突发负载均值 TTFT 最高降 6.1×</description>
+    <pubDate>Tue, 27 Oct 2026 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>

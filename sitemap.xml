@@ -1,9 +1,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
     <loc>https://lukebest.github.io/README</loc>
-    <lastmod>2026-10-26T00:57:58.767Z</lastmod>
+    <lastmod>2026-10-27T01:02:55.946Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/SCHEMA</loc>
-    <lastmod>2026-10-26T00:57:58.767Z</lastmod>
+    <lastmod>2026-10-27T01:02:55.942Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/analyses/ai-infra-book/ch00-preface</loc>
     <lastmod>2026-09-14T00:00:00.000Z</lastmod>
@@ -63,7 +63,7 @@
     <lastmod>2026-10-22T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/3d-stacking-technologies</loc>
-    <lastmod>2026-09-10T00:00:00.000Z</lastmod>
+    <lastmod>2026-10-27T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/adaptive-routing-noc</loc>
     <lastmod>2026-10-12T03:03:34.878Z</lastmod>
@@ -153,7 +153,7 @@
     <lastmod>2026-10-12T03:03:34.894Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/dnn-accelerator-systolic-dataflow</loc>
-    <lastmod>2026-10-16T00:00:00.000Z</lastmod>
+    <lastmod>2026-10-27T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/dram-memory-system</loc>
     <lastmod>2026-10-20T00:00:00.000Z</lastmod>
@@ -357,7 +357,7 @@
     <lastmod>2026-10-12T03:03:36.318Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/ssd-nvme-storage-system</loc>
-    <lastmod>2026-10-12T03:03:36.298Z</lastmod>
+    <lastmod>2026-10-27T01:02:38.142Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/stable-latent-moe</loc>
     <lastmod>2026-07-30T00:00:00.000Z</lastmod>
@@ -477,10 +477,10 @@
     <lastmod>2026-10-12T03:03:36.306Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/</loc>
-    <lastmod>2026-10-26T00:57:58.739Z</lastmod>
+    <lastmod>2026-10-27T01:02:55.918Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/log</loc>
-    <lastmod>2026-10-26T00:57:58.767Z</lastmod>
+    <lastmod>2026-10-27T01:02:55.942Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/3d-moe-complementarity-nmp-moe-decode</loc>
     <lastmod>2026-10-22T00:00:00.000Z</lastmod>
@@ -658,6 +658,9 @@
   </url><url>
     <loc>https://lukebest.github.io/papers/ember-uvm-oversubscription-discrete-gpu</loc>
     <lastmod>2026-10-14T00:00:00.000Z</lastmod>
+  </url><url>
+    <loc>https://lukebest.github.io/papers/embodied-emissions-2p5d-3d-chiplet-gpu</loc>
+    <lastmod>2026-10-27T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/entwine-tiled-computation-fine-grained-gpu-comm</loc>
     <lastmod>2026-09-14T00:00:00.000Z</lastmod>
@@ -855,7 +858,7 @@
     <lastmod>2026-10-12T03:03:36.542Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/</loc>
-    <lastmod>2026-10-26T00:57:35.635Z</lastmod>
+    <lastmod>2026-10-27T01:02:38.146Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/janus-agentic-ssd-sparse-kv</loc>
     <lastmod>2026-10-01T00:00:00.000Z</lastmod>
@@ -871,6 +874,9 @@
   </url><url>
     <loc>https://lukebest.github.io/papers/kvcompass-internet-scale-prefix-cache-discovery</loc>
     <lastmod>2026-10-21T00:00:00.000Z</lastmod>
+  </url><url>
+    <loc>https://lukebest.github.io/papers/kvstream-parallel-storage-kv-cache</loc>
+    <lastmod>2026-10-27T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/lachesis-lifetime-aware-kv-hbm-hbf</loc>
     <lastmod>2026-10-08T00:00:00.000Z</lastmod>
@@ -1099,6 +1105,9 @@
   </url><url>
     <loc>https://lukebest.github.io/papers/tpu-v4-optically-reconfigurable</loc>
     <lastmod>2026-10-12T03:03:36.962Z</lastmod>
+  </url><url>
+    <loc>https://lukebest.github.io/papers/transage-spatial-accelerator-generation</loc>
+    <lastmod>2026-10-27T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/trillion-param-moe-hbf-memory-provisioning</loc>
     <lastmod>2026-09-16T00:00:00.000Z</lastmod>
