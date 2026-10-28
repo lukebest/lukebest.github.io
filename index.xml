@@ -10,61 +10,61 @@
     <link>https://lukebest.github.io/README</link>
     <guid>https://lukebest.github.io/README</guid>
     <description>About this OKF knowledge wiki</description>
-    <pubDate>Tue, 27 Oct 2026 01:02:55 GMT</pubDate>
-  </item><item>
-    <title>Schema</title>
-    <link>https://lukebest.github.io/SCHEMA</link>
-    <guid>https://lukebest.github.io/SCHEMA</guid>
-    <description>OKF wiki schema and tag taxonomy</description>
-    <pubDate>Tue, 27 Oct 2026 01:02:55 GMT</pubDate>
+    <pubDate>Wed, 28 Oct 2026 01:01:10 GMT</pubDate>
   </item><item>
     <title>Update Log</title>
     <link>https://lukebest.github.io/log</link>
     <guid>https://lukebest.github.io/log</guid>
     <description>Bundle update history</description>
-    <pubDate>Tue, 27 Oct 2026 01:02:55 GMT</pubDate>
+    <pubDate>Wed, 28 Oct 2026 01:01:10 GMT</pubDate>
+  </item><item>
+    <title>Schema</title>
+    <link>https://lukebest.github.io/SCHEMA</link>
+    <guid>https://lukebest.github.io/SCHEMA</guid>
+    <description>OKF wiki schema and tag taxonomy</description>
+    <pubDate>Wed, 28 Oct 2026 01:01:10 GMT</pubDate>
   </item><item>
     <title>AI Infra LLM Wiki</title>
     <link>https://lukebest.github.io/</link>
     <guid>https://lukebest.github.io/</guid>
     <description>Open Knowledge Format 知识库 — AI 基础设施、互连网络、晶圆级加速器与 LLM 推理系统</description>
-    <pubDate>Tue, 27 Oct 2026 01:02:55 GMT</pubDate>
+    <pubDate>Wed, 28 Oct 2026 01:01:10 GMT</pubDate>
   </item><item>
     <title>index</title>
     <link>https://lukebest.github.io/papers/</link>
     <guid>https://lukebest.github.io/papers/</guid>
-    <description>Paper TranSAGE: Spatial Accelerator Generation for Transformers - ASPLOS’27 — 多算子流水簇空间加速器生成器；decode 比 A100 吞吐 1.62×、能效 8.57×，比 Gemmini/LEGO 最高 11.33× KVStream: Parallel Storage Tiers for KV Prefix Retrieval - Argonne 等 — NVMe+PFS 复制与完成驱动路由；离线吞吐比 LMCache 最高 1.49×，突发 TTFT 最高降 6.1× Embodied Emissions o...</description>
-    <pubDate>Tue, 27 Oct 2026 01:02:38 GMT</pubDate>
-  </item><item>
-    <title>SSD and NVMe Storage System</title>
-    <link>https://lukebest.github.io/concepts/ssd-nvme-storage-system</link>
-    <guid>https://lukebest.github.io/concepts/ssd-nvme-storage-system</guid>
-    <description>片外存储：NAND/FTL/GC/写放大、RAID 0/1/5/6 写惩罚、NVMe 多队列与 PCIe 带宽、read() 延迟分解与 io_uring；WSE memoryX 与 CMX KV tier</description>
-    <pubDate>Tue, 27 Oct 2026 01:02:38 GMT</pubDate>
-  </item><item>
-    <title>3D Stacking Technologies</title>
-    <link>https://lukebest.github.io/concepts/3d-stacking-technologies</link>
-    <guid>https://lukebest.github.io/concepts/3d-stacking-technologies</guid>
-    <description>3D 集成三路线对垒：TSV-based (via-middle 商业主流)、Monolithic 3D (实验性高密度)、Hybrid Bonding (Cu-Cu 是 2024 商业现实)；对 3D NoC 设计的根本含义对比</description>
-    <pubDate>Tue, 27 Oct 2026 00:00:00 GMT</pubDate>
+    <description>Paper ZipFusion: Lossless KV Decompression Fused into Attention - CUHK — FlashInfer 上寄存器内无损重建；H100 attention 1.23–1.25×，8K 最大 batch 吞吐 +26.3%/+25.8%，vs 最佳无损基线最高 2.76× SPARTA: Sparse Ternary Edge LLM Accelerator - 浙大/Veloxis — 28 nm 13.9 mm²；KV 流量 4.1–4.8×，Jetson 吞吐 3.9× / 能效 8.3×，vs FIGLUT/TeLLMe/MC...</description>
+    <pubDate>Wed, 28 Oct 2026 01:00:29 GMT</pubDate>
   </item><item>
     <title>DNN Accelerator Systolic Dataflow</title>
     <link>https://lukebest.github.io/concepts/dnn-accelerator-systolic-dataflow</link>
     <guid>https://lukebest.github.io/concepts/dnn-accelerator-systolic-dataflow</guid>
     <description>H&P Ch.7 DSA：脉动阵列、WS/OS/RS 数据复用、Roofline for NPU、TPU vs GPU vs WSE SLA；晶体管从控制迁到 MAC</description>
-    <pubDate>Tue, 27 Oct 2026 00:00:00 GMT</pubDate>
+    <pubDate>Wed, 28 Oct 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>Embodied Emissions of 2.5D and 3D Scaling in Chipletized GPUs for Low-Carbon AI</title>
-    <link>https://lukebest.github.io/papers/embodied-emissions-2p5d-3d-chiplet-gpu</link>
-    <guid>https://lukebest.github.io/papers/embodied-emissions-2p5d-3d-chiplet-gpu</guid>
-    <description>imec 短文 — 以 MI300X 式 chiplet GPU 为基线，算力与 HBM 容量翻倍：2.5D 摊大封装隐含碳 +141%，3D（XCD 叠 XCD + 16-Hi HBM）+89%；2.5D 训练仿真只快 6.8–13.5%</description>
-    <pubDate>Tue, 27 Oct 2026 00:00:00 GMT</pubDate>
+    <title>DSA Processor Design Tradeoffs</title>
+    <link>https://lukebest.github.io/concepts/dsa-processor-design-tradeoffs</link>
+    <guid>https://lukebest.github.io/concepts/dsa-processor-design-tradeoffs</guid>
+    <description>领域专用处理器设计取舍：现代 CPU 传统武器（OoO/Cache/分支预测/TLB）的能力代价矩阵 vs WSE SLA 核</description>
+    <pubDate>Wed, 28 Oct 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>KVStream: Adaptive Parallel Storage Management for KV Caching in Large-Scale LLM Serving</title>
-    <link>https://lukebest.github.io/papers/kvstream-parallel-storage-kv-cache</link>
-    <guid>https://lukebest.github.io/papers/kvstream-parallel-storage-kv-cache</guid>
-    <description>Argonne/RIT/IIT — 长上下文前缀 KV 溢出到存储时，把节点 NVMe 和闲置的并行文件系统一起用：批量读、写后置、每块全层复制、空闲层抢下一块；离线吞吐比 LMCache 最高 1.49×，突发负载均值 TTFT 最高降 6.1×</description>
-    <pubDate>Tue, 27 Oct 2026 00:00:00 GMT</pubDate>
+    <title>End-to-End Memory Data Path</title>
+    <link>https://lukebest.github.io/concepts/end-to-end-memory-data-path</link>
+    <guid>https://lukebest.github.io/concepts/end-to-end-memory-data-path</guid>
+    <description>存储篇综合（Day 17-22）：load 全路径 AMAT 层级展开、内存墙时间线、一致性决策树、同步成本量级、WSE 消除 off-chip 的简化路径</description>
+    <pubDate>Wed, 28 Oct 2026 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>Numeric Formats for AI Hardware</title>
+    <link>https://lukebest.github.io/concepts/numeric-formats-ai-hardware</link>
+    <guid>https://lukebest.github.io/concepts/numeric-formats-ai-hardware</guid>
+    <description>IEEE 754 浮点与 AI 数据格式（FP32/FP16/BF16/FP8/INT8）的精度、动态范围与硬件面积权衡</description>
+    <pubDate>Wed, 28 Oct 2026 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>Out-of-Order Execution</title>
+    <link>https://lukebest.github.io/concepts/out-of-order-execution</link>
+    <guid>https://lukebest.github.io/concepts/out-of-order-execution</guid>
+    <description>乱序执行：Tomasulo 算法、保留站、ROB 顺序提交、寄存器重命名与指令窗口 IPC 收益递减</description>
+    <pubDate>Wed, 28 Oct 2026 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>
