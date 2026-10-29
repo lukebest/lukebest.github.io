@@ -10,61 +10,61 @@
     <link>https://lukebest.github.io/README</link>
     <guid>https://lukebest.github.io/README</guid>
     <description>About this OKF knowledge wiki</description>
-    <pubDate>Wed, 28 Oct 2026 01:01:10 GMT</pubDate>
+    <pubDate>Thu, 29 Oct 2026 01:08:12 GMT</pubDate>
   </item><item>
     <title>Update Log</title>
     <link>https://lukebest.github.io/log</link>
     <guid>https://lukebest.github.io/log</guid>
     <description>Bundle update history</description>
-    <pubDate>Wed, 28 Oct 2026 01:01:10 GMT</pubDate>
+    <pubDate>Thu, 29 Oct 2026 01:08:12 GMT</pubDate>
   </item><item>
     <title>Schema</title>
     <link>https://lukebest.github.io/SCHEMA</link>
     <guid>https://lukebest.github.io/SCHEMA</guid>
     <description>OKF wiki schema and tag taxonomy</description>
-    <pubDate>Wed, 28 Oct 2026 01:01:10 GMT</pubDate>
+    <pubDate>Thu, 29 Oct 2026 01:08:12 GMT</pubDate>
   </item><item>
     <title>AI Infra LLM Wiki</title>
     <link>https://lukebest.github.io/</link>
     <guid>https://lukebest.github.io/</guid>
     <description>Open Knowledge Format 知识库 — AI 基础设施、互连网络、晶圆级加速器与 LLM 推理系统</description>
-    <pubDate>Wed, 28 Oct 2026 01:01:10 GMT</pubDate>
+    <pubDate>Thu, 29 Oct 2026 01:08:12 GMT</pubDate>
   </item><item>
     <title>index</title>
     <link>https://lukebest.github.io/papers/</link>
     <guid>https://lukebest.github.io/papers/</guid>
-    <description>Paper ZipFusion: Lossless KV Decompression Fused into Attention - CUHK — FlashInfer 上寄存器内无损重建；H100 attention 1.23–1.25×，8K 最大 batch 吞吐 +26.3%/+25.8%，vs 最佳无损基线最高 2.76× SPARTA: Sparse Ternary Edge LLM Accelerator - 浙大/Veloxis — 28 nm 13.9 mm²；KV 流量 4.1–4.8×，Jetson 吞吐 3.9× / 能效 8.3×，vs FIGLUT/TeLLMe/MC...</description>
-    <pubDate>Wed, 28 Oct 2026 01:00:29 GMT</pubDate>
+    <description>Paper INC-MoE: In-Network Collectives for Expert-Parallel MoE Inference - EP MoE dispatch/combine 卸到交换机 AG 组播 + RS 规约并与 FFN 流水重叠；相对 vLLM 默认 TTFT −20.2–33.1%、prefill 吞吐 +25.3–49.5% IntLSE: Speeding up Log-Sum-Exp - NeurIPS’26 — 单遍融合 + 整数近似 LSE；GPU 相对 torch.logsumexp ~10–11× / ~6×，HBM ~6×→1×；CPU IntLS...</description>
+    <pubDate>Thu, 29 Oct 2026 01:07:24 GMT</pubDate>
   </item><item>
-    <title>DNN Accelerator Systolic Dataflow</title>
-    <link>https://lukebest.github.io/concepts/dnn-accelerator-systolic-dataflow</link>
-    <guid>https://lukebest.github.io/concepts/dnn-accelerator-systolic-dataflow</guid>
-    <description>H&P Ch.7 DSA：脉动阵列、WS/OS/RS 数据复用、Roofline for NPU、TPU vs GPU vs WSE SLA；晶体管从控制迁到 MAC</description>
-    <pubDate>Wed, 28 Oct 2026 00:00:00 GMT</pubDate>
+    <title>3D-Stacked AI Chip</title>
+    <link>https://lukebest.github.io/concepts/3d-stacked-ai-chip</link>
+    <guid>https://lukebest.github.io/concepts/3d-stacked-ai-chip</guid>
+    <description>3D 堆叠 AI 芯片：TSV 垂直堆叠 DRAM bank 于 AI core 之上，分布式内存与专用总线带来带宽扩展与利用率新挑战</description>
+    <pubDate>Thu, 29 Oct 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>DSA Processor Design Tradeoffs</title>
-    <link>https://lukebest.github.io/concepts/dsa-processor-design-tradeoffs</link>
-    <guid>https://lukebest.github.io/concepts/dsa-processor-design-tradeoffs</guid>
-    <description>领域专用处理器设计取舍：现代 CPU 传统武器（OoO/Cache/分支预测/TLB）的能力代价矩阵 vs WSE SLA 核</description>
-    <pubDate>Wed, 28 Oct 2026 00:00:00 GMT</pubDate>
+    <title>In-Core Nonlinear Operator Acceleration</title>
+    <link>https://lukebest.github.io/concepts/in-core-nonlinear-operator-acceleration</link>
+    <guid>https://lukebest.github.io/concepts/in-core-nonlinear-operator-acceleration</guid>
+    <description>核内非线性运算加速：softmax、GELU/SiLU、LayerNorm/RMSNorm 与 exp/除法/rsqrt 单元在 GPU/NPU/FPGA 上的实现路线（融合在线算法、专用归约单元、快速内建指令、量化后多阈值比较）与 wiki 内已有案例索引</description>
+    <pubDate>Thu, 29 Oct 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>End-to-End Memory Data Path</title>
-    <link>https://lukebest.github.io/concepts/end-to-end-memory-data-path</link>
-    <guid>https://lukebest.github.io/concepts/end-to-end-memory-data-path</guid>
-    <description>存储篇综合（Day 17-22）：load 全路径 AMAT 层级展开、内存墙时间线、一致性决策树、同步成本量级、WSE 消除 off-chip 的简化路径</description>
-    <pubDate>Wed, 28 Oct 2026 00:00:00 GMT</pubDate>
+    <title>LLM Distributed Training Collectives</title>
+    <link>https://lukebest.github.io/concepts/llm-distributed-training-collectives</link>
+    <guid>https://lukebest.github.io/concepts/llm-distributed-training-collectives</guid>
+    <description>H&P Ch.6/10 语境下 LLM 训练集体通信：AllReduce/AllGather/All-to-All；Ring vs Tree；DP/TP/PP/EP 配方；通信-计算重叠与 WSE 片上 vs 跨 wafer</description>
+    <pubDate>Thu, 29 Oct 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>Numeric Formats for AI Hardware</title>
-    <link>https://lukebest.github.io/concepts/numeric-formats-ai-hardware</link>
-    <guid>https://lukebest.github.io/concepts/numeric-formats-ai-hardware</guid>
-    <description>IEEE 754 浮点与 AI 数据格式（FP32/FP16/BF16/FP8/INT8）的精度、动态范围与硬件面积权衡</description>
-    <pubDate>Wed, 28 Oct 2026 00:00:00 GMT</pubDate>
+    <title>FuseLSE / IntLSE: Speeding up Log-Sum-Exp at Memory and Compute Walls</title>
+    <link>https://lukebest.github.io/papers/fuselse-intlse-logsumexp-neurips2026</link>
+    <guid>https://lukebest.github.io/papers/fuselse-intlse-logsumexp-neurips2026</guid>
+    <description>NeurIPS'26 — 单遍融合 FuseLSE（GPU SFU）与整数近似 IntLSE（CPU）；GPU 上相对 torch.logsumexp 小负载 ~10–11×、大负载 ~6×，HBM 流量约 6×→1×；CPU 上 IntLSE 比 FuseLSE 再快 3–6×</description>
+    <pubDate>Thu, 29 Oct 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>Out-of-Order Execution</title>
-    <link>https://lukebest.github.io/concepts/out-of-order-execution</link>
-    <guid>https://lukebest.github.io/concepts/out-of-order-execution</guid>
-    <description>乱序执行：Tomasulo 算法、保留站、ROB 顺序提交、寄存器重命名与指令窗口 IPC 收益递减</description>
-    <pubDate>Wed, 28 Oct 2026 00:00:00 GMT</pubDate>
+    <title>INC-MoE: Overlapping In-Network Collectives and Expert Computation for Expert-Parallel MoE Inference</title>
+    <link>https://lukebest.github.io/papers/inc-moe-innetwork-collectives-moe-inference</link>
+    <guid>https://lukebest.github.io/papers/inc-moe-innetwork-collectives-moe-inference</guid>
+    <description>EP MoE 的 dispatch/combine 卸到交换机：片内 AllGather 组播 + ReduceScatter 规约，并与专家计算三阶段流水重叠；相对 vLLM 默认环集体 TTFT 最高 −33.1%、prefill 吞吐最高 +49.5%</description>
+    <pubDate>Thu, 29 Oct 2026 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>
