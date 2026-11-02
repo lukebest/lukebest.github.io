@@ -10,61 +10,61 @@
     <link>https://lukebest.github.io/README</link>
     <guid>https://lukebest.github.io/README</guid>
     <description>About this OKF knowledge wiki</description>
-    <pubDate>Fri, 30 Oct 2026 01:06:28 GMT</pubDate>
-  </item><item>
-    <title>Update Log</title>
-    <link>https://lukebest.github.io/log</link>
-    <guid>https://lukebest.github.io/log</guid>
-    <description>Bundle update history</description>
-    <pubDate>Fri, 30 Oct 2026 01:06:28 GMT</pubDate>
+    <pubDate>Mon, 02 Nov 2026 01:10:17 GMT</pubDate>
   </item><item>
     <title>Schema</title>
     <link>https://lukebest.github.io/SCHEMA</link>
     <guid>https://lukebest.github.io/SCHEMA</guid>
     <description>OKF wiki schema and tag taxonomy</description>
-    <pubDate>Fri, 30 Oct 2026 01:06:28 GMT</pubDate>
+    <pubDate>Mon, 02 Nov 2026 01:10:17 GMT</pubDate>
+  </item><item>
+    <title>Update Log</title>
+    <link>https://lukebest.github.io/log</link>
+    <guid>https://lukebest.github.io/log</guid>
+    <description>Bundle update history</description>
+    <pubDate>Mon, 02 Nov 2026 01:10:17 GMT</pubDate>
   </item><item>
     <title>AI Infra LLM Wiki</title>
     <link>https://lukebest.github.io/</link>
     <guid>https://lukebest.github.io/</guid>
     <description>Open Knowledge Format 知识库 — AI 基础设施、互连网络、晶圆级加速器与 LLM 推理系统</description>
-    <pubDate>Fri, 30 Oct 2026 01:06:28 GMT</pubDate>
+    <pubDate>Mon, 02 Nov 2026 01:10:17 GMT</pubDate>
   </item><item>
     <title>index</title>
     <link>https://lukebest.github.io/papers/</link>
     <guid>https://lukebest.github.io/papers/</guid>
-    <description>Paper DualPace: Decoupled GPU–CPU Decoding - 浙大宁波 — AMX CPU 独立 decode 引擎；吞吐 vs NEO +6.9–43.2%、vs vLLM +11.5–90.6%；同 P99 ITL 请求率 +7.3–50.5% uGDS: User-Space GPU Direct Storage - HKUST(GZ) — 用户态 NVMe + P2P；batch 读/写最高 12.12×/30.69× GDS；LMCache TTFT −62.7%、goodput 2.63× MCF: Memory- and Communication-A...</description>
-    <pubDate>Fri, 30 Oct 2026 01:05:45 GMT</pubDate>
+    <description>Paper UlaCache: Unified Logical Sparse KV Serving - Scitix.AI — 统一逻辑 KV 地址；相对 HiSparse 投机峰值 8×H200 1.16×/1.70×、8×B300 1.73×/2.51×；B300 TP 无投机 3.51× SGLang FlatCake: Flat KVCache Storage - 复旦/北大/沐曦/ICT — DRAM+SSD 对等扁平 KV；命中 94.2–94.6%（Mooncake→64.3%），峰值 TTFT/吞吐 1.6×，SSD 读放大消除 6.5–6.7× GPU–WSE Heterog...</description>
+    <pubDate>Mon, 02 Nov 2026 01:09:32 GMT</pubDate>
   </item><item>
     <title>Disaggregated Inference</title>
     <link>https://lukebest.github.io/concepts/disaggregated-inference</link>
     <guid>https://lukebest.github.io/concepts/disaggregated-inference</guid>
     <description>解耦推理：attention/FFN 分离部署，独立扩展，batch 聚合</description>
-    <pubDate>Fri, 30 Oct 2026 00:00:00 GMT</pubDate>
+    <pubDate>Mon, 02 Nov 2026 00:00:00 GMT</pubDate>
   </item><item>
     <title>End-to-End Memory Data Path</title>
     <link>https://lukebest.github.io/concepts/end-to-end-memory-data-path</link>
     <guid>https://lukebest.github.io/concepts/end-to-end-memory-data-path</guid>
     <description>存储篇综合（Day 17-22）：load 全路径 AMAT 层级展开、内存墙时间线、一致性决策树、同步成本量级、WSE 消除 off-chip 的简化路径</description>
-    <pubDate>Fri, 30 Oct 2026 00:00:00 GMT</pubDate>
+    <pubDate>Mon, 02 Nov 2026 00:00:00 GMT</pubDate>
   </item><item>
     <title>Heterogeneous Inference</title>
     <link>https://lukebest.github.io/concepts/heterogeneous-inference</link>
     <guid>https://lukebest.github.io/concepts/heterogeneous-inference</guid>
     <description>GPU + LPU 异构推理，分别优化 prefill/decode</description>
-    <pubDate>Fri, 30 Oct 2026 00:00:00 GMT</pubDate>
+    <pubDate>Mon, 02 Nov 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>LLM Distributed Training Collectives</title>
-    <link>https://lukebest.github.io/concepts/llm-distributed-training-collectives</link>
-    <guid>https://lukebest.github.io/concepts/llm-distributed-training-collectives</guid>
-    <description>H&P Ch.6/10 语境下 LLM 训练集体通信：AllReduce/AllGather/All-to-All；Ring vs Tree；DP/TP/PP/EP 配方；通信-计算重叠与 WSE 片上 vs 跨 wafer</description>
-    <pubDate>Fri, 30 Oct 2026 00:00:00 GMT</pubDate>
+    <title>PagedAttention and vLLM Serving</title>
+    <link>https://lukebest.github.io/concepts/pagedattention-vllm</link>
+    <guid>https://lukebest.github.io/concepts/pagedattention-vllm</guid>
+    <description>vLLM 服务系统的核心 KV cache 内存管理：借鉴 OS 虚拟内存与分页机制，将 KV cache 切为 fixed-size block 跨请求共享/重映射；解决 KV cache fragmentation 与不可共享</description>
+    <pubDate>Mon, 02 Nov 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>SSD and NVMe Storage System</title>
-    <link>https://lukebest.github.io/concepts/ssd-nvme-storage-system</link>
-    <guid>https://lukebest.github.io/concepts/ssd-nvme-storage-system</guid>
-    <description>片外存储：NAND/FTL/GC/写放大、RAID 0/1/5/6 写惩罚、NVMe 多队列与 PCIe 带宽、read() 延迟分解与 io_uring；WSE memoryX 与 CMX KV tier</description>
-    <pubDate>Fri, 30 Oct 2026 00:00:00 GMT</pubDate>
+    <title>Prefill-Decode Resource Divergence</title>
+    <link>https://lukebest.github.io/concepts/prefill-decode-divergence</link>
+    <guid>https://lukebest.github.io/concepts/prefill-decode-divergence</guid>
+    <description>Prefill（compute-bound）vs Decode（bandwidth-bound）资源需求正交，>99% 时间在 decode</description>
+    <pubDate>Mon, 02 Nov 2026 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>
