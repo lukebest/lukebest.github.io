@@ -10,61 +10,61 @@
     <link>https://lukebest.github.io/README</link>
     <guid>https://lukebest.github.io/README</guid>
     <description>About this OKF knowledge wiki</description>
-    <pubDate>Tue, 03 Nov 2026 01:07:37 GMT</pubDate>
-  </item><item>
-    <title>Schema</title>
-    <link>https://lukebest.github.io/SCHEMA</link>
-    <guid>https://lukebest.github.io/SCHEMA</guid>
-    <description>OKF wiki schema and tag taxonomy</description>
-    <pubDate>Tue, 03 Nov 2026 01:07:37 GMT</pubDate>
+    <pubDate>Wed, 04 Nov 2026 01:07:30 GMT</pubDate>
   </item><item>
     <title>Update Log</title>
     <link>https://lukebest.github.io/log</link>
     <guid>https://lukebest.github.io/log</guid>
     <description>Bundle update history</description>
-    <pubDate>Tue, 03 Nov 2026 01:07:37 GMT</pubDate>
+    <pubDate>Wed, 04 Nov 2026 01:07:30 GMT</pubDate>
+  </item><item>
+    <title>Schema</title>
+    <link>https://lukebest.github.io/SCHEMA</link>
+    <guid>https://lukebest.github.io/SCHEMA</guid>
+    <description>OKF wiki schema and tag taxonomy</description>
+    <pubDate>Wed, 04 Nov 2026 01:07:30 GMT</pubDate>
   </item><item>
     <title>AI Infra LLM Wiki</title>
     <link>https://lukebest.github.io/</link>
     <guid>https://lukebest.github.io/</guid>
     <description>Open Knowledge Format 知识库 — AI 基础设施、互连网络、晶圆级加速器与 LLM 推理系统</description>
-    <pubDate>Tue, 03 Nov 2026 01:07:37 GMT</pubDate>
+    <pubDate>Wed, 04 Nov 2026 01:07:30 GMT</pubDate>
   </item><item>
     <title>index</title>
     <link>https://lukebest.github.io/papers/</link>
     <guid>https://lukebest.github.io/papers/</guid>
-    <description>Paper RISK-KV: Selective KV Reconstruction - 哈工大 — 跨层 ridge 重建；省略 18.2–33.3% 历史 KV，PPL 变化 &lt;0.5%；512-token 恢复 1.51–3.31× Token Replay KVLearn: Disagg KV Retention - UCLA/Columbia SYSTOR’26 — PRP+CARS+ATC；TTFT 最高 −56%/−38%/−33% vs No-Cache/LRU/Mooncake；传输 −53%；MM 吞吐≈oracle±5% ConfluxServe: Heteroge...</description>
-    <pubDate>Tue, 03 Nov 2026 01:06:12 GMT</pubDate>
+    <description>Paper NORmal: 3D FeNOR as LPDDR6 Main Memory - 北大/IME CAS/港科大广州 — BEOL FeNOR 未改 LPDDR6 rank；vs UFS 8.9×–28.0×，相对无限 DRAM ≤0.4%，&gt;256K vs HBF 2.8×–6.3× / 能耗/token 8.1×–17.8× HiState: Hybrid Prefix Cache for Agentic Workloads - UCSD — 混合 LLM 前缀分层；历史循环 checkpoint→SSD；p99 TTFT vs Marconi/HiCache 最高 5.7...</description>
+    <pubDate>Wed, 04 Nov 2026 01:05:40 GMT</pubDate>
   </item><item>
-    <title>Disaggregated Inference</title>
-    <link>https://lukebest.github.io/concepts/disaggregated-inference</link>
-    <guid>https://lukebest.github.io/concepts/disaggregated-inference</guid>
-    <description>解耦推理：attention/FFN 分离部署，独立扩展，batch 聚合</description>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 GMT</pubDate>
+    <title>3D Stacking Technologies</title>
+    <link>https://lukebest.github.io/concepts/3d-stacking-technologies</link>
+    <guid>https://lukebest.github.io/concepts/3d-stacking-technologies</guid>
+    <description>3D 集成三路线对垒：TSV-based (via-middle 商业主流)、Monolithic 3D (实验性高密度)、Hybrid Bonding (Cu-Cu 是 2024 商业现实)；对 3D NoC 设计的根本含义对比</description>
+    <pubDate>Wed, 04 Nov 2026 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>DSA Processor Design Tradeoffs</title>
+    <link>https://lukebest.github.io/concepts/dsa-processor-design-tradeoffs</link>
+    <guid>https://lukebest.github.io/concepts/dsa-processor-design-tradeoffs</guid>
+    <description>领域专用处理器设计取舍：现代 CPU 传统武器（OoO/Cache/分支预测/TLB）的能力代价矩阵 vs WSE SLA 核</description>
+    <pubDate>Wed, 04 Nov 2026 00:00:00 GMT</pubDate>
   </item><item>
     <title>End-to-End Memory Data Path</title>
     <link>https://lukebest.github.io/concepts/end-to-end-memory-data-path</link>
     <guid>https://lukebest.github.io/concepts/end-to-end-memory-data-path</guid>
     <description>存储篇综合（Day 17-22）：load 全路径 AMAT 层级展开、内存墙时间线、一致性决策树、同步成本量级、WSE 消除 off-chip 的简化路径</description>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 GMT</pubDate>
+    <pubDate>Wed, 04 Nov 2026 00:00:00 GMT</pubDate>
   </item><item>
     <title>Heterogeneous Inference</title>
     <link>https://lukebest.github.io/concepts/heterogeneous-inference</link>
     <guid>https://lukebest.github.io/concepts/heterogeneous-inference</guid>
     <description>GPU + LPU 异构推理，分别优化 prefill/decode</description>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 GMT</pubDate>
+    <pubDate>Wed, 04 Nov 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>PagedAttention and vLLM Serving</title>
-    <link>https://lukebest.github.io/concepts/pagedattention-vllm</link>
-    <guid>https://lukebest.github.io/concepts/pagedattention-vllm</guid>
-    <description>vLLM 服务系统的核心 KV cache 内存管理：借鉴 OS 虚拟内存与分页机制，将 KV cache 切为 fixed-size block 跨请求共享/重映射；解决 KV cache fragmentation 与不可共享</description>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Prefill-Decode Resource Divergence</title>
-    <link>https://lukebest.github.io/concepts/prefill-decode-divergence</link>
-    <guid>https://lukebest.github.io/concepts/prefill-decode-divergence</guid>
-    <description>Prefill（compute-bound）vs Decode（bandwidth-bound）资源需求正交，>99% 时间在 decode</description>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 GMT</pubDate>
+    <title>Numeric Formats for AI Hardware</title>
+    <link>https://lukebest.github.io/concepts/numeric-formats-ai-hardware</link>
+    <guid>https://lukebest.github.io/concepts/numeric-formats-ai-hardware</guid>
+    <description>IEEE 754 浮点与 AI 数据格式（FP32/FP16/BF16/FP8/INT8）的精度、动态范围与硬件面积权衡</description>
+    <pubDate>Wed, 04 Nov 2026 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>
