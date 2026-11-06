@@ -10,61 +10,61 @@
     <link>https://lukebest.github.io/README</link>
     <guid>https://lukebest.github.io/README</guid>
     <description>About this OKF knowledge wiki</description>
-    <pubDate>Thu, 05 Nov 2026 01:09:11 GMT</pubDate>
-  </item><item>
-    <title>Update Log</title>
-    <link>https://lukebest.github.io/log</link>
-    <guid>https://lukebest.github.io/log</guid>
-    <description>Bundle update history</description>
-    <pubDate>Thu, 05 Nov 2026 01:09:11 GMT</pubDate>
+    <pubDate>Fri, 06 Nov 2026 01:06:34 GMT</pubDate>
   </item><item>
     <title>Schema</title>
     <link>https://lukebest.github.io/SCHEMA</link>
     <guid>https://lukebest.github.io/SCHEMA</guid>
     <description>OKF wiki schema and tag taxonomy</description>
-    <pubDate>Thu, 05 Nov 2026 01:09:11 GMT</pubDate>
+    <pubDate>Fri, 06 Nov 2026 01:06:34 GMT</pubDate>
+  </item><item>
+    <title>Update Log</title>
+    <link>https://lukebest.github.io/log</link>
+    <guid>https://lukebest.github.io/log</guid>
+    <description>Bundle update history</description>
+    <pubDate>Fri, 06 Nov 2026 01:06:34 GMT</pubDate>
   </item><item>
     <title>AI Infra LLM Wiki</title>
     <link>https://lukebest.github.io/</link>
     <guid>https://lukebest.github.io/</guid>
     <description>Open Knowledge Format 知识库 — AI 基础设施、互连网络、晶圆级加速器与 LLM 推理系统</description>
-    <pubDate>Thu, 05 Nov 2026 01:09:11 GMT</pubDate>
+    <pubDate>Fri, 06 Nov 2026 01:06:34 GMT</pubDate>
+  </item><item>
+    <title>FlashMoE Kernel</title>
+    <link>https://lukebest.github.io/concepts/flashmoe-kernel</link>
+    <guid>https://lukebest.github.io/concepts/flashmoe-kernel</guid>
+    <description>NeurIPS 2025 单 persistent GPU kernel 融合分布式 MoE：actor 调度、NVSHMEM 设备端 RDMA、payload-efficient dispatch；8×H100 相对 SOTA 最高 6× 延迟、5.7× 吞吐、93% SM 利用率</description>
+    <pubDate>Fri, 06 Nov 2026 01:05:13 GMT</pubDate>
+  </item><item>
+    <title>Virtual Memory and TLB</title>
+    <link>https://lukebest.github.io/concepts/virtual-memory-tlb</link>
+    <guid>https://lukebest.github.io/concepts/virtual-memory-tlb</guid>
+    <description>虚拟内存四作用、页表与 TLB、巨页与 TLB Shootdown、AMAT 含地址转换、WSE 无 MMU 的工程权衡</description>
+    <pubDate>Fri, 06 Nov 2026 01:05:13 GMT</pubDate>
   </item><item>
     <title>index</title>
     <link>https://lukebest.github.io/papers/</link>
     <guid>https://lukebest.github.io/papers/</guid>
-    <description>Paper ARK: KV Path Reservation for Disagg Inference - Georgia Tech NAIC’26 — 解耦 KV 大象流端侧预留；QPS=25 mean/P95 FCT −27.3%/−34.0%，mean TTFT 最高 −12.9% TIDE: FSDP2 Layout-Aware Collectives - KlingAI/快手 — 零拷贝 AG/RS；64 GPU step vs Stock −27.1%、vs SymmMem −6.0%；RS SM 12.5–14.5× PUD-LLM: In-DRAM Parallelism fo...</description>
-    <pubDate>Thu, 05 Nov 2026 01:05:53 GMT</pubDate>
+    <description>Paper HyPAIC: HBF Personal AI Computer - SK hynix HPCA’27 Rev.</description>
+    <pubDate>Fri, 06 Nov 2026 01:04:33 GMT</pubDate>
   </item><item>
     <title>Disaggregated Inference</title>
     <link>https://lukebest.github.io/concepts/disaggregated-inference</link>
     <guid>https://lukebest.github.io/concepts/disaggregated-inference</guid>
     <description>解耦推理：attention/FFN 分离部署，独立扩展，batch 聚合</description>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 GMT</pubDate>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
   </item><item>
     <title>DRAM and Memory System</title>
     <link>https://lukebest.github.io/concepts/dram-memory-system</link>
     <guid>https://lukebest.github.io/concepts/dram-memory-system</guid>
     <description>DRAM 访问时序与 Row Buffer、Channel/Bank 并行、DDR/HBM 带宽公式、内存墙与 Roofline Ridge Point、WSE 分布式 SRAM 对 HBM 的绕过</description>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 GMT</pubDate>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
   </item><item>
     <title>End-to-End Memory Data Path</title>
     <link>https://lukebest.github.io/concepts/end-to-end-memory-data-path</link>
     <guid>https://lukebest.github.io/concepts/end-to-end-memory-data-path</guid>
     <description>存储篇综合（Day 17-22）：load 全路径 AMAT 层级展开、内存墙时间线、一致性决策树、同步成本量级、WSE 消除 off-chip 的简化路径</description>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>LLM Distributed Training Collectives</title>
-    <link>https://lukebest.github.io/concepts/llm-distributed-training-collectives</link>
-    <guid>https://lukebest.github.io/concepts/llm-distributed-training-collectives</guid>
-    <description>H&P Ch.6/10 语境下 LLM 训练集体通信：AllReduce/AllGather/All-to-All；Ring vs Tree；DP/TP/PP/EP 配方；通信-计算重叠与 WSE 片上 vs 跨 wafer</description>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>PagedAttention and vLLM Serving</title>
-    <link>https://lukebest.github.io/concepts/pagedattention-vllm</link>
-    <guid>https://lukebest.github.io/concepts/pagedattention-vllm</guid>
-    <description>vLLM 服务系统的核心 KV cache 内存管理：借鉴 OS 虚拟内存与分页机制，将 KV cache 切为 fixed-size block 跨请求共享/重映射；解决 KV cache fragmentation 与不可共享</description>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 GMT</pubDate>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>
