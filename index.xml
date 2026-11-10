@@ -10,61 +10,61 @@
     <link>https://lukebest.github.io/README</link>
     <guid>https://lukebest.github.io/README</guid>
     <description>About this OKF knowledge wiki</description>
-    <pubDate>Mon, 09 Nov 2026 01:02:25 GMT</pubDate>
+    <pubDate>Tue, 10 Nov 2026 01:09:16 GMT</pubDate>
   </item><item>
     <title>Schema</title>
     <link>https://lukebest.github.io/SCHEMA</link>
     <guid>https://lukebest.github.io/SCHEMA</guid>
     <description>OKF wiki schema and tag taxonomy</description>
-    <pubDate>Mon, 09 Nov 2026 01:02:25 GMT</pubDate>
+    <pubDate>Tue, 10 Nov 2026 01:09:16 GMT</pubDate>
   </item><item>
     <title>Update Log</title>
     <link>https://lukebest.github.io/log</link>
     <guid>https://lukebest.github.io/log</guid>
     <description>Bundle update history</description>
-    <pubDate>Mon, 09 Nov 2026 01:02:25 GMT</pubDate>
+    <pubDate>Tue, 10 Nov 2026 01:09:16 GMT</pubDate>
   </item><item>
     <title>AI Infra LLM Wiki</title>
     <link>https://lukebest.github.io/</link>
     <guid>https://lukebest.github.io/</guid>
     <description>Open Knowledge Format 知识库 — AI 基础设施、互连网络、晶圆级加速器与 LLM 推理系统</description>
-    <pubDate>Mon, 09 Nov 2026 01:02:25 GMT</pubDate>
+    <pubDate>Tue, 10 Nov 2026 01:09:16 GMT</pubDate>
   </item><item>
     <title>index</title>
     <link>https://lukebest.github.io/papers/</link>
     <guid>https://lukebest.github.io/papers/</guid>
-    <description>Paper Elastic Precision Mixed-Precision LLM - Imperial/Cambridge — flattened systolic 双侧在线位宽；Llama-3-8B Avg4 PPL 6.58 vs PLENA 6.95、Avg 72.23 vs 69.63；vs PLENA 最高 2.55×/2.61×，vs 4×B200 最高 4.96×/12.56× SDMA) - AMD Primus/Primus-Turbo — 首个吃满 TDM/transpose/SDMA/RDMA；CSA TDM 几何均值 1.88×（峰 2.74×），transpos...</description>
-    <pubDate>Mon, 09 Nov 2026 01:01:26 GMT</pubDate>
+    <description>Paper MeshRT: Compile-Time Governed Wafer-Scale Runtime - Edinburgh/MSR SOSP’26 — WSE-3 编译期治理运行时动态；相对 WaferLLM 吞吐最高约 56×，匹配配置每 token 多 25–40 µs（7.6–9.5%）；相对单实例 SGLang@H200 延迟 4.5–7.0× 更低，功率匹配集群投影 decode 系统吞吐 1.7–13.0× CAMP: 3D-IMC Mapping and Placement - IBM Research — 冲突矩阵 + profiling + 剪枝束搜索；3D-IM...</description>
+    <pubDate>Tue, 10 Nov 2026 01:08:35 GMT</pubDate>
   </item><item>
-    <title>DNN Accelerator Systolic Dataflow</title>
-    <link>https://lukebest.github.io/concepts/dnn-accelerator-systolic-dataflow</link>
-    <guid>https://lukebest.github.io/concepts/dnn-accelerator-systolic-dataflow</guid>
-    <description>H&P Ch.7 DSA：脉动阵列、WS/OS/RS 数据复用、Roofline for NPU、TPU vs GPU vs WSE SLA；晶体管从控制迁到 MAC</description>
-    <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+    <title>3D Stacking Technologies</title>
+    <link>https://lukebest.github.io/concepts/3d-stacking-technologies</link>
+    <guid>https://lukebest.github.io/concepts/3d-stacking-technologies</guid>
+    <description>3D 集成三路线对垒：TSV-based (via-middle 商业主流)、Monolithic 3D (实验性高密度)、Hybrid Bonding (Cu-Cu 是 2024 商业现实)；对 3D NoC 设计的根本含义对比</description>
+    <pubDate>Tue, 10 Nov 2026 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>Disaggregated Inference</title>
+    <link>https://lukebest.github.io/concepts/disaggregated-inference</link>
+    <guid>https://lukebest.github.io/concepts/disaggregated-inference</guid>
+    <description>解耦推理：attention/FFN 分离部署，独立扩展，batch 聚合</description>
+    <pubDate>Tue, 10 Nov 2026 00:00:00 GMT</pubDate>
   </item><item>
     <title>End-to-End Memory Data Path</title>
     <link>https://lukebest.github.io/concepts/end-to-end-memory-data-path</link>
     <guid>https://lukebest.github.io/concepts/end-to-end-memory-data-path</guid>
     <description>存储篇综合（Day 17-22）：load 全路径 AMAT 层级展开、内存墙时间线、一致性决策树、同步成本量级、WSE 消除 off-chip 的简化路径</description>
-    <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+    <pubDate>Tue, 10 Nov 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>FlashAttention</title>
-    <link>https://lukebest.github.io/concepts/flashattention</link>
-    <guid>https://lukebest.github.io/concepts/flashattention</guid>
-    <description>IO-aware 精确 attention：SRAM tiling + online softmax + 反向重算；O(N) 内存、HBM 访问 IO-optimal；GPT-2 attention 7.6×、训练最高 3×</description>
-    <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+    <title>Network-on-Wafer</title>
+    <link>https://lukebest.github.io/concepts/network-on-wafer</link>
+    <guid>https://lukebest.github.io/concepts/network-on-wafer</guid>
+    <description>晶圆级互连（NoW）：field stitching / chiplet-on-fanout / WoW hybrid bonding 三条物理路线决定拓扑是否能同层直连；放置即拓扑</description>
+    <pubDate>Tue, 10 Nov 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>GPU SIMT Architecture</title>
-    <link>https://lukebest.github.io/concepts/gpu-simt-architecture</link>
-    <guid>https://lukebest.github.io/concepts/gpu-simt-architecture</guid>
-    <description>H&P Ch.4 GPU/SIMT：Warp 锁步、Warp Divergence、Occupancy 延迟隐藏、H100 内存层次、Tensor Core；与 CPU OoO / WSE MIMD 对比</description>
-    <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Heterogeneous Inference</title>
-    <link>https://lukebest.github.io/concepts/heterogeneous-inference</link>
-    <guid>https://lukebest.github.io/concepts/heterogeneous-inference</guid>
-    <description>GPU + LPU 异构推理，分别优化 prefill/decode</description>
-    <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+    <title>NVLink NVSwitch Scale-Up Fabric</title>
+    <link>https://lukebest.github.io/concepts/nvlink-nvswitch-scale-up-fabric</link>
+    <guid>https://lukebest.github.io/concepts/nvlink-nvswitch-scale-up-fabric</guid>
+    <description>Hopper/Blackwell/Rubin NVLink + NVSwitch — 固定 fat-tree；NVLink 6 3.6 TB/s all-to-all；与 TPU v4 OCS 对照</description>
+    <pubDate>Tue, 10 Nov 2026 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>
