@@ -1,9 +1,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
     <loc>https://lukebest.github.io/README</loc>
-    <lastmod>2026-11-10T01:09:16.240Z</lastmod>
+    <lastmod>2026-11-11T01:10:25.010Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/SCHEMA</loc>
-    <lastmod>2026-11-10T01:09:16.236Z</lastmod>
+    <lastmod>2026-11-11T01:10:25.010Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/analyses/ai-infra-book/ch00-preface</loc>
     <lastmod>2026-09-14T00:00:00.000Z</lastmod>
@@ -147,7 +147,7 @@
     <lastmod>2026-08-13T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/disaggregated-inference</loc>
-    <lastmod>2026-11-10T00:00:00.000Z</lastmod>
+    <lastmod>2026-11-11T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/distributed-gemm-algorithms</loc>
     <lastmod>2026-10-12T03:03:34.894Z</lastmod>
@@ -216,7 +216,7 @@
     <lastmod>2026-10-12T03:03:36.390Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/in-core-nonlinear-operator-acceleration</loc>
-    <lastmod>2026-10-29T00:00:00.000Z</lastmod>
+    <lastmod>2026-11-11T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/</loc>
     <lastmod>2026-10-19T01:05:32.778Z</lastmod>
@@ -255,7 +255,7 @@
     <lastmod>2026-08-13T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/llm-distributed-training-collectives</loc>
-    <lastmod>2026-11-09T00:00:00.000Z</lastmod>
+    <lastmod>2026-11-11T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/lpu-architecture</loc>
     <lastmod>2026-10-12T03:03:36.318Z</lastmod>
@@ -285,7 +285,7 @@
     <lastmod>2026-11-09T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/mpi-reduce-allreduce-algorithms</loc>
-    <lastmod>2026-10-15T00:00:00.000Z</lastmod>
+    <lastmod>2026-11-11T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/multi-plane-clos-topology</loc>
     <lastmod>2026-10-12T03:03:36.306Z</lastmod>
@@ -324,7 +324,7 @@
     <lastmod>2026-09-04T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/nvlink-nvswitch-scale-up-fabric</loc>
-    <lastmod>2026-11-10T00:00:00.000Z</lastmod>
+    <lastmod>2026-11-11T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/out-of-order-execution</loc>
     <lastmod>2026-11-04T00:00:00.000Z</lastmod>
@@ -342,7 +342,7 @@
     <lastmod>2026-08-18T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/prefill-decode-divergence</loc>
-    <lastmod>2026-11-10T00:00:00.000Z</lastmod>
+    <lastmod>2026-11-11T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/quantitative-architecture-fundamentals</loc>
     <lastmod>2026-10-12T03:03:36.318Z</lastmod>
@@ -477,10 +477,10 @@
     <lastmod>2026-10-12T03:03:36.306Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/</loc>
-    <lastmod>2026-11-10T01:09:16.220Z</lastmod>
+    <lastmod>2026-11-11T01:10:24.994Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/log</loc>
-    <lastmod>2026-11-10T01:09:16.236Z</lastmod>
+    <lastmod>2026-11-11T01:10:25.010Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/3d-moe-complementarity-nmp-moe-decode</loc>
     <lastmod>2026-10-22T00:00:00.000Z</lastmod>
@@ -698,6 +698,9 @@
     <loc>https://lukebest.github.io/papers/fancy-eviction-llm-prefix-cache</loc>
     <lastmod>2026-09-28T00:00:00.000Z</lastmod>
   </url><url>
+    <loc>https://lukebest.github.io/papers/fastafd-attention-ffn-disaggregation-nvl72</loc>
+    <lastmod>2026-11-11T00:00:00.000Z</lastmod>
+  </url><url>
     <loc>https://lukebest.github.io/papers/fasteep-intra-instance-elastic-ep-moe-serving</loc>
     <lastmod>2026-10-16T00:00:00.000Z</lastmod>
   </url><url>
@@ -715,6 +718,9 @@
   </url><url>
     <loc>https://lukebest.github.io/papers/figflex-mixed-precision-fp-int-gemm</loc>
     <lastmod>2026-10-26T00:00:00.000Z</lastmod>
+  </url><url>
+    <loc>https://lukebest.github.io/papers/flash-comm-self-synchronizing-collectives</loc>
+    <lastmod>2026-11-11T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/flashattention-2-faster-attention</loc>
     <lastmod>2026-10-12T03:03:36.358Z</lastmod>
@@ -903,7 +909,7 @@
     <lastmod>2026-10-29T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/</loc>
-    <lastmod>2026-11-10T01:08:35.456Z</lastmod>
+    <lastmod>2026-11-11T01:09:20.046Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/janus-agentic-ssd-sparse-kv</loc>
     <lastmod>2026-10-01T00:00:00.000Z</lastmod>
@@ -1004,6 +1010,9 @@
     <loc>https://lukebest.github.io/papers/nanocp-dynamic-context-parallelism-moe</loc>
     <lastmod>2026-10-23T00:00:00.000Z</lastmod>
   </url><url>
+    <loc>https://lukebest.github.io/papers/nccl-ep-moe-dispatch-offload-dbo</loc>
+    <lastmod>2026-11-11T00:00:00.000Z</lastmod>
+  </url><url>
     <loc>https://lukebest.github.io/papers/nccl-m2n-layout-topology-aware-resharding</loc>
     <lastmod>2026-10-08T00:00:00.000Z</lastmod>
   </url><url>
@@ -1103,6 +1112,9 @@
     <loc>https://lukebest.github.io/papers/rrevict-prefix-cache-eviction-agentic</loc>
     <lastmod>2026-09-30T00:00:00.000Z</lastmod>
   </url><url>
+    <loc>https://lukebest.github.io/papers/rvv-cgra-nonlinear-functions-soc</loc>
+    <lastmod>2026-11-11T00:00:00.000Z</lastmod>
+  </url><url>
     <loc>https://lukebest.github.io/papers/sage-semantic-aware-geographic-error-recovery</loc>
     <lastmod>2026-09-14T00:00:00.000Z</lastmod>
   </url><url>
@@ -1122,7 +1134,7 @@
     <lastmod>2026-10-12T03:03:37.022Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/siliconforge-should-you-split-decode</loc>
-    <lastmod>2026-11-10T00:00:00.000Z</lastmod>
+    <lastmod>2026-11-11T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/smartmem-layout-transformation-elimination</loc>
     <lastmod>2026-10-12T03:03:37.014Z</lastmod>

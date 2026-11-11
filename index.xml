@@ -10,61 +10,61 @@
     <link>https://lukebest.github.io/README</link>
     <guid>https://lukebest.github.io/README</guid>
     <description>About this OKF knowledge wiki</description>
-    <pubDate>Tue, 10 Nov 2026 01:09:16 GMT</pubDate>
+    <pubDate>Wed, 11 Nov 2026 01:10:25 GMT</pubDate>
   </item><item>
     <title>Schema</title>
     <link>https://lukebest.github.io/SCHEMA</link>
     <guid>https://lukebest.github.io/SCHEMA</guid>
     <description>OKF wiki schema and tag taxonomy</description>
-    <pubDate>Tue, 10 Nov 2026 01:09:16 GMT</pubDate>
+    <pubDate>Wed, 11 Nov 2026 01:10:25 GMT</pubDate>
   </item><item>
     <title>Update Log</title>
     <link>https://lukebest.github.io/log</link>
     <guid>https://lukebest.github.io/log</guid>
     <description>Bundle update history</description>
-    <pubDate>Tue, 10 Nov 2026 01:09:16 GMT</pubDate>
+    <pubDate>Wed, 11 Nov 2026 01:10:25 GMT</pubDate>
   </item><item>
     <title>AI Infra LLM Wiki</title>
     <link>https://lukebest.github.io/</link>
     <guid>https://lukebest.github.io/</guid>
     <description>Open Knowledge Format 知识库 — AI 基础设施、互连网络、晶圆级加速器与 LLM 推理系统</description>
-    <pubDate>Tue, 10 Nov 2026 01:09:16 GMT</pubDate>
+    <pubDate>Wed, 11 Nov 2026 01:10:24 GMT</pubDate>
   </item><item>
     <title>index</title>
     <link>https://lukebest.github.io/papers/</link>
     <guid>https://lukebest.github.io/papers/</guid>
-    <description>Paper MeshRT: Compile-Time Governed Wafer-Scale Runtime - Edinburgh/MSR SOSP’26 — WSE-3 编译期治理运行时动态；相对 WaferLLM 吞吐最高约 56×，匹配配置每 token 多 25–40 µs（7.6–9.5%）；相对单实例 SGLang@H200 延迟 4.5–7.0× 更低，功率匹配集群投影 decode 系统吞吐 1.7–13.0× CAMP: 3D-IMC Mapping and Placement - IBM Research — 冲突矩阵 + profiling + 剪枝束搜索；3D-IM...</description>
-    <pubDate>Tue, 10 Nov 2026 01:08:35 GMT</pubDate>
-  </item><item>
-    <title>3D Stacking Technologies</title>
-    <link>https://lukebest.github.io/concepts/3d-stacking-technologies</link>
-    <guid>https://lukebest.github.io/concepts/3d-stacking-technologies</guid>
-    <description>3D 集成三路线对垒：TSV-based (via-middle 商业主流)、Monolithic 3D (实验性高密度)、Hybrid Bonding (Cu-Cu 是 2024 商业现实)；对 3D NoC 设计的根本含义对比</description>
-    <pubDate>Tue, 10 Nov 2026 00:00:00 GMT</pubDate>
+    <description>Paper FastAFD: When Does AFD Pay on Rack-Scale NVLink? - UCSD Hao AI Lab — GB200 NVL72 调优 AFD；相对每负载调优 vLLM wide EP，Qwen3 最高 1.17×、Qwen3.5 最高 1.16×，MiniMax-M2.5 持平；模型均值误差 2.9%；投机再加约 8% flash-comm: Self-Synchronizing Collectives for Decode - ScitiX.AI — 自同步传输 + 代价引导选择器；八卡 B300 相对 custom AR v2，all-redu...</description>
+    <pubDate>Wed, 11 Nov 2026 01:09:20 GMT</pubDate>
   </item><item>
     <title>Disaggregated Inference</title>
     <link>https://lukebest.github.io/concepts/disaggregated-inference</link>
     <guid>https://lukebest.github.io/concepts/disaggregated-inference</guid>
     <description>解耦推理：attention/FFN 分离部署，独立扩展，batch 聚合</description>
-    <pubDate>Tue, 10 Nov 2026 00:00:00 GMT</pubDate>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>End-to-End Memory Data Path</title>
-    <link>https://lukebest.github.io/concepts/end-to-end-memory-data-path</link>
-    <guid>https://lukebest.github.io/concepts/end-to-end-memory-data-path</guid>
-    <description>存储篇综合（Day 17-22）：load 全路径 AMAT 层级展开、内存墙时间线、一致性决策树、同步成本量级、WSE 消除 off-chip 的简化路径</description>
-    <pubDate>Tue, 10 Nov 2026 00:00:00 GMT</pubDate>
+    <title>In-Core Nonlinear Operator Acceleration</title>
+    <link>https://lukebest.github.io/concepts/in-core-nonlinear-operator-acceleration</link>
+    <guid>https://lukebest.github.io/concepts/in-core-nonlinear-operator-acceleration</guid>
+    <description>核内非线性运算加速：softmax、GELU/SiLU、LayerNorm/RMSNorm 与 exp/除法/rsqrt 单元在 GPU/NPU/FPGA 上的实现路线（融合在线算法、专用归约单元、快速内建指令、量化后多阈值比较）与 wiki 内已有案例索引</description>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>Network-on-Wafer</title>
-    <link>https://lukebest.github.io/concepts/network-on-wafer</link>
-    <guid>https://lukebest.github.io/concepts/network-on-wafer</guid>
-    <description>晶圆级互连（NoW）：field stitching / chiplet-on-fanout / WoW hybrid bonding 三条物理路线决定拓扑是否能同层直连；放置即拓扑</description>
-    <pubDate>Tue, 10 Nov 2026 00:00:00 GMT</pubDate>
+    <title>LLM Distributed Training Collectives</title>
+    <link>https://lukebest.github.io/concepts/llm-distributed-training-collectives</link>
+    <guid>https://lukebest.github.io/concepts/llm-distributed-training-collectives</guid>
+    <description>H&P Ch.6/10 语境下 LLM 训练集体通信：AllReduce/AllGather/All-to-All；Ring vs Tree；DP/TP/PP/EP 配方；通信-计算重叠与 WSE 片上 vs 跨 wafer</description>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>MPI Reduce/AllReduce Algorithms</title>
+    <link>https://lukebest.github.io/concepts/mpi-reduce-allreduce-algorithms</link>
+    <guid>https://lukebest.github.io/concepts/mpi-reduce-allreduce-algorithms</guid>
+    <description>Rabenseifner ICCS 2004 五类 MPI 归约算法：二叉树、recursive doubling、halving&doubling、binary blocks、ring；α+nβ 代价模型与 (p,n) 自适应选择；MPICH-2 长向量基础</description>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 GMT</pubDate>
   </item><item>
     <title>NVLink NVSwitch Scale-Up Fabric</title>
     <link>https://lukebest.github.io/concepts/nvlink-nvswitch-scale-up-fabric</link>
     <guid>https://lukebest.github.io/concepts/nvlink-nvswitch-scale-up-fabric</guid>
     <description>Hopper/Blackwell/Rubin NVLink + NVSwitch — 固定 fat-tree；NVLink 6 3.6 TB/s all-to-all；与 TPU v4 OCS 对照</description>
-    <pubDate>Tue, 10 Nov 2026 00:00:00 GMT</pubDate>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>
