@@ -10,61 +10,61 @@
     <link>https://lukebest.github.io/README</link>
     <guid>https://lukebest.github.io/README</guid>
     <description>About this OKF knowledge wiki</description>
-    <pubDate>Thu, 12 Nov 2026 01:04:25 GMT</pubDate>
+    <pubDate>Fri, 13 Nov 2026 01:09:08 GMT</pubDate>
   </item><item>
     <title>Schema</title>
     <link>https://lukebest.github.io/SCHEMA</link>
     <guid>https://lukebest.github.io/SCHEMA</guid>
     <description>OKF wiki schema and tag taxonomy</description>
-    <pubDate>Thu, 12 Nov 2026 01:04:25 GMT</pubDate>
+    <pubDate>Fri, 13 Nov 2026 01:09:08 GMT</pubDate>
   </item><item>
     <title>Update Log</title>
     <link>https://lukebest.github.io/log</link>
     <guid>https://lukebest.github.io/log</guid>
     <description>Bundle update history</description>
-    <pubDate>Thu, 12 Nov 2026 01:04:25 GMT</pubDate>
+    <pubDate>Fri, 13 Nov 2026 01:09:08 GMT</pubDate>
   </item><item>
     <title>AI Infra LLM Wiki</title>
     <link>https://lukebest.github.io/</link>
     <guid>https://lukebest.github.io/</guid>
     <description>Open Knowledge Format 知识库 — AI 基础设施、互连网络、晶圆级加速器与 LLM 推理系统</description>
-    <pubDate>Thu, 12 Nov 2026 01:04:25 GMT</pubDate>
+    <pubDate>Fri, 13 Nov 2026 01:09:08 GMT</pubDate>
   </item><item>
     <title>index</title>
     <link>https://lukebest.github.io/papers/</link>
     <guid>https://lukebest.github.io/papers/</guid>
-    <description>Paper Evolving Infra: Agent-Adaptive LLM Serving - Georgia Tech/UIUC/Berkeley/NVIDIA/OpenAI/MIT — 智能体自适应 PD 与 KV；最多 256×GB300，相对 Dynamo v1.5.1 均值 E2E 最高 4.12×、P95 TTFT 最高 13.92×；吞吐最高 2.73× Relief: Per-Step EP Load-Balancing Engine - HKU/HKUST — 逐步副本拆分替代逐步 LP；CUDA/FPGA/片上引擎；硅实现达逐步最优 99.5%，相对静态放置最多回收 ...</description>
-    <pubDate>Thu, 12 Nov 2026 01:03:41 GMT</pubDate>
-  </item><item>
-    <title>3D Stacking Technologies</title>
-    <link>https://lukebest.github.io/concepts/3d-stacking-technologies</link>
-    <guid>https://lukebest.github.io/concepts/3d-stacking-technologies</guid>
-    <description>3D 集成三路线对垒：TSV-based (via-middle 商业主流)、Monolithic 3D (实验性高密度)、Hybrid Bonding (Cu-Cu 是 2024 商业现实)；对 3D NoC 设计的根本含义对比</description>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 GMT</pubDate>
+    <description>Paper NVLinkOneSided: One-Sided EP All-to-All over NVLink - NVIDIA — Fence/Sentinel 一侧 dispatch/combine；8×B300 相对 DeepEP V2.5 在 ≤128 token 时 1.75–3.00×、从 256 token 起 1.17–1.63×；MoE 层相对 DE+DG 最高 2.4× SFU-Sim: Bit-Exact NVIDIA MUFU - 中山大学 — 黑盒反演 MUFU 并补 PTX 外围；A100 / RTX 4060 / RTX PRO 5000 上 12 条常见路径...</description>
+    <pubDate>Fri, 13 Nov 2026 01:08:09 GMT</pubDate>
   </item><item>
     <title>Disaggregated Inference</title>
     <link>https://lukebest.github.io/concepts/disaggregated-inference</link>
     <guid>https://lukebest.github.io/concepts/disaggregated-inference</guid>
     <description>解耦推理：attention/FFN 分离部署，独立扩展，batch 聚合</description>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 GMT</pubDate>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 GMT</pubDate>
   </item><item>
     <title>End-to-End Memory Data Path</title>
     <link>https://lukebest.github.io/concepts/end-to-end-memory-data-path</link>
     <guid>https://lukebest.github.io/concepts/end-to-end-memory-data-path</guid>
     <description>存储篇综合（Day 17-22）：load 全路径 AMAT 层级展开、内存墙时间线、一致性决策树、同步成本量级、WSE 消除 off-chip 的简化路径</description>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 GMT</pubDate>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 GMT</pubDate>
   </item><item>
     <title>In-Core Nonlinear Operator Acceleration</title>
     <link>https://lukebest.github.io/concepts/in-core-nonlinear-operator-acceleration</link>
     <guid>https://lukebest.github.io/concepts/in-core-nonlinear-operator-acceleration</guid>
     <description>核内非线性运算加速：softmax、GELU/SiLU、LayerNorm/RMSNorm 与 exp/除法/rsqrt 单元在 GPU/NPU/FPGA 上的实现路线（融合在线算法、专用归约单元、快速内建指令、量化后多阈值比较）与 wiki 内已有案例索引</description>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 GMT</pubDate>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>Prefill-Decode Resource Divergence</title>
-    <link>https://lukebest.github.io/concepts/prefill-decode-divergence</link>
-    <guid>https://lukebest.github.io/concepts/prefill-decode-divergence</guid>
-    <description>Prefill（compute-bound）vs Decode（bandwidth-bound）资源需求正交，>99% 时间在 decode</description>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 GMT</pubDate>
+    <title>LLM Distributed Training Collectives</title>
+    <link>https://lukebest.github.io/concepts/llm-distributed-training-collectives</link>
+    <guid>https://lukebest.github.io/concepts/llm-distributed-training-collectives</guid>
+    <description>H&P Ch.6/10 语境下 LLM 训练集体通信：AllReduce/AllGather/All-to-All；Ring vs Tree；DP/TP/PP/EP 配方；通信-计算重叠与 WSE 片上 vs 跨 wafer</description>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>NVLink NVSwitch Scale-Up Fabric</title>
+    <link>https://lukebest.github.io/concepts/nvlink-nvswitch-scale-up-fabric</link>
+    <guid>https://lukebest.github.io/concepts/nvlink-nvswitch-scale-up-fabric</guid>
+    <description>Hopper/Blackwell/Rubin NVLink + NVSwitch — 固定 fat-tree；NVLink 6 3.6 TB/s all-to-all；与 TPU v4 OCS 对照</description>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>

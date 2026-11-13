@@ -1,9 +1,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
     <loc>https://lukebest.github.io/README</loc>
-    <lastmod>2026-11-12T01:04:25.784Z</lastmod>
+    <lastmod>2026-11-13T01:09:08.879Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/SCHEMA</loc>
-    <lastmod>2026-11-12T01:04:25.780Z</lastmod>
+    <lastmod>2026-11-13T01:09:08.875Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/analyses/ai-infra-book/ch00-preface</loc>
     <lastmod>2026-09-14T00:00:00.000Z</lastmod>
@@ -147,7 +147,7 @@
     <lastmod>2026-08-13T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/disaggregated-inference</loc>
-    <lastmod>2026-11-12T00:00:00.000Z</lastmod>
+    <lastmod>2026-11-13T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/distributed-gemm-algorithms</loc>
     <lastmod>2026-10-12T03:03:34.894Z</lastmod>
@@ -171,7 +171,7 @@
     <lastmod>2026-10-12T03:03:34.878Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/end-to-end-memory-data-path</loc>
-    <lastmod>2026-11-12T00:00:00.000Z</lastmod>
+    <lastmod>2026-11-13T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/eyeriss-accelerator</loc>
     <lastmod>2026-10-12T03:03:34.894Z</lastmod>
@@ -216,7 +216,7 @@
     <lastmod>2026-10-12T03:03:36.390Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/in-core-nonlinear-operator-acceleration</loc>
-    <lastmod>2026-11-12T00:00:00.000Z</lastmod>
+    <lastmod>2026-11-13T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/</loc>
     <lastmod>2026-10-19T01:05:32.778Z</lastmod>
@@ -255,7 +255,7 @@
     <lastmod>2026-08-13T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/llm-distributed-training-collectives</loc>
-    <lastmod>2026-11-11T00:00:00.000Z</lastmod>
+    <lastmod>2026-11-13T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/lpu-architecture</loc>
     <lastmod>2026-10-12T03:03:36.318Z</lastmod>
@@ -324,7 +324,7 @@
     <lastmod>2026-09-04T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/nvlink-nvswitch-scale-up-fabric</loc>
-    <lastmod>2026-11-11T00:00:00.000Z</lastmod>
+    <lastmod>2026-11-13T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/out-of-order-execution</loc>
     <lastmod>2026-11-04T00:00:00.000Z</lastmod>
@@ -342,7 +342,7 @@
     <lastmod>2026-08-18T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/prefill-decode-divergence</loc>
-    <lastmod>2026-11-12T00:00:00.000Z</lastmod>
+    <lastmod>2026-11-13T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/quantitative-architecture-fundamentals</loc>
     <lastmod>2026-10-12T03:03:36.318Z</lastmod>
@@ -477,10 +477,10 @@
     <lastmod>2026-10-12T03:03:36.306Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/</loc>
-    <lastmod>2026-11-12T01:04:25.752Z</lastmod>
+    <lastmod>2026-11-13T01:09:08.859Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/log</loc>
-    <lastmod>2026-11-12T01:04:25.780Z</lastmod>
+    <lastmod>2026-11-13T01:09:08.875Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/3d-moe-complementarity-nmp-moe-decode</loc>
     <lastmod>2026-10-22T00:00:00.000Z</lastmod>
@@ -631,6 +631,9 @@
   </url><url>
     <loc>https://lukebest.github.io/papers/dash-dual-path-hbf-moe-inference</loc>
     <lastmod>2026-08-28T00:00:00.000Z</lastmod>
+  </url><url>
+    <loc>https://lukebest.github.io/papers/decode-token-parallelism-tknp</loc>
+    <lastmod>2026-11-13T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/dennis-misunas-basic-data-flow-processor</loc>
     <lastmod>2026-10-12T03:03:36.318Z</lastmod>
@@ -912,7 +915,7 @@
     <lastmod>2026-10-29T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/</loc>
-    <lastmod>2026-11-12T01:03:41.420Z</lastmod>
+    <lastmod>2026-11-13T01:08:09.355Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/janus-agentic-ssd-sparse-kv</loc>
     <lastmod>2026-10-01T00:00:00.000Z</lastmod>
@@ -1034,6 +1037,9 @@
     <loc>https://lukebest.github.io/papers/nvidia-nvlink-hopper-blackwell</loc>
     <lastmod>2026-08-26T00:00:00.000Z</lastmod>
   </url><url>
+    <loc>https://lukebest.github.io/papers/nvlinkonesided-ep-all-to-all</loc>
+    <lastmod>2026-11-13T00:00:00.000Z</lastmod>
+  </url><url>
     <loc>https://lukebest.github.io/papers/ofan-destination-aware-load-balancing-ai-training</loc>
     <lastmod>2026-10-12T00:00:00.000Z</lastmod>
   </url><url>
@@ -1130,6 +1136,9 @@
     <loc>https://lukebest.github.io/papers/scaling-inference-prefill-photonic</loc>
     <lastmod>2026-09-04T00:00:00.000Z</lastmod>
   </url><url>
+    <loc>https://lukebest.github.io/papers/sfu-sim-nvidia-mufu-bit-exact</loc>
+    <lastmod>2026-11-13T00:00:00.000Z</lastmod>
+  </url><url>
     <loc>https://lukebest.github.io/papers/sharing-fabric-collective-storage-penalties</loc>
     <lastmod>2026-09-10T00:00:00.000Z</lastmod>
   </url><url>
@@ -1141,6 +1150,9 @@
   </url><url>
     <loc>https://lukebest.github.io/papers/siliconforge-should-you-split-decode</loc>
     <lastmod>2026-11-11T00:00:00.000Z</lastmod>
+  </url><url>
+    <loc>https://lukebest.github.io/papers/slaktier-engram-prefetch-deadlines</loc>
+    <lastmod>2026-11-13T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/smartmem-layout-transformation-elimination</loc>
     <lastmod>2026-10-12T03:03:37.014Z</lastmod>
