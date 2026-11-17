@@ -10,61 +10,61 @@
     <link>https://lukebest.github.io/README</link>
     <guid>https://lukebest.github.io/README</guid>
     <description>About this OKF knowledge wiki</description>
-    <pubDate>Mon, 16 Nov 2026 01:02:30 GMT</pubDate>
-  </item><item>
-    <title>Schema</title>
-    <link>https://lukebest.github.io/SCHEMA</link>
-    <guid>https://lukebest.github.io/SCHEMA</guid>
-    <description>OKF wiki schema and tag taxonomy</description>
-    <pubDate>Mon, 16 Nov 2026 01:02:30 GMT</pubDate>
+    <pubDate>Tue, 17 Nov 2026 01:06:57 GMT</pubDate>
   </item><item>
     <title>Update Log</title>
     <link>https://lukebest.github.io/log</link>
     <guid>https://lukebest.github.io/log</guid>
     <description>Bundle update history</description>
-    <pubDate>Mon, 16 Nov 2026 01:02:30 GMT</pubDate>
+    <pubDate>Tue, 17 Nov 2026 01:06:57 GMT</pubDate>
+  </item><item>
+    <title>Schema</title>
+    <link>https://lukebest.github.io/SCHEMA</link>
+    <guid>https://lukebest.github.io/SCHEMA</guid>
+    <description>OKF wiki schema and tag taxonomy</description>
+    <pubDate>Tue, 17 Nov 2026 01:06:57 GMT</pubDate>
   </item><item>
     <title>AI Infra LLM Wiki</title>
     <link>https://lukebest.github.io/</link>
     <guid>https://lukebest.github.io/</guid>
     <description>Open Knowledge Format 知识库 — AI 基础设施、互连网络、晶圆级加速器与 LLM 推理系统</description>
-    <pubDate>Mon, 16 Nov 2026 01:02:30 GMT</pubDate>
+    <pubDate>Tue, 17 Nov 2026 01:06:57 GMT</pubDate>
   </item><item>
     <title>index</title>
     <link>https://lukebest.github.io/papers/</link>
     <guid>https://lukebest.github.io/papers/</guid>
-    <description>Paper SHADOWPREFILL: Warm Prefix Cache for Per-Step Routing - 微软 Azure — 用正常流量 SLO 空隙做影子 prefill；24 对模型上切换时延基准 −10.4%、编程轨迹 −14.3%（单对最高 −21.4%），路由 token 费用 −28.5%/−32.0%，能量 +0.4% SlipStream: Demand-Paced HBF Prefetch for GPUs - Georgia Tech/NVIDIA/Stanford HPCA’27 — 40 MB 达到理想 HBF 的 92.4%，H3 即使用 320 ...</description>
-    <pubDate>Mon, 16 Nov 2026 01:01:29 GMT</pubDate>
+    <description>Paper Optical Broadcast Memory - Uppsala — 80,000 加速器建模；split-port 相对 HBM3e，Llama-3.1-405B / Llama-4-Maverick / DeepSeek-V4-Pro 吞吐 0.96× / 0.97× / 1.57×，能量 0.90× / 0.90× / 0.58×，去掉 4.05 / 4.00 / 8.44 PB 权重 HBM SubGPU Pipelining - NVIDIA — 仿真 Pareto 匹配每 GPU 吞吐时 per-user 最高 2.2×、匹配 per-user 时每 GPU 最高 ...</description>
+    <pubDate>Tue, 17 Nov 2026 01:05:46 GMT</pubDate>
   </item><item>
-    <title>Disaggregated Inference</title>
-    <link>https://lukebest.github.io/concepts/disaggregated-inference</link>
-    <guid>https://lukebest.github.io/concepts/disaggregated-inference</guid>
-    <description>解耦推理：attention/FFN 分离部署，独立扩展，batch 聚合</description>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 GMT</pubDate>
+    <title>Cerebras Color Mechanism</title>
+    <link>https://lukebest.github.io/concepts/cerebras-color-mechanism</link>
+    <guid>https://lukebest.github.io/concepts/cerebras-color-mechanism</guid>
+    <description>WSE Color 虚拟通道机制：静态路由+独立缓冲+Color×4任务调度+独立反压，Fabric/Local Color 双类型</description>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>DNN Accelerator Systolic Dataflow</title>
+    <link>https://lukebest.github.io/concepts/dnn-accelerator-systolic-dataflow</link>
+    <guid>https://lukebest.github.io/concepts/dnn-accelerator-systolic-dataflow</guid>
+    <description>H&P Ch.7 DSA：脉动阵列、WS/OS/RS 数据复用、Roofline for NPU、TPU vs GPU vs WSE SLA；晶体管从控制迁到 MAC</description>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 GMT</pubDate>
   </item><item>
     <title>End-to-End Memory Data Path</title>
     <link>https://lukebest.github.io/concepts/end-to-end-memory-data-path</link>
     <guid>https://lukebest.github.io/concepts/end-to-end-memory-data-path</guid>
     <description>存储篇综合（Day 17-22）：load 全路径 AMAT 层级展开、内存墙时间线、一致性决策树、同步成本量级、WSE 消除 off-chip 的简化路径</description>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 GMT</pubDate>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 GMT</pubDate>
   </item><item>
     <title>GPU SIMT Architecture</title>
     <link>https://lukebest.github.io/concepts/gpu-simt-architecture</link>
     <guid>https://lukebest.github.io/concepts/gpu-simt-architecture</guid>
     <description>H&P Ch.4 GPU/SIMT：Warp 锁步、Warp Divergence、Occupancy 延迟隐藏、H100 内存层次、Tensor Core；与 CPU OoO / WSE MIMD 对比</description>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 GMT</pubDate>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>LLM Distributed Training Collectives</title>
-    <link>https://lukebest.github.io/concepts/llm-distributed-training-collectives</link>
-    <guid>https://lukebest.github.io/concepts/llm-distributed-training-collectives</guid>
-    <description>H&P Ch.6/10 语境下 LLM 训练集体通信：AllReduce/AllGather/All-to-All；Ring vs Tree；DP/TP/PP/EP 配方；通信-计算重叠与 WSE 片上 vs 跨 wafer</description>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Prefill-Decode Resource Divergence</title>
-    <link>https://lukebest.github.io/concepts/prefill-decode-divergence</link>
-    <guid>https://lukebest.github.io/concepts/prefill-decode-divergence</guid>
-    <description>Prefill（compute-bound）vs Decode（bandwidth-bound）资源需求正交，>99% 时间在 decode</description>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 GMT</pubDate>
+    <title>Network-on-Wafer</title>
+    <link>https://lukebest.github.io/concepts/network-on-wafer</link>
+    <guid>https://lukebest.github.io/concepts/network-on-wafer</guid>
+    <description>晶圆级互连（NoW）：field stitching / chiplet-on-fanout / WoW hybrid bonding 三条物理路线决定拓扑是否能同层直连；放置即拓扑</description>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>
