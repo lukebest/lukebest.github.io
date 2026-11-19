@@ -1,9 +1,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
     <loc>https://lukebest.github.io/README</loc>
-    <lastmod>2026-11-18T01:03:07.067Z</lastmod>
+    <lastmod>2026-11-19T01:10:07.078Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/SCHEMA</loc>
-    <lastmod>2026-11-18T01:03:07.067Z</lastmod>
+    <lastmod>2026-11-19T01:10:07.074Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/analyses/ai-infra-book/ch00-preface</loc>
     <lastmod>2026-09-14T00:00:00.000Z</lastmod>
@@ -66,7 +66,7 @@
     <lastmod>2026-11-12T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/adaptive-routing-noc</loc>
-    <lastmod>2026-10-12T03:03:34.878Z</lastmod>
+    <lastmod>2026-11-19T01:09:03.394Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/aethereal-noc</loc>
     <lastmod>2026-10-12T03:03:34.894Z</lastmod>
@@ -138,7 +138,7 @@
     <lastmod>2026-10-12T03:03:34.914Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/deadlock-free-routing-cdg-dally</loc>
-    <lastmod>2026-10-12T03:03:34.894Z</lastmod>
+    <lastmod>2026-11-19T01:09:03.394Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/deterministic-execution</loc>
     <lastmod>2026-10-12T03:03:34.894Z</lastmod>
@@ -477,10 +477,10 @@
     <lastmod>2026-10-12T03:03:36.306Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/</loc>
-    <lastmod>2026-11-18T01:03:07.051Z</lastmod>
+    <lastmod>2026-11-19T01:10:07.050Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/log</loc>
-    <lastmod>2026-11-18T01:03:07.067Z</lastmod>
+    <lastmod>2026-11-19T01:10:07.078Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/3d-moe-complementarity-nmp-moe-decode</loc>
     <lastmod>2026-10-22T00:00:00.000Z</lastmod>
@@ -583,6 +583,9 @@
   </url><url>
     <loc>https://lukebest.github.io/papers/charm-plus-cross-hardware-attention</loc>
     <lastmod>2026-11-09T00:00:00.000Z</lastmod>
+  </url><url>
+    <loc>https://lukebest.github.io/papers/chimera-fpga-llm-decode</loc>
+    <lastmod>2026-11-19T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/chipsmore-cim-chiplets-llm-inference</loc>
     <lastmod>2026-09-02T00:00:00.000Z</lastmod>
@@ -921,7 +924,7 @@
     <lastmod>2026-10-29T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/</loc>
-    <lastmod>2026-11-18T01:02:16.903Z</lastmod>
+    <lastmod>2026-11-19T01:08:50.074Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/janus-agentic-ssd-sparse-kv</loc>
     <lastmod>2026-10-01T00:00:00.000Z</lastmod>
@@ -946,6 +949,12 @@
   </url><url>
     <loc>https://lukebest.github.io/papers/lachesis-lifetime-aware-kv-hbm-hbf</loc>
     <lastmod>2026-10-08T00:00:00.000Z</lastmod>
+  </url><url>
+    <loc>https://lukebest.github.io/papers/laflash-qlc-hbf-coding-agents</loc>
+    <lastmod>2026-11-19T00:00:00.000Z</lastmod>
+  </url><url>
+    <loc>https://lukebest.github.io/papers/lash-pat-inter-chiplet-routing</loc>
+    <lastmod>2026-11-19T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/leap-imc-noc-llm-inference</loc>
     <lastmod>2026-09-03T00:00:00.000Z</lastmod>
@@ -1048,6 +1057,9 @@
   </url><url>
     <loc>https://lukebest.github.io/papers/nvlinkonesided-ep-all-to-all</loc>
     <lastmod>2026-11-13T00:00:00.000Z</lastmod>
+  </url><url>
+    <loc>https://lukebest.github.io/papers/obaleth-gpu-initiated-networking</loc>
+    <lastmod>2026-11-19T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/ofan-destination-aware-load-balancing-ai-training</loc>
     <lastmod>2026-10-12T00:00:00.000Z</lastmod>
