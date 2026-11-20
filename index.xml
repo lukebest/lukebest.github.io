@@ -10,61 +10,61 @@
     <link>https://lukebest.github.io/README</link>
     <guid>https://lukebest.github.io/README</guid>
     <description>About this OKF knowledge wiki</description>
-    <pubDate>Thu, 19 Nov 2026 01:10:07 GMT</pubDate>
-  </item><item>
-    <title>Update Log</title>
-    <link>https://lukebest.github.io/log</link>
-    <guid>https://lukebest.github.io/log</guid>
-    <description>Bundle update history</description>
-    <pubDate>Thu, 19 Nov 2026 01:10:07 GMT</pubDate>
+    <pubDate>Fri, 20 Nov 2026 01:08:16 GMT</pubDate>
   </item><item>
     <title>Schema</title>
     <link>https://lukebest.github.io/SCHEMA</link>
     <guid>https://lukebest.github.io/SCHEMA</guid>
     <description>OKF wiki schema and tag taxonomy</description>
-    <pubDate>Thu, 19 Nov 2026 01:10:07 GMT</pubDate>
+    <pubDate>Fri, 20 Nov 2026 01:08:16 GMT</pubDate>
+  </item><item>
+    <title>Update Log</title>
+    <link>https://lukebest.github.io/log</link>
+    <guid>https://lukebest.github.io/log</guid>
+    <description>Bundle update history</description>
+    <pubDate>Fri, 20 Nov 2026 01:08:16 GMT</pubDate>
   </item><item>
     <title>AI Infra LLM Wiki</title>
     <link>https://lukebest.github.io/</link>
     <guid>https://lukebest.github.io/</guid>
     <description>Open Knowledge Format 知识库 — AI 基础设施、互连网络、晶圆级加速器与 LLM 推理系统</description>
-    <pubDate>Thu, 19 Nov 2026 01:10:07 GMT</pubDate>
+    <pubDate>Fri, 20 Nov 2026 01:08:16 GMT</pubDate>
+  </item><item>
+    <title>index</title>
+    <link>https://lukebest.github.io/papers/</link>
+    <guid>https://lukebest.github.io/papers/</guid>
+    <description>Paper PAISF - ETH Zurich — BookSim2 评 NoC / ICI / WSI 不规则拓扑上的保序选择函数；相对已有保序方法，饱和吞吐平均 +15.2%、每包能量 −12.1%、负载下延迟 −11.3% XM-Sparse - Netpreme / 港科大 / 新加坡国立 — SGLang 上稀疏注意力卸载到仿真 scale-up 内存池；相对 PCIe 上的 ECHO / HiSparse，decode 吞吐最高 4.98× / 4.52×，相对同平台朴素接入最高 1.34× HETEROVLM - UC Irvine — Versal VC1902 实测 LFM...</description>
+    <pubDate>Fri, 20 Nov 2026 01:06:46 GMT</pubDate>
   </item><item>
     <title>Adaptive Routing for NoC</title>
     <link>https://lukebest.github.io/concepts/adaptive-routing-noc</link>
     <guid>https://lukebest.github.io/concepts/adaptive-routing-noc</guid>
     <description>D&T Ch.6-7 自适应路由：最小/非最小、Valiant VRR、VC 与拥塞感知；Duato 逃逸子网预告；DOR vs 自适应选型与 WSE/AllReduce</description>
-    <pubDate>Thu, 19 Nov 2026 01:09:03 GMT</pubDate>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 GMT</pubDate>
   </item><item>
     <title>Deadlock-Free Routing CDG and Dally Theorem</title>
     <link>https://lukebest.github.io/concepts/deadlock-free-routing-cdg-dally</link>
     <guid>https://lukebest.github.io/concepts/deadlock-free-routing-cdg-dally</guid>
     <description>D&T Ch.8.1-8.4：通道依赖图 CDG、Dally & Seitz 无死锁定理、虫孔易死锁、Torus dateline/≥2 VC、Mesh 单 VC；WSE 选型</description>
-    <pubDate>Thu, 19 Nov 2026 01:09:03 GMT</pubDate>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>index</title>
-    <link>https://lukebest.github.io/papers/</link>
-    <guid>https://lukebest.github.io/papers/</guid>
-    <description>Paper LASH-PAT - ETH Zurich — BookSim2 评十个不规则 ICI 拓扑；相对每组最好基线，吞吐 +21.15%、每包能量 −12.77%，负载下延迟 −1.33% LaFlash - GIST / KAIST / Stanford — QLC-HBF 上用容量保留编程智能体的休眠 KV；相对 SLC-HBF+BE 平均 7.04× 吞吐、10.96× 能量效率（HBFSim） Chimera - UC Irvine — Alveo U280 实测十个设计；同板 Llama-3.2-1B W4 相对 FlexLLM 2.08×；相对四篇先前 FPGA 几何均值 ...</description>
-    <pubDate>Thu, 19 Nov 2026 01:08:50 GMT</pubDate>
+    <title>Disaggregated Inference</title>
+    <link>https://lukebest.github.io/concepts/disaggregated-inference</link>
+    <guid>https://lukebest.github.io/concepts/disaggregated-inference</guid>
+    <description>解耦推理：attention/FFN 分离部署，独立扩展，batch 聚合</description>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>Chimera: A Configurable LLM Decode Accelerator for HBM Multi-Die FPGAs</title>
-    <link>https://lukebest.github.io/papers/chimera-fpga-llm-decode</link>
-    <guid>https://lukebest.github.io/papers/chimera-fpga-llm-decode</guid>
-    <description>UC Irvine — Alveo U280 实测十个设计；同板 Llama-3.2-1B W4 相对 FlexLLM 2.08×；相对四篇先前 FPGA 几何均值 1.6×，tok/J 相对 3090/A100 为 3.0×/1.5×（batch 1）</description>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 GMT</pubDate>
+    <title>End-to-End Memory Data Path</title>
+    <link>https://lukebest.github.io/concepts/end-to-end-memory-data-path</link>
+    <guid>https://lukebest.github.io/concepts/end-to-end-memory-data-path</guid>
+    <description>存储篇综合（Day 17-22）：load 全路径 AMAT 层级展开、内存墙时间线、一致性决策树、同步成本量级、WSE 消除 off-chip 的简化路径</description>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>LaFlash: Capacity-Driven Acceleration for Coding Agent Workflows via QLC-HBF</title>
-    <link>https://lukebest.github.io/papers/laflash-qlc-hbf-coding-agents</link>
-    <guid>https://lukebest.github.io/papers/laflash-qlc-hbf-coding-agents</guid>
-    <description>GIST / KAIST / Stanford — 用 QLC-HBF 把容量分给休眠 KV 保留；相对 SLC-HBF+BE 平均 7.04× 吞吐、10.96× 能量效率（HBFSim）</description>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>LASH-PAT: Deadlock-Free Adaptive Shortest-Path Routing for Inter-Chiplet Interconnects</title>
-    <link>https://lukebest.github.io/papers/lash-pat-inter-chiplet-routing</link>
-    <guid>https://lukebest.github.io/papers/lash-pat-inter-chiplet-routing</guid>
-    <description>ETH Zurich — BookSim2 评十个不规则 ICI 拓扑；相对每组最好基线，吞吐 +21.15%、每包能量 −12.77%，负载下延迟相当</description>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 GMT</pubDate>
+    <title>LLM Distributed Training Collectives</title>
+    <link>https://lukebest.github.io/concepts/llm-distributed-training-collectives</link>
+    <guid>https://lukebest.github.io/concepts/llm-distributed-training-collectives</guid>
+    <description>H&P Ch.6/10 语境下 LLM 训练集体通信：AllReduce/AllGather/All-to-All；Ring vs Tree；DP/TP/PP/EP 配方；通信-计算重叠与 WSE 片上 vs 跨 wafer</description>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>
