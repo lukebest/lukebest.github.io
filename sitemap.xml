@@ -1,9 +1,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
     <loc>https://lukebest.github.io/README</loc>
-    <lastmod>2026-11-20T01:08:16.598Z</lastmod>
+    <lastmod>2026-11-23T01:09:12.956Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/SCHEMA</loc>
-    <lastmod>2026-11-20T01:08:16.594Z</lastmod>
+    <lastmod>2026-11-23T01:09:12.956Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/analyses/ai-infra-book/ch00-preface</loc>
     <lastmod>2026-09-14T00:00:00.000Z</lastmod>
@@ -153,7 +153,7 @@
     <lastmod>2026-10-12T03:03:34.894Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/dnn-accelerator-systolic-dataflow</loc>
-    <lastmod>2026-11-18T00:00:00.000Z</lastmod>
+    <lastmod>2026-11-23T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/dram-memory-system</loc>
     <lastmod>2026-11-06T00:00:00.000Z</lastmod>
@@ -171,7 +171,7 @@
     <lastmod>2026-10-12T03:03:34.878Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/end-to-end-memory-data-path</loc>
-    <lastmod>2026-11-20T00:00:00.000Z</lastmod>
+    <lastmod>2026-11-23T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/eyeriss-accelerator</loc>
     <lastmod>2026-10-12T03:03:34.894Z</lastmod>
@@ -318,7 +318,7 @@
     <lastmod>2026-10-12T03:03:36.306Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/numeric-formats-ai-hardware</loc>
-    <lastmod>2026-11-09T00:00:00.000Z</lastmod>
+    <lastmod>2026-11-23T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/nvidia-cpo-roadmap</loc>
     <lastmod>2026-09-04T00:00:00.000Z</lastmod>
@@ -342,7 +342,7 @@
     <lastmod>2026-08-18T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/prefill-decode-divergence</loc>
-    <lastmod>2026-11-20T00:00:00.000Z</lastmod>
+    <lastmod>2026-11-23T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/quantitative-architecture-fundamentals</loc>
     <lastmod>2026-10-12T03:03:36.318Z</lastmod>
@@ -357,7 +357,7 @@
     <lastmod>2026-10-12T03:03:36.318Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/ssd-nvme-storage-system</loc>
-    <lastmod>2026-11-17T00:00:00.000Z</lastmod>
+    <lastmod>2026-11-23T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/stable-latent-moe</loc>
     <lastmod>2026-07-30T00:00:00.000Z</lastmod>
@@ -477,10 +477,10 @@
     <lastmod>2026-10-12T03:03:36.306Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/</loc>
-    <lastmod>2026-11-20T01:08:16.578Z</lastmod>
+    <lastmod>2026-11-23T01:09:12.892Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/log</loc>
-    <lastmod>2026-11-20T01:08:16.594Z</lastmod>
+    <lastmod>2026-11-23T01:09:12.956Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/3d-moe-complementarity-nmp-moe-decode</loc>
     <lastmod>2026-10-22T00:00:00.000Z</lastmod>
@@ -779,6 +779,9 @@
     <loc>https://lukebest.github.io/papers/gc-moe-green-context-expert-parallel</loc>
     <lastmod>2026-11-17T00:00:00.000Z</lastmod>
   </url><url>
+    <loc>https://lukebest.github.io/papers/gnof-gpu-native-nvme-of</loc>
+    <lastmod>2026-11-23T00:00:00.000Z</lastmod>
+  </url><url>
     <loc>https://lukebest.github.io/papers/gpu-initiated-communication-dissected</loc>
     <lastmod>2026-10-05T00:00:00.000Z</lastmod>
   </url><url>
@@ -927,10 +930,13 @@
     <lastmod>2026-10-29T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/</loc>
-    <lastmod>2026-11-20T01:06:46.246Z</lastmod>
+    <lastmod>2026-11-23T01:08:27.792Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/janus-agentic-ssd-sparse-kv</loc>
     <lastmod>2026-10-01T00:00:00.000Z</lastmod>
+  </url><url>
+    <loc>https://lukebest.github.io/papers/kameleo-bit-serial-activation-precision</loc>
+    <lastmod>2026-11-23T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/katti-tsv-technology-roadmap-2010</loc>
     <lastmod>2026-10-12T03:03:41.246Z</lastmod>
@@ -1071,7 +1077,10 @@
     <lastmod>2026-10-12T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/optical-broadcast-memory-obm</loc>
-    <lastmod>2026-11-17T00:00:00.000Z</lastmod>
+    <lastmod>2026-11-23T00:00:00.000Z</lastmod>
+  </url><url>
+    <loc>https://lukebest.github.io/papers/optidecode-fso-kv-regeneration</loc>
+    <lastmod>2026-11-23T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/optimizing-comm-comp-parallelism-training</loc>
     <lastmod>2026-10-12T03:03:37.026Z</lastmod>
@@ -1144,6 +1153,9 @@
   </url><url>
     <loc>https://lukebest.github.io/papers/rexpert-reram-nmc-disaggregated-moe</loc>
     <lastmod>2026-10-12T03:04:45.938Z</lastmod>
+  </url><url>
+    <loc>https://lukebest.github.io/papers/rising-precision-vla-accelerator</loc>
+    <lastmod>2026-11-23T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/risk-kv-selective-reconstruction</loc>
     <lastmod>2026-11-03T00:00:00.000Z</lastmod>
