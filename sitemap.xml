@@ -1,9 +1,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
     <loc>https://lukebest.github.io/README</loc>
-    <lastmod>2026-11-24T01:08:38.746Z</lastmod>
+    <lastmod>2026-11-25T01:08:16.046Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/SCHEMA</loc>
-    <lastmod>2026-11-24T01:08:38.742Z</lastmod>
+    <lastmod>2026-11-25T01:08:16.042Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/analyses/ai-infra-book/ch00-preface</loc>
     <lastmod>2026-09-14T00:00:00.000Z</lastmod>
@@ -171,7 +171,7 @@
     <lastmod>2026-10-12T03:03:34.878Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/end-to-end-memory-data-path</loc>
-    <lastmod>2026-11-24T00:00:00.000Z</lastmod>
+    <lastmod>2026-11-25T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/eyeriss-accelerator</loc>
     <lastmod>2026-10-12T03:03:34.894Z</lastmod>
@@ -207,7 +207,7 @@
     <lastmod>2026-09-23T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/gpu-simt-architecture</loc>
-    <lastmod>2026-11-18T00:00:00.000Z</lastmod>
+    <lastmod>2026-11-25T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/heterogeneous-inference</loc>
     <lastmod>2026-11-09T00:00:00.000Z</lastmod>
@@ -318,7 +318,7 @@
     <lastmod>2026-10-12T03:03:36.306Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/numeric-formats-ai-hardware</loc>
-    <lastmod>2026-11-24T00:00:00.000Z</lastmod>
+    <lastmod>2026-11-25T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/nvidia-cpo-roadmap</loc>
     <lastmod>2026-09-04T00:00:00.000Z</lastmod>
@@ -327,7 +327,7 @@
     <lastmod>2026-11-24T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/out-of-order-execution</loc>
-    <lastmod>2026-11-04T00:00:00.000Z</lastmod>
+    <lastmod>2026-11-25T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/pagedattention-vllm</loc>
     <lastmod>2026-11-09T00:00:00.000Z</lastmod>
@@ -363,7 +363,7 @@
     <lastmod>2026-07-30T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/superscalar-cpu-research-2023-2026</loc>
-    <lastmod>2026-11-04T00:00:00.000Z</lastmod>
+    <lastmod>2026-11-25T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/concepts/switching-elements</loc>
     <lastmod>2026-10-12T03:03:36.318Z</lastmod>
@@ -477,10 +477,10 @@
     <lastmod>2026-10-12T03:03:36.306Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/</loc>
-    <lastmod>2026-11-24T01:08:38.726Z</lastmod>
+    <lastmod>2026-11-25T01:08:16.026Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/log</loc>
-    <lastmod>2026-11-24T01:08:38.742Z</lastmod>
+    <lastmod>2026-11-25T01:08:16.046Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/3d-moe-complementarity-nmp-moe-decode</loc>
     <lastmod>2026-10-22T00:00:00.000Z</lastmod>
@@ -545,6 +545,9 @@
     <loc>https://lukebest.github.io/papers/batude-monolithic-3d-review-2011</loc>
     <lastmod>2026-10-12T03:03:40.882Z</lastmod>
   </url><url>
+    <loc>https://lukebest.github.io/papers/bloom-miraclegro-ooo-core</loc>
+    <lastmod>2026-11-25T00:00:00.000Z</lastmod>
+  </url><url>
     <loc>https://lukebest.github.io/papers/boost-concurrent-host-hbm-llm-inference</loc>
     <lastmod>2026-09-16T00:00:00.000Z</lastmod>
   </url><url>
@@ -588,7 +591,7 @@
     <lastmod>2026-11-09T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/chimera-fpga-llm-decode</loc>
-    <lastmod>2026-11-20T00:00:00.000Z</lastmod>
+    <lastmod>2026-11-25T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/chipsmore-cim-chiplets-llm-inference</loc>
     <lastmod>2026-09-02T00:00:00.000Z</lastmod>
@@ -631,6 +634,9 @@
   </url><url>
     <loc>https://lukebest.github.io/papers/crossflow-pd-elasticity-agentic</loc>
     <lastmod>2026-09-24T00:00:00.000Z</lastmod>
+  </url><url>
+    <loc>https://lukebest.github.io/papers/cruella-mxfp4-bf16-dot-product-fpga</loc>
+    <lastmod>2026-11-25T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/dally-virtual-channel-flow-control</loc>
     <lastmod>2026-10-12T03:03:36.358Z</lastmod>
@@ -788,6 +794,9 @@
     <loc>https://lukebest.github.io/papers/gnof-gpu-native-nvme-of</loc>
     <lastmod>2026-11-23T00:00:00.000Z</lastmod>
   </url><url>
+    <loc>https://lukebest.github.io/papers/gpcplace-sm-partitioned-gpu</loc>
+    <lastmod>2026-11-25T00:00:00.000Z</lastmod>
+  </url><url>
     <loc>https://lukebest.github.io/papers/gpu-initiated-communication-dissected</loc>
     <lastmod>2026-10-05T00:00:00.000Z</lastmod>
   </url><url>
@@ -915,7 +924,7 @@
     <lastmod>2026-11-16T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/hotcold-hbm-hbf-agentic-llm</loc>
-    <lastmod>2026-09-24T00:00:00.000Z</lastmod>
+    <lastmod>2026-11-25T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/huawei-tau-chip-logicfolding-thermal</loc>
     <lastmod>2026-09-08T00:00:00.000Z</lastmod>
@@ -936,7 +945,7 @@
     <lastmod>2026-10-29T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/</loc>
-    <lastmod>2026-11-24T01:06:53.058Z</lastmod>
+    <lastmod>2026-11-25T01:05:20.838Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/janus-agentic-ssd-sparse-kv</loc>
     <lastmod>2026-10-01T00:00:00.000Z</lastmod>
@@ -1248,7 +1257,7 @@
     <lastmod>2026-11-16T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/subgpu-pipelining-intra-gpu-spatial</loc>
-    <lastmod>2026-11-17T00:00:00.000Z</lastmod>
+    <lastmod>2026-11-25T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/superinfer-slo-aware-rotary-scheduling</loc>
     <lastmod>2026-10-12T03:03:37.026Z</lastmod>
@@ -1258,6 +1267,9 @@
   </url><url>
     <loc>https://lukebest.github.io/papers/surma-scale-up-rma-engine</loc>
     <lastmod>2026-11-18T00:00:00.000Z</lastmod>
+  </url><url>
+    <loc>https://lukebest.github.io/papers/synapse-hbm-hbf-nmc-agentic</loc>
+    <lastmod>2026-11-25T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://lukebest.github.io/papers/synchronization-tax-gpu-scale-up</loc>
     <lastmod>2026-08-31T00:00:00.000Z</lastmod>
