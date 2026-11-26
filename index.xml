@@ -10,61 +10,61 @@
     <link>https://lukebest.github.io/README</link>
     <guid>https://lukebest.github.io/README</guid>
     <description>About this OKF knowledge wiki</description>
-    <pubDate>Wed, 25 Nov 2026 01:08:16 GMT</pubDate>
-  </item><item>
-    <title>Update Log</title>
-    <link>https://lukebest.github.io/log</link>
-    <guid>https://lukebest.github.io/log</guid>
-    <description>Bundle update history</description>
-    <pubDate>Wed, 25 Nov 2026 01:08:16 GMT</pubDate>
+    <pubDate>Thu, 26 Nov 2026 01:03:47 GMT</pubDate>
   </item><item>
     <title>Schema</title>
     <link>https://lukebest.github.io/SCHEMA</link>
     <guid>https://lukebest.github.io/SCHEMA</guid>
     <description>OKF wiki schema and tag taxonomy</description>
-    <pubDate>Wed, 25 Nov 2026 01:08:16 GMT</pubDate>
+    <pubDate>Thu, 26 Nov 2026 01:03:47 GMT</pubDate>
+  </item><item>
+    <title>Update Log</title>
+    <link>https://lukebest.github.io/log</link>
+    <guid>https://lukebest.github.io/log</guid>
+    <description>Bundle update history</description>
+    <pubDate>Thu, 26 Nov 2026 01:03:47 GMT</pubDate>
   </item><item>
     <title>AI Infra LLM Wiki</title>
     <link>https://lukebest.github.io/</link>
     <guid>https://lukebest.github.io/</guid>
     <description>Open Knowledge Format 知识库 — AI 基础设施、互连网络、晶圆级加速器与 LLM 推理系统</description>
-    <pubDate>Wed, 25 Nov 2026 01:08:16 GMT</pubDate>
+    <pubDate>Thu, 26 Nov 2026 01:03:47 GMT</pubDate>
   </item><item>
     <title>index</title>
     <link>https://lukebest.github.io/papers/</link>
     <guid>https://lukebest.github.io/papers/</guid>
-    <description>Paper GPCPlace - 港科大广州 / 清华 — 14 张 NVIDIA GPU 实测；相对 CUDA Green Contexts，各卡 112 个用例的平均加速最高 1.15×，单用例最高 2.38×，中位 STP 为 1.00× BLOOM - UC Berkeley — FireSim 跑完整 SPEC CPU2017 intspeed；SkyWater 130nm 上 IPC 几何均值 1.85×、频率 69.85→88.37 MHz，墙钟 2.34×，面积约 +33%；商业 16 nm 上关键路径大约长 14% Cruella - HyperAccel / KAIST /...</description>
-    <pubDate>Wed, 25 Nov 2026 01:05:20 GMT</pubDate>
+    <description>Paper ProtoBridge - 清华 / MetaX / 无问芯穹 / 港科大 / 上交 — 集体通信对照 H200 NVLink4 平均延迟误差 17.76%、C500 MetaXLink 10.33%；代理模型把延迟-带宽模型的 MAPE 从 55.7% 降到 11.8%，单次操作评估 20.5 µs；一小时探索 38,232 个超节点设计 ANOR - KAIST / SK hynix / Penn State — LLMServingSim（H100 NVL 剖析 GPU kernel、PNM 按 M2NDP 建模）；离线最大 batch 上相对 HiSparse，Qwen3-...</description>
+    <pubDate>Thu, 26 Nov 2026 01:02:14 GMT</pubDate>
+  </item><item>
+    <title>CXL Tiered Memory</title>
+    <link>https://lukebest.github.io/concepts/cxl-tiered-memory</link>
+    <guid>https://lukebest.github.io/concepts/cxl-tiered-memory</guid>
+    <description>CXL 扩展内存分层 — 页迁移（M5）、解耦内存数据通路（CosMoS）、fabric（Aurelia）；把冷页/容量迁出本机 DRAM</description>
+    <pubDate>Thu, 26 Nov 2026 00:00:00 GMT</pubDate>
   </item><item>
     <title>End-to-End Memory Data Path</title>
     <link>https://lukebest.github.io/concepts/end-to-end-memory-data-path</link>
     <guid>https://lukebest.github.io/concepts/end-to-end-memory-data-path</guid>
     <description>存储篇综合（Day 17-22）：load 全路径 AMAT 层级展开、内存墙时间线、一致性决策树、同步成本量级、WSE 消除 off-chip 的简化路径</description>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 GMT</pubDate>
+    <pubDate>Thu, 26 Nov 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>GPU SIMT Architecture</title>
-    <link>https://lukebest.github.io/concepts/gpu-simt-architecture</link>
-    <guid>https://lukebest.github.io/concepts/gpu-simt-architecture</guid>
-    <description>H&P Ch.4 GPU/SIMT：Warp 锁步、Warp Divergence、Occupancy 延迟隐藏、H100 内存层次、Tensor Core；与 CPU OoO / WSE MIMD 对比</description>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 GMT</pubDate>
+    <title>NVIDIA CPO Roadmap</title>
+    <link>https://lukebest.github.io/concepts/nvidia-cpo-roadmap</link>
+    <guid>https://lukebest.github.io/concepts/nvidia-cpo-roadmap</guid>
+    <description>NVIDIA CPO 用于 scale-up 的路线图：Rubin NVL576 测试 → Feynman NVL1152 volume ramp</description>
+    <pubDate>Thu, 26 Nov 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>Numeric Formats for AI Hardware</title>
-    <link>https://lukebest.github.io/concepts/numeric-formats-ai-hardware</link>
-    <guid>https://lukebest.github.io/concepts/numeric-formats-ai-hardware</guid>
-    <description>IEEE 754 浮点与 AI 数据格式（FP32/FP16/BF16/FP8/INT8）的精度、动态范围与硬件面积权衡</description>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 GMT</pubDate>
+    <title>NVLink NVSwitch Scale-Up Fabric</title>
+    <link>https://lukebest.github.io/concepts/nvlink-nvswitch-scale-up-fabric</link>
+    <guid>https://lukebest.github.io/concepts/nvlink-nvswitch-scale-up-fabric</guid>
+    <description>Hopper/Blackwell/Rubin NVLink + NVSwitch — 固定 fat-tree；NVLink 6 3.6 TB/s all-to-all；与 TPU v4 OCS 对照</description>
+    <pubDate>Thu, 26 Nov 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>Out-of-Order Execution</title>
-    <link>https://lukebest.github.io/concepts/out-of-order-execution</link>
-    <guid>https://lukebest.github.io/concepts/out-of-order-execution</guid>
-    <description>乱序执行：Tomasulo 算法、保留站、ROB 顺序提交、寄存器重命名与指令窗口 IPC 收益递减</description>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Superscalar CPU Research (2023-2026)</title>
-    <link>https://lukebest.github.io/concepts/superscalar-cpu-research-2023-2026</link>
-    <guid>https://lukebest.github.io/concepts/superscalar-cpu-research-2023-2026</guid>
-    <description>2023-2026 超标量 CPU 顶会综述：异构旁路子系统（Constable/Bullseye/Prophet）、CVA6S+ 开源 baseline、OoO 边际饱和与 LLM memory-bound 优化；WSE/NPU 关联矩阵与核内同步 Gap</description>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 GMT</pubDate>
+    <title>ANOR: 用 GPU–PNM 计算层次放大稀疏注意力</title>
+    <link>https://lukebest.github.io/papers/anor-gpu-pnm-sparse-attention</link>
+    <guid>https://lukebest.github.io/papers/anor-gpu-pnm-sparse-attention</guid>
+    <description>KAIST / SK hynix / Penn State — LLMServingSim（H100 NVL 剖析 GPU kernel、PNM 按 M2NDP 建模）；离线最大 batch 上相对 HiSparse，Qwen3-4B / 30B-A3B 平均吞吐 2.6× / 2.1×，相对 PNM 基线 2.3× / 1.7×</description>
+    <pubDate>Thu, 26 Nov 2026 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>
